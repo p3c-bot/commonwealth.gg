@@ -177,8 +177,8 @@
         <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
 
         <div class="ui olive message">
-            <p>Make sure you have
-                <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Saturn Wallet enabled</a>, and Metamask turned off. <b>Contract will show 0 balance if wallet not connected properly!</b>
+            <p>Make sure you have an
+                <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Ethereum Classic wallet</a> enabled, and Metamask turned off. <b>Contract will show 0 balance if wallet not connected properly!</b>
             </p>
         </div>
 
@@ -297,12 +297,25 @@
     </div>
 
     <div class="ui active dimmer" id="loadingSpinner">
-        <div class="ui massive text loader" id="loadingText">
+        <div class="ui text loader" id="loadingText">
             <div class="content">
                 <h2 class="ui inverted header">Connecting to <i>Ethereum Classic</i></h2>
                 <a target="_blank" href="https://p3c.hostedwiki.co/pages/P3C%20-%20Explained#how-to-start-playing" class="ui right labeled large icon green button">
                     <i class="question circle outline icon"></i>
                     Need an ETC Wallet?
+                </a>
+                <noscript><h2 class="ui inverted header">You need to enable JavaScript to run this app.</h2></noscript>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui dimmer" id="dimmerNetwork">
+        <div class="ui text loader">
+            <div class="content">
+                <h2 class="ui inverted header">You are not connected to the ETC network.</h2>
+                <a href="/help.html" class="ui right labeled large icon green button">
+                    <i class="question circle outline icon"></i>
+                    How can I change the network?
                 </a>
                 <noscript><h2 class="ui inverted header">You need to enable JavaScript to run this app.</h2></noscript>
             </div>
@@ -316,6 +329,7 @@
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"></script>
     <script src="lib/ls.js"></script>
+    <script src="lib/wallet.js"></script>
     <script src="lib/alertify.js"></script>
     <script src="lib/buy.js"></script>
     <script src="lib/rainmaker.js"></script>
