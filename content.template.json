@@ -1,0 +1,16 @@
+{
+ "address": "{{address}}",
+ "address_index": 28619906,
+ "background-color": "#FFF",
+ "description": "P3C bot",
+ "files": {},
+ "ignore": "(generate.js|content.template.json|.git|README.md|node_modules|package-lock.json)",
+ "inner_path": "content.json",
+ "modified": 1518995744,
+ "postmessage_nonce_security": true,
+ "signers_sign": "GweIkR2+7sDvLCl0w6QONahQMi/hp2vIfCjoh15V8gEGfDvW7Dbi+iHuZg4hF0SujCQQAWauQROYqA/y1bzG2p4=",
+ "signs": {},
+ "signs_required": 1,
+ "title": "P3C",
+ "zeronet_version": "0.6.2"
+}
