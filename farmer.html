@@ -1,151 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
-	<title>P3C.io</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
-	<link rel="stylesheet" href="css/alertify.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
+	<title>P3C Farmer Interface</title>
+	<link rel="stylesheet" href="css/semantic.min.css">
+	<link rel="stylesheet" href="css/alertify.min.css">
+	<link rel="stylesheet" href="css/jquery.qtip.min.css">
 	<link rel="icon" type="image/png" href="img/232.png">
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-	 crossorigin="anonymous">
-	</script>
-	<style>
-		.app.testframe .buy,
-		.app.testframe .sell,
-		.app.testframe .transfer {
-			text-align: center;
-		}
-
-		.app.testframe .buy input,
-		.app.testframe .sell input,
-		.app.testframe .transfer input {
-			text-align: center;
-			font-size: 25px;
-		}
-
-		.no-padding {
-			padding-top: 0 !important;
-			padding-bottom: 0 !important;
-		}
-
-		.approx {
-			font-size: 22px;
-			font-style: italic;
-			color: #949494;
-		}
-
-		.app.interface.loaded {
-			display: initial;
-		}
-
-		.app.stats.bubble span {
-			display: block;
-		}
-
-		.app.stats.bubble span.count {
-			margin-top: 12px;
-			font-size: 32px;
-			font-style: italic;
-		}
-
-		.app.stats.bubble span.identifier {
-			font-size: 20px;
-			font-weight: bold;
-		}
-
-		.app.stats.bubble span.identifier .soft {
-			font-weight: 300;
-			font-size: 15px;
-		}
-
-		.app.stats.bubble span.converted {
-			margin-top: 10px;
-		}
-
-		.app.stats.textual {
-			text-align: center;
-		}
-
-		.app.stats.textual span {
-			display: block;
-			font-size: 18px;
-			margin-bottom: 15px;
-		}
-
-		.app.stats.textual span img {
-			background: #eadfdf;
-			padding: 5px;
-			margin: 0 auto;
-			width: 60px;
-		}
-
-		.actions .button {
-			margin-bottom: 15px;
-			width: 100%;
-		}
-
-		.masternode.hidden {
-			display: none !important;
-		}
-
-		.masternode img {
-			width: 115px;
-		}
-
-		.masternode h2 {
-			font-weight: bold;
-			font-style: italic;
-		}
-
-		.masternode p {
-			padding-bottom: 15px;
-		}
-
-		.masternode .link span {
-			font-size: 22px;
-			display: block;
-			padding-bottom: 13px;
-		}
-
-		.masternode .link a {
-			font-size: 25px;
-		}
-
-		.buy .button,
-		.sell .button {
-			width: 100%;
-		}
-
-		.buy .six.wide.column,
-		.sell .six.wide.column {
-			text-align: center !important;
-		}
-
-		.buy .six.wide.column .buyPrice,
-		.buy .six.wide.column .sellPrice,
-		.sell .six.wide.column .buyPrice,
-		.sell .six.wide.column .sellPrice {
-			display: block;
-			font-size: 20px;
-			padding-bottom: 5px;
-		}
-
-		.transfer p {
-			text-align: center;
-		}
-
-		.transfer button {
-			width: 100%;
-		}
-
-		.transfer input {
-			height: 50px;
-			font-size: 20px !important;
-		}
-	</style>
-	<link rel="stylesheet" href="css/override.css">
+	<link rel="stylesheet" href="css/farmer.css">
 </head>
 
 <body>
@@ -156,45 +18,27 @@
 					<img src="img/powh.png" style="display: block; margin: 0 auto; height:72px; width:auto; border-radius: 0px;" alt="">
 					<div class="sub header">
 						<h2>
-							Proof of Weak Hands (P3D) on Ethereum Classic. Absolute immutability.</h2>
-						<p>
-							This website is just one portal to a
-							<a href="https://etherhub.io/addr/0xdf9aac76b722b08511a4c561607a9bf3afa62e49#tab_addr_3" target="_new">smart contract.</a>
-						</p>
-					</div>
-					<div class="sub header">
-						<p>
-							Secured by <b>Ethereum Classic</b>: the smart contract cannot be changed or controlled. Uses the original P3D contract.
-						</p>
+							P3C Farmer Interface. Absolute immutability.</h2>
 					</div>
 					<br>
 					<div class="sub header">
-						<h3>Instructions:</h3>
 						<p>
 							Please use
 							<a target="_new" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Saturn Wallet</a> to interact (disable Metamask while using).
-							<a target="_new" href="https://p3c.hostedwiki.co/pages/P3C%20-%20Explained">Check out our wiki!</a> <a target="_new" href="https://discord.gg/crjsdJr">Ask us questions.</a>
-							<br>
-							<b>Rules</b>: Buy tokens from this site. Earn dividends from other players. How long can you hold on?
+							<a target="_new" href="https://irthos.github.io/p3c/">Check out our wiki!</a>
+							This interface does not use the Crop smart contract, and connects P3C directly to your wallet account.
+
 						</p>
 						<div  style="text-align: center">
 							<a style="background: none"  href="https://discord.gg/crjsdJr" target="_new">
-								<button class="ui huge button">Join Community</button>
+								<button class="ui huge button">Need Help?</button>
 							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</ui>
-	<!-- 	<div class="ui grid container app loader">
-		<div class="column">
-			<h1 class="ui header">
-				Loading...
-			</h1>
-		</div>
-	</div> -->
 	<div class="ui grid container app interface">
 		<div class="column">
 			<div class="ui raised segment">
@@ -286,7 +130,7 @@
 												<div class="column app stats textual">
 													<span class="eth">
 														<img class="ui medium circular image" src="img/etc_new.png">
-														<b id="ethInContract">- ethereum classic</b> in contract.
+														<b id="etcInContract">- ethereum classic</b> in contract.
 													</span>
 													<span class="tokens">
 														<img class="ui medium circular image" src="https://media.discordapp.net/attachments/401301420575293440/415274787578052618/PowH_Logo_V2_Glow_Final_Concept_invert.png?width=522&height=576">
@@ -296,9 +140,9 @@
 														<img class="ui medium circular image" src="img/232.png">
 														<b id="rainMakerDividends"></b> ETC in RainMaker. P3C:<b id="rainMakerTokens"></b>
 													</span>
-													<span id="divs"class="divs">
+													<span id="divies"class="divs">
 														<img class="ui medium circular image" src="img/glowsnek.png">
-														<b id="divsBalance"></b> ETC in Global dividends.
+														<b id="diviesBalance"></b> ETC in Global dividends.
 													</span>
 												</div>
 											</div>
@@ -314,24 +158,26 @@
 												</div>
 											</div>
 											<div class="row">
-												<div class="column eight wide app stats bubble" id="myTokens">
+												<div class="column eight wide app stats bubble">
 													<div class="ui circular segment">
 														<span class="identifier">Tokens
 															<span class="soft">(P3C)</span>
 														</span>
-														<span class="count">-</span>
-														<span class="converted">(-USDT)</span>
-
+														<span class="count">
+															<div id="myTokens"></div>
+														</span>
 													</div>
 												</div>
-												<div class="column eight wide app stats bubble" id="myDividends">
+											</div>
+											<div class="row">
+												<div class="column eight wide app stats bubble">
 													<div class="ui circular segment">
 														<span class="identifier">Dividends
 															<span class="soft">(ETC)</span>
 														</span>
-														<span class="count">-</span>
-														<span class="converted">(-USDT)</span>
-
+														<span class="count">
+																<div id="myDividends"></div>
+														</span>
 													</div>
 												</div>
 											</div>
@@ -358,22 +204,6 @@
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="column masternode hidden" style="text-align: center;">
-							<div class="ui divider"></div>
-							<h2>You are currently holding enough tokens to run a Masternode!</h2>
-							<img src="img/phoenix.png" alt="">
-							<!--<p>You are currently holding 100 or more tokens, this means you're now running a Masternode! <br> You receive <strong>30% of the dividends</strong> made by anyone purchasing tokens with your masternode link.</p> -->
-							<p>You receive
-								<strong>33%</strong> of the community fee when someone buys tokens via your link! This does not affect how many tokens they
-								purchase.
-							</p>
-							<div class="link">
-								<a href="/?masternode=0x">https://p3c.io/index.html?masternode=0x123456</a>
-							</div>
-							<br>
 						</div>
 					</div>
 					<div class="row">
@@ -421,27 +251,19 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="ui active inverted dimmer" id="loadingSpinner">
-					<div class="ui massive text loader" id="loadingText">Connecting with Saturn...
-						<br>
-						<noscript>You need to enable JavaScript to run this app.</noscript>
-					</div>
-				</div> -->
 			</div>
 		</div>
 	</div>
-	<script src="lib/interact.js"></script>
-	<script src="js/alertify.js"></script>
+	<script src="lib/contracts.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/alertify.min.js"></script>
 	<script src="js/underscore.min.js"></script>
 	<script src="js/bluebird.min.js"></script>
 	<script src="js/semantic.min.js"></script>
 	<script src="js/web3.min.js"></script>
+	<script src="js/qtip.min.js"></script>
 	<script src="lib/buy.js"></script>
-	<script src="lib/contracts.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"></script>
-	<script src="lib/rainmaker.js"></script>
-	<script src="lib/divs.js"></script>
-
+	<script src="lib/farmer.js"></script>
 </body>
 
 </html>

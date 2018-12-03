@@ -1,6 +1,5 @@
-body
-{
-    color: rgba(0,0,0,.7) !important;
+body {
+    color: rgba(0, 0, 0, .7) !important;
 }
 
 .clock {
@@ -8,16 +7,26 @@ body
     width: auto;
     margin: 1em;
 }
- .clock-container {
+
+.container {
     text-align: center;
 }
 
-.ui.header { color: #34495e; }
-.ui.table { color: rgba(0,0,0,.65); }
-.ui.table thead th { color: #7f8c8e; }
+.ui.header {
+    color: #34495e;
+}
+
+.ui.table {
+    color: rgba(0, 0, 0, .65);
+}
+
+.ui.table thead th {
+    color: #7f8c8e;
+}
 
 .divider {
-    width: 100%; background-color: #eee;
+    width: 100%;
+    background-color: #eee;
 }
 
 .border.right {
@@ -37,23 +46,23 @@ body
 /* Margin Top */
 /* ----------- */
 .margin.top.one {
-    margin-top:1em;
+    margin-top: 1em;
 }
 
 .margin.top.one.and.half {
-    margin-top:1.5em;
+    margin-top: 1.5em;
 }
 
 .margin.top.two {
-    margin-top:2em;
+    margin-top: 2em;
 }
 
 .margin.top.two.and.half {
-    margin-top:2.5em;
+    margin-top: 2.5em;
 }
 
 .margin.top.seven {
-    margin-top:7em;
+    margin-top: 7em;
 }
 
 
@@ -74,60 +83,49 @@ body
 /* Width */
 /* ----------- */
 .width.one.and.eight {
-    width:1.8em;
+    width: 1.8em;
 }
 
-
-.gradient.mauve {
-    background: #42275a !important;
-    background: -webkit-linear-gradient(to left, #42275a , #734b6d) !important;
-    background: linear-gradient(to left, #42275a , #734b6d) !important;
+/* CHANGE THIS TO CHANGE THE COLOR */
+.gradient.emerald {
+    background: #348F50 !important;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #56B4D3, #348F50) !important;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #56B4D3, #348F50) !important;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.gradient.frost {
-
-
-background: #000428; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #000428 , #004e92); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #000428 , #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-.gradient.emerald
-{
-    background: #348F50 !important;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #56B4D3, #348F50) !important;  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #56B4D3, #348F50) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .opacity {
     margin-right: 10px;
-    background-color: rgba(0,0,0,.2);
-    padding:10px;
-    border-radius:5px;
+    background-color: rgba(0, 0, 0, .2);
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.small
-{
-    font-size:0.5em;
+.small {
+    font-size: 0.5em;
 }
 
-.button.price
-{
+.button.price {
 
     padding-right: 15px !important;
     padding-left: 15px !important;
 
 }
 
-.small.eleven
-{
-    font-size: 11px !important;
+.small.eleven {
+    font-size: 10px !important;
 }
 
-.no.click
-{
+.no.click {
     cursor: default;
 }
 
@@ -135,19 +133,16 @@ background: linear-gradient(to left, #56B4D3, #348F50) !important; /* W3C, IE 10
 /*
     SCHEMA
 */
-.ui.green.label
-{
+.ui.green.label {
     border-color: #348F50 !important;
     background-color: #348F50 !important;
 }
 
-.ui.green.button
-{
+.ui.green.button {
     background-color: #348F50 !important;
 }
 
-.ui.basic.green.button
-{
+.ui.basic.green.button {
     background-color: transparent !important;
     box-shadow: 0 0 0 1px #348F50 inset !important;
     color: #348F50 !important;
@@ -157,36 +152,30 @@ i.green.icon {
     color: #348F50 !important;
 }
 
-.ui.green.text
-{
+.ui.green.text {
     color: #348F50;
 }
 
 
-.ui.teal.button
-{
+.ui.teal.button {
     background-color: #48a59d !important;
 }
 
-.ui.teal.text
-{
+.ui.teal.text {
     color: #48a59d;
 }
 
 
-.ui.blue.label
-{
+.ui.blue.label {
     border-color: #56B4D3 !important;
     background-color: #56B4D3 !important;
 }
 
-.ui.blue.button
-{
+.ui.blue.button {
     background-color: #56B4D3 !important;
 }
 
-.ui.basic.blue.button
-{
+.ui.basic.blue.button {
     background-color: transparent !important;
     box-shadow: 0 0 0 1px #56B4D3 inset !important;
     color: #56B4D3 !important;
@@ -196,13 +185,11 @@ i.blue.icon {
     color: #56B4D3 !important;
 }
 
-.ui.blue.text
-{
+.ui.blue.text {
     color: #56B4D3;
 }
 
-.link.masternode
-{
+.link.masternode {
     font-size: .9em;
 }
 
@@ -216,7 +203,7 @@ i.blue.icon {
 }
 
 .ui.dimmer {
-    background-color: rgba(0,0,0,.60)
+    background-color: rgba(0, 0, 0, .60)
 }
 
 .sponsor {
@@ -230,57 +217,109 @@ i.blue.icon {
     margin-right: auto;
 }
 
+.agreement {
+    text-align: center;
+    padding: 5px;
+}
+
+.onboard {
+    padding: 10px;
+}
+
+.custom {
+    max-width: 20%;
+}
+
+.etc-logo {
+    margin-top: 20px;
+}
+
+.etc-small {
+    max-width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.ui.primary.basic.button.copy {
+    padding-left: 7px;
+    padding-right: 0px;
+}
+
+.qtip-content {
+    background-color: white;
+}
+
+.instruction {
+    text-align: left;
+}
+
+.reinvest {
+    padding-top: 10px;
+}
+
+.saturn {
+    max-width: 40% !important;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+}
+
 /* Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 989px) {
+
     [class*="mobile hidden"],
     [class*="tablet only"]:not(.mobile),
     [class*="custom-computer only"]:not(.mobile),
     [class*="large screen only"]:not(.mobile),
     [class*="widescreen only"]:not(.mobile),
     [class*="or lower hidden"] {
-      display: none !important;
+        display: none !important;
     }
-  }
-  
-  /* Tablet / iPad Portrait */
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Tablet / iPad Portrait */
+@media only screen and (min-width: 990px) and (max-width: 991px) {
+
     [class*="mobile only"]:not(.tablet),
     [class*="tablet hidden"],
     [class*="custom-computer only"]:not(.tablet),
     [class*="large screen only"]:not(.tablet),
     [class*="widescreen only"]:not(.tablet),
     [class*="or lower hidden"]:not(.mobile) {
-      display: none !important;
+        display: none !important;
     }
-  }
-  
-  /* custom-computer / Desktop / iPad Landscape */
-  @media only screen and (min-width: 992px) {
+}
+
+/* custom-computer / Desktop / iPad Landscape */
+@media only screen and (min-width: 992px) {
+
     [class*="mobile only"]:not(.custom-computer),
     [class*="tablet only"]:not(.custom-computer),
     [class*="custom-computer hidden"],
     [class*="large screen only"]:not(.custom-computer),
     [class*="widescreen only"]:not(.custom-computer),
     [class*="or lower hidden"]:not(.tablet):not(.mobile) {
-      display: none !important;
+        display: none !important;
     }
-  }
-  
-  /* Large Monitor */
-  @media only screen and (min-width: 1200px) and (max-width: 1919px) {
-    [class*="mobile only"]:not([class*="large screen"]),
-    [class*="tablet only"]:not([class*="large screen"]),
-    [class*="custom-computer only"]:not([class*="large screen"]),
-    [class*="large screen hidden"],
-    [class*="widescreen only"]:not([class*="large screen"]),
-  }
-  
-  /* Widescreen Monitor */
-  @media only screen and (min-width: 1920px) {
-    [class*="mobile only"]:not([class*="widescreen"]),
-    [class*="tablet only"]:not([class*="widescreen"]),
-    [class*="custom-computer only"]:not([class*="widescreen"]),
-    [class*="large screen only"]:not([class*="widescreen"]),
-    [class*="widescreen hidden"]
-  }
+}
 
+/* Large Monitor */
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+    [class*="mobile only"]: not([class*="large screen"]),
+        [class*="tablet only"]:not([class*="large screen"]),
+        [class*="custom-computer only"]:not([class*="large screen"]),
+        [class*="large screen hidden"],
+        [class*="widescreen only"]:not([class*="large screen"]),
+}
+
+/* Widescreen Monitor */
+@media only screen and (min-width: 1920px) {
+    [class*="mobile only"]: not([class*="widescreen"]),
+        [class*="tablet only"]:not([class*="widescreen"]),
+        [class*="custom-computer only"]:not([class*="widescreen"]),
+        [class*="large screen only"]:not([class*="widescreen"]),
+        [class*="widescreen hidden"]
+}

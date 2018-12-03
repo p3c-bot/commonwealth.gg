@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>P3C - Transition</title>
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/gtranslate.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
+    <link rel="icon" type="image/png" href="img/whale.png">
+
+</head>
+
+<body>
+    <div class="ui large inverted stackable menu gradient emerald" style="border-radius:0px !important;">
+        <div class="ui container">
+            <a class="header item" href="/">
+                <img src="img/whale.svg" class="ui mini image" />
+                <h2 class="title">P3C.io - Transition</h2>
+            </a>
+        </div>
+    </div>
+
+    <div class="ui container margin top two">
+        <div class="ui green message">
+            Your Crop is: <div id="myCropAddress"></div>
+            <br>
+            <b>(If your crop is blank, make sure to follow the steps below. Otherwise, you don't have to do anything)</b>
+            <br>
+            <br>
+            Your New Tokens Are: <div id="myCropTokens"></div>
+            <br>
+            Your New Dividends Are: <div id="myCropDividends"></div>
+            <br>
+            Need help? <a href="https://www.youtube.com/watch?v=8jXrzqg41GI" target="_blank">Video Tutorial</a>
+        </div>
+
+        <div>
+        <div id="get-rid-of-old-tokens" class="ui stackable grid"  ;>
+            <div class="sixteen wide column buy">
+                <h2 class="ui header" style="margin-top:25px;">
+                    <img src="img/time-forward.svg" class="width one and eight" />
+                    <div class="content">
+                        <span>Step 1</span>
+                        <span class="ui green text small">&nbsp;| Leave behind the old.</span>
+                        <div class="sub header">
+                            Turn your old P3C into ETC.</div>
+                    </div>
+                </h2>
+                <button id="liquidate-old" class="ui large fluid violet button" style="margin-top:10px;">
+                    Trade in Old P3C
+                </button>
+            </div>
+        </div>
+
+        <div id="plant-new" class="ui stackable grid" style="margin-bottom=75px" ;>
+            <div class="sixteen wide column buy">
+                <h2 class="ui header">
+                    <img src="img/plant.png " class="width one and eight" />
+                    <div class="content">
+                        <span id="fresh-p3c-title">Step 2</span>
+                        <span class="ui green text small">&nbsp;| Plant for the future.</span>
+                        <div class="sub header">
+                            Buy new P3C and put it into a fresh crop <b>(Get a 3% upgrade bonus!)</b>.</div>
+                    </div>
+                </h2>
+
+                <div class="ui right labeled left icon input fluid large buy">
+                    <i class="ethereum green icon"></i>
+                    <input placeholder="ETC to Spend..." type="text" id="buyInput">
+                    <div class="ui tag green label">
+                        ETC
+                    </div>
+                </div>
+                <button id="deployCrop" class="ui large fluid green button" style="margin-top:10px;">
+                    Get Upgraded P3C
+                </button>
+
+            </div>
+        </div>
+
+        <div id="transfer-new-p3c" class="ui stackable grid" style="margin-bottom=75px" ;>
+            <div class="sixteen wide column buy">
+                <h2 class="ui header">
+                    <img src="img/link.png " class="width one and eight" />
+                    <div class="content">
+                        <span id="transfer-p3c-title">Step 3</span>
+                        <span class="ui green text small">&nbsp;| Consolidate your Holdings.</span>
+                        <div class="sub header">
+                            Have any P3C right now that isn't being auto-invested?</div>
+                    </div>
+                </h2>
+                <button id="transferCrop" class="ui large fluid orange button" style="margin-top:10px;">
+                    Transfer it into your crop
+                </button>
+
+            </div>
+        </div>
+
+        </div>
+    
+        <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
+
+        <div class="ui stackable grid">
+
+            <div class="eight wide column">
+                <div style="text-align: center">
+                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
+                        style="margin-bottom:10px;">
+                        <i class="left discord icon"></i>
+                        Any questions?
+                    </a>
+                </div>
+                <div class="ui segments">
+                    <div class="ui segment">
+                        <h4 class="ui header">
+                        </h4>
+                        <p>
+                            <b>Instructions:</b> Please use
+                            <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Saturn
+                                Wallet
+                            </a> to interact (disable Metamask while using).
+                        </p>
+                    </div>
+                    <div class="ui segment">
+                        <p class="instructions">
+                            <b>1.</b> You buy into the contract by purchasing P3C, every token purchased increases the
+                            P3C
+                            price by +0.00000001 ETC.
+                            <br>
+                            <b>2.</b> 10% of what you spend to buy the P3C gets distributed to all other
+                            P3C
+                            holders.
+                            <br>
+                            <b>3.</b> When you sell your P3C, you get back ETC, and the global
+                            price
+                            goes down by -0.00000001 ETC.
+                            <br>
+                            <b>4.</b> 10% of what you would get back is distributed to P3C
+                            holders
+                            proportionally.
+                        </p>
+                    </div>
+                </div>
+                <div class="ui segments">
+                    <div class="ui segment">
+                        <p>
+                            Secured by
+                            <b>Ethereum Classic</b>: the <a target="_blanl" href="https://etherhub.io/addr/0xdf9aac76b722b08511a4c561607a9bf3afa62e49#tab_addr_3">smart
+                                contract
+                            </a> cannot be changed or controlled. <a target="_blank" href="https://p3c.hostedwiki.co/pages/P3C%20-%20Explained">Learn
+                                more on our Wiki!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eight wide column">
+                <div class="ui segments transfer">
+                    <div class="ui segment">
+                        <h4 class="ui header">
+                            <i class="circular inverted blue exchange alternate icon"></i>
+                            <div class="content">
+                                Transfer
+                                <div class="sub header">Transfer your P3C to another account.</div>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="ui segment">
+                        <form class="ui form">
+                            <div class="field">
+                                <input type="text" id="transferAddress" placeholder="Address..">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="ui segment">
+                        <form class="ui form">
+                            <div class="field">
+                                <input type="text" id="transferTokenCount" placeholder="P3C Tokens..">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="ui segment">
+                        <span class="approx">Type in a valid address and token amount..</span>
+                    </div>
+                    <div class="ui segment">
+                        <button id="transfer" class="ui right labeled large icon fluid button">
+                            <i class="right arrow icon"></i>
+                            Transfer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/alertify.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+
+    <script src="lib/contracts.js"></script>
+    <script src="lib/farm.js"></script>
+    <script src="lib/transition.js"></script>
+
+</body>
+
+</html>

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/semantic.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/alertify.css">
+    <link rel="stylesheet" href="css/alertify.min.css">
     <link rel="icon" type="image/png" href="img/whale.png">
 
 </head>
@@ -102,7 +102,7 @@
 
                     <div class="ui padded center aligned segment" id="myTokens">
                         <h2 class="ui header">
-                            My Tokens
+                            My Old Tokens
                             <div class="sub header">
                                 <span class="count">0.0000</span> P3C
                                 <div class="ui teal text small eleven">
@@ -189,13 +189,8 @@
 
         <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
 
-        <div class="ui olive message">
-            <p>Make sure you have an
-                <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Saturn
-                    Wallet enabled</a>, and Metamask turned off. <b>Contract will show 0 balance if wallet not connected
-                    properly!</b> Need help? <a target="_blank" href="https://www.youtube.com/watch?v=XEDjtJJH0BE&"><b>Tutorial.</b></a>
-                </b>
-            </p>
+        <div class="ui red message">
+            <p><b>Old P3C Interface:</b> Please go to the <a href="/transition.html">upgrade page</a> to upgrade. Need help? <a href="https://www.youtube.com/watch?v=8jXrzqg41GI" target="_blank">Video Tutorial</a></p>
         </div>
 
         <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
@@ -208,10 +203,6 @@
                         <i class="left discord icon"></i>
                         Join Our Community
                     </a>
-                </div>
-                <div class="custom-computer only" style="text-align: center">
-                    <iframe src="https://titanembeds.com/embed/463160028099117059?defaultchannel=463160028644245507&scrollbartheme=light-thin&theme=IceWyvern"
-                        height="500" width="500" frameborder="0"></iframe>
                 </div>
                 <div class="ui segments">
                     <div class="ui segment">
@@ -332,11 +323,11 @@
     <script src="js/bluebird.min.js"></script>
     <script src="js/semantic.min.js"></script>
     <script src="js/web3.min.js"></script>
-    <script src="js/alertify.js"></script>
+    <script src="js/alertify.min.js"></script>
 
-    <script src="lib/contracts.js"></script>
-    <script src="lib/interact.js"></script>
-    <script src="lib/buy.js"></script>
+    <script src="lib/legacy/contracts.js"></script>
+    <script src="lib/legacy/interact.js"></script>
+    <script src="lib/legacy/buy.js"></script>
 
     <script>
         $(document).ready(function () {
