@@ -133,15 +133,13 @@ contract Crop {
     // reinvest must be enabled
     require(disabled == false);
     
-    // setup p3c
     Hourglass p3c = Hourglass(p3cAddress);
-
-    // withdraw dividends
-    p3c.withdraw();
-
-    uint256 bal = address(this).balance;
-    // reinvest with a referral fee for sender
-    p3c.buy.value(bal)(_playerAddress);
+    if (p3c.dividendsOf(address(this)) > 0){
+        p3c.withdraw();
+        uint256 bal = address(this).balance;
+        // reinvest with a referral fee for sender
+        p3c.buy.value(bal)(_playerAddress);
+    }
   }
   
   /**
@@ -172,11 +170,13 @@ contract Crop {
    * @dev Withdraw P3C dividends and send balance to owner
    */
   function withdraw() public onlyOwner() {
-    // withdraw dividends
-    Hourglass(p3cAddress).withdraw();
+    if (Hourglass(p3cAddress).myDividends(true) > 0){
+        // withdraw dividends
+        Hourglass(p3cAddress).withdraw();
 
-    // transfer to owner
-    owner.transfer(address(this).balance);
+        // transfer to owner
+        owner.transfer(address(this).balance);
+    }
   }
   
   /**
@@ -193,9 +193,7 @@ contract Crop {
    * @param _amountOfTokens amount of tokens to send.
    */
   function transfer(address _toAddress, uint256 _amountOfTokens) external onlyOwner() returns (bool) {
-    if (Hourglass(p3cAddress).myDividends(true) > 0){
-        withdraw();
-    }
+    withdraw();
     return Hourglass(p3cAddress).transfer(_toAddress, _amountOfTokens);
   }
 
