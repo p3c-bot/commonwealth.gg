@@ -25,18 +25,25 @@
 <body>
     <div class="ui large inverted stackable menu gradient personal" style="border-radius:0px !important;">
         <div class="ui container">
-            <!-- THIS IS WHERE THE LOGO AND TITLE IS -->
-            <a class="header item" href="/">
-                <img id="logo" src="img/logo.svg" class="ui mini image" />
-                <h2 class="title">P3C.io</h2>
-            </a>
+            <div class="header">
+                <a class="item" href="/">
+                    <img id="logo" src="img/logo.svg" class="ui mini image" />
+                    <h2 class="title">P3C.io</h2>
+                    <div class="opacity mobile only">
+                            <strong>
+                                <i class="ethereum icon"></i>
+                            </strong>
+                            <span id="etcInContract">0</span>
+                    </div>
+                </a>
+            </div>
+
             <div class="right menu custom-computer only">
                 <div class="item">
                     <a href="https://etherhub.io/addr/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac#tab_addr_3" target="_blank">
                         <div class="opacity">
                             <strong>
                                 <i class="ethereum icon"></i>
-                                <span>Market Cap:&nbsp;</span>
                             </strong>
                             <span id="etcInContract">0 ETC</span> <span id="etcInContractUSDPrice">($0)</span>
 
@@ -45,9 +52,17 @@
                     <div class="opacity">
                         <strong>
                             <i class="tree icon"></i>
-                            <span>Total P3C:&nbsp;</span>
+                            <span>P3C:&nbsp;</span>
                         </strong>
-                        <span id="tokensInCirculation">0.0</span></div>
+                        <span id="tokensInCirculation">0.0</span>
+                    </div>
+                    <a target="_blank" href="http://p3c.trade">
+                        <div class="opacity">
+                            <strong>
+                                Price Chart
+                            </strong>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -392,8 +407,9 @@
                     </div>
                     <div class="ui secondary segment">
                         <div class="link masternode">
-                            <a id="masternodeLink" href="/?mn=0x">https://p3c.io/index.html?mn=0x123456</a> <button id="copyMNButton" class="ui primary basic button copy" data-clipboard-text="">
-                            <i class="clipboard icon"></i>
+                            <a id="masternodeLink" href="/?mn=0x">https://p3c.io/index.html?mn=0x123456</a> <button id="copyMNButton"
+                                class="ui primary basic button copy" data-clipboard-text="">
+                                <i class="clipboard icon"></i>
                             </button>
                         </div>
                     </div>
@@ -407,7 +423,8 @@
                         <h4 class="ui header">
                             <i class="circular inverted blue exchange alternate icon"></i>
                             <div class="content">
-                                <div class="sub header"><b>Transfer</b> your P3C. Withdraws dividends.<i> Give tips in P3C!</i></div>
+                                <div class="sub header"><b>Transfer</b> your P3C. Withdraws dividends.<i> Give tips in
+                                        P3C!</i></div>
                             </div>
                         </h4>
                     </div>
