@@ -2,8 +2,8 @@
 P3C Interface. Make sure you have Saturn Wallet installed. This can be run locally if necessary.
 
 1. ```npm install -g live-server```
-2. Run ```live-server``` from this directory.
-3. Navigate to `localhost:8080/use.html`.
+1. Run ```live-server``` from this directory.
+1. Navigate to `localhost:8080/use.html`.
 
 # Want to create a fork with a permanent Masternode?
 A Masternode entitles you to 33% of the 10% community fee on buying/selling/reinvesting. You can create a **custom** branded site that funnels all ETC through your Masternode.
