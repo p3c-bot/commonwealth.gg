@@ -269,6 +269,12 @@ i.blue.icon {
     margin: 0 auto;
 }
 
+.portfolio {
+    margin-left: 10px !important;
+    display: inline !important;
+    font-size: .6em !important;
+}
+
 /* Mobile */
 @media only screen and (max-width: 989px) {
 
