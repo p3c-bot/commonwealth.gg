@@ -269,10 +269,18 @@ i.blue.icon {
     margin: 0 auto;
 }
 
-.portfolio {
-    margin-left: 10px !important;
-    display: inline !important;
-    font-size: .6em !important;
+.portfolio#portfolioButton {
+    margin-left: 10px;
+    display: inline;
+    font-size: .6em;
+}
+
+.green {
+    color : green;
+}
+
+.red {
+    color: red;
 }
 
 /* Mobile */
