@@ -269,6 +269,20 @@ i.blue.icon {
     margin: 0 auto;
 }
 
+.portfolio#portfolioButton {
+    margin-left: 10px;
+    display: inline;
+    font-size: .6em;
+}
+
+.green {
+    color : green;
+}
+
+.red {
+    color: red;
+}
+
 /* Mobile */
 @media only screen and (max-width: 989px) {
 
