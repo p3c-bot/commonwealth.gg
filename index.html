@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="css/alertify.min.css">
     <link rel="stylesheet" href="css/flipclock.css">
     <link rel="stylesheet" href="css/gtranslate.css">
+        <!-- Default theme -->
+    <link rel="stylesheet" href="css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="css/themes/semantic.min.css" />
     <link rel="icon" type="image" href="img/whale.ico">
 </head>
 
@@ -200,23 +204,23 @@
             <div id="statsContainer" class="ui equal width stackable grid">
                 <div class="center aligned row">
                     <div class="column" style="padding-bottom: 0px !important;">
-                        <div class="ui segments">
+                        <div id="createdStats" class="ui segments">
                             <div class="ui segment">
                                     <h4 class="stats"><i class="globe line circle icon stats"></i>P3C Created: <span id="tokenSupply"></span>  (<span id="tokenSupplyPercentage"></span> of Total)</h4>
                             </div>
                         </div>
                     </div>
                     <div class="column" style="padding-bottom: 0px !important;">
-                            <div class="ui segments">
+                            <div id="priceStats" class="ui segments">
                             <div class="ui segment">
                                     <h4 class="stats"><i class="chart line circle icon stats"></i>Live Price: <span id="priceETC"></span> (<span id="priceUSD"></span>)</h4>
                                 </div>
                         </div>
                     </div>
                     <div class="column" style="padding-bottom: 0px !important;">
-                            <div class="ui segments">
+                            <div id="sizeStats" class="ui segments">
                                 <div class="ui segment">
-                                    <h4 class="stats"><i class="ethereum line circle icon stats"></i>Market Cap: <span id="sizeETC"></span></h4>
+                                    <h4 class="stats"><i class="ethereum line circle icon stats"></i>Bonded Funds: <span id="sizeETC"></span></h4>
                                 </div>
                             </div>
                         </div>
@@ -480,6 +484,7 @@
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/semantic.min.js"></script>
     <script src="js/flipclock.min.js"></script>
     <script src="lib/util.js"></script>
     <script src="lib/home.js"></script>
