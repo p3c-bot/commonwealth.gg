@@ -197,6 +197,31 @@
         <br>
         <div class="ui container vertical stripe">
             <h2 class="ui header center aligned">Social Security for the gig economy. Always open.</h2>
+            <div id="statsContainer" class="ui equal width stackable grid">
+                <div class="center aligned row">
+                    <div class="column" style="padding-bottom: 0px !important;">
+                        <div class="ui segments">
+                            <div class="ui segment">
+                                    <h3 class="stats"><i class="globe line circle icon stats"></i><span id="tokenSupply"></span> (<span id="tokenSupplyPercentage"></span>) P3C mined.</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" style="padding-bottom: 0px !important;">
+                            <div class="ui segments">
+                            <div class="ui segment">
+                                    <h3 class="stats"><i class="chart line circle icon stats"></i>Live Price: <span id="priceETC"></span> (<span id="priceUSD"></span>) </h3>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="column" style="padding-bottom: 0px !important;">
+                            <div class="ui segments">
+                                <div class="ui segment">
+                                    <h3 class="stats"><i class="ethereum line circle icon stats"></i>Market Cap: <span id="sizeETC"></span> (<span id="sizeUSD"></span>)</h3>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
             <div class="ui vertical stripe features">
                 <div class="ui equal width stackable grid">
                     <div class="center aligned row">
@@ -276,7 +301,8 @@
                             </div>
                             <h3>2. Acquire Ethereum Classic (<span class="notranslate">ETC</span>)</h3>
                             <hr class="line">
-                            <p> Once you have your Ethereum Classic Wallet installed, you need Ethereum Classic (<span class="notranslate">ETC</span>).
+                            <p> Once you have your Ethereum Classic Wallet installed, you need Ethereum Classic (<span
+                                    class="notranslate">ETC</span>).
                                 Reload
                                 this page. We recommend exchanging your coins on Changelly, or using an exchange like
                                 Binance.</p>
@@ -341,32 +367,50 @@
                         <b>2.</b> 10% of what you spend to buy the P3C gets distributed proportionally to all other P3C
                         holders.
                         <br>
-                        <b>3.</b> When you sell your P3C, you get back <span class="notranslate">ETC</span> at the specified price, and the global price
+                        <b>3.</b> When you sell your P3C, you get back <span class="notranslate">ETC</span> at the
+                        specified price, and the global price
                         per
                         P3C goes down by -0.00000001 <span class="notranslate">ETC</span>.
                         <br>
                         <b>4.</b> 10% of what you would get back for the sale is distributed to all other P3C holders
                         proportionally.
                         <br>
-                        <i>Remember, the contract holds enough <span class="notranslate">ETC</span> to pay everyone, but the price you'll get is always changing.</i>
+                        <i>Remember, the contract holds enough <span class="notranslate">ETC</span> to pay everyone,
+                            but the price you'll get is always changing.</i>
                         <img class="center-image" style="width: 75%" src="doc-assets/co.png" alt="Growth">
                     </p>
                 </div>
                 <div class="ui segment">
                     <h4>Q: What is the plan for P3C to succeed?</h4>
                     <div class="instruction">
-                    <p>A: P3C is a tool for people that want the freedom to save for retirement, but also want to be able to pull money in and out of their savings without restriction on age or nationality. As more and more people around the world stop working regular full-time jobs, the need for P3C will expand. These are the users P3C wants to serve.
-                    <li >Have an idea for a small online store? Give a little P3C back to users to encourage them to come back. Think loyalty points that pay dividends.</li>
-                    <li>Want to hire a friend to help you with something? Give them some P3C. They can choose to sell some of it, or all of it immediately.</li>
-                    <br>
-                    <p> Even if they choose to sell the P3C immediately, you know that 10% of that money is going back to the rest of the community. If enough people build businesses on top of P3C, more people will want to hold it so even if the business you originally supported fails, the network can still grow.</p>
-                </div>
+                        <p>A: P3C is a tool for people that want the freedom to save for retirement, but also want to
+                            be able to pull money in and out of their savings without restriction on age or
+                            nationality. As more and more people around the world stop working regular full-time jobs,
+                            the need for P3C will expand. These are the users P3C wants to serve.
+                            <li>Have an idea for a small online store? Give a little P3C back to users to encourage
+                                them to come back. Think loyalty points that pay dividends.</li>
+                            <li>Want to hire a friend to help you with something? Give them some P3C. They can choose
+                                to sell some of it, or all of it immediately.</li>
+                            <br>
+                            <p> Even if they choose to sell the P3C immediately, you know that 10% of that money is
+                                going back to the rest of the community. If enough people build businesses on top of
+                                P3C, more people will want to hold it so even if the business you originally supported
+                                fails, the network can still grow.</p>
+                    </div>
                 </div>
                 <div class="ui segment">
                     <h4>Q: What is Ethereum Classic, and why is P3C on it?</h4>
-                    <p class="instruction">A: Ethereum Classic is a system that allows you to run contracts, like P3C, <a href="https://www.youtube.com/watch?v=l9dpjN3Mwps&" target="_blank">in a trustless way.</a> This means that the contract and any funds inside of it is protected by computers all throughout the world. Ethereum Classic system also stands for the idea that <b>code is law</b>, which means that however the program runs, even if the results are unexpected, is valid. To use Ethereum Classic, you need <span class="notranslate">ETC</span> which is the native currency. There can only be 210 million <span class="notranslate">ETC</span>. You can purchase <span class="notranslate">ETC</span> on exchanges like <a href="https://www.coinbase.com/" target="_blank">Coinbase</a> or <a href="https://www.binance.com/en/trade/ETC_BTC" target="_blank">Binance</a>.
+                    <p class="instruction">A: Ethereum Classic is a system that allows you to run contracts, like P3C,
+                        <a href="https://www.youtube.com/watch?v=l9dpjN3Mwps&" target="_blank">in a trustless way.</a>
+                        This means that the contract and any funds inside of it is protected by computers all
+                        throughout the world. Ethereum Classic system also stands for the idea that <b>code is law</b>,
+                        which means that however the program runs, even if the results are unexpected, is valid. To use
+                        Ethereum Classic, you need <span class="notranslate">ETC</span> which is the native currency.
+                        There can only be 210 million <span class="notranslate">ETC</span>. You can purchase <span
+                            class="notranslate">ETC</span> on exchanges like <a href="https://www.coinbase.com/" target="_blank">Coinbase</a>
+                        or <a href="https://www.binance.com/en/trade/ETC_BTC" target="_blank">Binance</a>.
                         <img src="img/etc-logo.png" class=" etc-small" />
-                    </div>
+                </div>
                 <div class="ui segment">
                     <h4>Q: Can I access P3C from a mobile phone?</h4>
                     <p class="instruction">A: Yes! You can install
@@ -385,14 +429,17 @@
                 <div class="ui segment">
                     <h4>Q: Can I make my own version of P3C?</h4>
                     <p class="instruction">A: Yes, in fact we encourage it! You can go to the <a href="https://github.com/p3c-bot/p3c-bot.github.io">source
-                        code</a> and simply follow the README to build your own version in minutes. With your own
+                            code</a> and simply follow the README to build your own version in minutes. With your own
                         version, you collect a contract bonus of all transactions going through the website.</p>
                 </div>
                 <div class="ui segment">
                     <h4>Q: What exactly is reinvesting?</h4>
-                    <p class="instruction">A: Re-investing means that you are choosing to take all your <span class="notranslate">ETC</span> earnings
-                        (dividends) and exchange them for additional P3C tokens. During re-investment, the 10% community fee is incurred as with
-                        all transactions. In this way, reinvesting your tokens increases your holdings, thereby increasing
+                    <p class="instruction">A: Re-investing means that you are choosing to take all your <span class="notranslate">ETC</span>
+                        earnings
+                        (dividends) and exchange them for additional P3C tokens. During re-investment, the 10%
+                        community fee is incurred as with
+                        all transactions. In this way, reinvesting your tokens increases your holdings, thereby
+                        increasing
                         future earnings. Think "compound interest". By default you have auto-compounding turned on.</p>
                 </div>
             </div>
@@ -418,10 +465,12 @@
                     <div class="ten wide column">
                         <h4 class="ui inverted header">Disclaimer</h4>
                         <p class="instruction">
-                            This project is experimental. Do not send any <span class="notranslate">ETC</span> you cannot afford to
+                            This project is experimental. Do not send any <span class="notranslate">ETC</span> you
+                            cannot afford to
                             lose. There is zero guarantee
                             that you will make <span class="notranslate">ETC</span>. Join at your own risk and
-                            <b>PLEASE</b> do not attempt to pressure friends, family or strangers into participating. The
+                            <b>PLEASE</b> do not attempt to pressure friends, family or strangers into participating.
+                            The
                             contract is running<a style="color: orange;" target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">
                                 here</a> and cannot be changed. Don't trust, verify.
                         </p>
@@ -432,6 +481,7 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/flipclock.min.js"></script>
+    <script src="lib/util.js"></script>
     <script src="lib/home.js"></script>
 </body>
 

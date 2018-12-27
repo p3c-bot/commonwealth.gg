@@ -283,6 +283,15 @@ i.blue.icon {
     color: red;
 }
 
+.main-stats {
+    padding-top: 0px !important;
+}
+
+.stats.icon {
+    margin-right: 7px;
+    display: inline;
+}
+
 /* Mobile */
 @media only screen and (max-width: 989px) {
 
