@@ -292,6 +292,10 @@ i.blue.icon {
     display: inline;
 }
 
+.feature-title {
+    margin-top: 5px !important;
+}
+
 /* Mobile */
 @media only screen and (max-width: 989px) {
 
