@@ -206,21 +206,13 @@
             <h2 class="feature-title">Live System Stats</h2>
             <div id="statsContainer" class="ui equal width stackable grid">
                 <div class="center aligned row">
-                    <div class="column" style="padding-bottom: 0px !important;">
-                        <div id="createdStats" class="ui segments">
-                            <div class="ui segment">
-                                <h4 class="stats"><i class="globe line circle icon stats"></i>P3C Created: <span id="tokenSupply"></span>
-                                    (<span id="tokenSupplyPercentage"></span> of Hard Cap)</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column" style="padding-bottom: 0px !important;">
-                            <div id="sizeStats" class="ui segments">
-                                <div class="ui segment">
-                                    <h4 class="stats"><i class="ethereum line circle icon stats"></i>Locked Funds: <span id="sizeETC"></span></h4>
+                        <div class="column" style="padding-bottom: 0px !important;">
+                                <div id="sizeStats" class="ui segments">
+                                    <div class="ui segment">
+                                        <h4 class="stats"><i class="ethereum line circle icon stats"></i>Locked Funds: <span id="sizeETC"></span></h4>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     <div class="column" style="padding-bottom: 0px !important;">
                         <div id="priceStats" class="ui segments">
                             <div class="ui segment">
@@ -229,6 +221,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column" style="padding-bottom: 0px !important;">
+                            <div id="createdStats" class="ui segments">
+                                <div class="ui segment">
+                                    <h4 class="stats"><i class="globe line circle icon stats"></i>P3C Issued: <span id="tokenSupply"></span> of 204,939,006</h4>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
             <div class="ui vertical stripe features">
