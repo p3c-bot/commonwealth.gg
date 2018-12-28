@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/alertify.min.css">
     <link rel="stylesheet" href="css/flipclock.css">
     <link rel="stylesheet" href="css/gtranslate.css">
-        <!-- Default theme -->
+    <!-- Default theme -->
     <link rel="stylesheet" href="css/themes/default.min.css" />
     <!-- Semantic UI theme -->
     <link rel="stylesheet" href="css/themes/semantic.min.css" />
@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div class="ui large inverted stackable menu gradient personal" style="border-radius:0px !important;">
+    <div class="ui large inverted stackable menu gradient personal" style="border-radius:0px !important; margin-bottom: 0px;">
         <div class="ui container">
             <a class="header item" href="/">
                 <img src="img/whale.svg" class="ui mini image" />
@@ -50,7 +50,9 @@
     <div class="pusher">
         <div class="ui masthead vertical center aligned segment">
             <div class="ui text container jumbotron">
-                <img width="350" height="350" class="logo" src="/img/diamond.gif" alt="Diamond">
+                <img width="350" height="350" class="logo custom-computer only" src="/img/diamond.gif" alt="Diamond">
+                <img width="50%" height="50%" class="logo mobile only" src="/img/diamond.gif" alt="Diamond">
+
                 <h1 style="margin-top: 0px">P3C.io: Social Security for the Gig Economy.</h1>
                 <a target="_blank" href="/use.html" class="dashboard-link ui huge green primary button" style="margin-bottom: 10px;">Participate
                     <i class="right arrow icon"></i>
@@ -207,15 +209,9 @@
                     <div class="column" style="padding-bottom: 0px !important;">
                         <div id="createdStats" class="ui segments">
                             <div class="ui segment">
-                                    <h4 class="stats"><i class="globe line circle icon stats"></i>P3C Created: <span id="tokenSupply"></span>  (<span id="tokenSupplyPercentage"></span> of Hard Cap)</h4>
+                                <h4 class="stats"><i class="globe line circle icon stats"></i>P3C Created: <span id="tokenSupply"></span>
+                                    (<span id="tokenSupplyPercentage"></span> of Hard Cap)</h4>
                             </div>
-                        </div>
-                    </div>
-                    <div class="column" style="padding-bottom: 0px !important;">
-                            <div id="priceStats" class="ui segments">
-                            <div class="ui segment">
-                                    <h4 class="stats"><i class="chart line circle icon stats"></i>Current Price: <span id="priceETC"></span> (<span id="priceUSD"></span>)</h4>
-                                </div>
                         </div>
                     </div>
                     <div class="column" style="padding-bottom: 0px !important;">
@@ -225,6 +221,14 @@
                                 </div>
                             </div>
                         </div>
+                    <div class="column" style="padding-bottom: 0px !important;">
+                        <div id="priceStats" class="ui segments">
+                            <div class="ui segment">
+                                <h4 class="stats"><i class="chart line circle icon stats"></i>Current Price: <span id="priceETC"></span>
+                                    (<span id="priceUSD"></span>)</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="ui vertical stripe features">
