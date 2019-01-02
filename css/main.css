@@ -296,6 +296,10 @@ i.blue.icon {
     margin-top: 5px !important;
 }
 
+.airdrop {
+    font-size: initial;
+}
+
 /* Mobile */
 @media only screen and (max-width: 989px) {
 
