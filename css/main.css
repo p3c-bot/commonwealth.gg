@@ -103,6 +103,10 @@ body {
     width: 50%;
 }
 
+.instruct-pic {
+    margin-top: 10px;
+}
+
 .opacity {
     margin-right: 10px;
     background-color: rgba(0, 0, 0, .2);
