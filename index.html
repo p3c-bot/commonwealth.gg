@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/semantic.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/flipclock.css">
     <link rel="stylesheet" href="css/gtranslate.css">
     <!-- Default theme -->
     <link rel="stylesheet" href="css/themes/default.min.css" />
@@ -49,8 +48,8 @@
     <div class="pusher">
         <div class="ui masthead vertical center aligned segment">
             <div class="ui text container jumbotron">
-                <img width="350" height="350" class="logo custom-computer only" src="/img/diamond.gif" alt="Diamond">
-                <img width="50%" height="50%" class="logo mobile only" src="/img/diamond.gif" alt="Diamond">
+                <video autoplay loop muted playsinline width="350" height="350" class="logo custom-computer only" src="/img/mov/diamond.mp4"></video>
+                <video autoplay loop muted playsinline width="50%" height="50%" class="logo mobile only" src="/img/mov/diamond.mp4"></video>
 
                 <h1 style="margin-top: 0px">P3C: A New Form of Prosperity.</h1>
                 <a target="_blank" href="/use.html" class="dashboard-link ui huge green primary button" style="margin-bottom: 10px;">Participate
@@ -239,7 +238,8 @@
                             <h2 class="feature-title">Grow.</h2>
                             <hr class="line">
                             <p> The nature of work is changing. People can now work from anywhere. The P3C insurance algorithm offers financial consistency in an unstable world. Our systems help you monetize, grow, and prosper globally. 
-                                <img width="350" height="350" class="logo" src="/img/hourglass.gif" alt="Phoenix">
+                                <video autoplay loop muted playsinline  width="350" height="350" class="logo" src="/img/mov/hourglass.mp4"></video>
+
                         </div>
                         <div class="column">
                             <div class="icon-main">
@@ -249,7 +249,8 @@
                             <hr class="line">
                             <p> P3C is peer-to-peer insurance. When funds are deposited or withdrawn, a flat <b>10%</b> fee is instantly distributed
                                 to all other participants. Users can join or leave at anytime, no permission required. Learn <b><a target="_blank" href="https://p3c.hostedwiki.co/pages/P3C%20-%20Explained#rules-of-p3c">more</a></b>.</p>
-                            <img width="350" height="350" class="logo" src="/img/spin-ball.gif" alt="Phoenix">
+                            <video autoplay loop muted playsinline  width="350" height="350" class="logo" src="/img/mov/spin-ball.mp4"></video>
+
                         </div>
                         <div class="column">
                             <div class="icon-main">
@@ -310,28 +311,6 @@
                                 this page. We recommend exchanging your coins on Changelly, or using an exchange like
                                 Binance.</p>
                             <img class="logo" style="margin-bottom: 20px;" src="doc-assets/wallet.png" alt="Address">
-                            <link rel="stylesheet" href="https://old.changelly.com/widget.css" /> <a id="changellyButton"
-                                href="https://old.changelly.com/widget/v1?auth=email&from=ETH&to=ETC&merchant_id=5nyu40p1vkzlp7hr&address=&amount=.3&ref_id=5nyu40p1vkzlp7hr&color=009f56"
-                                target="_blank"> <img src="https://old.changelly.com/pay_button_exchange.png" /> </a>
-                            <div id="changellyModal">
-                                <div class="changellyModal-content"> <span class="changellyModal-close">x</span>
-                                    <iframe src="https://old.changelly.com/widget/v1?auth=email&from=ETH&to=ETC&merchant_id=5nyu40p1vkzlp7hr&address=&amount=.3&ref_id=5nyu40p1vkzlp7hr&color=009f56"
-                                        width="600" height="500" class="changelly" scrolling="no" style="overflow-y: hidden; border: none">
-                                        Can't load widget </iframe> </div>
-                                <script type="text/javascript">
-                                    var changellyModal = document.getElementById('changellyModal');
-                                    var changellyButton = document.getElementById('changellyButton');
-                                    var changellyCloseButton = document.getElementsByClassName('changellyModal-close')[
-                                        0];
-                                    changellyCloseButton.onclick = function () {
-                                        changellyModal.style.display = 'none';
-                                    };
-                                    changellyButton.onclick = function widgetClick(e) {
-                                        e.preventDefault();
-                                        changellyModal.style.display = 'block';
-                                    };
-                                </script>
-                            </div>
                         </div>
                         <div class="column">
                             <div class="icon-main">
@@ -351,6 +330,7 @@
             </div>
         </div>
         <div id="clock" class="ui container custom-computer only">
+            <link rel="stylesheet" href="css/flipclock.css">
             <br>
             <h1 class="ui header center aligned">How long has the economy been running?</h1>
             <br>
