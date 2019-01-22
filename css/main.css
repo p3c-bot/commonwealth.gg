@@ -114,6 +114,10 @@ body {
     border-radius: 5px;
 }
 
+.opacity:hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+
 .small {
     font-size: 0.5em;
 }
@@ -143,13 +147,17 @@ body {
 }
 
 .ui.green.button {
-    background-color: #348F50 !important;
+    background-color: #348F50;
 }
 
+.ui.green.button:hover {
+    background-color: #235f35;
+  }
+
 .ui.basic.green.button {
-    background-color: transparent !important;
-    box-shadow: 0 0 0 1px #348F50 inset !important;
-    color: #348F50 !important;
+    background-color: transparent;
+    box-shadow: 0 0 0 1px #348F50 inset;
+    color: #348F50;
 }
 
 i.green.icon {
@@ -162,7 +170,11 @@ i.green.icon {
 
 
 .ui.teal.button {
-    background-color: #48a59d !important;
+    background-color: #48a59d;
+}
+
+.ui.teal.button:hover {
+    background-color: #347771;
 }
 
 .ui.teal.text {
@@ -176,13 +188,17 @@ i.green.icon {
 }
 
 .ui.blue.button {
-    background-color: #56B4D3 !important;
+    background-color: #56B4D3;
+}
+
+.ui.blue.button:hover {
+    background-color: rgb(62, 128, 150);
 }
 
 .ui.basic.blue.button {
-    background-color: transparent !important;
-    box-shadow: 0 0 0 1px #56B4D3 inset !important;
-    color: #56B4D3 !important;
+    background-color: transparent;
+    box-shadow: 0 0 0 1px #56B4D3 inset;
+    color: #56B4D3;
 }
 
 i.blue.icon {
