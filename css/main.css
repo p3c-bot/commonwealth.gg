@@ -162,7 +162,7 @@ body {
 }
 
 .ui.green.button:hover {
-    background-color: #235f35;
+    background-color: #235f35 !important;
   }
 
 .ui.basic.green.button {
