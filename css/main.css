@@ -280,6 +280,10 @@ i.blue.icon {
     padding-right: 0px;
 }
 
+.ui.primary.basic.button:hover {
+    background-color: rgba(72, 165, 157, .2) !important;
+}
+
 .qtip-content {
     background-color: white;
 }
