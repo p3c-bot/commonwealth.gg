@@ -334,6 +334,10 @@ i.blue.icon {
     font-size: initial;
 }
 
+.alert-text {
+    text-align: center;
+}
+
 /* Mobile */
 @media only screen and (max-width: 989px) {
 
