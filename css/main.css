@@ -170,6 +170,11 @@ body {
     color: #348F50;
 }
 
+.ui.orange.button:hover {
+    background-color: #994712 !important;
+  }
+
+
 i.green.icon {
     color: #348F50 !important;
 }
@@ -336,6 +341,12 @@ i.blue.icon {
 
 .alert-text {
     text-align: center;
+}
+
+.coinbase-override {
+    font-size: 1.14285714rem !important;
+    font-family: Lato !important;
+    margin-bottom: 10px;
 }
 
 /* Mobile */
