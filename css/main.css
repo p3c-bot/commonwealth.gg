@@ -102,6 +102,11 @@ body {
     width: 50%;
 }
 
+.buy-amount {
+    background: white !important;
+    margin-top: 10px !important;
+}
+
 .center-larger {
     display: block;
     margin-left: auto;
@@ -158,6 +163,11 @@ body {
 
 .ui.green.button {
     background-color: #348F50;
+}
+
+.participate {
+    background-color: #348F50 !important;
+    margin-bottom: 10px !important;
 }
 
 .ui.green.button:hover {
@@ -294,6 +304,10 @@ i.blue.icon {
 
 .instruction {
     text-align: left;
+}
+
+.disclaimer {
+    font-size: 14px;
 }
 
 .reinvest {

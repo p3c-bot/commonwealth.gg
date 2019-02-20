@@ -120,7 +120,7 @@
                 <button id="buy" class="ui large fluid green button" style="margin-top:10px;">
                     Buy P3C
                 </button>
-                <div id="buyAmount" class="ui fluid large basic green button approx no click" style="margin-top:10px;">
+                <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
                     <i>How much will you buy?</i>
                 </div>
                 <!-- Begin GTranslate: https://gtranslate.io/ -->
@@ -131,7 +131,7 @@
                         onclick="doGTranslate('en|zh-CN');return false;" title="Chinese (Simplified)" class="gflag nturl"
                         style="background-position:-300px -0px;"><img src="//gtranslate.net/flags/blank.png" height="24"
                             width="24" alt="Chinese (Simplified)" /></a><a href="#" onclick="doGTranslate('en|en');return false;"
-                            title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png"
+                        title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png"
                             height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;"
                         title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="//gtranslate.net/flags/blank.png"
                             height="24" width="24" alt="French" /></a><a href="#" onclick="doGTranslate('en|hi');return false;"
@@ -266,7 +266,7 @@
             </div>
             <div id="myHoldings" class="eight wide column border right border left" style="background: rgba(58, 150, 139, 0.17);">
                 <h1 class="ui header" style="margin-bottom: 0px;">
-                    <div style="margin-left: 10px;" class="content">My Holdings</div><i id="portfolioButton" class="chart info circle icon portfolio"></i>
+                    <div style="margin-left: 10px;" class="content">Holdings</div><i id="portfolioButton" class="chart info circle icon portfolio"></i>
                 </h1>
                 <div class="ui horizontal segments" style="margin-top: 5px">
 
@@ -374,13 +374,11 @@
                 <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Ethereum
                     Classic</a>
                 Wallet enabled</a>, and Metamask turned off. <b>Contract will show no balance if wallet not
-                    connected properly!</b> <a target="_blank" href="https://www.youtube.com/watch?v=XEDjtJJH0BE&"><b>Video
+                    connected properly!</b> <a target="_blank" href="https://youtu.be/tBbl_nbp8_k"><b>Video
                         Tutorial.</b></a>
                 </b>
             </p>
         </div>
-
-        <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
 
         <div class="ui stackable grid">
 
@@ -422,30 +420,30 @@
                         <h4 class="ui header">
                             <i class="circular inverted blue exchange alternate icon"></i>
                             <div class="content">
-                                <div class="sub header"><b>Transfer P3C</b>. Use address below when receiving. <i>Pay
-                                        in P3C!</i></div>
+                                <div class="sub header"><b>Transfer P3C</b>. <i>Always send to a crop address.</i></div>
                             </div>
                         </h4>
                     </div>
                     <div class="ui segment notranslate">
                         <b>Crop Address:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
                             class="ui primary basic button copy" data-clipboard-text="">
-                            <i class="small clipboard icon"></i>
+                            <i class="copy icon"></i>
                         </button>
                     </div>
                     <div class="ui segment">
                         <form class="ui form">
                             <div class="field">
-                                <input type="text" id="transferAddress" placeholder="Destination P3C Address">
+                                <input type="text" id="transferAddress" placeholder="         Destination Crop Address">
                             </div>
                         </form>
                     </div>
                     <div class="ui segment">
-                        <form class="ui form">
-                            <div class="field">
-                                <input type="text" id="transferTokenCount" placeholder="Amount of P3C Tokens">
+                        <div class="ui right labeled left icon input fluid buy">
+                            <input type="text" id="transferTokenCount" placeholder="Amount of P3C Tokens">
+                            <div class="ui tag teal label notranslate">
+                                P3C
                             </div>
-                        </form>
+                        </div>
                     </div>
                     <div class="ui segment">
                         <button id="transfer" class="ui right labeled large icon teal fluid button">
@@ -457,7 +455,7 @@
                         <a id="refillButton" class="donate-with-crypto ui right labeled icon large fluid orange button coinbase-override"
                             style="padding-top: 10px" href="https://commerce.coinbase.com/checkout/ea25233e-7a3f-4554-b450-41d13dfdc6ff">
                             <i class="right bitcoin icon"></i>
-                            <span class="coinbase-override">Refill your P3C with other Currencies</span>
+                            <span class="coinbase-override">Buy P3C with other Currencies</span>
                         </a>
                         <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
                         </script>
@@ -488,8 +486,8 @@
                     </div>
                 </div>
                 <div class="ten wide column">
-                    <h4 class="ui inverted header">Disclaimer</h4>
-                    <p class="instruction">
+                    <h5 class="ui inverted header">Disclaimer</h5>
+                    <p class="instruction disclaimer">
                         This project is experimental. Do not send any <span class="notranslate">ETC</span> you cannot
                         afford to
                         lose. There is zero guarantee
