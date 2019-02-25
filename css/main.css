@@ -265,6 +265,7 @@ i.blue.icon {
 }
 
 .agreement {
+    font-size: 16px;
     text-align: center;
     padding: 5px;
 }
@@ -303,6 +304,12 @@ i.blue.icon {
 }
 
 .instruction {
+    text-align: left;
+}
+
+.faq {
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
     text-align: left;
 }
 
