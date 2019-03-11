@@ -165,6 +165,15 @@ body {
     background-color: #348F50;
 }
 
+.ui.email.button {
+    background-color: #48a59d !important;
+}
+
+.ui.email.button:hover {
+    background-color: #347771 !important;
+  }
+
+
 .participate {
     background-color: #348F50 !important;
     margin-bottom: 10px !important;
