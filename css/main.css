@@ -1,4 +1,6 @@
-
+body {
+    color: rgba(0, 0, 0, .7) !important;
+}
 
 .clock {
     display: inline-block;
