@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>P3C Dashboard - Manage your Holdings</title>
+    <title>P3C Dashboard - Manage your Vault</title>
     <meta charset="utf8">
     <meta name="description" content="P3C.io. An implementation of P2P employment insurance on Ethereum Classic. Totally Decentralized. Use P3C to store funds when times are good, and pull when you need funds.">
     <meta name="keywords" content="ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance">
@@ -56,24 +56,24 @@
                             <strong>
                                 <i class="ethereum icon"></i>
                             </strong>
-                            <span id="etcInContract">0 ETC</span> <span id="etcInContractUSDPrice">($0)</span>
+                            Vault: <span id="etcInContract">0 ETC</span> <span id="etcInContractUSDPrice">($0)</span>
 
                         </div>
                     </a>
-                    <div class="opacity notranslate">
+                    <!-- <div class="opacity notranslate">
                         <strong>
                             <i class="tree icon"></i>
                             <span>P3C:&nbsp;</span>
                         </strong>
                         <span id="tokensInCirculation">0.0</span>
-                    </div>
-                    <a target="_blank" href="http://p3c.trade">
+                    </div> -->
+                    <!-- <a target="_blank" href="http://p3c.trade">
                         <div class="opacity">
                             <strong>
                                 Price Chart
                             </strong>
                         </div>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -82,188 +82,6 @@
     <div class="ui container margin top two">
 
         <div class="ui stackable grid">
-
-            <div class="four wide column buy">
-                <h2 class="ui header">
-                    <img src="img/time-forward.svg" class="width one and eight" />
-                    <div class="content">
-                        <span>Buy</span>
-                        <span class="ui green text small">&nbsp;| Strong Hands</span>
-                        <div class="sub header">
-                            <strong>Start here</strong>! Buy new P3C.</div>
-                    </div>
-                </h2>
-
-                <div class="ui fluid large basic buttons" style="margin-top:10px; margin-bottom:10px;">
-                    <div class="ui button price no click">
-                        <i class="tree icon"></i>
-                        <strong>Price</strong>
-                    </div>
-
-                    <div class="ui positive button price no click">
-                        <i class="ethereum green icon"></i>
-                        <strong>
-                            <span class="buy-price" id="tokenBuyGet">0.0000</span>
-                            <span class="ui green text small eleven"> | </span> <span class="ui green text small eleven"
-                                id="tokenUSDBuyPrice">0.00</span>
-                        </strong>
-                    </div>
-                </div>
-
-                <div class="ui right labeled left icon input fluid large buy">
-                    <i class="ethereum green icon"></i>
-                    <input placeholder="ETC to Spend..." type="text" id="buyInput">
-                    <div class="ui tag green label notranslate">
-                        ETC
-                    </div>
-                </div>
-                <button id="buy" class="ui large fluid green button" style="margin-top:10px;">
-                    Buy P3C
-                </button>
-                <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
-                    <i>How much will you buy?</i>
-                </div>
-                <!-- Begin GTranslate: https://gtranslate.io/ -->
-                <link rel="stylesheet" href="css/gtranslate.css">
-                <div class="custom-computer only">
-                    <a href="#" onclick="doGTranslate('en|ar');return false;" title="Arabic" class="gflag nturl" style="background-position:-100px -0px;"><img
-                            src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="Arabic" /></a><a href="#"
-                        onclick="doGTranslate('en|zh-CN');return false;" title="Chinese (Simplified)" class="gflag nturl"
-                        style="background-position:-300px -0px;"><img src="//gtranslate.net/flags/blank.png" height="24"
-                            width="24" alt="Chinese (Simplified)" /></a><a href="#" onclick="doGTranslate('en|en');return false;"
-                        title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;"
-                        title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="French" /></a><a href="#" onclick="doGTranslate('en|hi');return false;"
-                        title="Hindi" class="gflag nturl" style="background-position:-500px -100px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Hindi" /></a><a href="#" onclick="doGTranslate('en|ja');return false;"
-                        title="Japanese" class="gflag nturl" style="background-position:-700px -100px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Japanese" /></a><a href="#" onclick="doGTranslate('en|ko');return false;"
-                        title="Korean" class="gflag nturl" style="background-position:-0px -200px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Korean" /></a><a href="#" onclick="doGTranslate('en|ms');return false;"
-                        title="Malay" class="gflag nturl" style="background-position:-400px -500px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Malay" /></a><a href="#" onclick="doGTranslate('en|pl');return false;"
-                        title="Polish" class="gflag nturl" style="background-position:-200px -200px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Polish" /></a><a href="#" onclick="doGTranslate('en|pt');return false;"
-                        title="Portuguese" class="gflag nturl" style="background-position:-300px -200px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Portuguese" /></a><a href="#" onclick="doGTranslate('en|ru');return false;"
-                        title="Russian" class="gflag nturl" style="background-position:-500px -200px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Russian" /></a><a href="#" onclick="doGTranslate('en|es');return false;"
-                        title="Spanish" class="gflag nturl" style="background-position:-600px -200px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Spanish" /></a><a href="#" onclick="doGTranslate('en|et');return false;"
-                        title="Estonian" class="gflag nturl" style="background-position:-400px -400px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Estonian" /></a><a href="#" onclick="doGTranslate('en|de');return false;"
-                        title="German" class="gflag nturl" style="background-position:-300px -100px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="German" /></a><a href="#" onclick="doGTranslate('en|cs');return false;"
-                        title="Czech" class="gflag nturl" style="background-position:-600px -0px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Czech" /></a> <a href="#" onclick="doGTranslate('en|nl');return false;"
-                        title="Dutch" class="gflag nturl" style="background-position:-0px -100px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="24" width="24" alt="Dutch" /></a>
-                </div>
-                <!-- MOBILE                 -->
-                <div class="mobile only" style="margin-top: 10px;">
-                    <select onchange="doGTranslate(this);">
-                        <option value="">🌐 Language</option>
-                        <option value="en|en">🇺🇸 English</option>
-                        <option value="en|zh-CN">🇨🇳 Chinese</option>
-                        <option value="en|ru">🇷🇺 Russian</option>
-                        <option value="en|es">🇪🇸 Spanish</option>
-                        <option value="en|ja">🇯🇵 Japanese</option>
-                        <option value="en|ko">🇰🇷 Korean</option>
-                        <option value="en|hi">🇮🇳 Hindi</option>
-                        <option value="en|vi">🇻🇳 Vietnamese</option>
-                        <option value="en|pt">🇧🇷 Portuguese</option>
-                        <option value="en|bg">🇧🇬 Bulgarian</option>
-                        <option value="en|uk">🇺🇦 Ukrainian</option>
-                        <option value="en|pl">🇵🇱 Polish</option>
-                        <option value="en|ms">🇲🇾 Malay</option>
-                        <option value="en|iw">🇮🇱 Hebrew</option>
-                        <option value="en|fr">🇫🇷 French</option>
-                        <option value="en|ar">🇸🇦 Arabic</option>
-                        <option value="en|zh-TW">🇹🇼 Chinese (Traditional)</option>
-                        <option value="en|de">🇩🇪 German</option>
-                        <option value="en|tr">🇹🇷 Turkish</option>
-                        <option value="en|el">🇬🇷 Greek</option>
-                        <option value="en|fa">🇮🇷 Persian</option>
-                        <option value="en|ur">🇵🇰 Urdu</option>
-                        <option value="en|ro">🇷🇴 Romanian</option>
-                        <option value="en|sw">🇰🇪 Swahili</option>
-                        <option value="en|af">🇿🇦 Afrikaans</option>
-                        <option value="en|sq">🇦🇱 Albanian</option>
-                        <option value="en|hy">🇦🇲 Armenian</option>
-                        <option value="en|az">🇦🇿 Azerbaijani</option>
-                        <option value="en|eu">Basque</option>
-                        <option value="en|be">🇧🇾 Belarusian</option>
-                        <option value="en|ca">Catalan</option>
-                        <option value="en|hr">🇭🇷 Croatian</option>
-                        <option value="en|cs">🇨🇿 Czech</option>
-                        <option value="en|da">🇩🇰 Danish</option>
-                        <option value="en|nl">🇳🇱 Dutch</option>
-                        <option value="en|et">🇪🇪 Estonian</option>
-                        <option value="en|tl">🇵🇭 Filipino</option>
-                        <option value="en|fi">🇫🇮 Finnish</option>
-                        <option value="en|gl">Galician</option>
-                        <option value="en|ka">🇬🇪 Georgian</option>
-                        <option value="en|ht">🇭🇹 Haitian Creole</option>
-                        <option value="en|hu">🇭🇺 Hungarian</option>
-                        <option value="en|is">🇮🇸 Icelandic</option>
-                        <option value="en|id">🇮🇩 Indonesian</option>
-                        <option value="en|ga">🇮🇪 Irish</option>
-                        <option value="en|it">🇮🇹 Italian</option>
-                        <option value="en|lv">🇱🇻 Latvian</option>
-                        <option value="en|lt">🇱🇹 Lithuanian</option>
-                        <option value="en|mk">🇲🇰 Macedonian</option>
-                        <option value="en|mt">🇲🇹 Maltese</option>
-                        <option value="en|no">🇳🇴 Norwegian</option>
-                        <option value="en|sr">🇷🇸 Serbian</option>
-                        <option value="en|sk">🇸🇰 Slovak</option>
-                        <option value="en|sl">🇸🇮 Slovenian</option>
-                        <option value="en|sv">🇸🇪 Swedish</option>
-                        <option value="en|th">🇹🇭 Thai</option>
-                        <option value="en|cy">Welsh</option>
-                        <option value="en|yi">Yiddish</option>
-                    </select>
-                    <div id="google_translate_element2"></div>
-                </div>
-                <div id="google_translate_element2"></div>
-                <script type="text/javascript">
-                    function googleTranslateElementInit2() {
-                        new google.translate.TranslateElement({
-                            pageLanguage: 'en',
-                            autoDisplay: false
-                        }, 'google_translate_element2');
-                    }
-                </script>
-                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
-                <script type="text/javascript">
-                    /* <![CDATA[ */
-                    eval(function (p, a, c, k, e, r) {
-                        e = function (c) {
-                            return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(
-                                c + 29) : c.toString(36))
-                        };
-                        if (!''.replace(/^/, String)) {
-                            while (c--) r[e(c)] = k[c] || e(c);
-                            k = [function (e) {
-                                return r[e]
-                            }];
-                            e = function () {
-                                return '\\w+'
-                            };
-                            c = 1
-                        };
-                        while (c--)
-                            if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
-                        return p
-                    }(
-                        '6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',
-                        43, 43,
-                        '||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'
-                        .split('|'), 0, {})) /* ]]> */
-                </script>
-                <!-- END GTranslate: https://gtranslate.io/ -->
-                <br>
-            </div>
             <div id="myHoldings" class="eight wide column border right border left" style="background: rgba(58, 150, 139, 0.17);">
                 <h1 class="ui header" style="margin-bottom: 0px;">
                     <div style="margin-left: 10px;" class="content">Holdings</div><i id="portfolioButton" class="chart info circle icon portfolio"></i>
@@ -304,24 +122,65 @@
                     </div>
                 </div>
                 <div class="ui one column centered grid">
-                    <div class="column" style="padding-top: 0px; padding-bottom: 0px;">
+                    <div class="column" style="padding-top: 0px; padding-bottom: 10px;">
                         <div class="ui horizontal segment">
                             <div id="sponsor" class="sponsor"></div>
                             <span class="ui text blue small" style="float: right"><a href="/sponsor.html" target="_blank">Buy
                                     this sponsorship space!</a></span>
                         </div>
                     </div>
-                    <div id="autoReinvest" class="ui toggle checkbox reinvest">
+                    <!-- <div id="autoReinvest" class="ui toggle checkbox reinvest">
                         <input type="checkbox" name="public">
                         <br>
                     </div>
                     <div id="infoButton" class="ui icon " style="margin-top: 10px; padding-left: 0px;">
                         <label id="reinvestToggle" for="autoReinvest" style="margin-top: 10px; padding-left: 0px; padding-right: 0px;">
                             Auto Compound <i id="info" class="info circle icon"></i></label>
-                    </div>
+                    </div> -->
 
                 </div>
 
+            </div>
+            <div class="four wide column buy">
+                <h2 class="ui header">
+                    <img src="img/time-forward.svg" class="width one and eight" />
+                    <div class="content">
+                        <span>Buy</span>
+                        <span class="ui green text small">&nbsp;| Strong Hands</span>
+                        <div class="sub header">
+                            <strong>Start here</strong>! Buy new P3C.</div>
+                    </div>
+                </h2>
+
+                <div class="ui fluid large basic buttons" style="margin-bottom:10px;">
+                    <div class="ui button price no click">
+                        <i class="tree icon"></i>
+                        <strong>Price</strong>
+                    </div>
+
+                    <div class="ui positive button price no click">
+                        <i class="ethereum green icon"></i>
+                        <strong>
+                            <span class="buy-price" id="tokenBuyGet">0.0000</span>
+                            <span class="ui green text small eleven"> | </span> <span class="ui green text small eleven"
+                                id="tokenUSDBuyPrice">0.00</span>
+                        </strong>
+                    </div>
+                </div>
+                <div class="ui right labeled left icon input fluid large buy">
+                    <i class="ethereum green icon"></i>
+                    <input placeholder="ETC to Spend..." type="text" id="buyInput">
+                    <div class="ui tag green label notranslate">
+                        ETC
+                    </div>
+                </div>
+                <button id="buy" class="ui large fluid green button" style="margin-top:10px;">
+                    Buy P3C
+                </button>
+                <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
+                    <i>How much will you buy?</i>
+                </div>
+                <br>
             </div>
             <div class="four wide column sell">
                 <h2 class="ui header">
@@ -330,11 +189,11 @@
                         <span>Sell</span>
                         <span class="ui text blue small">&nbsp;| Weak Hands</span>
                         <div class="sub header">
-                            Sell for a profit or loss.</div>
+                            Cash out of P3C.</div>
                     </div>
                 </h2>
 
-                <div class="ui fluid large basic buttons" style="margin-top:10px; margin-bottom:10px;">
+                <div class="ui fluid large basic buttons" style="margin-bottom:10px;">
                     <div class="ui button price no click">
                         <i class="tree icon"></i>
                         <strong>Price</strong>
@@ -381,55 +240,29 @@
         </div>
 
         <div class="ui stackable grid">
-
             <div class="eight wide column">
-                <div style="text-align: center">
-                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
-                        style="margin-bottom:10px;">
-                        <i class="left discord icon"></i>
-                        Join Our Community!
-                    </a>
-                </div>
-                <div class="ui segments">
-                    <div class="ui segment">
-                        <h4 class="ui header" style="text-align: left;">
-                            <b>Instructions:</b>
-                        </h4>
-                        <p class="instruction">
-                            1. Download <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Saturn
-                                Wallet</a> and get Ethereum Classic (ETC).
-                            <br>
-                            2. Ethereum users need to disable Metamask while Saturn wallet is on.
-                            <br>
-                            3. Every P3C buy or sell distributes a <b>10%</b> community fee as <b>prosperity</b> to
-                            each P3C holder. The more P3C you hold, the greater your share of prosperity.
-                            <br>
-                            4. P3C price increases/decreases by 0.00000001 ETC through each buy/sell.
-                            <br>
-                            5. As you gather more <b>prosperity</b>, you can withdraw it or allow it to compound.
-                        </p>
-                        <img class="center-image" style="width: 100%" src="doc-assets/co.png" alt="Growth">
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="eight wide column">
+                    <div style="text-align: center">
+                            <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
+                                style="margin-bottom:10px;">
+                                <i class="left discord icon"></i>
+                                Interested or Need Help? Chat now.
+                            </a>
+                        </div>
                 <div class="ui segments transfer">
                     <div class="ui segment">
                         <h4 class="ui header">
                             <i class="circular inverted blue exchange alternate icon"></i>
                             <div class="content">
-                                <div class="sub header"><b>Transfer P3C</b>. <i>Always send to a crop address.</i></div>
+                                <div class="sub header"><b>Transfer P3C</b>. <i>Always send to another crop address (see below).</i></div>
                             </div>
                         </h4>
                     </div>
                     <div class="ui segment notranslate">
-                        <b>Crop Address:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
-                            class="ui primary basic button copy" data-clipboard-text="">
-                            <i class="copy icon"></i>
-                        </button>
-                    </div>
+                            <b>My Crop:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
+                                class="ui primary basic button copy" data-clipboard-text="">
+                                <i class="copy icon"></i>
+                            </button>
+                        </div>
                     <div class="ui segment">
                         <form class="ui form">
                             <div class="field">
@@ -451,7 +284,7 @@
                             Transfer
                         </button>
                     </div>
-                    <div class="ui segment">
+                    <!-- <div class="ui segment">
                         <a id="refillButton" class="donate-with-crypto ui right labeled icon large fluid orange button coinbase-override"
                             style="padding-top: 10px" href="https://commerce.coinbase.com/checkout/ea25233e-7a3f-4554-b450-41d13dfdc6ff">
                             <i class="right bitcoin icon"></i>
@@ -459,6 +292,32 @@
                         </a>
                         <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
                         </script>
+                    </div> -->
+                </div>
+            </div>
+
+
+            <div class="eight wide column">
+                <div class="ui segments">
+                    <div class="ui segment">
+                        <h4 class="ui header" style="text-align: left;">
+                            <b>Instructions:</b>
+                        </h4>
+                        <p class="instruction">
+                            1. Download <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Saturn
+                                Wallet</a> and get Ethereum Classic (ETC).
+                            <br>
+                            2. Ethereum users need to disable Metamask while Saturn wallet is on.
+                            <br>
+                            3. Every P3C buy or sell distributes a <b>10%</b> community fee as <b>prosperity</b> to
+                            each P3C holder. The more P3C you hold, the greater your share of prosperity.
+                            <br>
+                            4. P3C price increases/decreases by 0.00000001 ETC through each buy/sell.
+                            <br>
+                            5. As you gather more <b>prosperity</b>, you can withdraw it or allow it to compound.
+                        </p>
+                        <img class="center-image" style="width: 100%" src="doc-assets/co.png" alt="Growth">
+
                     </div>
                 </div>
             </div>

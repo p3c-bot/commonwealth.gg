@@ -2,6 +2,35 @@ body {
     color: rgba(0, 0, 0, .7) !important;
 }
 
+.cityscape {
+    /* The image used */
+    background-image: url("/img/cityscape.png");
+
+    /* Full height */
+    height: 0%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4.5px;
+    margin-bottom: 20px;
+    font-size: 45px;
+}
+
+
+
 .clock {
     display: inline-block;
     width: auto;
@@ -95,6 +124,7 @@ body {
     background: linear-gradient(to left, #56B4D3, #348F50) !important;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 .center-image {
     display: block;
     margin-left: auto;
@@ -171,7 +201,7 @@ body {
 
 .ui.email.button:hover {
     background-color: #347771 !important;
-  }
+}
 
 
 .participate {
@@ -181,7 +211,7 @@ body {
 
 .ui.green.button:hover {
     background-color: #235f35 !important;
-  }
+}
 
 .ui.basic.green.button {
     background-color: transparent;
@@ -191,7 +221,7 @@ body {
 
 .ui.orange.button:hover {
     background-color: #994712 !important;
-  }
+}
 
 
 i.green.icon {
@@ -345,7 +375,7 @@ i.blue.icon {
 }
 
 .green {
-    color : green;
+    color: green;
 }
 
 .red {
