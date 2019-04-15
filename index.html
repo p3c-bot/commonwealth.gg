@@ -4,8 +4,10 @@
 <head>
     <title>P3C - A New Form of Prosperity</title>
     <meta charset="utf8">
-    <meta name="description" content="Fast, passive payments for live streamers, using Ethereum Classic. Provides a steady source of income for entrepeneuers and nomads. Use algorithms and sound money to plan for the future and gain peace of mind.">
-    <meta name="keywords" content="ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Crypto Social Security, Continuous Organization, Continous Organizations, Defi, Decentralized Finance, DAO, Decentralized Autonomous Organization, Blockchain insurance">
+    <meta name="description"
+        content="Fast, passive payments for live streamers, using Ethereum Classic. Provides a steady source of income for entrepeneuers and nomads. Use algorithms and sound money to plan for the future and gain peace of mind.">
+    <meta name="keywords"
+        content="ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Crypto Social Security, Continuous Organization, Continous Organizations, Defi, Decentralized Finance, DAO, Decentralized Autonomous Organization, Blockchain insurance">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="google-site-verification" content="WrgQBpU2wJGTSp9LZ9NFYn6p_NxgSB95ocpo39Dcydg" />
     <link rel="stylesheet" href="css/semantic.min.css">
@@ -32,47 +34,44 @@
 </head>
 
 <body>
-    <div class="ui large inverted stackable menu gradient personal" style="border-radius:0px !important; margin-bottom: 0px;">
-        <div class="ui container">
-            <a class="header item" href="/">
-                <img src="img/whale.svg" class="ui mini image" />
-                <h2 class="title">P3C.io</h2>
-            </a>
-            <div class="custom-computer only right menu">
-                <div class="item">
-                    <a target="_blank" href="/use.html">
-                        <div class="opacity">
+    <div class="pusher">
+        <div class="cityscape">
+            <div class="ui large inverted stackable menu gradient"
+                style="border-radius:0px !important; margin-bottom: 0px; background: rgba(0, 0, 0, .6) !important;">
+                <div class="ui container">
+                    <a class="header item" href="/">
+                        <img src="img/whale.svg" class="ui mini image" />
+                        <h2 class="title">P3C.io</h2>
+                    </a>
+                    <div class="custom-computer only right menu">
+                        <a class="item" href="/use.html">
                             <strong>
                                 Dashboard
                             </strong>
-                        </div>
-                    </a>
-                    <a target="_blank" href="http://p3c.trade">
-                        <div class="opacity">
+                        </a>
+                        <a class="item" href="https://wiki.p3c.io" target="_blank">
                             <strong>
-                                Price Chart
+                                Wiki
                             </strong>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="pusher">
-        <div class="cityscape">
-        <div class="ui masthead vertical center aligned segment ">
-            <div class="ui text container jumbotron">
-                <!-- <img width="250" height="250" class="logo custom-computer only" loop="" src="/img/diamond.gif" alt="Diamond">
+            <div class="ui masthead vertical center aligned segment ">
+                <div class="ui text container jumbotron">
+                    <!-- <img width="250" height="250" class="logo custom-computer only" loop="" src="/img/diamond.gif" alt="Diamond">
                 <img width="50%" height="50%" class="logo mobile only" src="/img/diamond.gif" alt="Diamond"> -->
-                <h1 class="bg-text mobile only">P3C: <i>Livestream Tipping</i></h1>
-                <h1 class="bg-text custom-computer only" style="margin-top: 325px;">P3C: <i>Fast Livestream Tipping</i></h1>
-                <a href="/use.html" class="dashboard-link ui huge primary button opacity" style="margin-bottom: 10px;">Dashboard
-                    <i class="right arrow icon"></i>
-                </a>
-                <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"
-                    class="ui huge default button">View Vault</a>
+                    <h1 class="bg-text mobile only">P3C: <i>Planetary Prosperity</i></h1>
+                    <h1 class="bg-text custom-computer only" style="margin-top: 325px;">P3C: <i>Planetary Prosperity</i>
+                    </h1>
+                    <a href="/use.html" class="dashboard-link ui huge primary button opacity"
+                        style="margin-bottom: 10px;">Dashboard
+                        <i class="right arrow icon"></i>
+                    </a>
+                    <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"
+                        class="ui huge default button">View Vault</a>
+                </div>
             </div>
-        </div>
         </div>
         <br>
         <div class="ui container vertical stripe">
@@ -83,14 +82,16 @@
                     <div class="column" style="padding-bottom: 0px !important;">
                         <div id="sizeStats" class="ui segments">
                             <div class="ui segment">
-                                <h4 class="stats"><i class="ethereum line circle icon stats"></i>P3C Size: <span id="sizeETC"></span></h4>
+                                <h4 class="stats"><i class="ethereum line circle icon stats"></i>Vault: <span
+                                        id="sizeETC"></span> (<span id="sizeUSD"></span>)</h4>
                             </div>
                         </div>
                     </div>
                     <div class="column" style="padding-bottom: 0px !important;">
                         <div id="priceStats" class="ui segments">
                             <div class="ui segment">
-                                <h4 class="stats"><i class="chart line circle icon stats"></i>P3C Price: <span id="priceETC"></span>
+                                <h4 class="stats"><i class="chart line circle icon stats"></i>P3C Price: <span
+                                        id="priceETC"></span>
                                     (<span id="priceUSD"></span>)</h4>
                             </div>
                         </div>
@@ -98,7 +99,8 @@
                     <div class="column" style="padding-bottom: 0px !important;">
                         <div id="createdStats" class="ui segments">
                             <div class="ui segment">
-                                <h4 class="stats"><i class="globe line circle icon stats"></i>P3C Created: <span id="tokenSupply"></span>
+                                <h4 class="stats"><i class="globe line circle icon stats"></i>P3C Created: <span 
+                                        id="tokenSupply"></span>
                                     of 204,939,006</h4>
                             </div>
                         </div>
@@ -112,42 +114,39 @@
                             <div class="icon-main">
                                 <i class="fas fa-exchange-alt"></i>
                             </div>
-                            <h2 class="feature-title">Grow.</h2>
+                            <h2 class="feature-title">Change.</h2>
                             <hr class="line">
-                            <p> New technology means anyone can start livestreaming right now. The P3C payment system
-                                offers networks of livestreamers a way to easily and fairly collect tips from viewers. A portion of each tip goes to every member, <b>not a middleman.</b> No bank account needed. Instant payouts.</p>
+                            <h3> Imagine a world where paying for goods and services grows your savings rather than
+                                middlemen. </h3>
                             <img class="logo" src="/img/gatekeeper.png" alt="Phoenix">
                         </div>
                         <div class="column">
                             <div class="icon-main">
                                 <i class="fas fa-chart-line"></i>
                             </div>
-                            <h2 class="feature-title">Prosper.</h2>
+                            <h2 class="feature-title">Income.</h2>
                             <hr class="line">
-                            <p> P3C is an advanced tipping engine. When tips are made or withdrawn, a flat <b>10%</b>
-                                fee is automatically distributed
-                                to all other participants, proportional to their P3C holdings. Users and streamers can came or go at anytime, no permission required.
-                                Learn <b><a target="_blank" href="https://p3c.hostedwiki.co/pages/P3C%20-%20Explained#rules-of-p3c">more</a></b>.</p>
+                            <h3> Whenever anybody pays or tips with P3C, the entire global network instantly splits a <i>10%</i>
+                                dividend.</h3>
                             <img class="logo" src="/img/good.png" alt="Phoenix">
                         </div>
                         <div class="column">
                             <div class="icon-main">
                                 <i class="fas fa-sync-alt"></i>
                             </div>
-                            <h2 class="feature-title">Decentralize.</h2>
+                            <h2 class="feature-title">Forever.</h2>
                             <hr class="line">
-                            <p> P3C is an open-source system that runs on the Ethereum Classic (ETC)
-                                blockchain. The contract has been audited multiple times and <b>cannot be changed, removed, or
-                                    tampered with</b>. The P3C vault is one of the strongest algorithms on earth.</p>
-                            <img  class="logo" style="margin-top: 18px;" src="/img/callisto-badge.png"
-                                alt="Phoenix">
+                            <h3>P3C is an automated system that serves its users. It's open 24/7 and available anywhere. No
+                                hidden fees.</h3>
+                            <img class="logo" style="margin-top: 18px;" src="/img/callisto-badge.png" alt="Phoenix">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div style="text-align:center;">
-            <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large green button" style="margin-top: 15px; margin-bottom: 15px;">
+            <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large green button"
+                style="margin-top: 15px; margin-bottom: 15px;">
                 <i class="left discord icon"></i>
                 Join Community Chat
             </a>
@@ -156,14 +155,14 @@
         <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
         <div id="mc_embed_signup">
             <form action="https://p3c.us19.list-manage.com/subscribe/post?u=9e5096bb4b60ca51360d201a8&amp;id=9af39f2a14"
-                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-                style="padding-left: 0px;" novalidate>
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" style="padding-left: 0px;" novalidate>
                 <div id="mc_embed_signup_scroll">
                     <input style="text-align: center; margin-right: auto; margin-left: auto;" type="email" value=""
                         name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9e5096bb4b60ca51360d201a8_9af39f2a14"
-                            tabindex="-1" value=""></div>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            name="b_9e5096bb4b60ca51360d201a8_9af39f2a14" tabindex="-1" value=""></div>
                     <div class="clear"><input style="margin: auto; text-align: center" type="submit" value="Subscribe"
                             name="subscribe" id="mc-embedded-subscribe" class="ui left large email button"></div>
                 </div>
@@ -191,7 +190,8 @@
                             <p>Make sure you keep your seedwords safe! Saturn wallet and Metamask cannot run at the
                                 same time.
                                 See here for
-                                <a target="_blank" href="https://p3c.hostedwiki.co/pages/P3C%20-%20Explained#how-to-start-playing">help</a>
+                                <a target="_blank"
+                                    href="https://p3c.hostedwiki.co/pages/P3C%20-%20Explained#how-to-start-playing">help</a>
                             </p>
                             <img class="logo" src="/img/landing/disable.png" alt="Disable">
                         </div>
@@ -257,8 +257,8 @@
                             <p>
                                 The system is totally open-source and encourages developers to build on top of P3C to
                                 accelerate adoption of their own projects. We are happy to give P3C to you if you need
-                                it for a project. A list of community projects is <a href="https://34r7h.github.io/p3c/docs/projects/"
-                                    target="_blank">here.</a>
+                                it for a project. A list of community projects is <a
+                                    href="https://34r7h.github.io/p3c/docs/projects/" target="_blank">here.</a>
                             </p>
                     </div>
                 </div>
@@ -290,8 +290,8 @@
                 <div class="ui segment">
                     <h3>Current System Liquidity</h3>
                     <a id="liquidity"></a>
-                    <iframe src="https://www.desmos.com/calculator/tzlxpyl6yd?embed" width="100%" height="400px" style="border: 1px solid #ccc"
-                        frameborder=0></iframe>
+                    <iframe src="https://www.desmos.com/calculator/tzlxpyl6yd?embed" width="100%" height="400px"
+                        style="border: 1px solid #ccc" frameborder=0></iframe>
                 </div>
                 <div class="ui segment">
                     <h4>Q: What is Ethereum Classic, and why is P3C on it?</h4>
@@ -303,7 +303,8 @@
                         which means that however the program runs, even if the results are unexpected, is valid. To use
                         Ethereum Classic, you need <span class="notranslate">ETC</span> which is the native currency.
                         There can only be 210 million <span class="notranslate">ETC</span>. You can purchase <span
-                            class="notranslate">ETC</span> on exchanges like <a href="https://www.coinbase.com/" target="_blank">Coinbase</a>
+                            class="notranslate">ETC</span> on exchanges like <a href="https://www.coinbase.com/"
+                            target="_blank">Coinbase</a>
                         or <a href="https://www.binance.com/en/trade/ETC_BTC" target="_blank">Binance</a>.
                         <img src="img/etc-logo.png" class=" etc-small" />
                 </div>
@@ -325,7 +326,8 @@
                 <div class="ui segment">
                     <h4>Q: Can I develop an application on top of P3C?</h4>
                     <p class="instruction"><b>A: </b> Yes, in fact we encourage it. There is no need to ask permission,
-                        as this is a decentralized project. You can go to the <a href="https://github.com/p3c-bot/p3c-bot.github.io">source
+                        as this is a decentralized project. You can go to the <a
+                            href="https://github.com/p3c-bot/p3c-bot.github.io">source
                             code</a> and simply follow the README to build your own version in minutes. With your own
                         version, you collect a contract bonus of all transactions going through the website. We also
                         have API-docs <a href="https://github.com/p3c-bot/api/blob/master/README.md">here.</a></p>
@@ -359,7 +361,8 @@
                         <div class="ui inverted link list" style="margin-top:0px;">
                             <a href="https://discord.gg/crjsdJr" target="_blank" class="item">Chat Room</a>
                             <a href="https://medium.com/@masterhax/" target="_blank" class="item">Blog</a>
-                            <a href="https://github.com/p3c-bot/api/blob/master/README.md" target="_blank" class="item">API
+                            <a href="https://github.com/p3c-bot/api/blob/master/README.md" target="_blank"
+                                class="item">API
                                 Docs</a>
                         </div>
                     </div>
@@ -374,7 +377,8 @@
                             kindly ask
                             anyone who doesn't grasp the risks inherent to Blockchain technology to not participate in
                             P3C. The
-                            contract is running <a style="color: orange;" target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">here</a>
+                            contract is running <a style="color: orange;" target="_blank"
+                                href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">here</a>
                             and cannot be changed. Don't trust, verify.
                         </p>
                     </div>
