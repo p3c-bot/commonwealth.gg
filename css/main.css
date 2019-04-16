@@ -29,8 +29,13 @@ body {
     font-size: 45px;
 }
 
+.smallpad-left {
+    padding-left: 25px !important;
+}
 
-
+.smallpad-right {
+    padding-right: 25px !important;
+}
 .clock {
     display: inline-block;
     width: auto;
