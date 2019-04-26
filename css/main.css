@@ -168,6 +168,21 @@ body {
     background-color: rgba(0, 0, 0, .4);
 }
 
+.opacity-dark {
+    margin-right: 10px;
+    font-size: 1.42857143rem;
+    color: white;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.opacity-dark:hover {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+
+
 .small {
     font-size: 0.5em;
 }
@@ -470,3 +485,82 @@ i.blue.icon {
         [class*="large screen only"]:not([class*="widescreen"]),
         [class*="widescreen hidden"]
 }
+
+/* CANDLE STICKS */
+
+
+.upGreenArrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4.5px 12px 4.5px;
+    border-color: transparent transparent #00ff00 transparent;
+ }
+   
+ .downRedArrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 4.5px 0 4.5px;
+    border-color: #ff0000 transparent transparent transparent;
+ }
+ 
+ .upArrow{
+   position: relative;
+   top: -15px;
+   left: -10px;
+   width:0;
+   height:0;
+   border: 6px solid transparent;
+   border-bottom-color: #00ff00;
+ }
+ .upArrow:after{
+   position: absolute;
+   content: '';
+   top: 20px;
+   left: -3px;
+   width: 6px;
+   height: 10px;
+   background: #00ff00;
+ }
+ 
+ .downArrow{
+   position: relative;
+   top: 18px;
+   left: -10px;
+   width: 0;
+   height: 0;
+   border: 6px solid transparent;
+   border-top-color: #ff0000;
+ }
+ .downArrow:after{
+   position: absolute;
+   content: '';
+   top: -15px;
+   left: -3px;
+   width: 6px;
+   height: 10px;
+   background: #ff0000;
+ }
+ 
+ 
+ /* d3 candle stick start */
+ 
+ .axis path,
+ .axis line {
+     fill: none;
+     stroke: black;
+     shape-rendering: crispEdges;
+ }
+ 
+ .axis text {
+     font-family: 'Open Sans', sans-serif;
+     font-size: 17px;
+     fill: black;
+ }
+ 
+ /* d3 candle stick end */
+ 
+ body {
+   background-color: white;
+ }

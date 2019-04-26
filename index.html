@@ -59,15 +59,15 @@
                 <div class="ui text container jumbotron">
                     <!-- <img width="250" height="250" class="logo custom-computer only" loop="" src="/img/diamond.gif" alt="Diamond">
                 <img width="50%" height="50%" class="logo mobile only" src="/img/diamond.gif" alt="Diamond"> -->
-                    <h1 class="bg-text mobile only">P3C: <i>Planetary Prosperity</i></h1>
+                    <h3 class="bg-text mobile only" style="margin-top:50px;">Welcome</h3>
                     <h1 class="bg-text custom-computer only" style="margin-top: 325px;">P3C: <i>Planetary Prosperity</i>
                     </h1>
-                    <a href="/use.html" class="dashboard-link ui huge primary button opacity"
-                        style="margin-bottom: 10px;">Wallet
+                    <a href="/use.html" class="dashboard-link ui huge primary opacity-dark"
+                        style="margin-bottom: 10px; color: white;">Wallet
                         <i class="right arrow icon"></i>
                     </a>
                     <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"
-                        class="ui huge default button">View Vault</a>
+                        class="ui huge default opacity-dark" style="color: white;">View Vault</a>
                 </div>
             </div>
         </div>
@@ -105,6 +105,16 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <!-- <div class="ui masthead vertical center aligned segment">
+                    <div class="ui segment">
+                    <h4 class="ui header" style="text-align: left;">
+                        <b>Live P3C Token Price</b><span class="ui green text small">&nbsp;| Denominated in USD</span>
+                    </h4>
+                    <svg id="container"></svg>
+                </div>
+            </div> -->
+            
             <div class="ui vertical stripe features">
                 <div class="ui equal width stackable grid">
                     <div class="center aligned row">
@@ -168,10 +178,7 @@
                 </div>
             </form>
         </div>
-
         <!--End mc_embed_signup-->
-        <div class="ui masthead vertical center aligned segment">
-        </div>
         <br>
         <div class="ui container vertical stripe">
             <h1 class="ui header center aligned">How to Participate</h1>
@@ -231,11 +238,11 @@
             <h1 class="ui header center aligned">How long has P3C been running?</h1>
             <br>
             <div class="ui header center aligned flip-clock"></div>
+            <br>
         </div>
 
         <div class="faq">
             <div class="ui container faq">
-                <h1 class="ui header inverted center aligned">Frequently Asked Questions</h1>
                 <div class="ui segment">
                     <h4>Q: What is the plan for P3C to succeed?</h4>
                     <div class="instruction">
@@ -286,12 +293,6 @@
                             changed.</i>
                         <img class="center-image" style="width: 75%" src="doc-assets/co.png" alt="Growth">
                     </p>
-                </div>
-                <div class="ui segment">
-                    <h3>Current System Liquidity</h3>
-                    <a id="liquidity"></a>
-                    <iframe src="https://www.desmos.com/calculator/tzlxpyl6yd?embed" width="100%" height="400px"
-                        style="border: 1px solid #ccc" frameborder=0></iframe>
                 </div>
                 <div class="ui segment">
                     <h4>Q: What is Ethereum Classic, and why is P3C on it?</h4>
@@ -389,8 +390,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/semantic.min.js"></script>
     <script src="js/flipclock.min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/d3.v5.min.js"></script>
+
     <script src="lib/util.js"></script>
     <script src="lib/home.js"></script>
+    <script src="lib/charts.js"></script>
 </body>
 
 </html>

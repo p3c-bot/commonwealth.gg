@@ -176,7 +176,6 @@
                 <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
                     <i>How much will you buy?</i>
                 </div>
-                <br>
             </div>
             <div class="four wide column sell">
                 <h2 class="ui header">
@@ -235,85 +234,68 @@
 
         <div class="ui stackable grid">
             <div class="eight wide column">
-                    <div style="text-align: center">
-                            <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
-                                style="margin-bottom:10px;">
-                                <i class="left discord icon"></i>
-                                Interested or Need Help? Chat now.
-                            </a>
-                        </div>
-                <div class="ui segments transfer">
-                    <div class="ui segment">
-                        <h4 class="ui header">
-                            <i class="circular inverted blue exchange alternate icon"></i>
-                            <div class="content">
-                                <div class="sub header"><b>Transfer P3C</b>. <i>Always send to another crop address (see below).</i></div>
-                            </div>
-                        </h4>
-                    </div>
-                    <div class="ui segment notranslate">
-                            <b>My Crop:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
-                                class="ui primary basic button copy" data-clipboard-text="">
-                                <i class="copy icon"></i>
-                            </button>
-                        </div>
-                    <div class="ui segment">
-                        <form class="ui form">
-                            <div class="field">
-                                <input type="text" id="transferAddress" placeholder="         Destination Crop Address">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="ui segment">
-                        <div class="ui right labeled left icon input fluid buy">
-                            <input type="text" id="transferTokenCount" placeholder="Amount of P3C Tokens">
-                            <div class="ui tag teal label notranslate">
-                                P3C
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui segment">
-                        <button id="transfer" class="ui right labeled large icon teal fluid button">
-                            <i class="right arrow icon"></i>
-                            Transfer
-                        </button>
-                    </div>
-                    <!-- <div class="ui segment">
-                        <a id="refillButton" class="donate-with-crypto ui right labeled icon large fluid orange button coinbase-override"
-                            style="padding-top: 10px" href="https://commerce.coinbase.com/checkout/ea25233e-7a3f-4554-b450-41d13dfdc6ff">
-                            <i class="right bitcoin icon"></i>
-                            <span class="coinbase-override">Buy P3C with other Currencies</span>
-                        </a>
-                        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                        </script>
-                    </div> -->
+                <div style="text-align: center">
+                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
+                        style="margin-bottom:10px;">
+                        <i class="left discord icon"></i>
+                        Interested or Need Help? Chat now.
+                    </a>
                 </div>
-            </div>
-
-
-            <div class="eight wide column">
-                <div class="ui segments">
-                    <div class="ui segment">
+                <div class="ui segment">
                         <h4 class="ui header" style="text-align: left;">
-                            <b>Instructions:</b>
+                            <b>P3C Token Price</b><span class="ui green text small">&nbsp;| Denominated in USD</span>
                         </h4>
-                        <p class="instruction">
-                            1. Download <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Saturn
-                                Wallet</a> and get Ethereum Classic (ETC).
-                            <br>
-                            2. Ethereum users need to disable Metamask while Saturn wallet is on.
-                            <br>
-                            3. Every P3C buy or sell distributes a <b>10%</b> community fee as <b>prosperity</b> to
-                            each P3C holder. The more P3C you hold, the greater your share of prosperity.
-                            <br>
-                            4. P3C price increases/decreases by 0.00000001 ETC through each buy/sell.
-                            <br>
-                            5. As you gather more <b>prosperity</b>, you can withdraw it or allow it to compound.
-                        </p>
-                        <img class="center-image" style="width: 100%" src="doc-assets/co.png" alt="Growth">
-
-                    </div>
+                        <svg id="container"></svg>
                 </div>
+
+            </div>
+            <div class="eight wide column">
+                    <div class="ui segments transfer">
+                            <div class="ui segment">
+                                <h4 class="ui header">
+                                    <i class="circular inverted blue exchange alternate icon"></i>
+                                    <div class="content">
+                                        <div class="sub header"><b>Transfer P3C</b>. <i>Always send to another crop address (see below).</i></div>
+                                    </div>
+                                </h4>
+                            </div>
+                            <div class="ui segment notranslate">
+                                    <b>My Crop:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
+                                        class="ui primary basic button copy" data-clipboard-text="">
+                                        <i class="copy icon"></i>
+                                    </button>
+                                </div>
+                            <div class="ui segment">
+                                <form class="ui form">
+                                    <div class="field">
+                                        <input type="text" id="transferAddress" placeholder="         Destination Crop Address">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="ui segment">
+                                <div class="ui right labeled left icon input fluid buy">
+                                    <input type="text" id="transferTokenCount" placeholder="Amount of P3C Tokens">
+                                    <div class="ui tag teal label notranslate">
+                                        P3C
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui segment">
+                                <button id="transfer" class="ui right labeled large icon teal fluid button">
+                                    <i class="right arrow icon"></i>
+                                    Transfer
+                                </button>
+                            </div>
+                            <!-- <div class="ui segment">
+                                <a id="refillButton" class="donate-with-crypto ui right labeled icon large fluid orange button coinbase-override"
+                                    style="padding-top: 10px" href="https://commerce.coinbase.com/checkout/ea25233e-7a3f-4554-b450-41d13dfdc6ff">
+                                    <i class="right bitcoin icon"></i>
+                                    <span class="coinbase-override">Buy P3C with other Currencies</span>
+                                </a>
+                                <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
+                                </script>
+                            </div> -->
+                        </div>
             </div>
         </div>
     </div>
@@ -361,6 +343,8 @@
     <script src="js/semantic.min.js"></script>
     <script src="js/web3.min.js"></script>
     <script src="js/clipboard.min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/d3.v5.min.js"></script>
 
     <script src="lib/util.js"></script>
     <script src="lib/contracts.js"></script>
@@ -368,6 +352,7 @@
     <script src="lib/masternode.js"></script>
     <script src="lib/prices.js"></script>
     <script src="lib/use.js"></script>
+    <script src="lib/charts.js"></script>
 </body>
 <source src="/doc-assets/register.mp3" type="audio/mpeg">
 <div id="sound"></div>
