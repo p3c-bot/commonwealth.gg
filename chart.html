@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>P3C - Planetary Prosperity</title>
+    <meta charset="utf8">
+    <meta name="description" content="Fast, passive payments for anyone using Ethereum Classic. Provides a steady source of income for entrepeneuers and nomads. Use algorithms and sound money to plan for the future and gain peace of mind.">
+    <meta name="keywords" content="Payments, Payment Processing, Live Streaming, ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance, Coops, Cooperative, Blockchain, Blockchain Technology">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="google-site-verification" content="WrgQBpU2wJGTSp9LZ9NFYn6p_NxgSB95ocpo39Dcydg" />
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <!-- Default theme -->
+    <link rel="stylesheet" href="css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="css/themes/semantic.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" type="image" href="img/whale.ico">
+    <!-- GA -->
+    <meta name="google-site-verification" content="DNUdvoQF9H6RE-YDglRHbC5UVL9AjAb9X8-YbMLriYc" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133170751-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-133170751-1');
+    </script>
+    <!-- END GA -->
+</head>
+
+<body>
+    <div class="pusher">
+        <div class="cityscape">
+            <div class="ui large inverted stackable menu gradient"
+                style="border-radius:0px !important; margin-bottom: 0px; background: rgba(0, 0, 0, .6) !important;">
+                <div class="ui container">
+                    <a class="header item" href="/">
+                        <img src="img/whale.svg" class="ui mini image" />
+                        <h2 class="title">P3C.io</h2>
+                    </a>
+                    <div class="custom-computer only right menu">
+                        <a class="item" href="/index.html">
+                            <strong>
+                                Home
+                            </strong>
+                        </a>
+                        <a class="item" href="/use.html">
+                            <strong>
+                                Wallet
+                            </strong>
+                        </a>
+                        <a class="item" href="https://wiki.p3c.io" target="_blank">
+                            <strong>
+                                Wiki
+                            </strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui container vertical stripe">
+            <h2 class="ui header center aligned"></h2>
+            <h2 class="feature-title">System Status</h2>
+            <div id="statsContainer" class="ui equal width stackable grid">
+                <div class="center aligned row">
+                    <div class="column" style="padding-bottom: 0px !important;">
+                        <div id="sizeStats" class="ui segments">
+                            <div class="ui segment">
+                                <h4 class="stats"><i class="chess rook line circle icon stats"></i>Vault: <span
+                                        id="sizeETC"></span> (<span id="sizeUSD"></span>)</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" style="padding-bottom: 0px !important;">
+                        <div id="priceStats" class="ui segments">
+                            <div class="ui segment">
+                                <h4 class="stats"><i class="chart line circle icon stats"></i>P3C Price:</span>
+                                    <span id="priceUSD"></span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" style="padding-bottom: 0px !important;">
+                        <div id="createdStats" class="ui segments">
+                            <div class="ui segment">
+                                <h4 class="stats"><i class="globe line circle icon stats"></i>P3C Created: <span
+                                        id="tokenSupply"></span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" style="padding-bottom: 0px !important;">
+                            <div id="createdStats" class="ui segments">
+                                <div class="ui segment">
+                                    <h4 class="stats"><i class="ethereum line circle icon stats"></i>ETC Price: $<span
+                                            id="etcPriceUSD"></span></h4>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <br>
+            <div class="ui masthead vertical center aligned segment">
+                    <div class="ui segment">
+                    <h4 class="ui header" style="text-align: left;">
+                        <b>Daily P3C Token Price</b><span class="ui green text small">&nbsp;| Denominated in USD</span>
+                    </h4>
+                    <svg id="container"></svg>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;">
+            <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large green button"
+                style="margin-top: 15px; margin-bottom: 15px;">
+                <i class="left discord icon"></i>
+                Join Community Chat
+            </a>
+        </div>
+        <div class="ui inverted vertical footer segment gradient personal">
+            <div class="ui container">
+                <div class="ui stackable inverted divided equal height stackable grid">
+                    <div class="three wide column">
+                        <div class="ui inverted link list">
+                            <a class="item" href="http://p3c.io/">Home</a>
+                            <a class="dashboard-link item" href="/use.html">Dashboard</a>
+                            <a class="item" href="https://34r7h.github.io/p3c/docs/faq/#what-is-p3c">Wiki</a>
+                            <a href="https://github.com/p3c-bot/p3c-bot.github.io" target="_blank" class="item"><i
+                                    class="github icon"></i>Github</a>
+                        </div>
+                    </div>
+                    <div class="three wide column">
+                        <h5 class="ui inverted header" style="margin-bottom:10px;">Community</h5>
+                        <div class="ui inverted link list" style="margin-top:0px;">
+                            <a href="https://discord.gg/crjsdJr" target="_blank" class="item">Chat Room</a>
+                            <a href="https://medium.com/@masterhax/" target="_blank" class="item">Blog</a>
+                            <a href="https://github.com/p3c-bot/api/blob/master/README.md" target="_blank"
+                                class="item">API
+                                Docs</a>
+                        </div>
+                    </div>
+                    <div class="ten wide column">
+                        <h5 class="ui inverted header">Disclaimer</h5>
+                        <p class="instruction disclaimer">
+                            This project is experimental. Do not send any <span class="notranslate">ETC</span> you
+                            cannot
+                            afford to
+                            lose. There is zero guarantee
+                            that you will make <span class="notranslate">ETC</span>. This is very new technology and we
+                            kindly ask
+                            anyone who doesn't grasp the risks inherent to Blockchain technology to not participate in
+                            P3C. The
+                            contract is running <a style="color: orange;" target="_blank"
+                                href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">here</a>
+                            and cannot be changed. Don't trust, verify.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/flipclock.min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/d3.v5.min.js"></script>
+
+    <script src="lib/util.js"></script>
+    <script src="lib/home.js"></script>
+    <script src="lib/charts.js"></script>
+</body>
+
+</html>
