@@ -109,6 +109,192 @@
                     <svg id="container"></svg>
                 </div>
             </div>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+        "symbols": [
+          {
+            "title": "S&P 500",
+            "proName": "OANDA:SPX500USD"
+          },
+          {
+            "description": "Bitcoin",
+            "proName": "COINBASE:BTCUSD"
+          },
+          {
+            "description": "Ethereum Classic",
+            "proName": "COINBASE:ETCUSD"
+          },
+          {
+            "description": "Ethereum",
+            "proName": "COINBASE:ETHUSD"
+          },
+          {
+            "description": "Bitcoin Cash",
+            "proName": "COINBASE:BCHUSD"
+          },
+          {
+            "description": "Gold",
+            "proName": "FX_IDC:XAUUSD"
+          },
+          {
+            "description": "EUR/USD",
+            "proName": "FX:EURUSD"
+          },
+          {
+            "description": "RUB/USD",
+            "proName": "FX_IDC:RUBUSD"
+          }
+        ],
+        "colorTheme": "light",
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "locale": "en"
+      }
+        </script>
+        </div>
+        <!-- TradingView Widget END -->
+        </div>
+        <div class="ui container vertical stripe custom-computer only">
+            <div class="ui vertical stripe features">
+                <div id="statsContainer" class="ui equal width stackable grid">
+                    <div class="center aligned row">
+                        <div class="column" style="padding-bottom: 0px !important;">
+                            <div id="sizeStats" class="ui segments" style="height: 500px;">
+                                <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Crypto</span></a> <span class="blue-text">and</span> <a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Stocks</span></a> by TradingView</div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                                {
+                                "showChart": true,
+                                "locale": "en",
+                                "width": "100%",
+                                "height": "100%",
+                                "largeChartUrl": "",
+                                "plotLineColorGrowing": "rgba(147, 196, 125, 1)",
+                                "plotLineColorFalling": "rgba(109, 158, 235, 1)",
+                                "gridLineColor": "rgba(233, 233, 234, 1)",
+                                "scaleFontColor": "rgba(66, 66, 66, 1)",
+                                "belowLineFillColorGrowing": "rgba(106, 168, 79, 0.12)",
+                                "belowLineFillColorFalling": "rgba(60, 120, 216, 0.12)",
+                                "symbolActiveColor": "rgba(225, 239, 249, 1)",
+                                "tabs": [
+                                    {
+                                    "title": "Crypto",
+                                    "symbols": [
+                                        {
+                                        "s": "COINBASE:ETCUSD",
+                                        "d": "Ethereum Classic"
+                                        },
+                                        {
+                                        "s": "COINBASE:BTCUSD",
+                                        "d": "Bitcoin"
+                                        },
+                                        {
+                                        "s": "COINBASE:ETHUSD",
+                                        "d": "Ethereum"
+                                        },
+                                        {
+                                        "s": "COINBASE:BCHUSD",
+                                        "d": "Bitcoin Cash"
+                                        },
+                                        {
+                                        "s": "COINBASE:LTCUSD",
+                                        "d": "Litecoin"
+                                        },
+                                        {
+                                        "s": "BINANCE:ADAUSDC",
+                                        "d": "Cardano"
+                                        }
+                                    ]
+                                    },
+                                    {
+                                    "title": "Stocks",
+                                    "symbols": [
+                                        {
+                                        "s": "AMEX:SPY",
+                                        "d": "SP500"
+                                        },
+                                        {
+                                        "s": "INDEX:XLY0",
+                                        "d": "Shanghai Composite"
+                                        },
+                                        {
+                                        "s": "NASDAQ:QQQ",
+                                        "d": "Technology Index"
+                                        },
+                                        {
+                                        "s": "NASDAQ:GOOG",
+                                        "d": "Google"
+                                        },
+                                        {
+                                        "s": "NASDAQ:AMZN",
+                                        "d": "Amazon"
+                                        },
+                                        {
+                                        "s": "NASDAQ:AAPL",
+                                        "d": "Apple"
+                                        },
+                                        {
+                                        "s": "NASDAQ:TSLA",
+                                        "d": "Tesla"
+                                        }
+                                    ]
+                                    },
+                                    {
+                                    "title": "Other",
+                                    "symbols": [
+                                        {
+                                        "s": "OANDA:XAUUSD",
+                                        "d": "Gold"
+                                        },
+                                        {
+                                        "s": "OANDA:XAGUSD",
+                                        "d": "Silver"
+                                        },
+                                        {
+                                        "s": "FX:EURUSD",
+                                        "d": "Euro"
+                                        },
+                                        {
+                                        "s": "FX_IDC:CNYUSD",
+                                        "d": "Chinese Yuan"
+                                        },
+                                        {
+                                        "s": "FX_IDC:JPYUSD",
+                                        "d": "Japanese Yen"
+                                        },
+                                        {
+                                        "s": "FX_IDC:RUBUSD",
+                                        "d": "Russian Ruble"
+                                        }
+                                    ]
+                                    }
+                                ]
+                                }
+                                </script>
+                                </div>
+                                <!-- TradingView Widget END -->
+                            </div>
+                        </div>
+                        <div class="column" style="padding-bottom: 0px !important;">
+                            <div id="sizeStats" class="ui segments">
+                                <a href="https://forum.saturn.network/t/tutorial-how-to-recieve-a-p3c-io-airdrop-on-your-phone-5-minute-tutorial/4144" target="_blank">
+                                <div class="ui segment">
+                                    <h4 style="margin-bottom: 0px;">Start Using P3C from your Phone<i class="right arrow icon"></i></h4>
+                                    <img class="logo mobile only" style="height: 65%" src="/img/landing/phone.png" alt="Phoenix">
+                                    <img class="logo custom-computer only" src="/img/landing/phone.png" alt="Phoenix">
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
         </div>
         <div style="text-align:center;">
             <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large green button"
