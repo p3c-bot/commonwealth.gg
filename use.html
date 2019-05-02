@@ -125,23 +125,14 @@
                         <button id="withdraw" class="ui teal fluid button large"><i class="money bill alternate  icon"></i>Take Dividends</button>
                     </div>
                 </div>
-                <div class="ui one column centered grid">
-                    <div class="column" style="padding-top: 0px; padding-bottom: 10px;">
+                <div class="ui one column centered grid" style="margin-top: 0px;">
+                    <div class="column" style="padding-bottom: 10px;">
                         <div class="ui horizontal segment">
                             <div id="sponsor" class="sponsor"></div>
                             <span class="ui text blue small" style="float: right"><a href="/sponsor.html" target="_blank">Buy
                                     this sponsorship space!</a></span>
                         </div>
                     </div>
-                    <div id="autoReinvest" class="ui toggle checkbox reinvest">
-                        <input type="checkbox" name="public">
-                        <br>
-                    </div>
-                    <div id="infoButton" class="ui icon " style="margin-top: 10px; padding-left: 0px;">
-                        <label id="reinvestToggle" for="autoReinvest" style="margin-top: 10px; padding-left: 0px; padding-right: 0px;">
-                            Auto Compound <i id="info" class="info circle icon"></i></label>
-                    </div>
-
                 </div>
 
             </div>
@@ -291,6 +282,14 @@
                                     <i class="right arrow icon"></i>
                                     Transfer
                                 </button>
+                            </div>
+                            <div class ="ui segment">
+                                <div id="autoReinvest" class="ui toggle checkbox reinvest" style="margin-top: 0px; padding-top: 0px;">
+                                    <input type="checkbox" name="public"> <label id="reinvestToggle" for="autoReinvest"> Auto Replay <i id="infoButton" class="info circle icon"></i></label>                    
+                                </div>
+                                <div id="infoButton" class="ui icon " style="margin-top: 10px; padding-left: 0px;">
+                            
+                                </div>
                             </div>
                             <!-- <div class="ui segment">
                                 <a id="refillButton" class="donate-with-crypto ui right labeled icon large fluid orange button coinbase-override"
