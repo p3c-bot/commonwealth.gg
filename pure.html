@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>P3C.io Pure</title>
+    <meta charset="utf8">
+    <meta name="description" content="The P3C.io official wallet interface.">
+    <meta name="keywords" content="Payments, Payment Processing, Live Streaming, ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance, Coops, Cooperative, Blockchain, Blockchain Technology">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="google-site-verification" content="WrgQBpU2wJGTSp9LZ9NFYn6p_NxgSB95ocpo39Dcydg" />
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" type="image/png" href="img/whale.png">
+    <!-- GA -->
+    <meta name="google-site-verification" content="DNUdvoQF9H6RE-YDglRHbC5UVL9AjAb9X8-YbMLriYc" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133170751-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-133170751-7');
+    </script>
+    <!-- END GA -->
+</head>
+
+<body>
+    <div class="ui large inverted stackable menu" style="border-radius:0px !important; background-color: whitesmoke;">
+        <div class="ui container">
+            <div class="header">
+                <a class="item" href="/">
+                    <img id="logo" src="img/etc-logo-transparent.png" class="ui mini image" style="max-width: 15%" />
+                    <h2 class="title" style="color: black;">P3C Pure</h2>
+                    <div class="opacity mobile only">
+                        <strong>
+                            <i class="chess rook icon"></i>
+                        </strong>
+                        <span id="etcInContract">0</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="right menu custom-computer only">
+                <div class="item">
+                    <!-- <div class="opacity notranslate">
+                        <strong>
+                            <i class="tree icon"></i>
+                            <span>P3C:&nbsp;</span>
+                        </strong>
+                        <span id="tokensInCirculation">0.0</span>
+                    </div> -->
+                    <a href="/index.html">
+                        <div class="opacity" style="color: black;">
+                            <strong>Home
+                            </strong>
+                        </div>
+                    </a>
+                    <a href="/chart.html" style="color: black;">
+                        <div class="opacity">
+                            <strong>Price Chart
+                            </strong>
+                        </div>
+                    </a>
+                    <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"
+                    target="_blank">
+                    <div class="opacity notranslate" style="color: black;">
+                        <strong>
+                            <i class="chess rook icon"></i>
+                        </strong>
+                        Vault: <span id="etcInContract">0 ETC</span>
+
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui container margin top two">
+
+        <div class="ui stackable grid">
+            <div id="myHoldings" class="eight wide column border right border left" style="background: rgba(58, 150, 139, 0.17);">
+                <h1 class="ui header" style="margin-bottom: 0px;">
+                    <div style="margin-left: 10px;" class="content">My Account</div><i id="portfolioButton" class="chart info circle icon portfolio"></i>
+                </h1>
+                <div class="ui horizontal segments" style="margin-top: 5px">
+
+                    <div class="ui padded center aligned segment" id="myTokens">
+                        <h2 class="ui header">
+                            Balance
+                            <div class="sub header notranslate">
+                                <span id="myTokensValue" class="converted" style="font-weight:bold;"></span>
+                                <div class="ui teal text small eleven">
+                                    <span id="myCropTokens" class="count"></span> P3C<span class="custom-computer only"> / <span id="myETCValue" class="notranslate" style="font-weight:bold;"></span> ETC</span>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="ui padded center aligned segment" id="myDividends">
+                        <h2 class="ui header">
+                            Dividends
+                            <div class="sub header notranslate">
+                                <span id="myDividendsValue" class="converted" style="font-weight:bold;"></span>
+                                <div class="ui teal text small eleven">
+                                    <span id="myCropDividends" class="count"></span> ETC
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="ui two column centered grid">
+                    <div class="column smallpad-left">
+                        <button id="reinvest" class="ui teal fluid button large"><i class="recycle icon"></i>Replay Dividends</button>
+                    </div>
+                    <div class="column smallpad-right">
+                        <button id="withdraw" class="ui teal fluid button large"><i class="money bill alternate  icon"></i>Take Dividends</button>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column buy" id="buyArea">
+                <h2 class="ui header">
+                    <img src="img/time-forward.svg" class="width one and eight" />
+                    <div class="content">
+                        <span>Buy</span>
+                        <span class="ui green text small">&nbsp;| For Saving</span>
+                        <div class="sub header">
+                            <strong>Start here</strong>! Buy new P3C.</div>
+                    </div>
+                </h2>
+
+                <div class="ui fluid large basic buttons" style="margin-bottom:10px;">
+                    <div class="ui button price no click">
+                        <strong>Price</strong>
+                    </div>
+
+                    <div class="ui positive button price no click">
+                        <strong>
+                            <span class="buy-price" id="tokenUSDBuyPrice">0.00</span>
+                            <span class="ui green text small eleven"> | </span> <span class="ui green text small eleven"
+                                id="tokenBuyGet">0.0000</span>
+                        </strong>
+                    </div>
+                </div>
+                <div class="ui right labeled left icon input fluid large buy">
+                    <i class="ethereum green icon"></i>
+                    <input placeholder="ETC to Spend..." type="text" id="buyInput">
+                    <div class="ui tag green label notranslate">
+                        ETC
+                    </div>
+                </div>
+                <button id="buy" class="ui large fluid green button" style="margin-top:10px;">
+                    Buy P3C
+                </button>
+                <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
+                    <i>How much will you buy?</i>
+                </div>
+            </div>
+            <div class="four wide column sell">
+                <h2 class="ui header">
+                    <img src="img/time-backward.svg" class="width one and eight" />
+                    <div class="content">
+                        <span>Sell</span>
+                        <span class="ui text blue small">&nbsp;| For Spending</span>
+                        <div class="sub header">
+                            Cash out your P3C.</div>
+                    </div>
+                </h2>
+
+                <div class="ui fluid large basic buttons" style="margin-bottom:10px;">
+                    <div class="ui button price no click">
+                        <strong>Price</strong>
+                    </div>
+
+                    <div class="ui button price no click">
+                        <strong>
+                            <span class="buy-price" id="tokenUSDSellPrice">0.00</span>
+                            <span class="ui green text small eleven"> | </span> <span class="ui green text small eleven"
+                                id="tokenSellGet">0.0000</span>
+                        </strong>
+                    </div>
+                </div>
+
+
+                <div class="ui right labeled left icon input fluid large">
+                    <i class="tree blue icon"></i>
+                    <input placeholder="P3C to Sell..." type="text" id="sellInput">
+                    <span class="ui tag blue label">
+                        P3C
+                    </span>
+                </div>
+                <button id="sell" class="ui large fluid blue button" style="margin-top:10px;">
+                    Sell P3C
+                </button>
+                <div id="sellAmount" class="ui fluid large basic blue button no click approx" style="margin-top:10px;">
+                    <i>How much will you sell?</i>
+                </div>
+            </div>
+        </div>
+
+        <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
+
+        <div id="warning" class="ui olive message">
+            <p>Make sure you have an
+                <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Ethereum
+                    Classic</a>
+                Wallet enabled</a>, and Metamask turned off. <b>Contract will show no balance if wallet not
+                    connected properly!</b> <a target="_blank" href="https://youtu.be/tBbl_nbp8_k"><b>Video
+                        Tutorial.</b></a>
+                </b>
+            </p>
+        </div>
+
+        <div class="ui stackable grid">
+            <div class="eight wide column">
+                <div style="text-align: center">
+                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
+                        style="margin-bottom:10px;">
+                        <i class="left discord icon"></i>
+                        Interested or Need Help? Chat now.
+                    </a>
+                </div>
+                <div id="masternode" class="ui segments masternode hidden">
+                    <div class="ui segment" style="text-align: left;">
+                        <p>API Link:
+                            <strong>33%</strong> of the community fee when P3C is bought with it:
+                        </p>
+                    </div>
+                    <div class="ui secondary segment">
+                        <div class="link masternode">
+                            <a id="masternodeLink" href="/?mn=0x">https://p3c.io/index.html?mn=0x123456</a> <button id="copyMNButton" class="ui primary basic button copy" data-clipboard-text="">
+                            <i class="clipboard icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center">
+                    <a id="rainMaker" class="ui left labeled icon large fluid white button"
+                        style="margin-bottom:10px;">
+                        <i class="left chart line icon"></i>
+                        Activate Rain Maker (<span id="rainMakerTokens"></span> P3C/Divs: <span id="rainMakerDividends"></span> ETC) 
+                    </a>
+                </div>
+                <div style="text-align: center">
+                    <a id="distribute" class="ui left labeled icon large fluid white button"
+                        style="margin-bottom:10px;">
+                        <i class="left sitemap icon"></i>
+                        Activate Divies (<span id="diviesBalance"></span> ETC) 
+                    </a>
+                </div>
+            </div>
+            <div class="eight wide column">
+                    <div class="ui segments transfer">
+                            <div class="ui segment">
+                                <h4 class="ui header">
+                                    <i class="circular inverted blue exchange alternate icon"></i>
+                                    <div class="content">
+                                        <div class="sub header"><b>Transfer P3C</b>. <i>Send to another crop or pure address (see below).</i></div>
+                                    </div>
+                                </h4>
+                            </div>
+                            <div class="ui segment notranslate">
+                                    <b>My Address:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
+                                        class="ui primary basic button copy" data-clipboard-text="">
+                                        <i class="copy icon"></i>
+                                    </button>
+                                </div>
+                            <div class="ui segment">
+                                <form class="ui form">
+                                    <div class="field">
+                                        <input type="text" id="transferAddress" placeholder="         Destination Address">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="ui segment">
+                                <div class="ui right labeled left icon input fluid buy">
+                                    <input type="text" id="transferTokenCount" placeholder="Amount of P3C Tokens">
+                                    <div class="ui tag teal label notranslate">
+                                        P3C
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui segment">
+                                <button id="transfer" class="ui right labeled large icon teal fluid button">
+                                    <i class="right arrow icon"></i>
+                                    Transfer
+                                </button>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <a class="item" href="http://p3c.io/">Home</a>
+                        <a class="dashboard-link item" href="/use.html">Wallet</a>
+                        <a href="/chart.html" class="item">Chart</a>
+                        <a class="item" href="https://34r7h.github.io/p3c/docs/faq/#what-is-p3c">Wiki</a>
+                        <a href="https://github.com/p3c-bot/p3c-bot.github.io" target="_blank" class="item"><i class="github icon"></i>Github</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <div class="ui inverted link list" style="margin-top:0px;">
+                        <a href="https://discord.gg/crjsdJr" target="_blank" class="item"><i class="left discord icon"></i>Discord Chat</a>
+                        <a href="https://twitter.com/P3COfficial" target="_blank" class="item">Twitter</a>
+                        <a href="https://medium.com/@masterhax/" target="_blank" class="item">Blog</a>
+                        <a href="/commonwealth.pdf" target="_blank" class="item">White Paper</a>
+                        <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts" target="_blank" class="item">Smart Contract</a>
+                        <a href="https://github.com/p3c-bot/api/blob/master/README.md" target="_blank"class="item">API Docs</a>
+                    </div>
+                </div>
+                <div class="ten wide column">
+                    <h5 class="ui inverted header">Disclaimer</h5>
+                    <p class="instruction disclaimer">
+                        This project is experimental. Do not send any <span class="notranslate">ETC</span> you cannot
+                        afford to
+                        lose. There is zero guarantee
+                        that you will make <span class="notranslate">ETC</span>. This is very new technology and we
+                        kindly ask
+                        anyone who doesn't grasp the risks inherent to Blockchain technology to not participate in P3C.
+                        The
+                        contract is running <a style="color: orange;" target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">here</a>
+                        and cannot be changed. Don't trust, verify.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/alertify.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/d3.v5.min.js"></script>
+
+    <script src="lib/util.js"></script>
+    <script src="lib/contracts.js"></script>
+    <script src="lib/pure/pure.js"></script>
+    <script src="lib/masternode.js"></script>
+    <script src="lib/prices.js"></script>
+    <script src="lib/pure/use.js"></script>
+    <script src="lib/pure/rainmaker.js"></script>
+</body>
+<source src="/doc-assets/register.mp3" type="audio/mpeg">
+<div id="sound"></div>
+
+</html>
