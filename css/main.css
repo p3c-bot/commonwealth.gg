@@ -294,7 +294,11 @@ i.blue.icon {
 }
 
 .link.masternode {
-    font-size: .9em;
+    font-size: 12px;
+}
+
+.cropAddress {
+    font-size: 12px;
 }
 
 .title {
