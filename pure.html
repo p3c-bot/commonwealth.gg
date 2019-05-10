@@ -20,16 +20,6 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="icon" type="image/png" href="img/whale.png">
-    <!-- GA -->
-    <meta name="google-site-verification" content="DNUdvoQF9H6RE-YDglRHbC5UVL9AjAb9X8-YbMLriYc" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133170751-7"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-133170751-7');
-    </script>
-    <!-- END GA -->
 </head>
 
 <body>
@@ -96,22 +86,16 @@
                     <div class="ui padded center aligned segment" id="myTokens">
                         <h2 class="ui header">
                             Balance
-                            <div class="sub header notranslate">
-                                <span id="myTokensValue" class="converted" style="font-weight:bold;"></span>
-                                <div class="ui teal text small eleven">
-                                    <span id="myCropTokens" class="count"></span> P3C<span class="custom-computer only"> / <span id="myETCValue" class="notranslate" style="font-weight:bold;"></span> ETC</span>
-                                </div>
+                            <div class="sub header">
+                                 <span id="myCropTokens" style=""></span> P3C<span class="custom-computer only"> / <span id="myETCValue" class="notranslate" style="font-weight:bold;"></span> ETC</span>
                             </div>
                         </h2>
                     </div>
                     <div class="ui padded center aligned segment" id="myDividends">
                         <h2 class="ui header">
                             Dividends
-                            <div class="sub header notranslate">
-                                <span id="myDividendsValue" class="converted" style="font-weight:bold;"></span>
-                                <div class="ui teal text small eleven">
-                                    <span id="myCropDividends" class="count"></span> ETC
-                                </div>
+                            <div class="sub header ">
+                                <span id="myCropDividends" class=""></span>  ETC
                             </div>
                         </h2>
                     </div>
@@ -356,7 +340,6 @@
     <script src="lib/pure/pure.js"></script>
     <script src="lib/pure/rainmaker.js"></script>
     <script src="lib/masternode.js"></script>
-    <script src="lib/prices.js"></script>
     <script src="lib/pure/use.js"></script>
 </body>
 <source src="/doc-assets/register.mp3" type="audio/mpeg">
