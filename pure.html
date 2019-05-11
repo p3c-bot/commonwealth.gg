@@ -7,7 +7,6 @@
     <meta name="description" content="The P3C.io official wallet interface.">
     <meta name="keywords" content="Payments, Payment Processing, Live Streaming, ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance, Coops, Cooperative, Blockchain, Blockchain Technology">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="google-site-verification" content="WrgQBpU2wJGTSp9LZ9NFYn6p_NxgSB95ocpo39Dcydg" />
     <link rel="stylesheet" href="css/semantic.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="css/alertify.min.css" />
@@ -78,7 +77,7 @@
                     <div class="ui padded center aligned segment" id="myTokens">
                         <h2 class="ui header">
                             Balance
-                            <div class="sub header" style="font-size: .8rem;">
+                            <div class="sub header pure-holdings">
                                  <span id="myCropTokens"></span> P3C<span class="custom-computer only"> / <span id="myETCValue" class="notranslate" style="font-weight:bold;"></span> ETC</span>
                             </div>
                         </h2>
@@ -86,7 +85,7 @@
                     <div class="ui padded center aligned segment" id="myDividends">
                         <h2 class="ui header">
                             Dividends
-                            <div class="sub header" style="font-size: .8rem;">
+                            <div class="sub header pure-holdings">
                                 <span id="myCropDividends" class=""></span>  ETC
                             </div>
                         </h2>
@@ -179,18 +178,6 @@
         </div>
 
         <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
-
-        <div id="warning" class="ui olive message">
-            <p>Make sure you have an
-                <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Ethereum
-                    Classic</a>
-                Wallet enabled</a>, and Metamask turned off. <b>Contract will show no balance if wallet not
-                    connected properly!</b> <a target="_blank" href="https://youtu.be/tBbl_nbp8_k"><b>Video
-                        Tutorial.</b></a>
-                </b>
-            </p>
-        </div>
-
         <div class="ui stackable grid">
             <div class="eight wide column">
                 <div style="text-align: center">
@@ -212,8 +199,8 @@
                     </div>
                     <div class="ui secondary segment">
                         <div class="link masternode">
-                            <a id="masternodeLink" href="/?mn=0x">https://p3c.io/index.html?mn=0x123456</a> <button id="copyMNButton" class="ui primary basic button copy" data-clipboard-text="">
-                            <i class="clipboard icon"></i>
+                            <a id="masternodeLink" href="/?ref=0x">https://p3c.io/index.html?ref=0x123456</a> <button id="copyMNButton" class="ui primary basic button copy" data-clipboard-text="">
+                            <i class="copy icon"></i>
                             </button>
                         </div>
                     </div>
@@ -244,11 +231,11 @@
                                 </h4>
                             </div>
                             <div class="ui segment notranslate">
-                                    <b>My Address:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
-                                        class="ui primary basic button copy" data-clipboard-text="">
-                                        <i class="copy icon"></i>
-                                    </button>
-                                </div>
+                                <b>My Crop:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
+                                    class="ui primary basic button copy" data-clipboard-text="">
+                                    <i class="copy icon"></i>
+                                </button>
+                            </div>
                             <div class="ui segment">
                                 <form class="ui form">
                                     <div class="field">

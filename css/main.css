@@ -433,6 +433,11 @@ i.blue.icon {
     margin-bottom: 10px;
 }
 
+.pure-holdings {
+    color: green !important;
+    font-size: .8rem !important;
+}
+
 /* Mobile */
 @media only screen and (max-width: 989px) {
 
