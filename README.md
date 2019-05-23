@@ -7,6 +7,11 @@ P3C Interface. Make sure you have [Saturn Wallet](https://chrome.google.com/webs
 1. Navigate to `localhost:8080/use.html` for the dashboard.
 1. For exchanges, merchants, or devs, we recommend using `localhost:8080/pure.html` which doesn't make any external calls besides what is from the blockchain.
 
+**Alternative Download Links**: 
+https://bitcoinfiles.com/d568c2a855056428f50ee063a05bdc2459b508afa73369dd29280a6610e35d97
+
+https://ipfs.io/ipfs/QmZxod99m4vL8acqLFRPX4wF1ZpGrLNsLLj8vPZQ3yAwKZ
+
 
 ## Information
 
