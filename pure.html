@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="icon" type="image/png" href="img/whale.png">
+    <link rel="icon" type="image/png" href="img/etc.png">
 </head>
 
 <body>
@@ -78,9 +78,9 @@
     <div class="ui container margin top two">
 
         <div class="ui stackable grid">
-            <div id="myHoldings" class="eight wide column border right border left" style="background: rgba(58, 150, 139, 0.17);">
+            <div id="myHoldings" class="eight wide column border right border left" style="background: rgba(0,0,0, 0.17);">
                 <h1 class="ui header" style="margin-bottom: 0px;">
-                    <div style="margin-left: 10px;" class="content">My Account</div>
+                    <div style="margin-left: 10px;" class="content">Pro Account</div>
                 </h1>
                 <div class="ui horizontal segments" style="margin-top: 5px">
 
@@ -104,10 +104,10 @@
 
                 <div class="ui two column centered grid">
                     <div class="column smallpad-left">
-                        <button id="reinvest" class="ui teal fluid button large"><i class="recycle icon"></i>Compound Dividends</button>
+                        <button id="reinvest" class="ui orange fluid button large" style="padding-left: 0px; padding-right: 0px;"><i class="recycle icon"></i>Compound Dividends</button>
                     </div>
                     <div class="column smallpad-right">
-                        <button id="withdraw" class="ui teal fluid button large"><i class="money bill alternate  icon"></i>Take Dividends</button>
+                        <button id="withdraw" class="ui orange fluid button large"><i class="money bill alternate  icon"></i>Take Dividends</button>
                     </div>
                 </div>
             </div>
@@ -188,7 +188,7 @@
                     <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
                         style="margin-bottom:10px;">
                         <i class="left discord icon"></i>
-                        Interested or Need Help? Chat now.
+                        Need Help? Chat now.
                     </a>
                 </div>
                 <div id="masternode" class="ui segments masternode hidden">
@@ -213,14 +213,14 @@
                     <a id="rainMaker" class="ui left labeled icon large fluid white button"
                         style="margin-bottom:10px;">
                         <i class="left chart line icon"></i>
-                        Call RainMaker <span class="ui green text small eleven">|  <span id="rainMakerTokens"></span> P3C / Divs: <span id="rainMakerDividends"></span> ETC</span>
+                        Activate RainMaker <span class="ui green text small eleven">|  <span id="rainMakerTokens"></span> P3C / Divs: <span id="rainMakerDividends"></span> ETC</span>
                     </a>
                 </div>
                 <div style="text-align: center">
                     <a id="distribute" class="ui left labeled icon large fluid white button"
                         style="margin-bottom:10px;">
                         <i class="left sitemap icon"></i>
-                        Call Divies <span class="ui green text small eleven">|  <span id="diviesBalance"></span> ETC</span> 
+                        Activate Divies <span class="ui green text small eleven">|  <span id="diviesBalance"></span> ETC</span> 
                     </a>
                 </div>
             </div>
@@ -228,14 +228,14 @@
                     <div class="ui segments transfer">
                             <div class="ui segment">
                                 <h4 class="ui header">
-                                    <i class="circular inverted blue exchange alternate icon"></i>
+                                    <i class="circular inverted orange exchange alternate icon"></i>
                                     <div class="content">
                                         <div class="sub header"><b>Transfer P3C</b>. <i>Send to another crop or pure ETC address..</i></div>
                                     </div>
                                 </h4>
                             </div>
                             <div class="ui segment notranslate">
-                                <b>My ETC Address:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
+                                <b>My Pure Address:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
                                     class="ui primary basic button copy" data-clipboard-text="">
                                     <i class="copy icon"></i>
                                 </button>
@@ -250,13 +250,13 @@
                             <div class="ui segment">
                                 <div class="ui right labeled left icon input fluid buy">
                                     <input type="text" id="transferTokenCount" placeholder="Amount of P3C Tokens">
-                                    <div class="ui tag teal label notranslate">
+                                    <div class="ui tag orange label notranslate">
                                         P3C
                                     </div>
                                 </div>
                             </div>
                             <div class="ui segment">
-                                <button id="transfer" class="ui right labeled large icon teal fluid button">
+                                <button id="transfer" class="ui right labeled large icon orange fluid button">
                                     <i class="right arrow icon"></i>
                                     Transfer
                                 </button>
