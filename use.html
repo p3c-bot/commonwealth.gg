@@ -49,18 +49,23 @@
     <div class="ui large inverted stackable menu gradient personal" style="border-radius:0px !important;">
         <div class="ui container">
             <div class="header">
-                <a class="item" href="/">
-                    <img id="logo" src="img/logo.svg" class="ui mini image" />
-                    <h2 class="title">P3C.io</h2>
-                    <div class="opacity mobile only">
+                <div class="item">
+                    <img id="logo" src="img/logo.svg" class="ui mini image home" />
+                    <h2 class="title home">P3C.io</h2>
+                    <div class="opacity mobile only home">
                         <strong>
                             <i class="chess rook icon"></i>
                         </strong>
                         <span id="etcInContract">0</span>
                     </div>
-                </a>
+                    <span class="opacity">
+                        <select id="language">
+                            <option value="en">English</option>
+                            <option value="ru">Русский</option>
+                            </select>
+                    </span>
+                </div>
             </div>
-
             <div class="right menu custom-computer only">
                 <div class="item">
                     <!-- <div class="opacity notranslate">
@@ -82,15 +87,13 @@
                             </strong>
                         </div>
                     </a>
-                    <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"
-                    target="_blank">
-                    <div class="opacity notranslate">
-                        <strong>
-                            <i class="chess rook icon"></i>
-                        </strong>
-                        Vault: <span id="etcInContract">0 ETC</span>
-
-                    </div>
+                    <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts" target="_blank">
+                        <div class="opacity notranslate">
+                            <strong>
+                                <i class="chess rook icon"></i>
+                            </strong>
+                            Vault: <span id="etcInContract">0 ETC</span>
+                        </div>
                     </a>
                 </div>
             </div>
