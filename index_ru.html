@@ -58,7 +58,7 @@
                     <div class="custom-computer only right menu">
                         <a class="item" href="https://p3c.io/info.html">
                             <strong>
-                                FAQ
+                                Информация
                             </strong>
                         </a>
                         
@@ -75,7 +75,7 @@
                     <a href="https://p3c.io/use.html" class="dashboard-link ui huge primary opacity-dark" style="margin-bottom: 10px; color: white;">Кошелек
                         <i class="right arrow icon"></i>
                     </a>
-                    <a href="https://p3c.io/chart.html" class="dashboard-link ui huge primary opacity-dark" style="margin-bottom: 10px; color: white;">Метрики
+                    <a href="https://p3c.io/chart.html" class="dashboard-link ui huge primary opacity-dark" style="margin-bottom: 10px; color: white;">Рынок
                     <i class="university icon"></i>
                     </a>
                 </div>
@@ -83,13 +83,15 @@
         </div>
         <br>
         <div class="ui container vertical stripe">
-            <h2 class="ui header center aligned">Состояние Системы</h2>
+            <h2 class="ui header center aligned">Состояние системы</h2>
             <div id="statsContainer" class="ui equal width stackable grid" style="">
                 <div class="center aligned row">
                     <div class="column" style="padding-bottom: 0px !important;">
                         <div id="sizeStats" class="ui segments">
                             <div class="ui segment">
-                                <h4 class="stats"><i class="chess rook line circle icon stats"></i>Банк: </h4>
+                                <h4 class="stats"><i class="chess rook line circle icon stats"></i>Банк:
+                                <span
+                                        id="sizeETC"></span> (<span id="sizeUSD"></span>)</h4>
                             </div>
                         </div>
                     </div>
@@ -98,7 +100,7 @@
                             <div class="ui segment">
                                 <a href="https://p3c.io/chart.html" style="color:rgba(0, 0, 0, .7)">
                                 <h4 class="stats"><i class="chart line circle icon stats"></i>Цена P3C:
-                                    </h4>
+                                    <span id="priceUSD"></span></h4>
                                 </a>
                             </div>
                         </div>
@@ -106,7 +108,10 @@
                     <div class="column" style="padding-bottom: 0px !important;">
                         <div id="createdStats" class="ui segments">
                             <div class="ui segment">
-                                <h4 class="stats"><i class="globe line circle icon stats"></i>Кол-во P3C: </h4>
+                                <h4 class="stats"><i class="globe line circle icon stats"></i>Оборот P3C:
+                                    <span
+                                        id="tokenSupply"></span>
+                                </h4>
                             </div>
                         </div>
                     </div>
@@ -123,7 +128,7 @@
                             <h2 class="feature-title">Change</h2>
                             <hr class="line">
                             <img class="logo" src="./img/vault.jpg" alt="Phoenix">
-                            <h3 style="margin-top:10px;"><i>Smart contract</i> используется как хранилище мировых сбережений</h3>
+                            <h3 style="margin-top:10px;"><i>Smart contract</i> >Мы используем смарт контракт, как безопасное хранилище мировых сбережений</h3>
                         </div>
                         <div class="column" style="padding-top: 0px;">
                             <div class="icon-main">
@@ -133,7 +138,7 @@
                             <hr class="line">
                             <img class="logo mobile only" src="./img/earth.png" alt="Phoenix">
                             <img class="logo custom-computer only" src="./img/earth-small.png" alt="Phoenix">
-                            <h3 style="margin-top:10px;">Хранилищем предусмотрены справедливые начисления дивидендов за использовние P3C</h3>
+                            <h3 style="margin-top:10px;">Смарт контрактом предусмотрены справедливые начисления дивидендов за использовние P3C</h3>
                         </div>
                         <div class="column">
                             <div class="icon-main">
@@ -142,7 +147,7 @@
                             <h2 class="feature-title">Forever</h2>
                             <hr class="line">
                             <img class="logo" style="width: 100%" src="./img/team.jpg" alt="Phoenix">
-                            <h3 style="margin-top:10px;">Удобность и доступность финансовых инструментов для всех</h3>
+                            <h3 style="margin-top:10px;">Глобальный масштаб платформы представляет удобность и доступность финансовых инструментов для всех</h3>
                         </div>
                     </div>
                 </div>
@@ -156,7 +161,7 @@
                 <i class="left comments icon"></i>
                 Присоедениться к чату
             </a>
-            <a id="whitepaper" href="https://p3c.io/commonwealth.pdf" class="ui left labeled icon large blue button" style="margin-top: 15px; margin-bottom: 5px;">
+            <a id="whitepaper" href="https://p3c.io/commonwealth_ru.pdf" class="ui left labeled icon large blue button" style="margin-top: 15px; margin-bottom: 5px;">
             <i class="left paper plane icon"></i>
             Читать Whitepaper
             </a>
@@ -230,7 +235,7 @@
                                         <div class="ui segments">
                                             <a href="https://p3c.tv/" target="_blank">
                                                 <div class="ui segment">
-                                                    <h4>P3C ипользуют для доната стримов. Смотреть<i class="right arrow icon"></i></h4>
+                                                    <h4>P3C уже используется как инструмент для рассчетов и взаимодействия в стриминге.<i class="right arrow icon"></i></h4>
                                                     <img class="logo mobile only" style="width:100%; border-radius: 15px;" src="./img/landing/livestream.png" alt="Phoenix">
                                                     <img class="logo custom-computer only" style="width:100%; border-radius: 15px;" src="./img/landing/livestream.png" alt="Phoenix">
                                                 </div>
@@ -258,16 +263,16 @@
                 <div class="ui stackable inverted divided equal height stackable grid">
                     <div class="three wide column">
                         <div class="ui inverted link list">
-                            <a class="item" href="http://p3c.io/">Главная страница</a>
+                            <a class="item" href="http://p3c.io/index_ru.html">Главная</a>
                             <a class="dashboard-link item" href="https://p3c.io/use.html">Кошелек</a>
                             <a href="https://p3c.io/chart.html" class="item">Чарт</a>
-                            <a href="https://p3c.io/commonwealth.pdf" target="_blank" class="item">White Paper</a>
+                            <a href="https://p3c.io/commonwealth_ru.pdf" target="_blank" class="item">White Paper</a>
                             <a href="https://github.com/p3c-bot/p3c-bot.github.io" target="_blank" class="item"><i class="github icon"></i>Github</a>
                         </div>
                     </div>
                     <div class="three wide column">
                         <div class="ui inverted link list" style="margin-top:0px;">
-                            <a href="https://discord.gg/crjsdJr" target="_blank" class="item"><i class="left discord icon"></i>Discord Chat</a>
+                            <a href="https://discord.gg/crjsdJr" target="_blank" class="item"><i class="left comments icon"></i>Discord Chat</a>
                             <a href="https://medium.com/@masterhax/" target="_blank" class="item">Блог</a>
                             <a href="https://twitter.com/P3COfficial" target="_blank" class="item">Twitter</a>
                             <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts" target="_blank" class="item">Smart Contract</a>
@@ -276,8 +281,7 @@
                     </div>
                     <div class="ten wide column">
                         <h5 class="ui inverted header">Предупреждение!</h5>
-                        <p class="instruction disclaimer">
-                            Данный проект является эксперементальным. Это совершенно новая технология и мы просим всех, кто не понимает риски присущие технологии blockchain не принимать участие в проекте P3C. Не отправляйте ETC, если не можете позволить потерю. Существует нулевая гарантия на возврат или умножение ETC. Контракт не изменнен.<span class="notranslate"></span><span class="notranslate"></span><a style="color: orange;" target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"></a></p>
+                        <p class="instruction disclaimer">Данный проект является эксперементальным. Это совершенно новая технология и мы просим всех, кто не понимает риски присущие технологии blockchain не принимать участие в проекте P3C. Не отправляйте ETC, если не можете позволить потерю. Существует нулевая гарантия на возврат или умножение ETC. Контракт не изменнен. Не доверяйте, просто проверьте.<span class="notranslate"></span><span class="notranslate"></span><a style="color: orange;" target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"></a></p>
                     </div>
                 </div>
             </div>
