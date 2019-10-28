@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html>
-
 <head>
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@P3COfficial" />
@@ -12,7 +10,7 @@
     <meta property="og:title" content="P3C.io" />
     <meta property="og:description" content="Planetary Prosperity is a peer-to-peer algorithmic bank built on Ethereum Classic. P3C holders receive passive income as the system is used. Ditch your bank, go with P3C." />
     <meta property="og:image" content="https://p3c.io/img/coin.png"/>
-
+    
     <title>P3C Wallet</title>
     <meta charset="utf8">
     <meta name="description" content="The P3C.io official wallet interface.">
@@ -43,6 +41,7 @@
     <!-- END GA -->
 </head>
 
+
 <body>
 
         
@@ -50,7 +49,7 @@
         <div class="ui container">
             <div class="header">
                 <div class="item">
-                    <img id="logo" src="img/logo.svg" class="ui mini image home" style="margin-right:10px;" />
+                    <img id="logo" src="img/logo.svg" class="ui mini image home" style="margin-right:10px;">
                     <h2 class="title home custom-computer only">P3C.io</h2>
                     <div class="opacity mobile only home">
                         <strong>
@@ -60,10 +59,10 @@
                     </div>
                     <span>
                         <select id="language">
-                            <option value="en">🇬🇧&emsp;English</option>
-                            <option value="ru">🇷🇺&emsp;Русский</option>
                             <option value="es">🇪🇸&emsp;Español</option>
-                            </select>
+                            <option value="ru">🇷🇺&emsp;Русский</option>
+                            <option value="en">🇬🇧&emsp;English</option>
+                        </select>
                     </span>
                 </div>
             </div>
@@ -82,9 +81,9 @@
                             </strong>
                         </div>
                     </a>
-                    <a href="/chart.html">
+                    <a href="https://p3c.io/chart.html">
                         <div class="opacity">
-                            <strong>Chart
+                            <strong>Gráfico
                             </strong>
                         </div>
                     </a>
@@ -93,7 +92,7 @@
                             <strong>
                                 <i class="chess rook icon"></i>
                             </strong>
-                            Vault: <span id="etcInContract">0 ETC</span>
+                            Banco: <span id="etcInContract">0 ETC</span>
                         </div>
                     </a>
                 </div>
@@ -106,13 +105,13 @@
         <div class="ui stackable grid">
             <div id="myHoldings" class="eight wide column border right border left" style="background: rgba(58, 150, 139, 0.17);">
                 <h1 class="ui header" style="margin-bottom: 0px;">
-                    <div style="margin-left: 10px;" class="content"><i id="portfolioButton" class="chart university icon portfolio"></i> My Account</div>
+                    <div style="margin-left: 10px;" class="content"><i id="portfolioButton" class="chart university icon portfolio"></i>Mi Cuenta</div>
                 </h1>
                 <div class="ui horizontal segments" style="margin-top: 5px">
 
                     <div class="ui padded center aligned segment" id="myTokens">
                         <h2 class="ui header">
-                            Balance
+ Estado
                             <div class="sub header notranslate">
                                 <span id="myTokensValue" class="converted" style="font-weight:bold;"></span><span id="myDayChange" class="converted" style="font-weight:bold;"></span>
                                 <div class="ui teal text small eleven">
@@ -123,7 +122,7 @@
                     </div>
                     <div class="ui padded center aligned segment" id="myDividends">
                         <h2 class="ui header">
-                            Dividends
+                            Dividendos
                             <div class="sub header notranslate">
                                 <span id="myDividendsValue" class="converted" style="font-weight:bold;"></span>
                                 <div class="ui teal text small eleven">
@@ -136,10 +135,10 @@
 
                 <div class="ui two column centered grid">
                     <div class="column smallpad-left">
-                        <button id="reinvest" class="ui teal fluid button large" style="padding-left: 0px; padding-right: 0px;"><i class="recycle icon"></i>Compound Dividends</button>
+                        <button id="reinvest" class="ui teal fluid button large" style="padding-left: 0px; padding-right: 0px;" disabled=""><i class="recycle icon"></i>Canjear dividendos</button>
                     </div>
                     <div class="column smallpad-right">
-                        <button id="withdraw" class="ui teal fluid button large"><i class="money bill alternate  icon"></i>Take Dividends</button>
+                        <button id="withdraw" class="ui teal fluid button large" disabled=""><i class="money bill alternate  icon"></i>Recibir Dividendos</button>
                     </div>
                 </div>
                 <!-- <div class="ui one column centered grid" style="margin-top: 0px;">
@@ -155,25 +154,24 @@
             </div>
             <div class="four wide column buy" id="buyArea">
                 <h2 class="ui header">
-                    <img src="img/time-forward.svg" class="width one and eight" />
+                    <img src="img/time-forward.svg" class="width one and eight">
                     <div class="content">
-                        <span>Buy</span>
-                        <span class="ui green text small">&nbsp;| For Saving</span>
+                        <span>Compra</span>
+                        <span class="ui green text small"></span>
                         <div class="sub header">
-                            <strong>Start here</strong>! Buy new P3C.</div>
+                            <strong></strong>P3C</div>
                     </div>
                 </h2>
 
                 <div class="ui fluid large basic buttons" style="margin-bottom:10px;">
                     <div class="ui button price no click">
-                        <strong>Price</strong>
+                        <strong>Precio</strong>
                     </div>
 
                     <div class="ui positive button price no click">
                         <strong>
                             <span class="buy-price" id="tokenUSDBuyPrice">0.00</span>
-                            <span class="ui green text small eleven"> | </span> <span class="ui green text small eleven"
-                                id="tokenBuyGet">0.0000</span>
+                            <span class="ui green text small eleven"> | </span> <span class="ui green text small eleven" id="tokenBuyGet">0.0000</span>
                         </strong>
                     </div>
                 </div>
@@ -184,34 +182,33 @@
                         ETC
                     </div>
                 </div>
-                <button id="buy" class="ui large fluid green button" style="margin-top:10px;">
-                    Buy P3C
+                <button id="buy" class="ui large fluid green button" style="margin-top:10px;" disabled="">
+                    Comprar P3C
                 </button>
                 <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
-                    <i>How much will you buy?</i>
+                    <i>Tokens para comprar</i>
                 </div>
             </div>
             <div class="four wide column sell">
                 <h2 class="ui header">
-                    <img src="img/time-backward.svg" class="width one and eight" />
+                    <img src="img/time-backward.svg" class="width one and eight">
                     <div class="content">
-                        <span>Sell</span>
-                        <span class="ui text blue small">&nbsp;| For Spending</span>
+                        <span>Venta</span>
+                        <span class="ui text blue small"></span>
                         <div class="sub header">
-                            Cash out your P3C.</div>
+                           P3C</div>
                     </div>
                 </h2>
 
                 <div class="ui fluid large basic buttons" style="margin-bottom:10px;">
                     <div class="ui button price no click">
-                        <strong>Price</strong>
+                        <strong>Precio</strong>
                     </div>
 
                     <div class="ui button price no click">
                         <strong>
                             <span class="buy-price" id="tokenUSDSellPrice">0.00</span>
-                            <span class="ui green text small eleven"> | </span> <span class="ui green text small eleven"
-                                id="tokenSellGet">0.0000</span>
+                            <span class="ui green text small eleven"> | </span> <span class="ui green text small eleven" id="tokenSellGet">0.0000</span>
                         </strong>
                     </div>
                 </div>
@@ -224,43 +221,36 @@
                         P3C
                     </span>
                 </div>
-                <button id="sell" class="ui large fluid blue button" style="margin-top:10px;">
-                    Sell P3C
+                <button id="sell" class="ui large fluid blue button" style="margin-top:10px;" disabled="">
+                    Vender P3C
                 </button>
                 <div id="sellAmount" class="ui fluid large basic blue button no click approx" style="margin-top:10px;">
-                    <i>How much will you sell?</i>
+                    <i>Tokens para vender</i>
                 </div>
             </div>
         </div>
 
         <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
 
-        <div id="warning" class="ui olive message">
-            <p>Make sure you have an
-                <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Ethereum
-                    Classic</a>
-                Wallet enabled</a>, and Metamask turned off. <b>Contract will show no balance if wallet not
-                    connected properly!</b> <a target="_blank" href="https://youtu.be/tBbl_nbp8_k"><b>Video
-                        Tutorial.</b></a>
-                </b>
+        <div id="warning" class="ui olive message animating transition shake" style="animation-duration: 2s;">
+            <p>Atención! Favor de verificar que su monedero esta debidamente concetado. Utilize <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Ethereum
+                    Classic Wallet.</a><b> En caso de falla el balance del contrato será nulo. Siga las instrucciones de video tutoriales.</b> <a target="_blank" href="https://youtu.be/tBbl_nbp8_k"><b>Mirar</b></a>
+                
             </p>
         </div>
 
         <div class="ui stackable grid">
             <div class="eight wide column">
                 <div style="text-align: center">
-                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
-                        style="margin-bottom:10px;">
-                        <i class="left comments icon"></i>
-                        Need Help? Chat now.
-                    </a>
+                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
+                        <i class="left comments icon"></i>Conéctese al chat para preguntar</a>
                 </div>
                 <div class="ui segment">
                         <h4 class="ui header" style="text-align: left;">
-                            <b>My Portfolio</b><span class="ui green text small">&nbsp;| Updated Daily</span>
+                            <b>Mi Portafolio</b><span class="ui green text small">&nbsp;| Actualizado diariamente</span>
                         </h4>
                         <svg id="container"></svg>
-                        <a href="https://www.xenobank.com/" target="_blank" style="font-size:10px;">(More Data Available at Xenobank.com)</a>
+                        <a href="https://www.xenobank.com/" target="_blank" style="font-size:10px;">(Mos datos disponibles en  Xenobank.com)</a>
                 </div>
 
             </div>
@@ -270,40 +260,40 @@
                                 <h4 class="ui header">
                                     <i class="circular inverted blue exchange alternate icon"></i>
                                     <div class="content">
-                                        <div class="sub header"><b>Transfer P3C</b>. <i>Always send to another crop address (see below).</i></div>
+                                        <div class="sub header"><b>
+Transferencia P3C</b>. <i>Solo transferencias a crop address (ver a continuación).</i></div>
                                     </div>
                                 </h4>
                             </div>
                             <div class="ui segment notranslate">
-                                <b>My Crop:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
-                                    class="ui primary basic button copy" data-clipboard-text="">
+                                <b>Mi Crop:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton" class="ui primary basic button copy" data-clipboard-text="">
                                     <i class="copy icon"></i>
                                 </button>
                             </div>
                             <div class="ui segment">
                                 <form class="ui form">
                                     <div class="field">
-                                        <input type="text" id="transferAddress" placeholder="         Destination Crop Address">
+                                        <input type="text" id="transferAddress" placeholder="         Crop Address destinatario">
                                     </div>
                                 </form>
                             </div>
                             <div class="ui segment">
                                 <div class="ui right labeled left icon input fluid buy">
-                                    <input type="text" id="transferTokenCount" placeholder="Amount of P3C Tokens">
+                                    <input type="text" id="transferTokenCount" placeholder="Cantidad de  P3C Tokens">
                                     <div class="ui tag teal label notranslate">
                                         P3C
                                     </div>
                                 </div>
                             </div>
                             <div class="ui segment">
-                                <button id="transfer" class="ui right labeled large icon teal fluid button">
+                                <button id="Enviar" class="ui right labeled large icon teal fluid button" disabled="">
                                     <i class="right arrow icon"></i>
-                                    Transfer
+                                    Enviar
                                 </button>
                             </div>
-                            <div class ="ui segment">
+                            <div class="ui segment">
                                 <div id="autoReinvest" class="ui toggle checkbox reinvest" style="margin-top: 0px; padding-top: 0px; top: 7px;">
-                                    <input type="checkbox" name="public"></div><label id="reinvestToggle" for="autoReinvest">Auto Compound <i id="infoButton" class="info circle icon"></i></label>                    
+                                    <input type="checkbox" name="public"></div><label id="reinvestToggle" for="autoReinvest">Сonversión automática de dividendos<i id="infoButton" class="info circle icon"></i></label>                    
                                 </div>
                             </div>
                             <!-- <div class="ui segment">
@@ -319,7 +309,7 @@
                         </div>
             </div>
         </div>
-    </div>
+    
     <br>
     <div class="ui inverted vertical footer segment gradient personal">
         <div class="ui container">
@@ -327,9 +317,9 @@
                 <div class="three wide column">
                     <div class="ui inverted link list">
                         <a class="item" href="http://p3c.io/">Home</a>
-                        <a class="dashboard-link item" href="/use.html">Wallet</a>
-                        <a href="/chart.html" class="item">Chart</a>
-                        <a href="/commonwealth.pdf" target="_blank" class="item">White Paper</a>
+                        <a class="dashboard-link item" href="https://p3c.io/use.html">Monedero</a>
+                        <a href="https://p3c.io/chart.html" class="item">Gráfico</a>
+                        <a href="https://p3c.io/commonwealth.pdf" target="_blank" class="item">White Paper</a>
                         <a href="https://github.com/p3c-bot/p3c-bot.github.io" target="_blank" class="item"><i class="github icon"></i>Github</a>
                     </div>
                 </div>
@@ -339,27 +329,16 @@
                         <a href="https://twitter.com/P3COfficial" target="_blank" class="item">Twitter</a>
                         <a href="https://medium.com/@masterhax/" target="_blank" class="item">Blog</a>
                         <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts" target="_blank" class="item">Smart Contract</a>
-                        <a href="https://github.com/p3c-bot/api/blob/master/README.md" target="_blank"class="item">API Docs</a>
+                        <a href="https://github.com/p3c-bot/api/blob/master/README.md" target="_blank" class="item">API documentación</a>
                     </div>
                 </div>
                 <div class="ten wide column">
-                    <h5 class="ui inverted header">Disclaimer</h5>
-                    <p class="instruction disclaimer">
-                        This project is experimental. Do not send any <span class="notranslate">ETC</span> you cannot
-                        afford to
-                        lose. There is zero guarantee
-                        that you will make <span class="notranslate">ETC</span>. This is very new technology and we
-                        kindly ask
-                        anyone who doesn't grasp the risks inherent to Blockchain technology to not participate in P3C.
-                        The
-                        contract is running <a style="color: orange;" target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">here</a>
-                        and cannot be changed. Don't trust, verify.
-                    </p>
+                    <h5 class="ui inverted header">Atención!</h5>
+                    <p class="instruction disclaimer">Este proyecto es experimental. Es una tecnología totalmente nueva y pedimos a no participar en este proyecto en caso de que no evalúen los riesgos implicados de la tecnología  blockchain! No envíen ETC, si no puedan correr las pérdidas. No existe garantias de la devolución o multiplicación de ETC. El contrato no se cambia. No confíen, siempre traten!<span class="notranslate"></span><span class="notranslate"></span><a style="color: orange;" target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"></a></p>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="js/jquery.min.js"></script>
     <script src="js/alertify.min.js"></script>
     <script src="js/semantic.min.js"></script>
