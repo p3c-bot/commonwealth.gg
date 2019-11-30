@@ -1,5 +1,5 @@
-# P3C.io
-P3C Interface. Make sure you have [Saturn Wallet](https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig?hl=en) installed. This can be run locally if necessary.
+# Commonwealth
+Commonwealth Interface. Make sure you have [Saturn Wallet](https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig?hl=en) installed. This can be run locally if necessary.
 
 1. ```git clone https://github.com/p3c-bot/p3c-bot.github.io.git && cd ./p3c-bot.github.io/```
 1. ```npm install -g live-server```
@@ -21,7 +21,7 @@ P3C is an open-source project and can be listed on any exchange without permissi
 
 Token Type: ERC-20
 
-Ticker Symbol: P3C
+Ticker Symbol: PNT
 
 Blockchain: Ethereum Classic (ETC)
 
@@ -33,7 +33,7 @@ Max Supply: 204,939,006 (assuming all ETC possible is in contract)
 
 About: Commonwealth is a peer-to-peer algorithmic bank that mints P3C via a smart contract. When ETC is deposited or withdrawn from the contract a 10% dividend is paid proportionally and instantly to every holder. This micro-dividend is used to provide long term income stability to those without access to banks across the world. It is also used as a currency for online applications and to pay for things.
 
-Official Website: https://p3c.io
+Official Website: https://commonwealth.gg
 
 Official Whitepaper: https://p3c.io/commonwealth.pdf
 
