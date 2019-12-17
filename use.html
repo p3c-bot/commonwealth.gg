@@ -155,7 +155,6 @@
                     <img src="img/time-forward.svg" class="width one and eight" />
                     <div class="content">
                         <span>Buy</span>
-                        <span class="ui green text small">&nbsp;| For Saving</span>
                         <div class="sub header">
                             <strong>Start</strong>! Buy Points.</div>
                     </div>
@@ -193,7 +192,6 @@
                     <img src="img/time-backward.svg" class="width one and eight" />
                     <div class="content">
                         <span>Sell</span>
-                        <span class="ui text blue small">&nbsp;| For Spending</span>
                         <div class="sub header">
                             Cash out your Points.</div>
                     </div>
@@ -245,29 +243,46 @@
 
         <div class="ui stackable grid">
             <div class="eight wide column">
-                <div style="text-align: center">
-                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
-                        style="margin-bottom:10px;">
-                        <i class="left comments icon"></i>
-                        Need Help? Chat now.
-                    </a>
-                </div>
                 <div class="ui segment">
                         <h4 class="ui header" style="text-align: left;">
                             <b>Token Price</b><span class="ui green text small">&nbsp;| Updated Daily</span>
                         </h4>
                         <svg id="container"></svg>
-                        <a href="https://www.xenobank.com/" target="_blank" style="font-size:10px;">(More Data Available at Xenobank.com)</a>
+                        <a href="https://www.xenobank.com/" target="_blank" style="font-size:10px;">(More Data at Xenobank.com)</a>
                 </div>
-
+                <div style="text-align: center">
+                        <a id="copyMNButton" data-clipboard-text="" class="ui left labeled icon large fluid green button copy"
+                            style="margin-bottom:10px;"> <i class="left magic icon"></i>
+                            Press for a Referral Link! 
+                        </a>
+                    </div>
+                <div id="masternode" class="ui segments masternode hidden">
+                        <div class="ui segment" style="text-align: left;">
+                            <p>
+                                <strong>33%</strong> of the Commonwealth fee goes to referrer when link is used.<a href="https://medium.com/@masterhax/how-do-referral-links-work-in-p3c-13c8242fd9d9" target="_blank"> Details.</a>
+                            </p>
+                        </div>
+                        <!-- <div class="ui secondary segment">
+                            <div class="link masternode">
+                                <a id="masternodeLink" href="/?ref=0x">https://commonwealth.gg/index.html?ref=0x123456</a> 
+                            </div>
+                        </div> -->
+                    </div>
             </div>
             <div class="eight wide column">
-                    <div class="ui segments transfer">
+                                <div style="text-align: center">
+                            <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
+                                style="margin-bottom:10px;">
+                                <i class="left comments icon"></i>
+                                Need Help? Press to Chat.
+                            </a>
+                        </div>
+                    <div class="ui segments" style="margin: 0px;">
                             <div class="ui segment">
                                 <h4 class="ui header">
                                     <i class="circular inverted blue exchange alternate icon"></i>
                                     <div class="content">
-                                        <div class="sub header"><b>Transfer Points</b>. <i>Always send to another crop address (see below).</i></div>
+                                        <div class="sub header"><b>Transfer Points</b>. <i>Always send to another crop address.</i></div>
                                     </div>
                                 </h4>
                             </div>
