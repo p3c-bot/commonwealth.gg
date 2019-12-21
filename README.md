@@ -35,7 +35,7 @@ About: Commonwealth is a peer-to-peer algorithmic bank that mints P3C via a smar
 
 Official Website: https://commonwealth.gg
 
-Official Whitepaper: https://p3c.io/commonwealth.pdf
+Official Whitepaper: https://commonwealth.gg/commonwealth.pdf
 
 Security Audit: Contract is Callisto Certified https://github.com/EthereumCommonwealth/Auditing/issues/15
 
