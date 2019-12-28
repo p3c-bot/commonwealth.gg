@@ -43,7 +43,7 @@ Security Audit: Contract is Callisto Certified https://github.com/EthereumCommon
 
 Official Chat: https://discord.gg/crjsdJr
 
-Official Twitter: https://twitter.com/P3COfficial
+Official Twitter: https://twitter.com/commonwealthgg
 
 Official Blog: https://medium.com/@masterhax/
 
