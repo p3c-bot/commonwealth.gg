@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@P3COfficial" />
+        <meta name="twitter:title" content="Commonwealth" />
+        <meta name="twitter:description" content="Commonwealth is a peer-to-peer savings fund built on Ethereum Classic. Points holders receive passive income as the system is used. Plan for the future with Commonwealth." />
+        <meta name="twitter:image" content="https://commonwealth.gg/img/coin.png"/>
+        <meta property="og:url" content="https://commonwealth.gg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Commonwealth" />
+        <meta property="og:description" content="Commonwealth is a peer-to-peer savings fund built on Ethereum Classic. Points holders receive passive income as the system is used. Plan for the future with Commonwealth." />
+        <meta property="og:image" content="https://commonwealth.gg/img/coin.png"/>
+        <title>Commonwealth</title>
+        <meta charset="utf8">
+        <meta name="description" content="The Commonwealth official wallet interface.">
+        <meta name="keywords" content="Global Savings Fund, Cryptocurrency Savings, Live Streaming, ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance, Coops, Cooperative, Blockchain, Blockchain Technology,Savings Fund, P3C, Commonwealth.gg,DeFi,Decentralized Finance">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta name="google-site-verification" content="WrgQBpU2wJGTSp9LZ9NFYn6p_NxgSB95ocpo39Dcydg" />
+        <link rel="stylesheet" href="css/alertify.min.css" />
+        <link rel="stylesheet" href="css/themes/default.min.css" />
+        <link rel="stylesheet" href="css/themes/semantic.min.css" />
+        <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="icon" type="image/png" href="img/whale.png">
+        <!-- GA -->
+        <meta name="google-site-verification" content="ZDl3q34Gq9Ct8J5T4o7FxNohH0fHqnGFAv4pZCoftos" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141280467-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-141280467-1');
+        </script>
+        <!-- END GA -->
+    </head>
+    
     <h3> My Virtual Country</h3>
-    <p> This pseudo-randomly derived from your ETC Address which is: </p>
+    <p> This pseudo-randomly derived from your ETC Address which is: <span id="address"></span></p>
     <p> The ETC address goes to our server, and we use it as a seed to generate a plot of land, this land is yours and secured by your key.</p>
     <iframe id="map" style="height: 1000px; width:1000px" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBjN9bBBMOM3j33HZYkueaV7akl8IMciE0&q=-33.8569,151.2152&center=-33.8569,151.2152&zoom=20&maptype=roadmap"></iframe>
    <div id="footer"></div>
@@ -11,9 +47,8 @@
    <script src="js/lodash.min.js"></script>
    <script src="js/d3.v5.min.js"></script>
    <script src="js/alertify.min.js"></script>
+   <script src="js/web3.min.js"></script>
 
    <script src="lib/util.js"></script>
-   <script src="lib/home.js"></script>
-   <script src="lib/charts.js"></script>
    <script src="lib/country.js"></script>
 </html>
