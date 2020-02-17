@@ -49,12 +49,38 @@
 </head>
 
 <body>
-    <div class="pusher">
+    <div class="pusher chart-background">
         <div class="cityscape">
             <div class="ui large inverted stackable menu gradient"
                 style="border-radius:0px !important; margin-bottom: 0px; background: rgba(0, 0, 0, .6) !important;">
                 <div class="ui container">
-                    <a class="header item" href="/">
+                    <!-- MOBILE MENU START  -->
+                    <span class="mobile only topnav ui large inverted stackable menu gradient">
+                        <a class="header item" href="/">
+                            <img src="img/whale.svg" class="ui mini image" />
+                            <h2 class="title">Commonwealth</h2>
+                        </a>
+                        <div id="myLinks">
+                            <a class="item" href="/index.html">
+                                <strong>Home</strong>
+                            </a>
+                            <a class="item" href="/use.html">
+                                <strong>Wallet</strong>
+                            </a>
+                            <a class="item" href="/games.html">
+                                <strong>Games</strong>
+                            </a>
+                            <a class="item" href="/info.html">
+                                <strong>Info</strong>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="padding-bottom: 100%;">
+                        <i class="bars icon"></i>
+                        </a>
+                    </span>
+                    <!-- MOBILE MENU END -->
+                    <!-- COMPUTER MEMU START -->
+                    <a class="custom-computer only header item" href="/">
                         <img src="img/whale.svg" class="ui mini image" />
                         <h2 class="title">Commonwealth</h2>
                     </a>
@@ -80,6 +106,7 @@
                             </strong>
                         </a>
                     </div>
+                    <!-- COMPUTER MENU END -->
                 </div>
             </div>
         </div>
@@ -142,7 +169,7 @@
         <!-- TradingView Widget BEGIN -->
         <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"  style="color: black !important;">Ticker Tape by TradingView</a></div>
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
         {
         "symbols": [
@@ -338,8 +365,7 @@
             </div>
             </div>
         </div>
-        <br>
-        <div class="ui inverted vertical footer segment gradient personal">
+        <div class="ui inverted vertical footer segment gradient personal ">
             <div class="ui container">
                 <div class="ui stackable inverted divided equal height stackable grid">
                     <div class="three wide column">

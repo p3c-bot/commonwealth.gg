@@ -46,15 +46,41 @@
           shard: 'https://disweb.deploys.io'
         })
       </script>
+      <!-- Top Navigation Menu -->
 </head>
 
 <body>
     <div class="pusher">
         <div class="game-background">
-            <div class="ui large inverted stackable menu gradient"
-                style="border-radius:0px !important; margin-bottom: 0px; background: rgba(0, 0, 0, .6) !important;">
+            <div class="ui large inverted stackable menu gradient" style="border-radius:0px !important; margin-bottom: 0px; background: rgba(0, 0, 0, .6) !important;">
                 <div class="ui container">
-                    <a class="header item" href="/">
+                    <!-- MOBILE MENU START  -->
+                    <span class="mobile only topnav ui large inverted stackable menu gradient">
+                        <a class="header item" href="/">
+                            <img src="img/whale.svg" class="ui mini image" />
+                            <h2 class="title">Commonwealth</h2>
+                        </a>
+                        <div id="myLinks">
+                            <a class="item" href="/index.html">
+                                <strong>Home</strong>
+                            </a>
+                            <a class="item" href="/use.html">
+                                <strong>Wallet</strong>
+                            </a>
+                            <a class="item" href="/info.html">
+                                <strong>Info</strong>
+                            </a>
+                            <a class="item" href="/chart.html">
+                                <strong>Price Chart</strong>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="padding-bottom: 100%;">
+                          <i class="bars icon"></i>
+                        </a>
+                    </span>
+                    <!-- MOBILE MENU END -->
+                    <!-- COMPUTER MEMU START -->
+                    <a class="custom-computer only header item" href="/">
                         <img src="img/whale.svg" class="ui mini image" />
                         <h2 class="title">Commonwealth</h2>
                     </a>
@@ -80,24 +106,25 @@
                             </strong>
                         </a>
                     </div>
+                    <!-- COMPUTER MENU END -->
                 </div>
             </div>
         <div class="faq column">
             <div class="ui container vertical stripe">
-                <h1 class="ui header center aligned" style="margin-top: 10px; color:white;">Games Built on Commonwealth</h1>
+                <h1 class="ui header center aligned" style="margin-top: 10px; color:white;">Community Games</h1>
                 <div id="statsContainer" class="ui equal width stackable grid">
                         <div class="center aligned row">
                                 <div class="column" style="padding-bottom: 0px !important;">
                                         <div class="ui segments">
                                             <a href="https://arena.highlander.network/">
                                                 <div class="ui segment">
-                                                        <h4>⭐Race in the Commonwealth Arena<i class="right arrow icon"></i></h4>
+                                                        <h4>⭐Arena Race<i class="right arrow icon"></i></h4>
                                                         <ul>
                                                             <li style="text-align: left; margin-bottom: 10px;">
-                                                                <i> Most popular Commonwealth App</i>
+                                                                <i>Most popular Commonwealth App</i>
                                                             </li> 
                                                             <li style="text-align: left; margin-bottom: 10px;">
-                                                                5 Drivers enter with .1 ETC. Four drivers pull back .12 ETC. 
+                                                                5 Drivers enter with <b>.1</b> ETC. Four drivers pull back .12 ETC. 
                                                             </li>
                                                             <li style="text-align: left; margin-bottom: 10px;">
                                                                 One is chosen by the Arena, and receives the arena's Commonwealth Dividends.
@@ -113,10 +140,10 @@
                                         <div class="ui segments">
                                             <a href="https://arena.highlander.network/">
                                                 <div class="ui segment">
-                                                        <h4>Race in the Highstakes Commonwealth Arena<i class="right arrow icon"></i></h4>
+                                                        <h4>Arena Race <i>Highstakes</i><i class="right arrow icon"></i></h4>
                                                         <ul>
                                                             <li style="text-align: left; margin-bottom: 10px;">
-                                                                5 Drivers enter with .5 ETC. Four drivers pull back .6 ETC. 
+                                                                5 Drivers enter with <b>.5 ETC</b>. Four drivers pull back .6 ETC. 
                                                             </li>
                                                             <li style="text-align: left; margin-bottom: 10px;">
                                                                 One is chosen by the Arena, and receives the arena's Commonwealth Dividends.
@@ -138,7 +165,7 @@
                                                                 <i> Generate an immutable new Country based on your ETC Address.</i>
                                                             </li> 
                                                             <li style="text-align: left; margin-bottom: 10px;">
-                                                                New Games can be built on it, the API Standard is open. Read the API Docs. 
+                                                                New Games can be built on it, open API. Read API Docs. 
                                                             </li> 
                                                             <li style="text-align: left; margin-bottom: 10px;">
                                                                 Looking for a developer to integrate this further as an account system.
@@ -162,9 +189,6 @@
                                                             The more points you own, the bigger your whale gets.
                                                         </li> 
                                                         <li style="text-align: left; margin-bottom: 10px;">
-                                                            Idle Clicker Game on top of Commonwealth.
-                                                        </li>
-                                                        <li style="text-align: left; margin-bottom: 10px;">
                                                             <b>Commonwealth Benefit:</b> Every ETC used to grow the whale, is spent on Points.
                                                         </li>
                                                     <img class="logo game-screenshot custom-computer only" src="/img/game/aqua.png" style="width:80%"  alt="Phoenix">
@@ -178,13 +202,13 @@
                                                     <h4>Power Inc.<i class="right arrow icon"></i></h4>
                                                     <ul>
                                                         <li style="text-align: left; margin-bottom: 10px;">
-                                                            <i> A Power Company Simulator - Buy Power Cells with ETC.</i>
+                                                            <i>Grow your Power Generation Empire - generate Gigawatts!</i>
                                                         </li> 
                                                         <li style="text-align: left; margin-bottom: 10px;">
-                                                            Power Cells generate Watts that you can sell, or use to buy more Cells.
+                                                            Power Cells generate Watts that you can sell for ETC, or use to buy more Cells.
                                                         </li> 
                                                         <li style="text-align: left; margin-bottom: 10px;">
-                                                            Grow your Power Generation Empire - generate Gigawatts!
+                                                            More Cells generate more watts daily.
                                                         </li>
                                                         <li style="text-align: left; margin-bottom: 10px;">
                                                             <b>Commonwealth Benefit:</b> A portion of ETC spent on Cells gets delivered as Divies to the Commonwealth.
@@ -206,10 +230,10 @@
                                                             Figure out real users from bots, and help provide tech support.
                                                         </li> 
                                                         <li style="text-align: left; margin-bottom: 10px;">
-                                                            Have fun and become a core member of the Commonwealth.
+                                                            Have fun and become a core member of the Commonwealth!
                                                         </li>
                                                         <li style="text-align: left; margin-bottom: 10px;">
-                                                            <b>Commonwealth Benefit:</b> This is how the Commonwealth sources new talent, and grows in numbers.
+                                                            <b>Commonwealth Benefit:</b> How Commonwealth sources new talent, and grows in numbers.
                                                         </li>
                                                     <img class="logo game-screenshot custom-computer only" src="/img/game/airdrop.jpeg" style="width:80%"  alt="Phoenix">
                                                     <img class="logo game-screenshot mobile only" src="/img/game/airdrop.jpeg" style="width:80%"  alt="Phoenix">                                                                                                
@@ -222,9 +246,7 @@
             </div>
         </div>
         </div>
-        <br>
-        <br>
-        <div class="ui inverted vertical footer segment gradient personal">
+        <div class="ui inverted vertical footer segment gradient personal" style="margin-top: 16px;">
             <div class="ui container">
                 <div class="ui stackable inverted divided equal height stackable grid">
                     <div class="three wide column">
