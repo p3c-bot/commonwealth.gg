@@ -592,11 +592,8 @@ i.blue.icon {
 .topnav {
     overflow: hidden;
     margin-bottom: 0px; 
-    /* background: rgba(0, 0, 0, .1) !important; */
-    position: fixed;
-    z-index: 9999;
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    background: rgba(0, 0, 0, .1) !important;
+    position: relative;
   }
   
   /* Hide the links inside the navigation menu (except for logo/home) */
@@ -623,7 +620,7 @@ i.blue.icon {
   
   /* Add a grey background color on mouse-over */
   .topnav a:hover {
-    background-color: rgba(86, 180, 211, 0.301) !important;
+    background-color: rgba(0, 0, 0, .7) !important;
     color: #56B4D3;
   }
   
