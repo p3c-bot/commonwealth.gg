@@ -22,15 +22,16 @@ pragma solidity ^0.4.21;
  */
 
 contract Hourglass {
-    function myTokens() public view returns(uint256) {}
-    function myDividends(bool) public view returns(uint256) {}
-    function transfer(address, uint256) public {}
+    function myTokens() public pure returns(uint256) {}
+    function myDividends(bool) public pure returns(uint256) {}
+    function transfer(address, uint256) public returns(bool) {}
     function buy(address) public payable returns(uint256) {}
 }
 contract Farm {
-    function myCrop() public view returns(address) {}
-    function myCropTokens() public view returns(uint256) {}
-    function myCropDividends() public view returns(uint256) {}
+    mapping (address => address) public crops;
+    function myCrop() public pure returns(address) {}
+    function myCropTokens() public pure returns(uint256) {}
+    function myCropDividends() public pure returns(uint256) {}
 }
 
 contract Lobby {
@@ -38,93 +39,100 @@ contract Lobby {
     event NewGame(address indexed _from, address _game, uint _id, uint _amountOfPlayers, uint _entryCost);
 
     mapping (uint256 => address) public games;
-    uint256 public numberOfGames = 0;
+    uint256 public gameNumber = 0;
     
     /**
      * User specifies how many players they want, and what the entry cost in wei is for a new game.
      * Creates a new contract for them, and buys them automatic entry.
      */
     function createGame(uint256 amountOfPlayers, uint256 entryCost) public payable returns (address) {
-        address gameAddress = new NodeForNode(amountOfPlayers, entryCost);
-        games[numberOfGames] = gameAddress;
+        address gameAddress = new NodeForNode(gameNumber, amountOfPlayers, entryCost);
+        games[gameNumber] = gameAddress;
 
-        numberOfGames += 1;
         
         NodeForNode game = NodeForNode(gameAddress);
         game.BuyIn.value(entryCost)(msg.sender);
         
-        emit NewGame(msg.sender, gameAddress, numberOfGames, amountOfPlayers, entryCost);
-        
+        emit NewGame(msg.sender, gameAddress, gameNumber, amountOfPlayers, entryCost);
+        gameNumber += 1;
         return gameAddress;
     }
 }
 
-
+/**
+ * NodeForNode game contract. It is created by the lobby, and one time use.
+ * If it fills up, it buys P3C with everyone's referal link, user can ask for refund, which sends back to them.
+ * If a user has a crop setup, the functions will detect it and use it to buy tokens for.
+ * Contract self desturcts when it is used to clean the blockchain. 
+ */
 contract NodeForNode {
     
     event GameJoined(address indexed _from);
-    event GameExecuted(address indexed _from, uint size, uint entry);
+    event GameExecuted(uint256 indexed _id, address indexed _from, uint size);
     
     Hourglass p3c;
     Farm farm;
     
-    address internal p3cAddress = 0xDF9AaC76b722B08511A4C561607A9bf3AfA62E49;
+    // address internal p3cAddress = 0x8c01128ff13E8296c34b22b20Ffc2829D85A2A22;
+    address internal p3cAddress = 0xDe6FB6a5adbe6415CDaF143F8d90Eb01883e42ac;
     address internal farmAddress = 0x93123bA3781bc066e076D249479eEF760970aa32;
 
     mapping(address => bool) public waiting;
     address[] public players;
     
-    uint256 public playerAmount;
-    uint256 public entryCost;
+    uint256 public id;
+    uint256 public size;
+    uint256 public cost;
 
-    function NodeForNode(uint256 amountOfPlayers, uint256 cost) public {
+    function NodeForNode(uint256 _id, uint256 _amountOfPlayers, uint256 _cost) public {
         p3c = Hourglass(p3cAddress);
         farm = Farm(farmAddress);
         
-        playerAmount = amountOfPlayers;
-        entryCost = cost;
+        id = _id;
+        size = _amountOfPlayers;
+        cost = _cost;
     }
     
     function waitingPlayers() public view returns (uint256){
         return players.length;
     }
-    
-    function BuyIn(address user) payable public {
-        require(msg.value == entryCost);
-        require(waiting[user] == false);
 
-        // address user = msg.sender;
+    function BuyIn(address _user) payable public {
+        require(msg.value == cost);
+
+        // if a crop exists for a user, make that the user address
+        address user = _user;
+        if (farm.crops(_user) != 0x0){
+            user = farm.crops(_user);
+        }
         
-        // If the user has crop tokens, use that as the N4N destination
-        // if (farm.myCropTokens() > p3c.myTokens()){
-        //     user = farm.myCrop();
-        // }
+        require(waiting[user] == false);
         
-        emit GameJoined(user);
         players.push(user);
         waiting[user] = true;
-        // require(players.length > size);
-        
-        if (players.length == playerAmount){
-            // Iterate through players and distribute tokens
+        emit GameJoined(user);
+
+        // Iterate through players and distribute tokens
+        if (players.length >= size){
             for (uint i=0; i<players.length;i++){
-                // uint tokensBought = p3c.buy.value(entryCost)(players[i]);
-                // p3c.transfer(players[i],tokensBought);
-                players[i].transfer(entryCost);
+                // Each player buys in using their own node. Game theory is a beautiful thing.
+                p3c.buy.value(cost)(players[i]);
+                uint myTokens = (p3c.myTokens());
+                p3c.transfer(players[i], myTokens);
             }
             
-            emit GameExecuted(user, playerAmount, entryCost);
+            emit GameExecuted(id, user, size);
+            // Send any extra dividends back to the first player
             selfdestruct(msg.sender);
         }
     }
     
-    function Refund(address user) public {
-        require(user == msg.sender);
-        // address user = msg.sender;
-        // If the user has crop tokens, use that as the N4N destination
-        // if (farm.myCropTokens() > p3c.myTokens()){
-        //     user = farm.myCrop();
-        // }
+    function Refund() public {
+        address user = msg.sender;
+        // if there is a crop for the user, use it.
+        if (farm.crops(msg.sender) != 0x0){
+            user = farm.crops(msg.sender);
+        }
         
         require(waiting[user] == true);
         
@@ -132,7 +140,7 @@ contract NodeForNode {
         removeByIndex(players, index);     
         
         waiting[user] = false;
-        user.transfer(entryCost);
+        (msg.sender).transfer(cost);
         if (players.length == 0){
             selfdestruct(msg.sender);
         }
