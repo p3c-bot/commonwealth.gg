@@ -12,7 +12,7 @@
     <meta property="og:title" content="Commonwealth" />
     <meta property="og:description" content="Commonwealth is a peer-to-peer savings fund built on Ethereum Classic. Points holders receive passive income as the system is used. Plan for the future with Commonwealth." />
     <meta property="og:image" content="https://commonwealth.gg/img/coin.png"/>
-    <title>Commonwealth Pure</title>
+    <title>Node for Node</title>
     <meta charset="utf8">
     <meta name="description" content="The Commonwealth pure wallet interface. Useful for exchanges, developers, and merchants.">
     <meta name="keywords" content="Payments, Payment Processing, Live Streaming, ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance, Coops, Cooperative, Blockchain, Blockchain Technology,Savings Fund, P3C, Commonwealth.gg">
@@ -38,12 +38,12 @@
                 <a class="item" href="/">
                     <img id="logo" src="img/etc-logo-alt.png" class="ui mini image" style="max-width: 15%" />
                     <h2 class="title" style="color: black;">Node for Node</h2>
-                    <div class="opacity mobile only">
+                    <!-- <div class="opacity mobile only">
                         <strong>
                             <i class="chess rook icon"></i>
                         </strong>
                         <span id="etcInContract">0</span>
-                    </div>
+                    </div> -->
                 </a>
             </div>
 
@@ -63,11 +63,20 @@
                     </a>
                     <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"
                     target="_blank">
-                    <div class="opacity notranslate" style="color: black;">
+                    <div class="opacity" style="color: black;">
                         <strong>
                             <i class="chess rook icon"></i>
                         </strong>
                         Balance: <span id="myCropTokens"></span> P3C
+                    </div>
+                    </a>
+                    <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"
+                    target="_blank">
+                    <div class="opacity" style="color: black;">
+                        <strong>
+                            <i class="chess pawn icon"></i>
+                        </strong>
+                        Games: <span id="gameNumber"></span>
                     </div>
                     </a>
                 </div>
@@ -96,10 +105,10 @@
                     <tbody>
                       <tr>
                         <td id="infoGameId" data-label="ID">Null</td>
-                        <td id="infoGameAge" data-label="Age">1</td>
-                        <td id="infoGameCost" data-label="Cost">.01ETC</td>
-                        <td id="infoGameWaiting" data-label="Waiting">1</td>
-                        <td id="infoGameSize" data-label="Seats">2</td>
+                        <td id="infoGameAge" data-label="Age">0 Seconds</td>
+                        <td id="infoGameCost" data-label="Cost">0 ETC</td>
+                        <td id="infoGameWaiting" data-label="Waiting">0</td>
+                        <td id="infoGameSize" data-label="Seats">0</td>
                       </tr>
                     </tbody>
                   </table>
@@ -150,9 +159,6 @@
                 <a href="#" id="createGame" class="ui large fluid green button" style="margin-top:10px;">
                     Create Game
                 </a>
-                <a href="#" id="copyGameAddress" class="ui large fluid green button" style="margin-top:10px;">
-                    Copy Address
-                </a>
                 </form>
             </div>
         </div>
@@ -161,9 +167,8 @@
         <div class="ui stackable grid">
             <div class="eight wide column">
                 <div style="text-align: center">
-                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
-                        style="margin-bottom:10px;">
-                        <i class="left discord icon"></i>
+                    <a id="copyGameButton" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
+                        <i class="left magic icon"></i>
                         Copy Game Link
                     </a>
                 </div>
@@ -231,10 +236,9 @@
     
     <script src="lib/util.js"></script>
     <script src="lib/contracts.js"></script>
-    <script src="lib/pure/pure.js"></script>
-    <script src="lib/pure/rainmaker.js"></script>
     <script src="lib/masternode.js"></script>
-    <script src="lib/pure/use.js"></script>
+    <script src="lib/farm.js"></script>
+    <script src="lib/use.js"></script>
     <script src="lib/nodefornode.js"></script>
 </body>
 <source src="/doc-assets/register.mp3" type="audio/mpeg">
