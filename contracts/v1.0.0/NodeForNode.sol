@@ -24,7 +24,6 @@ pragma solidity ^0.4.21;
 contract Hourglass {
     function myTokens() public pure returns(uint256) {}
     function myDividends(bool) public pure returns(uint256) {}
-    function transfer(address, uint256) public returns(bool) {}
     function buy(address) public payable returns(uint256) {}
 }
 contract Farm {
@@ -33,6 +32,11 @@ contract Farm {
     function myCropTokens() public pure returns(uint256) {}
     function myCropDividends() public pure returns(uint256) {}
 }
+
+contract Crop {
+    function buy(address) external payable {}
+}
+
 
 contract Lobby {
     
@@ -46,10 +50,11 @@ contract Lobby {
      * Creates a new contract for them, and buys them automatic entry.
      */
     function createGame(uint256 amountOfPlayers, uint256 entryCost) public payable returns (address) {
+        require(amountOfPlayers > 1 && entryCost > 0);
+        
         address gameAddress = new NodeForNode(gameNumber, amountOfPlayers, entryCost);
         games[gameNumber] = gameAddress;
 
-        
         NodeForNode game = NodeForNode(gameAddress);
         game.BuyIn.value(entryCost)(msg.sender);
         
@@ -72,9 +77,7 @@ contract NodeForNode {
     
     Hourglass p3c;
     Farm farm;
-    
-    // address internal p3cAddress = 0x8c01128ff13E8296c34b22b20Ffc2829D85A2A22;
-    address internal p3cAddress = 0xDe6FB6a5adbe6415CDaF143F8d90Eb01883e42ac;
+
     address internal farmAddress = 0x93123bA3781bc066e076D249479eEF760970aa32;
 
     mapping(address => bool) public waiting;
@@ -83,14 +86,15 @@ contract NodeForNode {
     uint256 public id;
     uint256 public size;
     uint256 public cost;
+    uint256 public time;
 
     function NodeForNode(uint256 _id, uint256 _amountOfPlayers, uint256 _cost) public {
-        p3c = Hourglass(p3cAddress);
         farm = Farm(farmAddress);
-        
+
         id = _id;
         size = _amountOfPlayers;
         cost = _cost;
+        time = now;
     }
     
     function waitingPlayers() public view returns (uint256){
@@ -116,15 +120,23 @@ contract NodeForNode {
         if (players.length >= size){
             for (uint i=0; i<players.length;i++){
                 // Each player buys in using their own node. Game theory is a beautiful thing.
-                p3c.buy.value(cost)(players[i]);
-                uint myTokens = (p3c.myTokens());
-                p3c.transfer(players[i], myTokens);
+                Crop(players[i]).buy.value(cost)(players[i]);
             }
             
             emit GameExecuted(id, user, size);
+
             // Send any extra dividends back to the first player
             selfdestruct(msg.sender);
         }
+    }
+    
+    function amIWaiting() public view returns (bool) {
+        address user = msg.sender;
+        // if there is a crop for the user, use it.
+        if (farm.crops(msg.sender) != 0x0){
+            user = farm.crops(msg.sender);
+        }
+        return waiting[user];
     }
     
     function Refund() public {

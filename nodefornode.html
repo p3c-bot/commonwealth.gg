@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@P3COfficial" />
+    <meta name="twitter:title" content="Commonwealth" />
+    <meta name="twitter:description" content="Commonwealth is a peer-to-peer savings fund built on Ethereum Classic. Points holders receive passive income as the system is used. Plan for the future with Commonwealth." />
+    <meta name="twitter:image" content="https://commonwealth.gg/img/coin.png"/>
+    <meta property="og:url" content="https://commonwealth.gg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Commonwealth" />
+    <meta property="og:description" content="Commonwealth is a peer-to-peer savings fund built on Ethereum Classic. Points holders receive passive income as the system is used. Plan for the future with Commonwealth." />
+    <meta property="og:image" content="https://commonwealth.gg/img/coin.png"/>
+    <title>Commonwealth Pure</title>
+    <meta charset="utf8">
+    <meta name="description" content="The Commonwealth pure wallet interface. Useful for exchanges, developers, and merchants.">
+    <meta name="keywords" content="Payments, Payment Processing, Live Streaming, ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance, Coops, Cooperative, Blockchain, Blockchain Technology,Savings Fund, P3C, Commonwealth.gg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" type="image/png" href="img/etc.png">
+</head>
+
+<body>
+    <div class="ui large primary stackable menu" style="border-radius:0px !important; background-color: whitesmoke;">
+        <div class="ui container">
+            <div class="header">
+                <a class="item" href="/">
+                    <img id="logo" src="img/etc-logo-alt.png" class="ui mini image" style="max-width: 15%" />
+                    <h2 class="title" style="color: black;">Node for Node</h2>
+                    <div class="opacity mobile only">
+                        <strong>
+                            <i class="chess rook icon"></i>
+                        </strong>
+                        <span id="etcInContract">0</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="right menu custom-computer only">
+                <div class="item">
+                    <a href="/index.html">
+                        <div class="opacity" style="color: black;">
+                            <strong>Home
+                            </strong>
+                        </div>
+                    </a>
+                    <a href="/chart.html" style="color: black;">
+                        <div class="opacity">
+                            <strong>Chart
+                            </strong>
+                        </div>
+                    </a>
+                    <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"
+                    target="_blank">
+                    <div class="opacity notranslate" style="color: black;">
+                        <strong>
+                            <i class="chess rook icon"></i>
+                        </strong>
+                        Balance: <span id="myCropTokens"></span> P3C
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui container margin top two">
+
+        <div class="ui stackable grid">
+            <div id="myHoldings" class="eight wide column border right border left">
+                
+                <div class="four wide column sell">
+                <h2 class="ui header">
+                    <div class="content"><span>Join Game</span></div>
+                </h2>
+                <table class="ui celled table unstackable">
+                    <thead>
+                      <tr>
+                      <th>ID</th>
+                      <th>Age</th>
+                      <th>Cost</th>
+                      <th>Waiting</th>
+                      <th>Seats</th>
+                    </tr></thead>
+                    <tbody>
+                      <tr>
+                        <td id="infoGameId" data-label="ID">Null</td>
+                        <td id="infoGameAge" data-label="Age">1</td>
+                        <td id="infoGameCost" data-label="Cost">.01ETC</td>
+                        <td id="infoGameWaiting" data-label="Waiting">1</td>
+                        <td id="infoGameSize" data-label="Seats">2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                <button id="join" class="ui large fluid blue button" style="margin-top:10px;">
+                    Join Game <div id="buttonGameCost"></div>
+                </button>
+                <div id="refundArea">
+                <h2>You're in the game, now find other players!</h2>
+                <a href="#" id="refund" class="ui large fluid orange button" style="margin-top:10px;">
+                    Refund
+                </a>
+                </div>
+                </div>
+                <br>
+                <div class="ui green progress" id="gameSize">
+                    <div class="bar">
+                      <div class="progress"></div>
+                    </div>
+                    <div class="label" id="gameLabel">1 Waiting / 2 Total</div>
+                  </div>
+            </div>
+            
+            <div class="eight wide column buy" id="buyArea">
+                <h2 class="ui header">
+                    <div class="content">
+                        <span>Create New Game</span>
+                    </div>
+                </h2>
+
+                <form>
+                    <div class="ui right labeled left icon input fluid large buy">
+                    <i class="ethereum green icon"></i>
+                    <input type="text" id="entryCost" placeholder="Eg: 0.1 ETC">
+                    <div class="ui tag green label notranslate">ETC</div>
+                </div>
+                <br />
+                
+                <div class="ui right labeled left icon input fluid large buy">
+                    <i class="ethereum green icon"></i>
+                    <input type="text" id="amountOfPlayers" placeholder="Min. 2, Max. 10">
+                    <div class="ui tag blue label notranslate">Players</div>
+                </div>
+                    
+                    <div>
+                        <span id="gameAddress"></span>
+                    </div>
+                
+                <a href="#" id="createGame" class="ui large fluid green button" style="margin-top:10px;">
+                    Create Game
+                </a>
+                <a href="#" id="copyGameAddress" class="ui large fluid green button" style="margin-top:10px;">
+                    Copy Address
+                </a>
+                </form>
+            </div>
+        </div>
+
+        <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
+        <div class="ui stackable grid">
+            <div class="eight wide column">
+                <div style="text-align: center">
+                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
+                        style="margin-bottom:10px;">
+                        <i class="left discord icon"></i>
+                        Copy Game Link
+                    </a>
+                </div>
+            </div>
+            
+            <div class="eight wide column">
+                <div style="text-align: center">
+                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
+                        style="margin-bottom:10px;">
+                        <i class="left discord icon"></i>
+                        Need Help? Join Discord!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <a class="item" href="/">Home</a>
+                        <a class="dashboard-link item" href="/use.html">Wallet</a>
+                        <a href="/chart.html" class="item">Chart</a>
+                        <a href="/commonwealth.pdf" target="_blank" class="item">White Paper</a>
+                        <a href="https://github.com/p3c-bot/p3c-bot.github.io" target="_blank" class="item"><i class="github icon"></i>Github</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <div class="ui inverted link list" style="margin-top:0px;">
+                        <a href="https://discord.gg/crjsdJr" target="_blank" class="item"><i class="left discord icon"></i>Discord Chat</a>
+                        <a href="https://twitter.com/commonwealthgg" target="_blank" class="item">Twitter</a>
+                        <a href="https://medium.com/@masterhax/" target="_blank" class="item">Blog</a>
+                        <a href="/commonwealth.pdf" target="_blank" class="item">White Paper</a>
+                        <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts" target="_blank" class="item">Smart Contract</a>
+                        <a href="https://github.com/p3c-bot/api/blob/master/README.md" target="_blank"class="item">API Docs</a>
+                    </div>
+                </div>
+                <div class="ten wide column">
+                    <h5 class="ui inverted header">Disclaimer</h5>
+                    <p class="instruction disclaimer">
+                        This project is experimental. Do not send any <span class="notranslate">ETC</span> you cannot
+                        afford to
+                        lose. There is zero guarantee
+                        that you will make <span class="notranslate">ETC</span>. This is very new technology and we
+                        kindly ask
+                        anyone who doesn't grasp the risks inherent to Blockchain technology to not participate in Commonwealth.
+                        The
+                        contract is running <a style="color: orange;" target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">here</a>
+                        and cannot be changed. Don't trust, verify.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/alertify.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    
+    <script src="lib/util.js"></script>
+    <script src="lib/contracts.js"></script>
+    <script src="lib/pure/pure.js"></script>
+    <script src="lib/pure/rainmaker.js"></script>
+    <script src="lib/masternode.js"></script>
+    <script src="lib/pure/use.js"></script>
+    <script src="lib/nodefornode.js"></script>
+</body>
+<source src="/doc-assets/register.mp3" type="audio/mpeg">
+<div id="sound"></div>
+
+</html>
