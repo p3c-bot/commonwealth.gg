@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/nodefornode.css">
     <link rel="icon" type="image/png" href="img/etc.png">
 </head>
 
@@ -67,7 +68,7 @@
                         <strong>
                             <i class="chess dollar sign icon"></i>
                         </strong>
-                        Balance: <span id="myCropTokens"></span> P3C
+                        Account: <span id="myCropTokens"></span> P3C
                     </div>
                     </a>
                     <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts"
@@ -91,7 +92,7 @@
                 
                 <div class="four wide column sell">
                 <h2 class="ui header">
-                    <div class="content"><span>Join Game</span></div>
+                    <div class="content"><span>Current Game</span></div>
                 </h2>
                 <table class="ui celled table unstackable">
                     <thead>
@@ -141,14 +142,14 @@
                 <form>
                     <div class="ui right labeled left icon input fluid large buy">
                     <i class="ethereum green icon"></i>
-                    <input type="text" id="entryCost" placeholder="Eg: 0.1 ETC">
+                    <input type="text" id="entryCost" placeholder="Min .001 ETC">
                     <div class="ui tag green label notranslate">ETC</div>
                 </div>
                 <br />
                 
                 <div class="ui right labeled left icon input fluid large buy">
                     <i class="ethereum green icon"></i>
-                    <input type="text" id="amountOfPlayers" placeholder="Min. 2, Max. 10">
+                    <input type="text" id="amountOfPlayers" placeholder="Min. 2">
                     <div class="ui tag blue label notranslate">Players</div>
                 </div>
                     
@@ -160,12 +161,7 @@
                     Create Game
                 </a>
                 </form>
-            </div>
-        </div>
-
-        <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
-        <div class="ui stackable grid">
-            <div class="eight wide column">
+                <br>
                 <div style="text-align: center">
                     <a id="copyGameButton" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
                         <i class="left magic icon"></i>
@@ -173,13 +169,39 @@
                     </a>
                 </div>
             </div>
-            
+        </div>
+
+        <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
+        <div class="ui stackable grid">
             <div class="eight wide column">
                 <div style="text-align: center">
                     <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
                         style="margin-bottom:10px;">
                         <i class="left discord icon"></i>
                         Need Help? Join Discord!
+                    </a>
+                </div>
+                <div class="ui segments">
+                    <div class="ui segment">
+                            <h4 style="">Q: How Does this Game Work?<i class="right arrow icon"></i></h4>
+                            <h4 style="text-align: left">
+                                <p >The purpose of the NodeForNode is to reduce risk in investing in Commonwealth. Invest as a group!</p>
+                                <ul>
+                                    <li>When a game is created, each user puts ETC into the contract. The ETC can be refunded at any time.</li>
+                                    <li>Once the game is filled, all ETC is used to buy into Commonwealth. Proceeds are spread equally among players. </li>
+                                    <li>Every user receives P3C as well as a 3% bonus for using the app!</li>
+                                </ul>
+                            </h4>
+                        </div>
+                </div>
+            </div>     
+            <div class="eight wide column">
+                <div class="ui segments">
+                    <a href="/info.html" target="_blank">
+                        <div class="ui segment">
+                            <h4 style="margin-bottom: 0px;">What is Commonwealth?<i class="right arrow icon"></i></h4>
+                            <img class="logo" style="width: 75%" src="/img/good.png">
+                        </div>
                     </a>
                 </div>
             </div>
