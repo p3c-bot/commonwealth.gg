@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@P3COfficial" />
+        <meta name="twitter:title" content="Commonwealth" />
+        <meta name="twitter:description" content="Commonwealth is a peer-to-peer savings fund built on Ethereum Classic. Points holders receive passive income as the system is used. Plan for the future with Commonwealth." />
+        <meta name="twitter:image" content="https://commonwealth.gg/img/coin.png"/>
+        <meta property="og:url" content="https://commonwealth.gg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Commonwealth" />
+        <title>Node for Node</title>
+        <meta charset="utf8">
+        <meta name="description" content="The Commonwealth pure wallet interface. Useful for exchanges, developers, and merchants.">
+        <meta name="keywords" content="Payments, Payment Processing, Live Streaming, ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance, Coops, Cooperative, Blockchain, Blockchain Technology,Savings Fund, P3C, Commonwealth.gg">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="css/semantic.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/alertify.min.css" />
+        <!-- Default theme -->
+        <link rel="stylesheet" href="css/themes/default.min.css" />
+        <!-- Semantic UI theme -->
+        <link rel="stylesheet" href="css/themes/semantic.min.css" />
+        <!-- Bootstrap theme -->
+        <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="css/responsive.dataTables.min.css">    
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/nodefornode.css">
+        <link rel="icon" type="image/png" href="img/etc.png">
+    </head>
+    <body>
+        <div class="ui large inverted stackable menu gradient emerald" style="border-radius:0px !important;">
+            <div class="ui container">
+                <a class="header item" href="/">
+                    <img src="img/tribes/moai.png" style="height: 45px;" ui mini image" />
+                    <h2 class="title">Commonwealth Tribes</h2>
+                </a>
+                <div class="right menu">
+                    <div class="item">
+
+                        <div class="opacity">
+                            <strong>
+                                <i class="ethereum icon"></i>
+                                <span>Locked:&nbsp;</span>
+                            </strong>
+                            <span id="global">Loading</span>
+                        </div>
+                        <div class="opacity">
+                            <a href="https://pro.coinbase.com/trade/ETC-USD" style="color: white" target="_blank"><strong>
+                                <span>ETC Price:&nbsp;</span>
+                            </strong>
+                            $<span id="price">0.0</span>
+                            </a>
+                        </div>
+                        <div class="opacity">
+                            <a href="https://etcstatus.live/#seenoevil" style="color: white" target="_blank">Network: <i id="status" class="circle icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui container margin top two">
+            <div class="ui stackable grid">
+                <div class="sixteen wide column border right border left" style="background: rgba(58, 150, 139, 0.17);">
+                    <h3 class="ui header">
+                        <div class="content">Active Tribes
+                            <div class="sub header">Each of these tribes can be joined to save and grow the commonwealth. The tribes can be a club!</div>
+                        </div>
+                    </h3>
+                    <br>
+                    <div class="ui one column centered grid">
+                        <div class="column" style="padding-top: 0px; padding-bottom: 0px;">
+                            <div class="ui horizontal segment">
+                                <div id="sponsor" class="sponsor"></div>
+                                <span class="ui text blue small" style="float: right"><a href="https://p3c.io/sponsor.html"
+                                        target="_blank">Purchase this Ad with ETC</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <table id="dapps" class="display">
+                        <thead>
+                            <tr>
+                                <th>Users (72Hr)</th>
+                                <th>Tx (72Hr)</th>
+                                <th>Dapp</th>
+                                <th>Locked (ETC)</th>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Volume (72Hr)</th>
+                                <th>Help</th>
+                                <th>Smart Contract</th>
+                                <th><img src="img/etc.png" style="height: 45px;" ui mini image" /></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+            <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
+            <div class="ui olive message">
+                <p>To use the Dapps, make sure you have
+                    <a target="_blank" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig">Saturn
+                        Wallet enabled</a>, and Metamask turned off. <b>Contracts will show 0 balance if wallet not
+                        connected properly!</b>
+                </p>
+            </div>
+
+            <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
+
+            <div class="ui stackable grid">
+
+                <div class="eight wide column">
+                    <div class="ui segments">
+                        <div class="ui segment">
+                            <p>
+                                An <a href="https://github.com/p3c-bot/dappDirect" target="_blank">open source</a> Dapp
+                                Explorer. Any donations are appreciated!
+                            </p>
+                        </div>
+                    </div>
+                    <div style="text-align: center">
+                        <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button">
+                            <i class="left discord icon"></i>
+                            Need help? Ask on our Discord. 
+                        </a>
+                    </div>
+                    <div class="ui segments">
+                            <a href="https://trustwallet.com/" target="_blank">
+                            <div class="ui segment">
+                                <h2 style="margin-bottom: 0px; text-align: center;">Start using ETC from a Phone<i class="right arrow icon"></i></h2>
+                                <img class="center mobile only" style="height: 20%" src="/img/landing/phone.png" alt="Phoenix">
+                                <img class="center custom-computer only" src="/img/landing/phone.png" alt="Phoenix">
+                            </div>
+                            </a>
+                    </div>
+                </div>
+
+                <div class="eight wide column">
+                    <div class="ui segments transfer">
+                        <div class="ui segment">
+                            <h4 class="ui header">
+                                <i class="circular inverted blue exchange alternate icon"></i>
+                                <div class="content">
+                                    Need Ethereum Classic?
+                                    <div class="sub header">You need ETC to interact with the dapps listed on this page.</div>
+                                </div>
+                            </h4>
+                        </div>
+                        <div id="changelly" class="ui segment">
+                            <div>WTF</div>
+                        </div>
+                    </div>
+                    <div class="ui segments">
+                            <a href="https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en" target="_blank">
+                            <div class="ui segment">
+                                <h2 style="margin-bottom: 0px; text-align: center;">Start using ETC from a PC<i class="right arrow icon"></i></h2>
+                                <img class="center mobile only" style="width: 100% !important;" src="/img/landing/pc.png" alt="Phoenix">
+                                <img class="center custom-computer only" style="width: 100% !important;" src="/img/landing/pc.png" alt="Phoenix">
+                            </div>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/underscore.min.js"></script>
+        <script src="/js/bluebird.min.js"></script>
+        <script src="/js/semantic.min.js"></script>
+        <script src="/js/jquery.dataTables.min.js"></script>
+        <script src="/js/dataTables.responsive.min.js"></script>
+        <script src="js/alertify.min.js"></script>
+        
+        <script src="lib/util.js"></script>
+        <script src="lib/tribes.js"></script>
+        <script>
+                function refreshPrice() {
+                    $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETC&tsyms=USDT', function (json) {
+                        var USETC = JSON.parse(JSON.stringify(json)).USDT;
+                        var price = (USETC).toFixed(2);
+                        $("#price").text(price)
+                    });
+                }
+                setTimeout(function () {
+                    refreshPrice()
+                }, 2000);
+                setInterval(function () {
+                    refreshPrice() // this will run after every 5 seconds
+                }, 12000);
+        </script>
+    </body>
+
+</html>
