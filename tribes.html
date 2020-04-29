@@ -71,29 +71,18 @@
                         </div>
                     </h3>
                     <br>
-                    <div class="ui one column centered grid">
-                        <div class="column" style="padding-top: 0px; padding-bottom: 0px;">
-                            <div class="ui horizontal segment">
-                                <div id="sponsor" class="sponsor"></div>
-                                <span class="ui text blue small" style="float: right"><a href="https://p3c.io/sponsor.html"
-                                        target="_blank">Purchase this Ad with ETC</a></span>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <table id="dapps" class="display">
+                    <table id="tribes" class="display">
                         <thead>
                             <tr>
-                                <th>Users (72Hr)</th>
-                                <th>Tx (72Hr)</th>
-                                <th>Dapp</th>
-                                <th>Locked (ETC)</th>
-                                <th>Category</th>
-                                <th>Description</th>
-                                <th>Volume (72Hr)</th>
-                                <th>Help</th>
-                                <th>Smart Contract</th>
-                                <th><img src="img/etc.png" style="height: 45px;" ui mini image" /></th>
+                                <th>Tribe</th>
+                                <th>Name</th>
+                                <th>Cost</th>
+                                <th>Size</th>
+                                <th>Age</th>
+                                <th>Reward</th>
+                                <th>Creator</th>
+                                <!-- <th>Smart Contract</th>
+                                <th><img src="img/etc.png" style="height: 45px;" ui mini image" /></th> -->
                             </tr>
                         </thead>
                     </table>
@@ -176,21 +165,6 @@
         
         <script src="lib/util.js"></script>
         <script src="lib/tribes.js"></script>
-        <script>
-                function refreshPrice() {
-                    $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETC&tsyms=USDT', function (json) {
-                        var USETC = JSON.parse(JSON.stringify(json)).USDT;
-                        var price = (USETC).toFixed(2);
-                        $("#price").text(price)
-                    });
-                }
-                setTimeout(function () {
-                    refreshPrice()
-                }, 2000);
-                setInterval(function () {
-                    refreshPrice() // this will run after every 5 seconds
-                }, 12000);
-        </script>
     </body>
 
 </html>
