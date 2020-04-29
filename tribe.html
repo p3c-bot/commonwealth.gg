@@ -34,7 +34,7 @@
     <div class="ui large primary stackable menu" style="border-radius:0px !important; background-color: whitesmoke;">
         <div class="ui container">
             <div class="header">
-                <a class="item" href="/">
+                <a class="item" href="/tribes.html">
                     <img id="logo" src="img/etc-logo-alt.png" class="ui mini image" style="max-width: 15%" />
                     <h2 class="title" style="color: black;">Commonwealth Tribe</h2>
                     <div class="opacity mobile only">
@@ -92,7 +92,6 @@
                       <th>Age</th>
                       <th>Cost</th>
                       <th>Reward</th>
-                      <th>Waiting</th>
                       <th>Size</th>
                     </tr></thead>
                     <tbody>
@@ -101,7 +100,6 @@
                         <td id="infoGameAge" data-label="Age">0 Seconds</td>
                         <td id="infoGameCost" data-label="Cost">0 ETC</td>
                         <td id="infoGameReward" data-label="Cost">0 P3C</td>
-                        <td id="infoGameWaiting" data-label="Waiting">0</td>
                         <td id="infoGameSize" data-label="Seats">0</td>
                       </tr>
                     </tbody>
@@ -190,12 +188,10 @@
             </div>     
             <div class="eight wide column">
                 <div class="ui segments">
-                    <a href="/info.html" target="_blank">
                         <div class="ui segment">
-                            <h4 style="margin-bottom: 0px;">What is Commonwealth?<i class="right arrow icon"></i></h4>
-                            <img class="logo" style="width: 75%" src="/img/good.png">
+                            <h4><i class="globe icon"></i>Tribe Location</h4>
+                            <iframe id="map" style="width:100%; height: 400px;" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBjN9bBBMOM3j33HZYkueaV7akl8IMciE0&q=-33.8569,151.2152&center=-33.8569,151.2152&zoom=4&maptype=roadmap"></iframe>
                         </div>
-                    </a>
                 </div>
             </div>
         </div>
