@@ -35,8 +35,8 @@
         <div class="ui container">
             <div class="header">
                 <a class="item" href="/tribes.html">
-                    <img id="logo" src="img/etc-logo-alt.png" class="ui mini image" style="max-width: 15%" />
-                    <h2 class="title" style="color: black;">Commonwealth Tribe</h2>
+                    <img id="logo" src="img/tribes/moai.png" class="ui mini image" style="max-width: 15%" />
+                    <h2 class="title" style="color: black;">Commonwealth Tribes</h2>
                     <div class="opacity mobile only">
                         <strong>Home
                         </strong>
@@ -52,9 +52,9 @@
                             </strong>
                         </div>
                     </a>
-                    <a href="/chart.html" style="color: black;">
+                    <a href="/tribes.html" style="color: black;">
                         <div class="opacity">
-                            <strong>Chart
+                            <strong>Tribes
                             </strong>
                         </div>
                     </a>
@@ -68,7 +68,7 @@
                             <strong>
                                 <i class="chess pawn icon"></i>
                             </strong>
-                            Games: <span id="gameNumber"></span>
+                            Tribes: <span id="tribeNumber"></span>
                         </div>
                     </a>
                 </div>
@@ -83,7 +83,7 @@
                 
                 <div class="four wide column sell">
                 <h2 class="ui header">
-                    <div class="content"><span>Current</span></div>
+                    <i id="infoTribeName" class="content">Current</i>
                 </h2>
                 <table class="ui celled table unstackable">
                     <thead>
@@ -96,16 +96,16 @@
                     </tr></thead>
                     <tbody>
                       <tr>
-                        <td id="infoGameId" data-label="ID">Null</td>
-                        <td id="infoGameAge" data-label="Age">0 Seconds</td>
-                        <td id="infoGameCost" data-label="Cost">0 ETC</td>
-                        <td id="infoGameReward" data-label="Cost">0 P3C</td>
-                        <td id="infoGameSize" data-label="Seats">0</td>
+                        <td id="infoTribeId" data-label="ID">Null</td>
+                        <td id="infoTribeAge" data-label="Age">0 Seconds</td>
+                        <td id="infoTribeCost" data-label="Cost">0 ETC</td>
+                        <td id="infoTribeReward" data-label="Cost">0 P3C</td>
+                        <td id="infoTribeSize" data-label="Seats">0</td>
                       </tr>
                     </tbody>
                   </table>
                 <button id="join" class="ui large fluid blue button" style="margin-top:10px;">
-                    Join this Tribe! <div id="buttonGameCost"></div>
+                    Join this Tribe! <div id="buttonTribeCost"></div>
                 </button>
                 <div id="refundArea">
                 <h2>You're in the tribe, now find other players!</h2>
@@ -115,48 +115,54 @@
                 </div>
                 </div>
                 <br>
-                <div class="ui green progress" id="gameSize">
+                <div class="ui green progress" id="tribeSize">
                     <div class="bar">
                       <div class="progress"></div>
                     </div>
-                    <div class="label" id="gameLabel">Null Waiting / Null Total</div>
+                    <div class="label" id="tribeLabel">Null Waiting / Null Total</div>
                   </div>
             </div>
             
             <div class="eight wide column buy" id="buyArea">
                 <h2 class="ui header">
                     <div class="content">
-                        <span>Create a New Tribe</span>
+                        <span>Create a Tribe</span>
                     </div>
                 </h2>
 
                 <form>
                     <div class="ui right labeled left icon input fluid large buy">
-                    <i class="ethereum green icon"></i>
-                    <input type="text" id="entryCost" placeholder="Min .001 ETC">
-                    <div class="ui tag green label notranslate">ETC</div>
-                </div>
-                <br />
+                      <i class="tag green icon"></i>
+                      <input type="text" id="tribeName" placeholder="Max 32 Characters">
+                      <div class="ui tag teal label notranslate">Name</div>
+                    </div>
+                    <br>
+                    <div class="ui right labeled left icon input fluid large buy">
+                      <i class="ethereum green icon"></i>
+                      <input type="text" id="entryCost" placeholder="Min .001 ETC">
+                      <div class="ui tag green label notranslate">ETC</div>
+                    </div>
+                <br/>
                 
                 <div class="ui right labeled left icon input fluid large buy">
-                    <i class="ethereum green icon"></i>
-                    <input type="text" id="amountOfPlayers" placeholder="Min. 2">
+                    <i class="users green icon"></i>
+                    <input type="text" id="amountOfMembers" placeholder="Min. 2">
                     <div class="ui tag blue label notranslate">Members</div>
                 </div>
                     
                     <div>
-                        <span id="gameAddress"></span>
+                        <span id="tribeAddress"></span>
                     </div>
                 
-                <a href="#" id="createGame" class="ui large fluid green button" style="margin-top:10px;">
+                <a href="#" id="createTribe" class="ui large fluid green button" style="margin-top:10px;">
                     Create Tribe
                 </a>
                 </form>
                 <br>
                 <div style="text-align: center">
-                    <a id="copyGameButton" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
+                    <a id="copyTribeButton" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
                         <i class="left magic icon"></i>
-                        Copy Game Link
+                        Copy Tribe Link
                     </a>
                 </div>
             </div>

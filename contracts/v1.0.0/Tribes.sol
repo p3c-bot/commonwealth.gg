@@ -1,18 +1,17 @@
 pragma solidity ^0.4.21;
 /***
- *  _   _           _     ______         _   _           _      
- * | \ | |         | |    |  ___|       | \ | |         | |     
- * |  \| | ___   __| | ___| |_ ___  _ __|  \| | ___   __| | ___ 
- * | . ` |/ _ \ / _` |/ _ \  _/ _ \| '__| . ` |/ _ \ / _` |/ _ \
- * | |\  | (_) | (_| |  __/ || (_) | |  | |\  | (_) | (_| |  __/
- * \_| \_/\___/ \__,_|\___\_| \___/|_|  \_| \_/\___/ \__,_|\___|
- *
+ *  _____     _ _               
+ * |_   _| __(_) |__   ___  ___ 
+ *   | || '__| | '_ \ / _ \/ __|
+ *   | || |  | | |_) |  __/\__ \
+ *   |_||_|  |_|_.__/ \___||___/
+ *                             
  *  v 1.0.0
  *  "If you want to go fast, go alone, if you want to go far go with others."
  *  What?
- *  -> Create a NodeForNode Game of any amount of Players and Amounts in the lobby.
- *  -> Put money into the Game, and when it hits the threshold, all players buy into Commonwealth on each other's masternode links. 
- *  -> NodeForNode contract self destructs after payout, but Lobby still lasts.
+ *  -> Create a Tribe of any amount of members and Amounts in the lobby.
+ *  -> Put money into the Tribe, and when it hits the threshold, all members buy into Commonwealth on each other's masternode links. 
+ *  -> Tribe contract self destructs after payout, but Lobby still lasts.
  * 
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
@@ -40,40 +39,40 @@ contract Crop {
 
 contract Lobby {
     
-    event NewGame(address indexed _from, address _game, uint _id, uint _amountOfPlayers, uint _entryCost);
+    event NewTribe(address indexed _from, address _tribe, uint _id, uint _amountOfmembers, uint _entryCost);
 
-    mapping (uint256 => address) public games;
-    uint256 public gameNumber = 0;
+    mapping (uint256 => address) public tribes;
+    uint256 public tribeNumber = 0;
     
     /**
-     * User specifies how many players they want, and what the entry cost in wei is for a new game.
+     * User specifies how many members they want, and what the entry cost in wei is for a new tribe.
      * Creates a new contract for them, and buys them automatic entry.
      */
-    function createGame(uint256 amountOfPlayers, uint256 entryCost) public payable returns (address) {
-        require(amountOfPlayers > 1 && entryCost > 0);
+    function createTribe(bytes32 name, uint256 amountOfmembers, uint256 entryCost) public payable returns (address) {
+        require(amountOfmembers > 1 && entryCost > 0);
         
-        address gameAddress = new NodeForNode(gameNumber, amountOfPlayers, entryCost);
-        games[gameNumber] = gameAddress;
+        address tribeAddress = new Tribe(tribeNumber, name, amountOfmembers, entryCost);
+        tribes[tribeNumber] = tribeAddress;
 
-        NodeForNode game = NodeForNode(gameAddress);
-        game.BuyIn.value(entryCost)(msg.sender);
+        Tribe tribe = Tribe(tribeAddress);
+        tribe.BuyIn.value(entryCost)(msg.sender);
         
-        emit NewGame(msg.sender, gameAddress, gameNumber, amountOfPlayers, entryCost);
-        gameNumber += 1;
-        return gameAddress;
+        emit NewTribe(msg.sender, tribeAddress, tribeNumber, amountOfmembers, entryCost);
+        tribeNumber += 1;
+        return tribeAddress;
     }
 }
 
 /**
- * NodeForNode game contract. It is created by the lobby, and one time use.
- * If it fills up, it buys P3C with everyone's referal link, user can ask for refund, which sends back to them.
+ * NodeForNode tribe contract. It is created by the lobby, and one time use.
+ * If it fills up, it buys P3C with everyone's ref link, user can ask for refund, which sends back to them.
  * If a user has a crop setup, the functions will detect it and use it to buy tokens for.
- * Contract self desturcts when it is used to clean the blockchain. 
+ * Contract self destructs when it is used to clean the blockchain. 
  */
-contract NodeForNode {
+contract Tribe {
     
-    event GameJoined(address indexed _from);
-    event GameExecuted(uint256 indexed _id, address indexed _from, uint size);
+    event TribeJoined(address indexed _from);
+    event TribeCompleted(uint256 indexed _id, address indexed _from, uint size);
     
     Hourglass p3c;
     Farm farm;
@@ -81,24 +80,26 @@ contract NodeForNode {
     address internal farmAddress = 0x93123bA3781bc066e076D249479eEF760970aa32;
 
     mapping(address => bool) public waiting;
-    address[] public players;
+    address[] public members;
     
     uint256 public id;
+    bytes32 public name;
     uint256 public size;
     uint256 public cost;
     uint256 public time;
 
-    function NodeForNode(uint256 _id, uint256 _amountOfPlayers, uint256 _cost) public {
+    function Tribe(uint256 _id, bytes32 _name, uint256 _amountOfmembers, uint256 _cost) public {
         farm = Farm(farmAddress);
-
+        
+        name = _name;
         id = _id;
-        size = _amountOfPlayers;
+        size = _amountOfmembers;
         cost = _cost;
         time = now;
     }
     
-    function waitingPlayers() public view returns (uint256){
-        return players.length;
+    function waitingMembers() public view returns (uint256){
+        return members.length;
     }
 
     function BuyIn(address _user) payable public {
@@ -112,20 +113,20 @@ contract NodeForNode {
         
         require(waiting[user] == false);
         
-        players.push(user);
+        members.push(user);
         waiting[user] = true;
-        emit GameJoined(user);
+        emit TribeJoined(user);
 
-        // Iterate through players and distribute tokens
-        if (players.length >= size){
-            for (uint i=0; i<players.length;i++){
-                // Each player buys in using their own node. Game theory is a beautiful thing.
-                Crop(players[i]).buy.value(cost)(players[i]);
+        // Iterate through members and distribute tokens
+        if (members.length >= size){
+            for (uint i=0; i<members.length;i++){
+                // Each member buys in using their own node. Tribe theory is a beautiful thing.
+                Crop(members[i]).buy.value(cost)(members[i]);
             }
             
-            emit GameExecuted(id, user, size);
+            emit TribeCompleted(id, user, size);
 
-            // Send any extra dividends back to the first player
+            // Send any extra dividends back to the first member
             selfdestruct(msg.sender);
         }
     }
@@ -148,12 +149,12 @@ contract NodeForNode {
         
         require(waiting[user] == true);
         
-        uint index = find(players, user);
-        removeByIndex(players, index);     
+        uint index = find(members, user);
+        removeByIndex(members, index);     
         
         waiting[user] = false;
         (msg.sender).transfer(cost);
-        if (players.length == 0){
+        if (members.length == 0){
             selfdestruct(msg.sender);
         }
     }
