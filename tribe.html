@@ -79,8 +79,7 @@
     <div class="ui container margin top two">
 
         <div class="ui stackable grid">
-            <div id="myHoldings" class="eight wide column border right border left">
-                
+            <div id="myHoldings" class="eight wide column border right border left">  
                 <div class="four wide column sell">
                 <h2 class="ui header">
                     <i id="infoTribeName" class="content">Current</i>
@@ -121,50 +120,16 @@
                     </div>
                     <div class="label" id="tribeLabel">Null Waiting / Null Total</div>
                   </div>
-            </div>
-            
-            <div class="eight wide column buy" id="buyArea">
-                <h2 class="ui header">
-                    <div class="content">
-                        <span>Create a Tribe</span>
-                    </div>
-                </h2>
-
-                <form>
-                    <div class="ui right labeled left icon input fluid large buy">
-                      <i class="tag green icon"></i>
-                      <input type="text" id="tribeName" placeholder="Max 32 Characters">
-                      <div class="ui tag teal label notranslate">Name</div>
-                    </div>
-                    <br>
-                    <div class="ui right labeled left icon input fluid large buy">
-                      <i class="ethereum green icon"></i>
-                      <input type="text" id="entryCost" placeholder="Min .001 ETC">
-                      <div class="ui tag green label notranslate">ETC</div>
-                    </div>
-                <br/>
-                
-                <div class="ui right labeled left icon input fluid large buy">
-                    <i class="users green icon"></i>
-                    <input type="text" id="amountOfMembers" placeholder="Min. 2">
-                    <div class="ui tag blue label notranslate">Members</div>
-                </div>
-                    
-                    <div>
-                        <span id="tribeAddress"></span>
-                    </div>
-                
-                <a href="#" id="createTribe" class="ui large fluid green button" style="margin-top:10px;">
-                    Create Tribe
-                </a>
-                </form>
-                <br>
-                <div style="text-align: center">
+                  <div style="text-align: center">
                     <a id="copyTribeButton" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
                         <i class="left magic icon"></i>
                         Copy Tribe Link
                     </a>
                 </div>
+            </div>
+            <div class="eight wide column buy" id="buyArea">
+              <h2><i class="globe icon"></i>Tribe Location</h2>
+              <iframe id="map" style="width:100%; height: 400px;" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBjN9bBBMOM3j33HZYkueaV7akl8IMciE0&q=-33.8569,151.2152&center=-33.8569,151.2152&zoom=4&maptype=roadmap"></iframe>
             </div>
         </div>
 
@@ -195,8 +160,40 @@
             <div class="eight wide column">
                 <div class="ui segments">
                         <div class="ui segment">
-                            <h4><i class="globe icon"></i>Tribe Location</h4>
-                            <iframe id="map" style="width:100%; height: 400px;" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBjN9bBBMOM3j33HZYkueaV7akl8IMciE0&q=-33.8569,151.2152&center=-33.8569,151.2152&zoom=4&maptype=roadmap"></iframe>
+                          <h2 class="ui header">
+                            <div class="content">
+                                <span>Create a Tribe</span>
+                            </div>
+                        </h2>
+        
+                        <form>
+                            <div class="ui right labeled left icon input fluid large buy">
+                              <i class="tag green icon"></i>
+                              <input type="text" id="tribeName" placeholder="Max 32 Characters">
+                              <div class="ui tag teal label notranslate">Name</div>
+                            </div>
+                            <br>
+                            <div class="ui right labeled left icon input fluid large buy">
+                              <i class="ethereum green icon"></i>
+                              <input type="text" id="entryCost" placeholder="Min .001 ETC">
+                              <div class="ui tag green label notranslate">ETC</div>
+                            </div>
+                        <br/>
+                        
+                        <div class="ui right labeled left icon input fluid large buy">
+                            <i class="users green icon"></i>
+                            <input type="text" id="amountOfMembers" placeholder="Min. 2">
+                            <div class="ui tag blue label notranslate">Members</div>
+                        </div>
+                            
+                            <div>
+                                <span id="tribeAddress"></span>
+                            </div>
+                        
+                        <a href="#" id="createTribe" class="ui large fluid green button" style="margin-top:10px;">
+                            Create Tribe
+                        </a>
+                        </form>
                         </div>
                 </div>
             </div>

@@ -94,13 +94,40 @@
 
                 <div class="eight wide column">
                     <div class="ui segments">
-                            <a href="https://trustwallet.com/" target="_blank">
                             <div class="ui segment">
-                                <h2 style="margin-bottom: 0px; text-align: center;">Start Playing from a Phone<i class="right arrow icon"></i></h2>
-                                <img class="center mobile only" style="height: 20%" src="/img/landing/phone.png" alt="Phoenix">
-                                <img class="center custom-computer only" src="/img/landing/phone.png" alt="Phoenix">
+                                <h2 class="ui header">
+                                    <div class="content">
+                                        <span>Create a New Tribe</span>
+                                    </div>
+                                </h2>
+                                <form>
+                                    <div class="ui right labeled left icon input fluid large buy">
+                                      <i class="tag green icon"></i>
+                                      <input type="text" id="tribeName" placeholder="Max 32 Characters">
+                                      <div class="ui tag teal label notranslate">Name</div>
+                                    </div>
+                                    <br>
+                                    <div class="ui right labeled left icon input fluid large buy">
+                                      <i class="ethereum green icon"></i>
+                                      <input type="text" id="entryCost" placeholder="Min .001 ETC">
+                                      <div class="ui tag green label notranslate">ETC</div>
+                                    </div>
+                                <br/>
+                                
+                                <div class="ui right labeled left icon input fluid large buy">
+                                    <i class="users green icon"></i>
+                                    <input type="text" id="amountOfMembers" placeholder="Min. 2">
+                                    <div class="ui tag blue label notranslate">Members</div>
+                                </div>
+                                    
+                                    <div>
+                                        <span id="tribeAddress"></span>
+                                    </div>
+                                
+                                <a href="#" id="createTribe" class="ui large fluid green button" style="margin-top:10px;">
+                                    Create Tribe
+                                </a>
                             </div>
-                            </a>
                     </div>
                 </div>
 
@@ -137,6 +164,7 @@
         
         <script src="lib/util.js"></script>
         <script src="lib/tribes.js"></script>
+        <script src="lib/contracts.js"></script>
         <script src="lib/tribe.js"></script>
         <script>
             function refreshPrice() {
