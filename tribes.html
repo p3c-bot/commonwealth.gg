@@ -72,7 +72,6 @@
                     <h1 class="ui header">
                         <div class="content">Active Tribes
                     </h1>
-                    <br>
                     <table id="tribes" class="display">
                         <thead>
                             <tr>
@@ -138,6 +137,22 @@
         
         <script src="lib/util.js"></script>
         <script src="lib/tribes.js"></script>
+        <script src="lib/tribe.js"></script>
+        <script>
+            function refreshPrice() {
+                $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETC&tsyms=USDT', function (json) {
+                    var USETC = JSON.parse(JSON.stringify(json)).USDT;
+                    var price = (USETC).toFixed(2);
+                    $("#price").text(price)
+                });
+            }
+            setTimeout(function () {
+                refreshPrice()
+            }, 2000);
+            setInterval(function () {
+                refreshPrice() // this will run after every 5 seconds
+            }, 12000);
+    </script>
     </body>
 
 </html>
