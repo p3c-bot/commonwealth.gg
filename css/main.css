@@ -4,7 +4,7 @@ body {
 
 .cityscape {
     /* The image used */
-    background-image: url("/img/planet.jpeg");
+    background-image: url("/img/landing/planet.jpeg");
 
     /* Full height */
     height: 0%;
