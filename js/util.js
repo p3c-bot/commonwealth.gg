@@ -28,6 +28,7 @@ $("#language").change(function(){
         window.location.href="https://id.commonwealth.gg/";
     }
 });
+
 function displayError(errorString){
     alertify.defaults.notifier.delay = 10000
     alertify.error(errorString)
@@ -60,8 +61,6 @@ function getETCMessage(){
         `
         <h2>Recommended</h2>
         <h4 style="line-height:35px; text-align: center;"> 
-        <a target="_blank" href="https://buy.moonpay.io/">🇪🇺 Moonpay.io: Global</a>
-        <br>
         <a target="_blank" href="https://changelly.com/?ref_id=5nyu40p1vkzlp7hr"> 🇪🇺 Changelly.com: Global</a>
         <br>
         <a target="_blank" href="https://www.coinbase.com/signup">🇺🇸 Coinbase.com: USA, EU</a>
@@ -72,7 +71,7 @@ function getETCMessage(){
         <br>
         <a target="_blank" href="https://www.coinspot.com.au/buy/etc">🇦🇺 Coinspot.com.au: AUS</a>
         </h4>
-        <img id="loginLogo" src="img/etc-logo.png" class="ui image etc-logo center-larger" />
+        <img id="loginLogo" src="img/logo/etc-title.jpg" class="ui image etc-logo center-larger" />
         `,
         //if ok deploy the crop
         function () {},
@@ -90,61 +89,44 @@ $( "#buyETCButton" ).click(function() {
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'PurchaseETCInfo'});};
 });
 
-
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction() {
+function showNav() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
       x.style.display = "none";
     } else {
       x.style.display = "block";
     }
-  }
+}
 
-  function timeSince(date) {
-    var seconds = Math.floor((new Date() - date) / 1000);
-    var interval = Math.floor(seconds / 31536000);
-  
-    if (interval > 1) {
-      return interval + " years";
-    }
-    interval = Math.floor(seconds / 2592000);
-    if (interval > 1) {
-      return interval + " months";
-    }
-    interval = Math.floor(seconds / 86400);
-    if (interval > 1) {
-      return interval + " days";
-    }
-    interval = Math.floor(seconds / 3600);
-    if (interval > 1) {
-      return interval + " hours";
-    }
-    interval = Math.floor(seconds / 60);
-    if (interval > 1) {
-      return interval + " minutes";
-    }
-    return Math.floor(seconds) + " seconds";
+function timeSince(date) {
+  var seconds = Math.floor((new Date() - date) / 1000);
+  var interval = Math.floor(seconds / 31536000);
+
+  if (interval > 1) {
+    return interval + " years";
   }
+  interval = Math.floor(seconds / 2592000);
+  if (interval > 1) {
+    return interval + " months";
+  }
+  interval = Math.floor(seconds / 86400);
+  if (interval > 1) {
+    return interval + " days";
+  }
+  interval = Math.floor(seconds / 3600);
+  if (interval > 1) {
+    return interval + " hours";
+  }
+  interval = Math.floor(seconds / 60);
+  if (interval > 1) {
+    return interval + " minutes";
+  }
+  return Math.floor(seconds) + " seconds";
+}
 
 function linkify(name, link) {
     return '<a href=' + link + '>' + name + '</a>'
-}
-
-function postAjax(url, data, success) {
-    var params = typeof data == 'string' ? data : Object.keys(data).map(
-            function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
-        ).join('&');
-
-    var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-    xhr.open('POST', url);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState>3 && xhr.status==200) { success(xhr.responseText); }
-    };
-    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.send(params);
-    return xhr;
 }
 
 function getURL(query) {
@@ -165,4 +147,4 @@ function getURL(query) {
       }
     }
     return query_string;
-  }
+}
