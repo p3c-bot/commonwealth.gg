@@ -14,20 +14,14 @@
         <meta name="description" content="The Commonwealth pure wallet interface. Useful for exchanges, developers, and merchants.">
         <meta name="keywords" content="Payments, Payment Processing, Live Streaming, ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance, Coops, Cooperative, Blockchain, Blockchain Technology,Savings Fund, P3C, Commonwealth.gg">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        <link rel="stylesheet" href="css/semantic.min.css">
+        <link rel="stylesheet" href="css/lib/semantic.min.css">
         <!-- CSS -->
-        <link rel="stylesheet" href="css/alertify.min.css" />
-        <!-- Default theme -->
-        <link rel="stylesheet" href="css/themes/default.min.css" />
-        <!-- Semantic UI theme -->
-        <link rel="stylesheet" href="css/themes/semantic.min.css" />
-        <!-- Bootstrap theme -->
-        <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/jquery.dataTables.min.css">
-        <link rel="stylesheet" href="css/responsive.dataTables.min.css">    
+        <link rel="stylesheet" href="css/lib/alertify.min.css" />
+        <link rel="stylesheet" href="css/lib/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="css/lib/responsive.dataTables.min.css">    
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="css/nodefornode.css">
+        <link rel="stylesheet" href="css/tribes.css">
         <link rel="icon" type="image/png" href="img/tribes/moai.png">
         <!-- GA -->
         <meta name="google-site-verification" content="ZDl3q34Gq9Ct8J5T4o7FxNohH0fHqnGFAv4pZCoftos" />
@@ -168,18 +162,17 @@
                 </div>
             </div>
         </div>
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/underscore.min.js"></script>
-        <script src="/js/bluebird.min.js"></script>
-        <script src="/js/semantic.min.js"></script>
-        <script src="/js/jquery.dataTables.min.js"></script>
-        <script src="/js/dataTables.responsive.min.js"></script>
-        <script src="js/alertify.min.js"></script>
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/semantic.min.js"></script>
+        <script src="lib/jquery.dataTables.min.js"></script>
+        <script src="lib/dataTables.responsive.min.js"></script>
+        <script src="lib/alertify.min.js"></script>
         
-        <script src="lib/util.js"></script>
-        <script src="lib/tribes.js"></script>
-        <script src="lib/contracts.js"></script>
-        <script src="lib/tribe.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/etc/contracts.js"></script>
+        <script src="js/etc/tribes/tribe.js"></script>
+        <script src="js/etc/tribes/lobby.js"></script>
+
         <script>
             function refreshPrice() {
                 $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETC&tsyms=USDT', function (json) {

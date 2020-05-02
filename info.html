@@ -18,14 +18,10 @@
     <meta name="keywords" content="Payments, Payment Processing, Live Streaming, ETC Dapps,Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance, Coops, Cooperative, Blockchain, Blockchain Technology,Savings Fund, P3C, Commonwealth.gg">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="google-site-verification" content="WrgQBpU2wJGTSp9LZ9NFYn6p_NxgSB95ocpo39Dcydg" />
-    <link rel="stylesheet" href="css/semantic.min.css">
-    <!-- Default theme -->
-    <link rel="stylesheet" href="css/themes/default.min.css" />
-    <!-- Semantic UI theme -->
-    <link rel="stylesheet" href="css/themes/semantic.min.css" />
+    <link rel="stylesheet" href="css/lib/semantic.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="icon" type="image" href="img/whale.ico">
+    <link rel="icon" type="image" href="img/logo/whale.ico">
     <!-- GA -->
     <meta name="google-site-verification" content="ZDl3q34Gq9Ct8J5T4o7FxNohH0fHqnGFAv4pZCoftos" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141280467-1"></script>
@@ -39,13 +35,6 @@
         gtag('config', 'UA-141280467-1');
     </script>
     <!-- END GA -->
-    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-        new Crate({
-          server: '463160028099117059',
-          channel: '463160028644245507',
-          shard: 'https://disweb.deploys.io'
-        })
-      </script>
 </head>
 
 <body>
@@ -57,7 +46,7 @@
                     <!-- MOBILE MENU START  -->
                     <span class="mobile only topnav ui large inverted stackable menu gradient">
                         <a class="header item" href="/">
-                            <img src="img/whale.svg" class="ui mini image" />
+                            <img src="img/logo/whale.svg" class="ui mini image" />
                             <h2 class="title">Commonwealth</h2>
                         </a>
                         <div id="myLinks">
@@ -74,14 +63,14 @@
                                 <strong>Price Chart</strong>
                             </a>
                         </div>
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="padding-bottom: 100%;">
+                        <a href="javascript:void(0);" class="icon" onclick="showNav()" style="padding-bottom: 100%;">
                           <i class="bars icon"></i>
                         </a>
                     </span>
                     <!-- MOBILE MENU END -->
                     <!-- COMPUTER MEMU START -->
                     <a class="custom-computer only header item" href="/">
-                        <img src="img/whale.svg" class="ui mini image" />
+                        <img src="img/logo/whale.svg" class="ui mini image" />
                         <h2 class="title">Commonwealth</h2>
                     </a>
                     <div class="custom-computer only right menu">
@@ -136,8 +125,8 @@
                                             <div class="ui segment">
                                                 <h4 style="">Q: What is the Commonwealth vault?<i class="right arrow icon"></i></h4>
                                                 <h4 style="color: black; text-align: left">The vault is the true market cap of Commonwealth, it is how much Ethereum Classic is locked in the smart contract. The vault can never be changed, taken down, or modified. It is open source and has been security audited.</h4>
-                                                <img class="logo mobile only" style="width:50%" src="/img/callisto-badge.png" alt="Phoenix">
-                                                <img class="logo custom-computer only" src="/img/callisto-badge.png" style="width:50%"  alt="Phoenix">
+                                                <img class="logo mobile only" style="width:50%" src="/img/info/callisto-badge.png" >
+                                                <img class="logo custom-computer only" src="/img/info/callisto-badge.png" style="width:50%">
                                             </div>
                                             </a>
                                         </div>
@@ -180,8 +169,8 @@
                                             <div class="ui segment">
                                                 <h4 style="">I need help!<i class="right arrow icon"></i></h4>
                                                 <h4 style="color: black; text-align: left">Ask us any questions in Discord! We respond quickly, and in multiple languages.</h4>
-                                                <img class="logo mobile only" style="width:100%; border-radius: 25px;" src="/img/discord.jpg" alt="Phoenix">
-                                                <img class="logo custom-computer only" src="/img/discord.jpg" style="width:100%; border-radius: 25px;"  alt="Phoenix">
+                                                <img class="logo mobile only" style="width:100%; border-radius: 25px;" src="/img/info/discord.jpg" >
+                                                <img class="logo custom-computer only" src="/img/info/discord.jpg" style="width:100%; border-radius: 25px;">
                                             </div>
                                             </a>
                                         </div>
@@ -260,11 +249,11 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/semantic.min.js"></script>
-    <script src="js/lodash.min.js"></script>
-    <script src="lib/util.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/semantic.min.js"></script>
+    <script src="lib/lodash.min.js"></script>
+
+    <script src="js/util.js"></script>
 
 </body>
-
 </html>
