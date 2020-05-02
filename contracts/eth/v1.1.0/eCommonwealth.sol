@@ -73,7 +73,7 @@ contract Hourglass {
     /*=====================================
     =            CONFIGURABLES            =
     =====================================*/
-    string public name = "Commonwealth.gg:Ethereum";
+    string public name = "ETH-Commonwealth-1.1.0";
     string public symbol = "eCom";
     uint8 constant public decimals = 18;
     uint8 constant internal dividendFee_ = 10;
