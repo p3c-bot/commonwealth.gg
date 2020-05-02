@@ -15,7 +15,7 @@ https://ipfs.io/ipfs/QmZxod99m4vL8acqLFRPX4wF1ZpGrLNsLLj8vPZQ3yAwKZ
 
 Commonwealth is an open-source project and can be listed on any exchange without permission. It is also experimental software and is released to run on Ethereum Classic (ETC), a platform where code is law.
 
-![Callisto](/img/logo/etc-title.jpg)
+![ETC](/img/logo/etc-title.jpg)
 
 Token Type: ERC-20
 
@@ -37,7 +37,7 @@ Official Whitepaper: https://commonwealth.gg/commonwealth.pdf
 
 Security Audit: Contract is Callisto Certified https://github.com/EthereumCommonwealth/Auditing/issues/15
 
-![Callisto](/img/callisto-badge.png)
+![Callisto](/img/info/callisto.png)
 
 Official Chat: https://discord.gg/crjsdJr
 
