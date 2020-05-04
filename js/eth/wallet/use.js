@@ -1,5 +1,5 @@
 // $('#sponsor').load("https://api.commonwealth.gg/sponsor/");
-
+ethereum.enable()
 // if saturn isn't installed 
 if (typeof web3 == 'undefined') {
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Issue', 'event_category': 'NoWeb3'});};
@@ -12,7 +12,7 @@ if (typeof web3 == 'undefined') {
 }
 
 getNetworkId(web3).then(function (res) {
-    if (res !== "61") {
+    if (res !== "42") {
         if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Issue', 'event_category': 'EthereumWeb3'});};        
         displayError(
             `

@@ -6,7 +6,7 @@ function setMarketCap(usdPrice) {
   p3cContract.totalEthereumBalance.call(function (err, result) {
     if (!err) {
       amount = web3.fromWei(result).toFixed(0)
-      $("#etcInContract").replaceWith(numberWithCommas(amount) + " ETC")
+      $("#etcInContract").replaceWith(numberWithCommas(amount) + " ETH")
       $('#etcInContractUSDPrice').text('($' + numberWithCommas(Number((amount * usdPrice).toFixed(0)))+ ')')
 
     }
@@ -24,7 +24,7 @@ var sellPrice;
 function setSellPrice(usdPrice) {
   p3cContract.sellPrice(function (e, r) {
     sellPrice = web3.fromWei(r)
-    $('#tokenSellGet').text(sellPrice.toFixed(4) + ' ETC')
+    $('#tokenSellGet').text(sellPrice.toFixed(4) + ' ETH')
     $('#tokenUSDSellPrice').text('$' + (sellPrice * usdPrice).toFixed(2))
   })
 }
@@ -35,7 +35,7 @@ function setBuyPrice(usdPrice) {
   p3cContract.buyPrice(function (e, r) {
     buyPrice = web3.fromWei(r)
     // alert((buyPrice * usdPrice).toFixed(2))
-    $('#tokenBuyGet').text(buyPrice.toFixed(4) + ' ETC')
+    $('#tokenBuyGet').text(buyPrice.toFixed(4) + ' ETH')
     $('#tokenUSDBuyPrice').text('$' + (buyPrice * usdPrice).toFixed(2))
   })
 }
@@ -57,7 +57,7 @@ function setDividendsPrice(usdPrice){
 }
 
 function updateEtcPrice(portfolio) {
-  $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETC&tsyms=USD', function (result) {
+  $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD', function (result) {
     if (result !== null){
       var usd = result.USD
       usdPrice = parseFloat(usd)
@@ -97,7 +97,7 @@ $('#sellInput').on('input change', function () {
   if (value > 0) {
     sellAmountUSD = numberWithCommas((value * sellPrice * usdPrice).toFixed(2))
     sellAmount = numberWithCommas((value * sellPrice).toFixed(2))
-    $('#sellAmount').text("$" + sellAmountUSD + "/" + sellAmount + " ETC")
+    $('#sellAmount').text("$" + sellAmountUSD + "/" + sellAmount + " ETH")
   } else {
     $('#sellAmount').hide()
   }

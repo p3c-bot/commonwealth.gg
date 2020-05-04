@@ -2,12 +2,8 @@
 .gradient.personal {
     background: #348F50 !important;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #e0c56e, #003399) !important;
+    background: -webkit-linear-gradient(to left, #E5C300, #CD0000) !important;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #e0c56e, #003399) !important;
+    background: linear-gradient(to left, #E5C300, #CD0000) !important;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.holdings {
-    background: rgba(58, 69, 150, 0.17);
 }

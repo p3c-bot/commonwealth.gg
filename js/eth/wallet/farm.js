@@ -15,6 +15,7 @@ alertify.defaults.notifier.delay = 45
 
 function getMyCrop(onboard) {
     myCropAddress = localStorage.getItem(web3.eth.accounts[0])
+    console.log(myCropAddress)
     // if we don't have the crop in local storage
     if (myCropAddress == 'null' || myCropAddress == null || myCropAddress == "0x") {
         farmContract.myCrop.call(function (err, result) {
@@ -26,10 +27,10 @@ function getMyCrop(onboard) {
                         `
                         <h1 id="loginWarning" class="login-warning">Login to Saturn wallet, and refresh!</h1>
                         <p id="agreement" class="agreement">
-                        Commonwealth is an Ethereum Classic app. Read it <a target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">here</a>. By continuing, you accept that the code will run as written, without guarantee of profit.
+                        Commonwealth is an Ethereum app. Read it <a target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">here</a>. By continuing, you accept that the code will run as written, without guarantee of profit.
                         To begin, click "Accept" and complete the transaction.
                         </p>
-                        <img id="loginLogo" src="img/logo/etc-title.jpg" class="ui image etc-logo center-larger" />
+                        <img id="loginLogo" src="img/logo/eth-title.png" class="ui image etc-logo center-larger" />
                         `,
                         //if ok deploy the crop
                         function () {
@@ -65,7 +66,7 @@ function getMyCrop(onboard) {
                     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'RemoteFarmConnect'});};
                     myCropAddress = result;
                     if (getETCWallet == false){
-                        alertify.success('<h3>Turn on ETC Mode</h3>')
+                        alertify.success('<h3>Turn on ETH Mode</h3>')
                         getETCWallet = true;
                     }
                     localStorage.setItem(web3.eth.accounts[0], result)
@@ -128,10 +129,10 @@ function getMyCropDividends() {
                         myRefDividends = myCropDividends - result;
                         if (!Number(myRefDividends)){
                             // $("#refDivs").hide();
-                            $("#myRefDividends").replaceWith("<b id='myRefDividends'>" + "0 ETC" + "</b>")
+                            $("#myRefDividends").replaceWith("<b id='myRefDividends'>" + "0 ETH" + "</b>")
                         } else {
                             if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'ReferralDividendsUp'});};
-                            $("#myRefDividends").replaceWith("<b id='myRefDividends'>" + Number(web3.fromWei(myRefDividends)).toFixed(8) + " ETC</b>")
+                            $("#myRefDividends").replaceWith("<b id='myRefDividends'>" + Number(web3.fromWei(myRefDividends)).toFixed(8) + " ETH</b>")
                         }
                     }
                 });
@@ -277,7 +278,7 @@ function buyFromCrop(amountToBuy, referrer) {
             function (error, result) { //get callback from function which is your transaction key
                 if (!error) {
                     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'BuyP3C', 'value': Number(amountToBuy)});};
-                    alertify.success('<h3>' + amountToBuy + " ETC spent. Waiting for Blockchain.</h3>")
+                    alertify.success('<h3>' + amountToBuy + " ETH spent. Waiting for Blockchain.</h3>")
                     // playSound('register');
                     $("#buy").transition({
                         animation: 'tada',
@@ -305,7 +306,7 @@ function sellFromCrop(amountToSell) {
             function (error, result) { //get callback from function which is your transaction key
                 if (!error) {
                     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'SellP3C', 'value': amountToSell});};
-                    alertify.success('<h3>' + amountToSell + " Points Sold. Funds are sent to wallet as ETC.</h3>")
+                    alertify.success('<h3>' + amountToSell + " Points Sold. Funds are sent to wallet as ETH.</h3>")
                     // playSound('register');
                     $('#sellAmount').hide();
                 } else {
@@ -346,7 +347,7 @@ function withdrawFromCrop() {
             function (error, result) { //get callback from function which is your transaction key
                 if (!error) {
                     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'Withdraw'});};
-                    alertify.success("<h3>Withdrawing dividends to your ETC wallet.</h3>")
+                    alertify.success("<h3>Withdrawing dividends to your ETH wallet.</h3>")
                     console.log(result);
                     // playSound('register');
                 } else {

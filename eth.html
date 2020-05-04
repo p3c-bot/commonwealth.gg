@@ -40,21 +40,21 @@
         <div class="ui container">
             <div class="header">
                 <div class="item">
-                    <img id="logo" src="img/logo/whale.svg" class="ui mini image home" style="margin-right:10px;" />
-                    <h2 class="title home custom-computer only">Commonwealth</h2>
+                    <img id="logo" src="img/logo/eth-flag.png" class="ui mini image home" style="margin-right:10px;" />
+                    <h2 class="title home custom-computer only">eCommonwealth</h2>
                     <div class="opacity mobile only home">
                         <strong>
                             <i class="chess rook icon"></i>
                         </strong>
                         <span id="etcInContract">0</span>
                     </div>
-                    <span>
+                    <!-- <span>
                         <select id="language">
                             <option value="en">🇬🇧&emsp;EN</option>
                             <option value="ru">🇷🇺&emsp;RU</option>
                             <option value="id">🇮🇩&emsp;ID</option>
                             </select>
-                    </span>
+                    </span> -->
                 </div>
             </div>
             <div class="right menu custom-computer only">
@@ -89,7 +89,7 @@
                             <strong>
                                 <i class="chess rook icon"></i>
                             </strong>
-                            Vault: <span id="etcInContract">0 ETC</span>
+                            Vault: <span id="etcInContract">0 ETH</span>
                         </div>
                     </a>
                 </div>
@@ -100,7 +100,7 @@
     <div class="ui container margin top two">
 
         <div class="ui stackable grid">
-            <div id="myHoldings" class="eight wide column border right border left" style="background: rgba(58, 150, 139, 0.17);">
+            <div id="myHoldings" class="eight wide column border right border left holdings">
                 <h1 class="ui header" style="margin-bottom: 0px;">
                     <div style="margin-left: 10px;" class="content"><i id="portfolioButton" class="chart university icon portfolio"></i> My Account</div>
                 </h1>
@@ -112,7 +112,7 @@
                             <div class="sub header notranslate">
                                 <span id="myTokensValue" class="converted" style="font-weight:bold;"></span><span id="myDayChange" class="converted" style="font-weight:bold;"></span>
                                 <div class="ui teal text small eleven">
-                                    <span id="myCropTokens" class="count"></span> Points<span class="custom-computer only"> / <span id="myETCValue" class="notranslate" style="font-weight:bold;"></span> ETC</span>
+                                    <span id="myCropTokens" class="count"></span> eCOM<span class="custom-computer only"> / <span id="myETCValue" class="notranslate" style="font-weight:bold;"></span> ETC</span>
                                 </div>
                             </div>
                         </h2>
@@ -138,22 +138,12 @@
                         <button id="withdraw" class="ui teal fluid button large"><i class="money bill alternate  icon"></i>Take Dividends</button>
                     </div>
                 </div>
-                <!-- <div class="ui one column centered grid" style="margin-top: 0px;">
-                    <div class="column" style="padding-bottom: 10px;">
-                        <div class="ui horizontal segment">
-                            <div id="sponsor" class="sponsor"></div>
-                            <span class="ui text blue small" style="float: right"><a href="/sponsor.html" target="_blank">Buy
-                                    this sponsorship space!</a></span>
-                        </div>
-                    </div>
-                </div> -->
-
             </div>
             <div class="four wide column buy" id="buyArea">
                 <h2 class="ui header">
                     <img src="img/wallet/time-forward.svg" class="width one and eight" />
                     <div class="content">
-                        <span>Buy Points</span>
+                        <span>Buy eCOM</span>
                     </div>
                 </h2>
 
@@ -172,13 +162,13 @@
                 </div>
                 <div class="ui right labeled left icon input fluid large buy">
                     <i class="ethereum blue icon"></i>
-                    <input placeholder="ETH to Spend..." type="text" id="buyInput">
+                    <input type="text" id="buyInput">
                     <div class="ui tag green label notranslate">
                         ETH
                     </div>
                 </div>
                 <button id="buy" class="ui large fluid green button" style="margin-top:10px;">
-                    Buy Points
+                    Buy eCOM
                 </button>
                 <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
                     <i>How much will you buy?</i>
@@ -188,7 +178,7 @@
                 <h2 class="ui header">
                     <img src="img/wallet/time-backward.svg" class="width one and eight" />
                     <div class="content">
-                        <span>Sell Points</span>
+                        <span>Sell eCOM</span>
                     </div>
                 </h2>
 
@@ -209,13 +199,13 @@
 
                 <div class="ui right labeled left icon input fluid large">
                     <i class="tree blue icon"></i>
-                    <input placeholder="Points to Sell..." type="text" id="sellInput">
+                    <input placeholder="..." type="text" id="sellInput">
                     <span class="ui tag blue label">
-                        Points
+                        eCOM
                     </span>
                 </div>
                 <button id="sell" class="ui large fluid blue button" style="margin-top:10px;">
-                    Sell Points
+                    Sell eCOM
                 </button>
                 <div id="sellAmount" class="ui fluid large basic blue button no click approx" style="margin-top:10px;">
                     <i>How much will you sell?</i>
@@ -278,7 +268,7 @@
                                 <h4 class="ui header">
                                     <i class="circular inverted blue exchange alternate icon"></i>
                                     <div class="content">
-                                        <div class="sub header"><b>Transfer Points</b>. <i>(Dividends will go to your wallet).</i></div>
+                                        <div class="sub header"><b>Transfer eCOM</b>. <i>(Dividends will go to your wallet).</i></div>
                                     </div>
                                 </h4>
                             </div>
@@ -297,9 +287,9 @@
                             </div>
                             <div class="ui segment">
                                 <div class="ui right labeled left icon input fluid buy">
-                                    <input type="text" id="transferTokenCount" placeholder="Amount of Points">
+                                    <input type="text" id="transferTokenCount" placeholder="Amount of eCOM">
                                     <div class="ui tag teal label notranslate">
-                                        Points
+                                        eCOM
                                     </div>
                                 </div>
                             </div>
