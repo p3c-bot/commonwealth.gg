@@ -411,91 +411,6 @@ body {
         [class*="widescreen hidden"]
 }
 
-/* CANDLE STICKS */
-
-
-.upGreenArrow {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 4.5px 12px 4.5px;
-    border-color: transparent transparent #00ff00 transparent;
-}
-
-.downRedArrow {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 12px 4.5px 0 4.5px;
-    border-color: #ff0000 transparent transparent transparent;
-}
-
-.upArrow {
-    position: relative;
-    top: -15px;
-    left: -10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-bottom-color: #00ff00;
-}
-
-.upArrow:after {
-    position: absolute;
-    content: '';
-    top: 20px;
-    left: -3px;
-    width: 6px;
-    height: 10px;
-    background: #00ff00;
-}
-
-.downArrow {
-    position: relative;
-    top: 18px;
-    left: -10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-top-color: #ff0000;
-}
-
-.downArrow:after {
-    position: absolute;
-    content: '';
-    top: -15px;
-    left: -3px;
-    width: 6px;
-    height: 10px;
-    background: #ff0000;
-}
-
-
-/* d3 candle stick start */
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: black;
-    shape-rendering: crispEdges;
-}
-
-.axis text {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 17px;
-    fill: black;
-}
-
-/* d3 candle stick end */
-
-body {
-    background-color: white;
-}
-
-select {
-    height: 40px;
-}
-
 /* Style the navigation menu */
 .topnav {
     overflow: hidden;
@@ -535,4 +450,9 @@ select {
 /* Style the active link (or home/logo) */
 .active {
     color: white;
+}
+
+.network-title {
+    border: 1px solid #348F50;
+    border-radius: 7px;
 }

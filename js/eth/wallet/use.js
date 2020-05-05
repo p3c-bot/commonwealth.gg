@@ -86,10 +86,6 @@ $( "#refillButton" ).click(function() {
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'RefillLinkClick'});};
 });
 
-$( "#buyWithCoinbase" ).click(function() {
-    if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'BuyWithCoinbase'});};
-});
-
 function setPortfolio(cropAddress) {
     $.getJSON("https://api.commonwealth.gg/price/crop/" + web3.toChecksumAddress(cropAddress), function (data) {
         if (data !== null){
