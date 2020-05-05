@@ -7,3 +7,91 @@
     background: linear-gradient(to left, #56B4D3, #348F50) !important;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+/*
+    SCHEMA
+*/
+.ui.green.label {
+    border-color: #348F50 !important;
+    background-color: #348F50 !important;
+}
+
+.ui.green.button {
+    background-color: #348F50;
+}
+
+.ui.email.button {
+    background-color: #48a59d !important;
+}
+
+.ui.email.button:hover {
+    background-color: #347771 !important;
+}
+
+
+.participate {
+    background-color: #348F50 !important;
+    margin-bottom: 10px !important;
+}
+
+.ui.green.button:hover {
+    background-color: #235f35 !important;
+}
+
+.ui.basic.green.button {
+    background-color: transparent;
+    box-shadow: 0 0 0 1px #348F50 inset;
+    color: #348F50;
+}
+
+.ui.orange.button:hover {
+    background-color: #994712 !important;
+}
+
+i.green.icon {
+    color: #348F50 !important;
+}
+
+.ui.green.text {
+    color: #348F50;
+}
+
+.ui.teal.button {
+    background-color: #48a59d;
+}
+
+.ui.teal.button:hover {
+    background-color: #347771;
+}
+
+.ui.teal.text {
+    color: #48a59d;
+}
+
+
+.ui.blue.label {
+    border-color: #56B4D3 !important;
+    background-color: #56B4D3 !important;
+}
+
+.ui.blue.button {
+    background-color: #56B4D3;
+}
+
+.ui.blue.button:hover {
+    background-color: rgb(62, 128, 150);
+}
+
+.ui.basic.blue.button {
+    background-color: transparent;
+    box-shadow: 0 0 0 1px #56B4D3 inset;
+    color: #56B4D3;
+}
+
+i.blue.icon {
+    color: #56B4D3 !important;
+}
+
+.ui.blue.text {
+    color: #56B4D3;
+}

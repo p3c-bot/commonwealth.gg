@@ -1,13 +1,99 @@
 /* CHANGE THIS TO CHANGE THE COLOR */
 .gradient.personal {
-    background: #348F50 !important;
+    background: #003399 !important;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #e0c56e, #003399) !important;
+    background: -webkit-linear-gradient(to left, rgb(224, 197, 110,.8), #003399) !important;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #e0c56e, #003399) !important;
+    background: linear-gradient(to left, rgb(224, 197, 110,.8), #003399) !important;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .holdings {
     background: rgba(58, 69, 150, 0.17);
+}
+
+/*
+    SCHEMA
+*/
+.ui.green.label {
+    border-color: #003399 !important;
+    background-color: #003399 !important;
+}
+
+.ui.green.button {
+    background-color: rgb(0, 51, 153,.8);
+}
+
+.ui.email.button {
+    background-color: #48a59d !important;
+}
+
+.ui.email.button:hover {
+    background-color: #347771 !important;
+}
+
+.participate {
+    background-color: #003399 !important;
+    margin-bottom: 10px !important;
+}
+
+.ui.green.button:hover {
+    background-color: rgb(0, 51, 153,1) !important;
+}
+
+.ui.basic.green.button {
+    background-color: transparent;
+    box-shadow: 0 0 0 1px #003399 inset;
+    color: #003399;
+}
+
+.ui.orange.button:hover {
+    background-color: #994712 !important;
+}
+
+i.green.icon {
+    color: #003399 !important;
+}
+
+.ui.green.text {
+    color: #003399;
+}
+
+.ui.teal.button {
+    background-color: #48a59d;
+}
+
+.ui.teal.button:hover {
+    background-color: #347771;
+}
+
+.ui.teal.text {
+    color: #48a59d;
+}
+
+.ui.blue.label {
+    border-color: #e0c56e !important;
+    background-color: #e0c56e !important;
+}
+
+.ui.blue.button {
+    background-color: #e0c56e;
+}
+
+.ui.blue.button:hover {
+    background-color: #B39D58;
+}
+
+.ui.basic.blue.button {
+    background-color: transparent;
+    box-shadow: 0 0 0 1px #e0c56e inset;
+    color: #e0c56e;
+}
+
+i.blue.icon {
+    color: #e0c56e !important;
+}
+
+.ui.blue.text {
+    color: #e0c56e;
 }

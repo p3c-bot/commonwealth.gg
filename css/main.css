@@ -44,6 +44,7 @@ body {
 .smallpad-right {
     padding-right: 25px !important;
 }
+
 .clock {
     display: inline-block;
     width: auto;
@@ -189,17 +190,13 @@ body {
     background-color: rgba(0, 0, 0, .9);
 }
 
-
-
 .small {
     font-size: 0.5em;
 }
 
 .button.price {
-
     padding-right: 15px !important;
     padding-left: 15px !important;
-
 }
 
 .small.eleven {
@@ -208,97 +205,6 @@ body {
 
 .no.click {
     cursor: default;
-}
-
-
-/*
-    SCHEMA
-*/
-.ui.green.label {
-    border-color: #348F50 !important;
-    background-color: #348F50 !important;
-}
-
-.ui.green.button {
-    background-color: #348F50;
-}
-
-.ui.email.button {
-    background-color: #48a59d !important;
-}
-
-.ui.email.button:hover {
-    background-color: #347771 !important;
-}
-
-
-.participate {
-    background-color: #348F50 !important;
-    margin-bottom: 10px !important;
-}
-
-.ui.green.button:hover {
-    background-color: #235f35 !important;
-}
-
-.ui.basic.green.button {
-    background-color: transparent;
-    box-shadow: 0 0 0 1px #348F50 inset;
-    color: #348F50;
-}
-
-.ui.orange.button:hover {
-    background-color: #994712 !important;
-}
-
-
-i.green.icon {
-    color: #348F50 !important;
-}
-
-.ui.green.text {
-    color: #348F50;
-}
-
-
-.ui.teal.button {
-    background-color: #48a59d;
-}
-
-.ui.teal.button:hover {
-    background-color: #347771;
-}
-
-.ui.teal.text {
-    color: #48a59d;
-}
-
-
-.ui.blue.label {
-    border-color: #56B4D3 !important;
-    background-color: #56B4D3 !important;
-}
-
-.ui.blue.button {
-    background-color: #56B4D3;
-}
-
-.ui.blue.button:hover {
-    background-color: rgb(62, 128, 150);
-}
-
-.ui.basic.blue.button {
-    background-color: transparent;
-    box-shadow: 0 0 0 1px #56B4D3 inset;
-    color: #56B4D3;
-}
-
-i.blue.icon {
-    color: #56B4D3 !important;
-}
-
-.ui.blue.text {
-    color: #56B4D3;
 }
 
 .link.masternode {
@@ -508,123 +414,125 @@ i.blue.icon {
 /* CANDLE STICKS */
 
 
-.upGreenArrow{
+.upGreenArrow {
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 4.5px 12px 4.5px;
     border-color: transparent transparent #00ff00 transparent;
- }
-   
- .downRedArrow{
+}
+
+.downRedArrow {
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 12px 4.5px 0 4.5px;
     border-color: #ff0000 transparent transparent transparent;
- }
- 
- .upArrow{
-   position: relative;
-   top: -15px;
-   left: -10px;
-   width:0;
-   height:0;
-   border: 6px solid transparent;
-   border-bottom-color: #00ff00;
- }
- .upArrow:after{
-   position: absolute;
-   content: '';
-   top: 20px;
-   left: -3px;
-   width: 6px;
-   height: 10px;
-   background: #00ff00;
- }
- 
- .downArrow{
-   position: relative;
-   top: 18px;
-   left: -10px;
-   width: 0;
-   height: 0;
-   border: 6px solid transparent;
-   border-top-color: #ff0000;
- }
- .downArrow:after{
-   position: absolute;
-   content: '';
-   top: -15px;
-   left: -3px;
-   width: 6px;
-   height: 10px;
-   background: #ff0000;
- }
- 
- 
- /* d3 candle stick start */
- 
- .axis path,
- .axis line {
-     fill: none;
-     stroke: black;
-     shape-rendering: crispEdges;
- }
- 
- .axis text {
-     font-family: 'Open Sans', sans-serif;
-     font-size: 17px;
-     fill: black;
- }
- 
- /* d3 candle stick end */
- 
- body {
-   background-color: white;
- }
+}
 
- select {
+.upArrow {
+    position: relative;
+    top: -15px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom-color: #00ff00;
+}
+
+.upArrow:after {
+    position: absolute;
+    content: '';
+    top: 20px;
+    left: -3px;
+    width: 6px;
+    height: 10px;
+    background: #00ff00;
+}
+
+.downArrow {
+    position: relative;
+    top: 18px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top-color: #ff0000;
+}
+
+.downArrow:after {
+    position: absolute;
+    content: '';
+    top: -15px;
+    left: -3px;
+    width: 6px;
+    height: 10px;
+    background: #ff0000;
+}
+
+
+/* d3 candle stick start */
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    fill: black;
+}
+
+/* d3 candle stick end */
+
+body {
+    background-color: white;
+}
+
+select {
     height: 40px;
 }
 
 /* Style the navigation menu */
 .topnav {
     overflow: hidden;
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
     background: rgba(0, 0, 0, .1) !important;
     position: relative;
-  }
-  
-  /* Hide the links inside the navigation menu (except for logo/home) */
-  .topnav #myLinks {
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
     display: none;
-  }
-  
-  /* Style navigation menu links */
-  .topnav a {
+}
+
+/* Style navigation menu links */
+.topnav a {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     display: block;
-  }
-  
-  /* Style the hamburger menu */
-  .topnav a.icon {
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
-  }
-  
-  /* Add a grey background color on mouse-over */
-  .topnav a:hover {
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
     background-color: rgba(0, 0, 0, .7) !important;
     color: #56B4D3;
-  }
-  
-  /* Style the active link (or home/logo) */
-  .active {
+}
+
+/* Style the active link (or home/logo) */
+.active {
     color: white;
-  }
+}

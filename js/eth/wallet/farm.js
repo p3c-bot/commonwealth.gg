@@ -91,7 +91,7 @@ function activateUI(cropAddress) {
     // This is where MN link is defined.
     $("#masternodeLink").replaceWith('<a id="masternodeLink" href="/?ref=' + myCropAddress + '"https://commonwealth.gg/index.html?ref=' + myCropAddress + '</a>')
     // This definnes the clipboard button event for the referral link
-    $("#copyMNButton").attr("data-clipboard-text", 'https://commonwealth.gg/index.html?ref=' + myCropAddress);
+    $("#copyMNButton").attr("data-clipboard-text", 'https://commonwealth.gg/eth.html?ref=' + myCropAddress);
 
     // Enable buttons
     $('#buy').prop("disabled", false);
