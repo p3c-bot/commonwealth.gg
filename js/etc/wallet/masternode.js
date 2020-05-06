@@ -10,7 +10,6 @@ var masternode = getURL(window.location.search.substring(1)).ref;
 
 if (masternode){
   localStorage.setItem("ref", masternode)
-  $(".dashboard-link").attr("href", "/use.html?ref=" + localStorage.getItem('ref'))
 }
 
 if (localStorage.getItem('ref')){

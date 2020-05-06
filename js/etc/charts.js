@@ -41,9 +41,9 @@ function drawChart(days) {
 
         const margin = {
                 top: 15,
-                right: 100,
+                right: 80,
                 bottom: 205,
-                left: 75
+                left: 65
             },
             w = 1000 - margin.left - margin.right,
             h = 625 - margin.top - margin.bottom;
