@@ -97,7 +97,7 @@ function drawChart(days) {
         var yAxis = d3.axisLeft()
             .scale(yScale)
             .tickFormat(function (d) {
-                return "$" + d
+                return "$" + d.toFixed(2)
             });
         var gY = svg.append("g")
             .attr("class", "axis y-axis")
