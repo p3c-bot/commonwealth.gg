@@ -3,13 +3,13 @@
 
 <head>
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@P3COfficial" />
+    <meta name="twitter:creator" content="@Commonwealthgg" />
     <meta name="twitter:title" content="Commonwealth.gg" />
     <meta name="twitter:description" content="Commonwealth is a peer-to-peer savings fund built on Ethereum Classic. Points holders receive passive income as the system is used. Ditch your bank, go with P3C." />
     <meta name="twitter:image" content="https://commonwealth.gg/img/coin.png"/>
     <meta property="og:url" content="https://commonwealth.gg" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Commonwealth" />
+    <meta property="og:title" content="Commonwealth.gg" />
     <meta name="twitter:description" content="Commonwealth is a peer-to-peer savings fund built on Ethereum Classic. Points holders receive passive income as the system is used. Ditch your bank, go with P3C." />
     <meta property="og:image" content="https://commonwealth.gg/img/coin.png"/>
     <title>Points Price Chart</title>
@@ -141,13 +141,13 @@
                 </div>
             </div>
             <div class="ui masthead vertical center aligned segment"  style="margin-top: 5px;">
-                <div class="ui segment" style="padding-bottom: 5px; padding-right: 0px; padding-left: 7px;">
+                <div class="ui segment chart-window">
                 <h4 class="ui header" style="text-align: left; margin-bottom: 5px;">
                     <div id="timeFrame" class="ui selection dropdown">
                         <input>
                         <i class="dropdown icon"></i>
-                        <div>
-                            <b>Point Price</b><span class="ui green text">&nbsp;| <span id="numDays">90 Days</span></span>
+                        <div style="font-size: 1em;">
+                            <b>Point Price</b><span class="ui green text">&nbsp;| <span id="numDays">180 Days</span></span>
                         </div>
                         <div class="menu">
                           <div class="item" data-value="30">30 Days</div>
@@ -165,7 +165,6 @@
         <!-- TradingView Widget BEGIN -->
         <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"  style="color: black !important;">Ticker Tape by TradingView</a></div>
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
         {
         "symbols": [
@@ -212,18 +211,18 @@
         <!-- TradingView Widget END -->
         <div style="text-align:center;">
             <a id="buyETCButton" class="ui left labeled icon large green button"
-            style="margin-top: 15px; margin-bottom: 5px;">
+            style="margin-top: 10px; margin-bottom: 10px;">
             <i class="left ethereum icon"></i>
                 Need to buy ETC?
             </a>
         </div>
         </div>
-        <div class="ui container vertical stripe">
+        <div class="ui container vertical stripe" style="padding-bottom: 15px;">
             <div class="ui vertical stripe features">
                 <div id="statsContainer" class="ui equal width stackable grid">
                     <div class="center aligned row">
-                        <div class="column">
-                            <div id="sizeStats" class="ui segments custom-computer only" style="height: 500px;">
+                        <div class="column custom-computer only">
+                            <div id="sizeStats" class="ui segments" style="height: 500px;">
                                 <!-- TradingView Widget BEGIN -->
                                 <div class="tradingview-widget-container">
                                 <div class="tradingview-widget-container__widget"></div>
@@ -353,7 +352,7 @@
                                 <!-- TradingView Widget END -->
                             </div>
                         </div>
-                        <div class="column" style="padding-bottom: 0px !important;">
+                        <div class="column">
                             <div id="sizeStats" class="ui segments">
                                 <a href="https://youtu.be/PuQBHfKVF2I" target="_blank">
                                 <div class="ui segment">
@@ -368,6 +367,7 @@
             </div>
             </div>
         </div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"  style="color: black !important;">Ticker Tape by TradingView</a></div>
         <div class="ui inverted vertical footer segment gradient personal">
             <div class="ui container">
                 <div class="ui stackable inverted divided equal height stackable grid">
@@ -418,7 +418,7 @@
 
     <script src="js/util.js"></script>
     <script src="js/etc/charts.js"></script>
-    <script>drawChart(90);</script>
+    <script>drawChart(180);</script>
 </body>
 
 </html>
