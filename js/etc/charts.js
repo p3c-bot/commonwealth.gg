@@ -4,7 +4,7 @@ $('.ui.dropdown')
         onChange: function(value, text, $selectedItem) {
             drawChart(value)
             if (value == '100000'){
-                $('#numDays').text('All Time')
+                $('#numDays').text('Max')
             } else {
                 $('#numDays').text(value + ' Days')
             }
