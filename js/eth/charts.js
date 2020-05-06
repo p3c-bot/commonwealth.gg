@@ -1,6 +1,6 @@
 function drawChart(days) {
-
-    d3.json("https://api.commonwealth.gg/chart/ohlc/" + days).then(function (prices) {
+    d3.selectAll("svg > *").remove();
+    d3.json("https://api.commonwealth.gg/eth/chart/ohlc/" + days).then(function (prices) {
 
         const months = {
             0: 'Jan',
