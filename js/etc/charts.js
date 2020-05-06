@@ -8,6 +8,7 @@ $('.ui.dropdown')
             } else {
                 $('#numDays').text(value + ' Days')
             }
+            if (typeof gtag !== 'undefined'){gtag('event', 'Home', {'event_label': 'Usage', 'event_category': 'ChangeRange'});};
         }
     });
 ;
