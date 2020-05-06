@@ -1,5 +1,20 @@
-function drawChart(days) {
+$('.ui.dropdown')
+    .dropdown({
+        action: 'hide',
+        onChange: function(value, text, $selectedItem) {
+            drawChart(value)
+            if (value == '100000'){
+                $('#numDays').text('All Time')
+            } else {
+                $('#numDays').text(value + ' Days')
+            }
+        }
+    });
+;
 
+
+function drawChart(days) {
+    d3.selectAll("svg > *").remove();
     d3.json("https://api.commonwealth.gg/chart/ohlc/" + days).then(function (prices) {
 
         const months = {
