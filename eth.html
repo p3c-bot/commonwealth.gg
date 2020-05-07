@@ -75,8 +75,7 @@
                     </a>
                     <a>
                         <div id="changeNetwork" class="opacity">
-                            <strong>Network
-                            </strong>
+                            Network:<strong> ETH</strong>
                         </div>
                     </a>
                     <a href="/chart.html">
@@ -226,12 +225,26 @@
 
         <div class="ui stackable grid">
             <div class="eight wide column">
-                <div class="ui segment">
-                        <h4 class="ui header" style="text-align: left;">
-                            <b>Point Price</b><span class="ui green text small">&nbsp;| Last 90 Days</span>
-                        </h4>
-                        <svg id="container"></svg>
-                        <a href="https://www.xenobank.com/" target="_blank" style="font-size:10px;">(More Data at Xenobank.com)</a>
+
+                <div class="ui segment chart-window">
+                    <h4 class="ui header" style="text-align: left; margin-bottom: 5px;">
+                        <div id="timeFrame" class="ui selection dropdown" style="font-size: .75em;">
+                            <input>
+                            <i class="dropdown icon"></i>
+                            <div>
+                                <b>Price</b><span class="ui green text">&nbsp;| <span id="numDays">90 Days</span></span>
+                            </div>
+                            <div class="menu">
+                              <div class="item" data-value="30">30 Days</div>
+                              <div class="item" data-value="90">90 Days</div>
+                              <div class="item" data-value="180">6 Months</div>
+                              <div class="item" data-value="365">1 Year</div>
+                              <div class="item" data-value="100000">Max</div>
+                            </div>
+                          </div>
+                    </h4>
+                    <svg id="container"></svg>
+                    <a href="https://www.xenobank.com/" target="_blank" style="font-size:10px; ">(More Data Available at Xenobank.com)</a>
                 </div>
                 <div style="text-align: center">
                         <a id="copyMNButton" data-clipboard-text="" class="ui left labeled icon large fluid green button copy"
