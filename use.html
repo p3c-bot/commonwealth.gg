@@ -3,14 +3,14 @@
 
 <head>
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@P3COfficial" />
+    <meta name="twitter:creator" content="@Commonwealthgg" />
     <meta name="twitter:title" content="Commonwealth" />
-    <meta name="twitter:description" content="Commonwealth is a peer-to-peer savings fund built on Ethereum Classic. Points holders receive passive income as the system is used. Plan for the future with Commonwealth." />
+    <meta name="twitter:description" content="A peer-to-peer savings fund built on Ethereum Classic. Built entirely on immutable smart contracts. Participants receive passive income as the system is used, with no central operator or controller." />
     <meta name="twitter:image" content="https://commonwealth.gg/img/coin.png"/>
     <meta property="og:url" content="https://commonwealth.gg" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Commonwealth" />
-    <meta property="og:description" content="Commonwealth is a peer-to-peer savings fund built on Ethereum Classic. Points holders receive passive income as the system is used. Plan for the future with Commonwealth." />
+    <meta property="og:title" content="Commonwealth.gg" />
+    <meta property="og:description" content="A peer-to-peer savings fund built on Ethereum Classic. Built entirely on immutable smart contracts. Participants receive passive income as the system is used, with no central operator or controller." />
     <meta property="og:image" content="https://commonwealth.gg/img/coin.png"/>
     <title>Commonwealth</title>
     <meta charset="utf8">
@@ -97,9 +97,7 @@
             </div>
         </div>
     </div>
-
     <div class="ui container margin top two">
-
         <div class="ui stackable grid">
             <div id="myHoldings" class="eight wide column border right border left" style="background: rgba(58, 150, 139, 0.17);">
                 <h1 class="ui header" style="margin-bottom: 0px;">
@@ -173,13 +171,13 @@
                 </div>
                 <div class="ui right labeled left icon input fluid large buy">
                     <i class="ethereum green icon"></i>
-                    <input placeholder="ETC to Spend..." type="text" id="buyInput">
+                    <input placeholder="..." type="text" id="buyInput">
                     <div class="ui tag green label notranslate">
                         ETC
                     </div>
                 </div>
                 <button id="buy" class="ui large fluid green button" style="margin-top:10px;">
-                    Buy Points
+                    Buy
                 </button>
                 <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
                     <i>How much will you buy?</i>
@@ -209,14 +207,14 @@
 
 
                 <div class="ui right labeled left icon input fluid large">
+                    <input placeholder="..." type="text" id="sellInput">
                     <i class="tree blue icon"></i>
-                    <input placeholder="Points to Sell..." type="text" id="sellInput">
                     <span class="ui tag blue label">
                         Points
                     </span>
                 </div>
                 <button id="sell" class="ui large fluid blue button" style="margin-top:10px;">
-                    Sell Points
+                    Sell
                 </button>
                 <div id="sellAmount" class="ui fluid large basic blue button no click approx" style="margin-top:10px;">
                     <i>How much will you sell?</i>
@@ -239,12 +237,25 @@
 
         <div class="ui stackable grid">
             <div class="eight wide column">
-                <div class="ui segment">
-                        <h4 class="ui header" style="text-align: left;">
-                            <b>Point Price</b><span class="ui green text small">&nbsp;| Last 90 Days</span>
-                        </h4>
-                        <svg id="container"></svg>
-                        <a href="https://www.xenobank.com/" target="_blank" style="font-size:10px;">(More Data at Xenobank.com)</a>
+                <div class="ui segment chart-window">
+                    <h4 class="ui header" style="text-align: left; margin-bottom: 5px;">
+                        <div id="timeFrame" class="ui selection dropdown" style="font-size: .75em;">
+                            <input>
+                            <i class="dropdown icon"></i>
+                            <div>
+                                <b>Price</b><span class="ui green text">&nbsp;| <span id="numDays">90 Days</span></span>
+                            </div>
+                            <div class="menu">
+                              <div class="item" data-value="30">30 Days</div>
+                              <div class="item" data-value="90">90 Days</div>
+                              <div class="item" data-value="180">6 Months</div>
+                              <div class="item" data-value="365">1 Year</div>
+                              <div class="item" data-value="100000">Max</div>
+                            </div>
+                          </div>
+                    </h4>
+                    <svg id="container"></svg>
+                    <a href="https://www.xenobank.com/" target="_blank" style="font-size:10px; ">(More Data Available at Xenobank.com)</a>
                 </div>
                 <div style="text-align: center">
                         <a id="copyMNButton" data-clipboard-text="" class="ui left labeled icon large fluid green button copy"

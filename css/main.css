@@ -4,7 +4,7 @@ body {
 
 .cityscape {
     /* The image used */
-    background-image: url("/img/landing/planet.jpeg");
+    background-image: url("/img/landing/planet.jpg");
 
     /* Full height */
     height: 0%;
@@ -20,7 +20,7 @@ body {
 }
 
 .chart-background {
-    background-image: linear-gradient(#56B4D3, rgb(34, 94, 52));
+    background-image: linear-gradient(#56B4D3, rgb(34, 94, 52,.3));
 }
 
 /* Position text in the middle of the page/image */

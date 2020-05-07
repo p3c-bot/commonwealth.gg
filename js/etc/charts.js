@@ -4,10 +4,11 @@ $('.ui.dropdown')
         onChange: function(value, text, $selectedItem) {
             drawChart(value)
             if (value == '100000'){
-                $('#numDays').text('All Time')
+                $('#numDays').text('Max')
             } else {
                 $('#numDays').text(value + ' Days')
             }
+            if (typeof gtag !== 'undefined'){gtag('event', 'Home', {'event_label': 'Usage', 'event_category': 'ChangeRange'});};
         }
     });
 ;
@@ -40,9 +41,9 @@ function drawChart(days) {
 
         const margin = {
                 top: 15,
-                right: 100,
+                right: 80,
                 bottom: 205,
-                left: 75
+                left: 65
             },
             w = 1000 - margin.left - margin.right,
             h = 625 - margin.top - margin.bottom;
@@ -96,7 +97,7 @@ function drawChart(days) {
         var yAxis = d3.axisLeft()
             .scale(yScale)
             .tickFormat(function (d) {
-                return "$" + d
+                return "$" + d.toFixed(2)
             });
         var gY = svg.append("g")
             .attr("class", "axis y-axis")
