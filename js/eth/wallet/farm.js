@@ -27,7 +27,7 @@ function getMyCrop(onboard) {
                         `
                         <h1 id="loginWarning" class="login-warning">Login to Saturn wallet, and refresh!</h1>
                         <p id="agreement" class="agreement">
-                        Commonwealth is an Ethereum app. Read it <a target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">here</a>. By continuing, you accept that the code will run as written, without guarantee of profit.
+                        Commonwealth is an Ethereum app. Read it <a target="_blank" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts">here</a>. You accept that the code will run as written, without guarantee of profit.
                         To begin, click "Accept" and complete the transaction.
                         </p>
                         <img id="loginLogo" src="img/logo/eth-title.png" class="ui image etc-logo center-larger" />
