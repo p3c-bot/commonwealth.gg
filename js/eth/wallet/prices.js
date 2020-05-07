@@ -67,9 +67,6 @@ function updateEtcPrice(portfolio) {
 
       setTokensPrice(usdPrice)
       setDividendsPrice(usdPrice)
-      if (portfolio === true){
-        setPortfolio(myCropAddress)
-      }
     }
   })
 }

@@ -67,11 +67,18 @@
 
 .axis text {
     font-family: 'Open Sans', sans-serif;
-    font-size: 17px;
+    font-size: 17.8px;
     fill: black;
 }
 
 /* d3 candle stick end */
+
+.chart-window {
+    padding-bottom: 5px !important;
+    padding-right: 0px !important;
+    padding-left: 7px !important;
+    padding-top: 5px !important;
+}
 
 body {
     background-color: white;

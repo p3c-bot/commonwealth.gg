@@ -5,8 +5,8 @@ if (typeof web3 == 'undefined') {
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Issue', 'event_category': 'NoWeb3'});};
     displayError(
         `
-        <div class="custom-computer only">To Use, Install an <a target="_blank" style="color: white; text-decoration: underline;" href="https://www.youtube.com/watch?v=TUD-w5P_uAA&feature=youtu.be">ETC Wallet</a></div>
-        <div class="mobile only">To Use, Install an <a target="_blank" style="color: white; text-decoration: underline;" href="https://www.youtube.com/watch?v=xCyrjiF6f3E&feature=youtu.be">ETC Wallet</a></div>
+        <div class="custom-computer only">To Use, Install an <a target="_blank" style="color: white; text-decoration: underline;" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig?hl=en">ETH Wallet</a></div>
+        <div class="mobile only">To Use, Install an <a target="_blank" style="color: white; text-decoration: underline;" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig?hl=en>ETH Wallet</a></div>
         `
     )
 }
@@ -16,8 +16,8 @@ getNetworkId(web3).then(function (res) {
         if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Issue', 'event_category': 'EthereumWeb3'});};        
         displayError(
             `
-            <div class="custom-computer only">To Use, Install an <a target="_blank" style="color: white; text-decoration: underline;" href="https://www.youtube.com/watch?v=TUD-w5P_uAA&feature=youtu.be">ETC Wallet</a></div>
-            <div class="mobile only">To Use, Install an <a target="_blank" style="color: white; text-decoration: underline;" href="https://www.youtube.com/watch?v=xCyrjiF6f3E&feature=youtu.be">ETC Wallet</a></div>
+            <div class="custom-computer only">To Use, Install an <a target="_blank" style="color: white; text-decoration: underline;" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig?hl=en">ETH Wallet</a></div>
+            <div class="mobile only">To Use, Install an <a target="_blank" style="color: white; text-decoration: underline;" href="https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig?hl=en>ETH Wallet</a></div>
             `
         )
     } else {
@@ -85,54 +85,6 @@ $('#portfolioButton').hide();
 $( "#refillButton" ).click(function() {
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'RefillLinkClick'});};
 });
-
-function setPortfolio(cropAddress) {
-    $.getJSON("https://api.commonwealth.gg/price/crop/" + web3.toChecksumAddress(cropAddress), function (data) {
-        if (data !== null){
-            // (New Number - Original Number) ÷ Original Number × 100.
-            $('#portfolioButton').show();
-            performance = `
-            My account performance (in USD):
-            <br>
-            <b>Change 1 Day</b>: {usd1}
-            <br>
-            <b>Change 7 Days</b>: {usd7}
-            <br>
-            <b>Change 30 Days</b>: {usd30}
-            <br>
-            <span class="ui text small eleven converted">Past growth is no guarantee of future results.</span>
-            `
-            $.each(data, function (key, val) {
-                if (key.includes('usd')) {
-                    change = (((myUSDValue - val) / val) * 100).toFixed(0)
-                } else {
-                    change = (((myETCValue - val) / val) * 100).toFixed(1)
-                    change = String(change).replace('0.', '.')
-                }
-                color = (change >= 0) ? "green" : "red"
-                // TODO does this make sense?
-                // if (key == "usd1"){
-                //     $("#myDayChange").html("<span class='text small eleven'>  " + change + "%</span>")
-                //     $("#myDayChange").css("color", color)
-                // }
-                performance = performance.replace('{' + key + '}', '<span class="' + color + '">' + change + '%</span>')
-                if (color == "red" && key == 'usd7' && Math.abs(Number(change)) != 100){
-                    if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'BalanceDown','value': Number(change)});};
-                    alertify.error('<h3>Balance: <u>' + change + '</u>% down in last 7 days.</h3>',5)
-                }
-
-                if (color == "green" && key == 'usd7' && Number(change) != 100){
-                    if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'BalanceUp','value': Number(change)});};
-                    alertify.success('<h3>Balance: <u>' + change + '</u>% up in last 7 days.</h3>',7)
-                }
-            });
-            $('#portfolioButton').popup({
-                html: performance,
-                position: 'right center'
-            });
-        }
-    });
-}
 
 function copyAddress() {
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'CopyAddress'});};
