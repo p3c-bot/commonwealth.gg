@@ -74,6 +74,20 @@ $("#transfer").click(function () {
     }
 })
 
+$( "#transferAddress" ).on('input', function() {
+    console.log( "Handler for .keypress() called." );
+    destination = $("#transferAddress").val()
+    if (web3.isAddress(destination) == true){
+        cropAbi.at(destination).owner.call(function (err, owner) {
+            if (owner != "0x"){
+                alertify.success('Sending to a Crop')
+            } else {
+                alertify.warning('Destination is not a Crop') 
+            }
+        });
+    }
+});
+
 $('#infoButton')
     .popup({
         content: "Allow bots to compound your dividends in exchange for a referral bonus. You can manually withdraw at any time, but this must be on to use Compound. For greater control, use the Pure Interface.",
