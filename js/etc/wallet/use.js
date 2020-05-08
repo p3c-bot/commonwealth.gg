@@ -88,6 +88,20 @@ $( "#buyWithCoinbase" ).click(function() {
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'BuyWithCoinbase'});};
 });
 
+$( "#transferOpen" ).click(function() {
+    $('.ui.modal')
+    .modal('show')
+    ;
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: myCropAddress, 
+        width: 128,
+        height: 128,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+});
+
 function copyAddress() {
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'CopyAddress'});};
 

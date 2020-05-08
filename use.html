@@ -163,8 +163,6 @@
                     <div class="ui positive button price no click">
                         <strong>
                             <span class="buy-price" id="tokenUSDBuyPrice">0.00</span>
-                            <span class="ui green text small eleven"> | </span> <span class="ui green text small eleven"
-                                id="tokenBuyGet">0.0000</span>
                         </strong>
                     </div>
                 </div>
@@ -198,8 +196,6 @@
                     <div class="ui button price no click">
                         <strong>
                             <span class="buy-price" id="tokenUSDSellPrice">0.00</span>
-                            <span class="ui green text small eleven"> | </span> <span class="ui green text small eleven"
-                                id="tokenSellGet">0.0000</span>
                         </strong>
                     </div>
                 </div>
@@ -256,13 +252,21 @@
                     <svg id="container"></svg>
                     <a href="https://www.xenobank.com/" target="_blank" style="font-size:10px; ">(More Data Available at Xenobank.com)</a>
                 </div>
+            </div>
+            <div class="eight wide column">
                 <div style="text-align: center">
-                        <a id="copyMNButton" data-clipboard-text="" class="ui left labeled icon large fluid green button copy"
-                            style="margin-bottom:10px;"> <i class="left magic icon"></i>
-                            Press for a Referral Link! 
-                        </a>
+                <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
+                <i class="left comments icon"></i>
+                    Need Help? Press to Chat.
+                </a>
+                </div>
+                <div style="text-align: center">
+                    <a id="transferOpen" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
+                    <i class="left qrcode icon"></i>
+                        Transfer or Receive Points
+                    </a>
                     </div>
-                <div id="masternode" class="ui segments masternode hidden">
+                    <div id="masternode" class="ui segments masternode hidden">
                         <div class="ui segment" style="text-align: left;">
                             <p style="margin-bottom: 4px;">
                                 <strong>33%</strong> of the Commonwealth fee goes to referrer when link is used.<a href="https://medium.com/@masterhax/how-do-referral-links-work-in-p3c-13c8242fd9d9" target="_blank"> Details.</a>
@@ -275,16 +279,13 @@
                             </div>
                         </div> -->
                     </div>
-            </div>
-            <div class="eight wide column">
-                                <div style="text-align: center">
-                            <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
-                                style="margin-bottom:10px;">
-                                <i class="left comments icon"></i>
-                                Need Help? Press to Chat.
-                            </a>
-                        </div>
-                    <div class="ui segments" style="margin: 0px;">
+                    <div style="text-align: center">
+                        <a id="copyMNButton" data-clipboard-text="" class="ui left labeled icon large fluid green button copy"
+                            style="margin-bottom:10px;"> <i class="left magic icon"></i>
+                            Press for a Referral Link! 
+                        </a>
+                    </div> 
+                    <div class="ui segments small modal" style="margin: 0px;">
                             <div class="ui segment">
                                 <h4 class="ui header">
                                     <i class="circular inverted blue exchange alternate icon"></i>
@@ -293,7 +294,7 @@
                                     </div>
                                 </h4>
                             </div>
-                            <div class="ui segment notranslate">
+                            <div class="ui segment notranslate" style="color: black !important;">
                                 <b>My Crop:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
                                     class="ui primary basic button copy" data-clipboard-text="">
                                     <i class="copy icon"></i>
@@ -320,22 +321,20 @@
                                     Transfer
                                 </button>
                             </div>
-                            <div class ="ui segment">
-                                <div id="autoReinvest" class="ui toggle checkbox reinvest" style="margin-top: 0px; padding-top: 0px; top: 7px;">
-                                    <input type="checkbox" name="public"></div><label id="reinvestToggle" for="autoReinvest">Auto Compound <i id="infoButton" class="info circle icon"></i></label>                    
+                            <div class="ui stackable grid">
+                                <div class="eight wide column">
+                                    <div class ="ui center aligned segment">
+                                        <div id="autoReinvest" class="ui toggle checkbox reinvest" style="margin-top: 0px; padding-top: 0px; top: 7px;">
+                                            <input type="checkbox" name="public"></div><label id="reinvestToggle" for="autoReinvest" style=" text-align: center;">Auto Compound <i id="infoButton" class="info circle icon"></i></label>                    
+                                        </div>
                                 </div>
+                                <div class="eight wide column">
+                                    <div class ="ui segment">
+                                        <div id="qrcode"></div>
+                                    </div>                                
                             </div>
-                            <!-- <div class="ui segment">
-                                <a id="refillButton" class="donate-with-crypto ui right labeled icon large fluid orange button coinbase-override"
-                                    style="padding-top: 10px" href="https://commerce.coinbase.com/checkout/ea25233e-7a3f-4554-b450-41d13dfdc6ff">
-                                    <i class="right bitcoin icon"></i>
-                                    <span class="coinbase-override">Buy P3C with other Currencies</span>
-                                </a>
-                                <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                                </script>
-                            </div> -->
-                            
-                        </div>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
@@ -386,6 +385,7 @@
     <script src="lib/clipboard.min.js"></script>
     <script src="lib/lodash.min.js"></script>
     <script src="lib/d3.v5.min.js"></script>
+    <script src="lib/qrcode.min.js"></script>
 
     <script src="js/util.js"></script>
     <script src="js/etc/contracts.js"></script>
