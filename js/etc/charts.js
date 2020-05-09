@@ -292,20 +292,20 @@ function setStats() {
 			// 	position: 'bottom center'
 			// });
 			if (typeof gtag !== 'undefined'){gtag('event', 'Home', {'event_label': 'Usage', 'event_category': 'LoadStats'});};
-            $.getJSON("https://api.commonwealth.gg/chart/ohlc/30", function (ohlc) {
-                if (ohlc !== null){
-                    vaultDiff = (data.SizeETC - ohlc[0].SizeETC)
-                    $("#vaultDiff").replaceWith(vaultDiff.toFixed(0) + " ETC")
-                    percentChange = ((data.SizeETC - ohlc[0].SizeETC) / ohlc[0].SizeETC * 100 )
-                    if (percentChange > 0){
-                        $('#pointChange').text(" | +" + percentChange.toFixed(1) + "%")
-                        $( "#pointChange" ).addClass("green") 
-                    } else {
-                        $('#pointChange').text(" | -" + percentChange.toFixed(0) + "%") 
-                        $( "#pointChange" ).addClass("red") 
-                    }
-                }
-            });
+            // $.getJSON("https://api.commonwealth.gg/chart/ohlc/30", function (ohlc) {
+            //     if (ohlc !== null){
+            //         vaultDiff = (data.SizeETC - ohlc[0].SizeETC)
+            //         $("#vaultDiff").replaceWith(vaultDiff.toFixed(0) + " ETC")
+            //         percentChange = ((data.SizeETC - ohlc[0].SizeETC) / ohlc[0].SizeETC * 100 )
+            //         if (percentChange > 0){
+            //             $('#pointChange').text(" | +" + percentChange.toFixed(1) + "%")
+            //             $( "#pointChange" ).addClass("green") 
+            //         } else {
+            //             $('#pointChange').text(" | -" + percentChange.toFixed(0) + "%") 
+            //             $( "#pointChange" ).addClass("red") 
+            //         }
+            //     }
+            // });
         }
 	});
 }
