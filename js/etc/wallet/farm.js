@@ -116,7 +116,9 @@ function getMyCropDividends() {
             if (!err) {
                 change = (String(myCropDividends) !== String(result))
                 myCropDividends = result;
+                myCropDividendsPoints = (web3.fromWei(myCropDividends) / buyPrice)
                 if (change) {
+                    $("#myCropDividendsPoints").replaceWith("<b id='myCropDividendsPoints'>" + myCropDividendsPoints.toFixed(2) + " </b>")
                     $("#myCropDividends").replaceWith("<b id='myCropDividends'>" + web3.fromWei(myCropDividends).toFixed(8) + "</b>")
                     $('#myCropDividends').transition({
                         animation: 'flash',
