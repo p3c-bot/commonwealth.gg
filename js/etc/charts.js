@@ -13,10 +13,29 @@ $('.ui.dropdown')
     });
 ;
 
+setStats()
+
 
 function drawChart(days) {
     d3.selectAll("svg > *").remove();
     d3.json("https://api.commonwealth.gg/chart/ohlc/" + days).then(function (prices) {
+
+        // Vault Growth Calculator
+        if (prices !== null && prices[0].SizeETC){
+            vaultDiff = (globalStats.SizeETC - prices[0].SizeETC)
+            $("#vaultDiff").html(numberWithCommas(vaultDiff.toFixed(0)) + " ETC")
+            percentChange = ((globalStats.SizeETC - prices[0].SizeETC) / prices[0].SizeETC * 100 )
+            if (percentChange > 0){
+                $('#pointChange').text(" | +" + percentChange.toFixed(1) + "%")
+                $( "#pointChange" ).addClass("green") 
+                $( "#pointChange" ).removeClass("red") 
+            } else {
+                $('#pointChange').text(" | " + percentChange.toFixed(0) + "%") 
+                $( "#pointChange" ).addClass("red")
+                $( "#pointChange" ).removeClass("green")
+
+            }
+        }
 
         const months = {
             0: 'Jan',
@@ -247,10 +266,11 @@ function wrap(text, width) {
 }
 
 $('#statsContainer').hide();
-setStats()
+var globalStats
 function setStats() {
     $.getJSON("https://api.commonwealth.gg/chart/info", function (data) {
 		if (data !== null){
+            globalStats = data
 			// (New Number - Original Number) ÷ Original Number × 100.
 			$('#statsContainer').show();
 			P3CSupply = numberWithCommas(Number(data.P3CSupply).toFixed(0))
@@ -292,20 +312,6 @@ function setStats() {
 			// 	position: 'bottom center'
 			// });
 			if (typeof gtag !== 'undefined'){gtag('event', 'Home', {'event_label': 'Usage', 'event_category': 'LoadStats'});};
-            $.getJSON("https://api.commonwealth.gg/chart/ohlc/30", function (ohlc) {
-                if (ohlc !== null){
-                    vaultDiff = (data.SizeETC - ohlc[0].SizeETC)
-                    $("#vaultDiff").replaceWith(vaultDiff.toFixed(0) + " ETC")
-                    percentChange = ((data.SizeETC - ohlc[0].SizeETC) / ohlc[0].SizeETC * 100 )
-                    if (percentChange > 0){
-                        $('#pointChange').text(" | +" + percentChange.toFixed(1) + "%")
-                        $( "#pointChange" ).addClass("green") 
-                    } else {
-                        $('#pointChange').text(" | -" + percentChange.toFixed(0) + "%") 
-                        $( "#pointChange" ).addClass("red") 
-                    }
-                }
-            });
         }
 	});
 }
