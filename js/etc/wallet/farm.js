@@ -86,7 +86,8 @@ function activateUI(cropAddress) {
     var myCropAddress = web3.toChecksumAddress(cropAddress)
     $("#copyAddressButton").attr("data-clipboard-text", myCropAddress);
     $("#myCropAddress").replaceWith("<b id='myCropAddress' class='cropAddress'>" + myCropAddress + "</b>")
-
+    $("#qrImage").replaceWith('<img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=' + myCropAddress + '&amp;choe=UTF-8" />');
+ 
     // This is where MN link is defined.
     $("#masternodeLink").replaceWith('<a id="masternodeLink" href="/?ref=' + myCropAddress + '"https://commonwealth.gg/index.html?ref=' + myCropAddress + '</a>')
     // This definnes the clipboard button event for the referral link
