@@ -75,9 +75,19 @@
         </div>
         <div class="ui container margin top two">
             <div class="ui stackable grid">
+                <div class="ui selection dropdown" style="margin-bottom: 10px;">
+                    <input type="hidden" name="tribes">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Show Tribes</div>
+                    <div class="menu">
+                      <div class="item" data-value="0">Open Tribes</div>
+                      <div class="item" data-value="1">My Tribes</div>
+                      <div class="item" data-value="2">Completed Tribes</div>
+                    </div>
+                  </div>
                 <div class="sixteen wide column border right border left" style="background: rgba(58, 150, 139, 0.17);">
                     <h1 class="ui header">
-                        <div class="content">Active Tribes
+                        <div id="title" class="content">Active Tribes
                     </h1>
                     <table id="tribes" class="display">
                         <thead>

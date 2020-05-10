@@ -192,19 +192,14 @@ function buyIn(tribe,activeTribeCost) {
         },
         function (error, result) { //get callback from function which is your transaction key
             if (!error) {
-                if(activeTribeSize - activeTribeWaiting == 1){
-                    $.ajax({
-                        type: "GET",
-                        url: "https://api.commonwealth.gg/tribes/finished/" + tribeID,
-                        crossDomain: true,
-                    });
-                    succesfulTribeAlert()
-                } else {
-                    $.ajax({
+                $.ajax({
                         type: "GET",
                         url: "https://api.commonwealth.gg/tribes/join/" + tribeID + "/" + userAddress,
                         crossDomain: true,
-                    });
+                });
+                if(activeTribeSize - activeTribeWaiting == 1){
+                    succesfulTribeAlert()
+                } else {
                     joinTribeAlert()
                 }
             } else {
