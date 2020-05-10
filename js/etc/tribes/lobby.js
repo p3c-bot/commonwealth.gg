@@ -83,7 +83,7 @@ function buildLobby(url){
         {
           data: 'reward',
           render: function (data, type, row) {
-            return data + ' P3C'
+            return data + ' Points'
           }
         },
         {
