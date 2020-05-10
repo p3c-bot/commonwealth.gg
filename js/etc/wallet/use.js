@@ -105,15 +105,17 @@ $( "#buyWithCoinbase" ).click(function() {
 $( "#transferOpen" ).click(function() {
     $('.ui.modal')
     .modal('show')
-    ;
+    $( "#qrcode" ).empty();
+
     var qrcode = new QRCode(document.getElementById("qrcode"), {
         text: myCropAddress, 
         width: 128,
         height: 128,
-        colorDark : "#000000",
+        colorDark : "#348F50",
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
     });
+    $('qrcode').css('display', 'inline-block');
 });
 
 function copyAddress() {

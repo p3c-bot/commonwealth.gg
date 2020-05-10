@@ -261,12 +261,6 @@
                     Need Help? Press to Chat.
                 </a>
                 </div>
-                <div style="text-align: center">
-                    <a id="transferOpen" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
-                    <i class="left qrcode icon"></i>
-                        Transfer or Receive Points
-                    </a>
-                    </div>
                     <div id="masternode" class="ui segments masternode hidden">
                         <div class="ui segment" style="text-align: left;">
                             <p style="margin-bottom: 4px;">
@@ -274,29 +268,35 @@
                             </p>
                             <div id="refDivs" style="text-align: center;">Recent Referral Dividends: <span id="myRefDividends"></span></div> 
                         </div>
-                        <!-- <div class="ui secondary segment">
-                            <div class="link masternode">
-                                <a id="masternodeLink" href="/?ref=0x">https://commonwealth.gg/index.html?ref=0x123456</a> 
-                            </div>
-                        </div> -->
                     </div>
-                    <div style="text-align: center">
+                    <div style="text-align: center;  margin-top: 20px;">
                         <a id="copyMNButton" data-clipboard-text="" class="ui left labeled icon large fluid green button copy"
                             style="margin-bottom:10px;"> <i class="left magic icon"></i>
                             Press for a Referral Link! 
                         </a>
-                    </div> 
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a id="transferOpen" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
+                        <i class="left qrcode icon"></i>
+                            Transfer or Receive Points
+                        </a>
+                    </div>
+                    <div class ="ui segment">
+                        <div id="autoReinvest" class="ui toggle checkbox reinvest" style="margin-top: 0px; padding-top: 0px; top: 7px;">
+                            <input type="checkbox" name="public"></div><label id="reinvestToggle" for="autoReinvest">Auto Compound <i id="infoButton" class="info circle icon"></i></label>                    
+                        </div>
+                    </div>
                     <div class="ui segments small modal" style="margin: 0px;">
                             <div class="ui segment">
                                 <h4 class="ui header">
-                                    <i class="circular inverted blue exchange alternate icon"></i>
+                                    <i class="circular inverted green exchange alternate icon"></i>
                                     <div class="content">
-                                        <div class="sub header"><b>Transfer Points</b>. <i>(Dividends will go to your wallet).</i></div>
+                                        <div class="sub header"><b>Transfer Points</b>. <i>(All dividends go to your ETC wallet during transfer)</i></div>
                                     </div>
                                 </h4>
                             </div>
                             <div class="ui segment notranslate" style="color: black !important;">
-                                <b>My Crop:</b> <span id="myCropAddress" class="approx"></span> <button id="copyAddressButton"
+                                <b>My Crop:  </b> <span id="myCropAddress"></span> <button id="copyAddressButton"
                                     class="ui primary basic button copy" data-clipboard-text="">
                                     <i class="copy icon"></i>
                                 </button>
@@ -322,18 +322,33 @@
                                     Transfer
                                 </button>
                             </div>
-                            <div class="ui stackable grid">
-                                <div class="eight wide column">
-                                    <div class ="ui center aligned segment">
-                                        <div id="autoReinvest" class="ui toggle checkbox reinvest" style="margin-top: 0px; padding-top: 0px; top: 7px;">
-                                            <input type="checkbox" name="public"></div><label id="reinvestToggle" for="autoReinvest" style=" text-align: center;">Auto Compound <i id="infoButton" class="info circle icon"></i></label>                    
-                                        </div>
+
+                    <div class="ui segment">
+                        <div class="ui two column very relaxed grid">
+                        <div class="column">
+                            <div class ="ui center aligned segment">
+                                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
+                                    <i class="left camera icon"></i>
+                                        Scan QR
+                                    </a>
+                                    <h1>jsQR Demo</h1>
+                                    <a id="githubLink" href="https://github.com/cozmo/jsQR">View documentation on Github</a>
+                                    <p>Pure JavaScript QR code decoding library.</p>
+                                    <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
+                                    <canvas id="canvas" hidden></canvas>
+                                    <div id="output" hidden>
+                                      <div id="outputMessage">No QR code detected.</div>
+                                      <div hidden><b>Data:</b> <span id="outputData"></span></div>
+                                    </div>
                                 </div>
-                                <div class="eight wide column">
-                                    <div class ="ui segment">
-                                        <div id="qrcode"></div>
-                                    </div>                                
-                            </div>
+                        </div>
+                        <div class="column">
+                            <div id="qrcode"></div>
+                        </div>
+                        </div>
+                        <div class="ui vertical divider">
+                        </div>
+                    </div>
                     </div>
                   </div>
             </div>
@@ -387,8 +402,10 @@
     <script src="lib/lodash.min.js"></script>
     <script src="lib/d3.v5.min.js"></script>
     <script src="lib/qrcode.min.js"></script>
+    <script src="lib/jsqr.min.js"></script>
 
     <script src="js/util.js"></script>
+    <script src="js/qr-reader.js"></script>
     <script src="js/etc/contracts.js"></script>
     <script src="js/etc/wallet/farm.js"></script>
     <script src="js/etc/wallet/masternode.js"></script>
