@@ -24,7 +24,7 @@ var sellPrice;
 function setSellPrice(usdPrice) {
   p3cContract.sellPrice(function (e, r) {
     sellPrice = web3.fromWei(r)
-    $('#tokenSellGet').text(sellPrice.toFixed(4) + ' ETC')
+    $('#tokenSellGet').text(sellPrice.toFixed(3) + ' ETC')
     $('#tokenUSDSellPrice').text('$' + (sellPrice * usdPrice).toFixed(2))
   })
 }
@@ -35,7 +35,7 @@ function setBuyPrice(usdPrice) {
   p3cContract.buyPrice(function (e, r) {
     buyPrice = web3.fromWei(r)
     // alert((buyPrice * usdPrice).toFixed(2))
-    $('#tokenBuyGet').text(buyPrice.toFixed(4) + ' ETC')
+    $('#tokenBuyGet').text(buyPrice.toFixed(3) + ' ETC')
     $('#tokenUSDBuyPrice').text('$' + (buyPrice * usdPrice).toFixed(2))
   })
 }
