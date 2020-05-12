@@ -132,7 +132,7 @@ $('#copyTribeLink').on('click', function (){
 var address;
 // CREATE GAME
 function createTribe(tribeName, amountOfMembers, entryCost) {
-    if (Number(tribeNumber) == None || Number((entryCost / buyPrice).toFixed(1) == None)){
+    if (Number(tribeNumber) == null || Number((entryCost / buyPrice).toFixed(1) == null)){
         alertify.error('Error: Please confirm your wallet is logged in and connected to ETC')
         return
     } 
