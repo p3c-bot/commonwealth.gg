@@ -132,6 +132,10 @@ $('#copyTribeLink').on('click', function (){
 var address;
 // CREATE GAME
 function createTribe(tribeName, amountOfMembers, entryCost) {
+    if (Number(tribeNumber) == None || Number((entryCost / buyPrice).toFixed(1) == None)){
+        alertify.error('Error: Please confirm your wallet is logged in and connected to ETC')
+        return
+    } 
     amount = web3.toWei(entryCost)
     
     data = { 
