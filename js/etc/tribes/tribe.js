@@ -132,6 +132,10 @@ $('#copyTribeLink').on('click', function (){
 var address;
 // CREATE GAME
 function createTribe(tribeName, amountOfMembers, entryCost) {
+    if (Number(tribeNumber) == null || Number((entryCost / buyPrice).toFixed(1) == null)){
+        alertify.error('Error: Please confirm your wallet is logged in and connected to ETC')
+        return
+    } 
     amount = web3.toWei(entryCost)
     
     data = { 
@@ -192,19 +196,14 @@ function buyIn(tribe,activeTribeCost) {
         },
         function (error, result) { //get callback from function which is your transaction key
             if (!error) {
-                if(activeTribeSize - activeTribeWaiting == 1){
-                    $.ajax({
-                        type: "GET",
-                        url: "https://api.commonwealth.gg/tribes/finished/" + tribeID,
-                        crossDomain: true,
-                    });
-                    succesfulTribeAlert()
-                } else {
-                    $.ajax({
+                $.ajax({
                         type: "GET",
                         url: "https://api.commonwealth.gg/tribes/join/" + tribeID + "/" + userAddress,
                         crossDomain: true,
-                    });
+                });
+                if(activeTribeSize - activeTribeWaiting == 1){
+                    succesfulTribeAlert()
+                } else {
                     joinTribeAlert()
                 }
             } else {

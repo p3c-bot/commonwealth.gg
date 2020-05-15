@@ -74,69 +74,41 @@ $("#transfer").click(function () {
     }
 })
 
+$( "#transferAddress" ).on('input', function() {
+    console.log( "Handler for .keypress() called." );
+    destination = $("#transferAddress").val()
+    if (web3.isAddress(destination) == true){
+        cropAbi.at(destination).owner.call(function (err, owner) {
+            if (owner != "0x"){
+                alertify.success('Sending to a Crop')
+            } else {
+                alertify.warning('Destination is not a Crop') 
+            }
+        });
+    }
+});
+
 $('#infoButton')
     .popup({
         content: "Allow bots to compound your dividends in exchange for a referral bonus. You can manually withdraw at any time, but this must be on to use Compound. For greater control, use the Pure Interface.",
         position: 'top center'
     });
 
-$('#portfolioButton').hide();
+$( "#transferOpen" ).click(function() {
+    $('.ui.modal')
+    .modal('show')
+    $( "#qrcode" ).empty();
 
-$( "#refillButton" ).click(function() {
-    if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'RefillLinkClick'});};
-});
-
-$( "#buyWithCoinbase" ).click(function() {
-    if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'BuyWithCoinbase'});};
-});
-
-function setPortfolio(cropAddress) {
-    $.getJSON("https://api.commonwealth.gg/price/crop/" + web3.toChecksumAddress(cropAddress), function (data) {
-        if (data !== null){
-            // (New Number - Original Number) ÷ Original Number × 100.
-            $('#portfolioButton').show();
-            performance = `
-            My account performance (in USD):
-            <br>
-            <b>Change 1 Day</b>: {usd1}
-            <br>
-            <b>Change 7 Days</b>: {usd7}
-            <br>
-            <b>Change 30 Days</b>: {usd30}
-            <br>
-            <span class="ui text small eleven converted">Past growth is no guarantee of future results.</span>
-            `
-            $.each(data, function (key, val) {
-                if (key.includes('usd')) {
-                    change = (((myUSDValue - val) / val) * 100).toFixed(0)
-                } else {
-                    change = (((myETCValue - val) / val) * 100).toFixed(1)
-                    change = String(change).replace('0.', '.')
-                }
-                color = (change >= 0) ? "green" : "red"
-                // TODO does this make sense?
-                // if (key == "usd1"){
-                //     $("#myDayChange").html("<span class='text small eleven'>  " + change + "%</span>")
-                //     $("#myDayChange").css("color", color)
-                // }
-                performance = performance.replace('{' + key + '}', '<span class="' + color + '">' + change + '%</span>')
-                if (color == "red" && key == 'usd7' && Math.abs(Number(change)) != 100){
-                    if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'BalanceDown','value': Number(change)});};
-                    alertify.error('<h3>Balance: <u>' + change + '</u>% down in last 7 days.</h3>',5)
-                }
-
-                if (color == "green" && key == 'usd7' && Number(change) != 100){
-                    if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'BalanceUp','value': Number(change)});};
-                    alertify.success('<h3>Balance: <u>' + change + '</u>% up in last 7 days.</h3>',7)
-                }
-            });
-            $('#portfolioButton').popup({
-                html: performance,
-                position: 'right center'
-            });
-        }
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: myCropAddress, 
+        width: 128,
+        height: 128,
+        colorDark : "#348F50",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
     });
-}
+    $('qrcode').css('display', 'inline-block');
+});
 
 function copyAddress() {
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'CopyAddress'});};

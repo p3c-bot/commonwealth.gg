@@ -212,7 +212,7 @@ body {
 }
 
 .cropAddress {
-    font-size: 12px;
+    color: black;
 }
 
 .title {
@@ -308,10 +308,6 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     margin: 0 auto;
-}
-
-.portfolio#portfolioButton {
-    display: inline;
 }
 
 .green {
