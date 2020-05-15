@@ -74,16 +74,39 @@ $("#transfer").click(function () {
     }
 })
 
+$( "#transferAddress" ).on('input', function() {
+    destination = $("#transferAddress").val()
+    if (web3.isAddress(destination) == true){
+        cropAbi.at(destination).owner.call(function (err, owner) {
+            if (owner != "0x"){
+                alertify.success('Sending to a Crop')
+            } else {
+                alertify.warning('Destination is not a Crop') 
+            }
+        });
+    }
+});
+
 $('#infoButton')
     .popup({
         content: "Allow bots to compound your dividends in exchange for a referral bonus. You can manually withdraw at any time, but this must be on to use Compound. For greater control, use the Pure Interface.",
         position: 'top center'
     });
 
-$('#portfolioButton').hide();
+$( "#transferOpen" ).click(function() {
+    $('.ui.modal')
+    .modal('show')
+    $( "#qrcode" ).empty();
 
-$( "#refillButton" ).click(function() {
-    if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'RefillLinkClick'});};
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: myCropAddress, 
+        width: 128,
+        height: 128,
+        colorDark : "#348F50",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+    $('qrcode').css('display', 'inline-block');
 });
 
 function copyAddress() {

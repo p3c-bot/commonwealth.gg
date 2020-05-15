@@ -15,7 +15,6 @@ alertify.defaults.notifier.delay = 45
 
 function getMyCrop(onboard) {
     myCropAddress = localStorage.getItem(web3.eth.accounts[0])
-    console.log(myCropAddress)
     // if we don't have the crop in local storage
     if (myCropAddress == 'null' || myCropAddress == null || myCropAddress == "0x") {
         farmContract.myCrop.call(function (err, result) {
@@ -117,7 +116,9 @@ function getMyCropDividends() {
             if (!err) {
                 change = (String(myCropDividends) !== String(result))
                 myCropDividends = result;
+                myCropDividendsPoints = (web3.fromWei(myCropDividends) / buyPrice)
                 if (change) {
+                    $("#myCropDividendsPoints").replaceWith("<b id='myCropDividendsPoints'>" + myCropDividendsPoints.toFixed(2) + " </b>")
                     $("#myCropDividends").replaceWith("<b id='myCropDividends'>" + web3.fromWei(myCropDividends).toFixed(8) + "</b>")
                     $('#myCropDividends').transition({
                         animation: 'flash',
@@ -129,7 +130,7 @@ function getMyCropDividends() {
                         myRefDividends = myCropDividends - result;
                         if (!Number(myRefDividends)){
                             // $("#refDivs").hide();
-                            $("#myRefDividends").replaceWith("<b id='myRefDividends'>" + "0 ETH" + "</b>")
+                            $("#myRefDividends").replaceWith("<b id='myRefDividends'>" + "0 ETC" + "</b>")
                         } else {
                             if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'ReferralDividendsUp'});};
                             $("#myRefDividends").replaceWith("<b id='myRefDividends'>" + Number(web3.fromWei(myRefDividends)).toFixed(8) + " ETH</b>")

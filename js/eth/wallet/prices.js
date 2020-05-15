@@ -24,7 +24,7 @@ var sellPrice;
 function setSellPrice(usdPrice) {
   p3cContract.sellPrice(function (e, r) {
     sellPrice = web3.fromWei(r)
-    $('#tokenSellGet').text(sellPrice.toFixed(4) + ' ETH')
+    $('#tokenSellGet').text(sellPrice.toFixed(3) + ' ETH')
     $('#tokenUSDSellPrice').text('$' + (sellPrice * usdPrice).toFixed(2))
   })
 }
@@ -35,7 +35,7 @@ function setBuyPrice(usdPrice) {
   p3cContract.buyPrice(function (e, r) {
     buyPrice = web3.fromWei(r)
     // alert((buyPrice * usdPrice).toFixed(2))
-    $('#tokenBuyGet').text(buyPrice.toFixed(4) + ' ETH')
+    $('#tokenBuyGet').text(buyPrice.toFixed(3) + ' ETH')
     $('#tokenUSDBuyPrice').text('$' + (buyPrice * usdPrice).toFixed(2))
   })
 }
@@ -56,7 +56,7 @@ function setDividendsPrice(usdPrice){
   myDividendUSDValue = value.toFixed(5)
 }
 
-function updateEtcPrice(portfolio) {
+function updateEtcPrice() {
   $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD', function (result) {
     if (result !== null){
       var usd = result.USD
@@ -74,10 +74,10 @@ function updateEtcPrice(portfolio) {
 // get the etc price after 1.5s, and then every 10s
 setTimeout(function(){
   updateEtcPrice(true)
-}, 1700);
+}, 1400);
 setInterval(function(){
   updateEtcPrice(false)
-}, 10000);
+}, 8000);
 
 $('#buyInput').on('input change', function () {
   var value = parseFloat($(this).val())
