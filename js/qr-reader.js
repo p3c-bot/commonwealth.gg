@@ -47,7 +47,7 @@ function tick() {
     outputContainer.hidden = false;
 
     canvasElement.height = video.videoHeight / 2;
-    canvasElement.width = video.videoWidth;
+    canvasElement.width = video.videoWidth / 2;
     canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
     var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
     var code = jsQR(imageData.data, imageData.width, imageData.height, {
