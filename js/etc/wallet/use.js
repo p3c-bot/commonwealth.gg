@@ -74,18 +74,26 @@ $("#transfer").click(function () {
     }
 })
 
-$( "#transferAddress" ).on('input', function() {
-    console.log( "Handler for .keypress() called." );
-    destination = $("#transferAddress").val()
+function checkIfCrop(destination){
     if (web3.isAddress(destination) == true){
         cropAbi.at(destination).owner.call(function (err, owner) {
             if (owner != "0x"){
                 alertify.success('Sending to a Crop')
+                crop = true
             } else {
                 alertify.warning('Destination is not a Crop') 
+                crop = false
             }
         });
+    } else {
+        crop = false
     }
+    return crop
+}
+
+$( "#transferAddress" ).on('input', function() {
+    destination = $("#transferAddress").val()
+    checkIfCrop(destination)
 });
 
 $('#infoButton')
