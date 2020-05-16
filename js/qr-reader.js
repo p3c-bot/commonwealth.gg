@@ -63,6 +63,8 @@ function tick() {
       if(checkIfCrop(code.data)){
         $("#transferAddress").val(code.data)
         killVideo()
+        $("#qrReader").hide()
+        $("#gatherQr").show()
         return
       }
     }
