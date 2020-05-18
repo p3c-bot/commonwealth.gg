@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/tribes.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
     <link rel="icon" type="image/png" href="img/tribes/moai.png">
     <!-- GA -->
     <meta name="google-site-verification" content="ZDl3q34Gq9Ct8J5T4o7FxNohH0fHqnGFAv4pZCoftos" />
@@ -136,7 +139,8 @@
             </div>
             <div class="eight wide column buy" id="buyArea">
               <h2><i class="globe icon"></i>Tribe Location</h2>
-              <iframe id="map" style="width:100%; height: 400px;" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBjN9bBBMOM3j33HZYkueaV7akl8IMciE0&q=-33.8569,151.2152&center=-33.8569,151.2152&zoom=4&maptype=roadmap"></iframe>
+              <div id="map" style="width:100%; height: 400px;"></div>
+              <!-- <iframe id="map"  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBjN9bBBMOM3j33HZYkueaV7akl8IMciE0&q=-33.8569,151.2152&center=-33.8569,151.2152&zoom=4&maptype=roadmap"></iframe> -->
             </div>
         </div>
 
@@ -254,11 +258,15 @@
     <script src="lib/web3.min.js"></script>
     <script src="lib/clipboard.min.js"></script>
     <script src="lib/lodash.min.js"></script>
-    
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
     <script src="js/util.js"></script>
     <script src="js/etc/contracts.js"></script>
     <script src="js/etc/wallet/farm.js"></script>
     <script src="js/etc/wallet/use.js"></script>
     <script src="js/etc/tribes/tribe.js"></script>
+    
 </body>
 </html>

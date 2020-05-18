@@ -27,16 +27,15 @@ if (tribeID){
         $("#infoTribeId").html(tribeID);
         if (result != "0x0000000000000000000000000000000000000000"){
             var activeTribeAddress = result
-            loadLocation(activeTribeAddress)
             activeTribe = web3.eth.contract(contracts.tribe.abi).at(String(result));
-            getTribeDetails(activeTribe)
+            getTribeDetails(activeTribe, activeTribeAddress)
         } else {
             expiredTribeAlert()
         }
     });
 }
 
-function getTribeDetails(tribe) {
+function getTribeDetails(tribe,tribeAddress) {
     tribe.size.call(function (err, result) {
         activeTribeSize = result.toNumber()
         if (activeTribeSize == 0){
@@ -54,17 +53,20 @@ function getTribeDetails(tribe) {
             $('#infoTribeSize').text(sizeString)
             $('#tribeSize').progress({percent: percentage});
             $("#tribeLabel").text(tribeString);
+
+            tribe.cost.call(function (err, result) {
+                activeTribeCost = result.toNumber()
+                var prettyNumber = web3.fromWei(parseFloat(activeTribeCost).toFixed(4))
+                $("#infoTribeCost").html( prettyNumber + " ETC");
+                $("#buttonTribeCost").html(" ("+ prettyNumber + " ETC)");
+                tribeReward = Number(web3.fromWei(activeTribeCost / buyPrice)).toFixed(1)
+                $("#infoTribeReward").html( tribeReward + " Points");
+                
+                var power = (web3.fromWei(activeTribeCost) * activeTribeWaiting * 50000)
+                loadLocation(tribeAddress, power)
+            }); 
         });
     });
-
-    tribe.cost.call(function (err, result) {
-        activeTribeCost = result.toNumber()
-        var prettyNumber = web3.fromWei(parseFloat(activeTribeCost).toFixed(4))
-        $("#infoTribeCost").html( prettyNumber + " ETC");
-        $("#buttonTribeCost").html(" ("+ prettyNumber + " ETC)");
-        tribeReward = Number(web3.fromWei(activeTribeCost / buyPrice)).toFixed(1)
-        $("#infoTribeReward").html( tribeReward + " P3C");
-    }); 
 
     tribe.name.call(function (err, result) {
         activeTribeName = web3.toAscii(result).trim();
@@ -82,6 +84,7 @@ function getTribeDetails(tribe) {
             $( "#join").hide();
         }
     });
+
     
     new ClipboardJS('.button');
     $("#copyTribeButton").attr("data-clipboard-text", 'https://commonwealth.gg/tribe.html?id=' + tribeID + "#");
@@ -235,13 +238,32 @@ function refund(tribe){
     )
 }
 
-function loadLocation(address){
+function loadLocation(address,power){
+
     checksum = web3.toChecksumAddress(address)
-    $.getJSON("https://api.commonwealth.gg/planet/coord/"+checksum, function (data) {
-        coord = data;
-        url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBjN9bBBMOM3j33HZYkueaV7akl8IMciE0&q=" + coord + "&center=" + coord + "&zoom=4&maptype=roadmap"
+    $.getJSON("https://api.commonwealth.gg/planet/newcoord/"+checksum, function (data) {
+        console.log(data)
+        var mymap = L.map('map').setView(data, 5);
+        var marker = L.marker(data).addTo(mymap);
+        var circle = L.circle(data, {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: power
+        }).addTo(mymap);
+        
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW50c2Fua292IiwiYSI6ImNrYWQwOWQxYzF6NTAyem96OWd5d2V1N2wifQ.IheYsirwEr5e_Sr06guSRQ', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiYW50c2Fua292IiwiYSI6ImNrYWQwOWQxYzF6NTAyem96OWd5d2V1N2wifQ.IheYsirwEr5e_Sr06guSRQ'
+        }).addTo(mymap);
+
+        // url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBjN9bBBMOM3j33HZYkueaV7akl8IMciE0&q=" + coord + "&center=" + coord + "&zoom=4&maptype=roadmap"
         // alert('WTF')
-        $("#map").attr("src",url); 
+        // $("#map").attr("src",url); 
     })
 }
 
