@@ -260,10 +260,6 @@ function loadLocation(address,power){
             zoomOffset: -1,
             accessToken: 'pk.eyJ1IjoiYW50c2Fua292IiwiYSI6ImNrYWQwOWQxYzF6NTAyem96OWd5d2V1N2wifQ.IheYsirwEr5e_Sr06guSRQ'
         }).addTo(mymap);
-
-        // url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBjN9bBBMOM3j33HZYkueaV7akl8IMciE0&q=" + coord + "&center=" + coord + "&zoom=4&maptype=roadmap"
-        // alert('WTF')
-        // $("#map").attr("src",url); 
     })
 }
 
