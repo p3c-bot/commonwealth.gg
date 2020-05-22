@@ -59,7 +59,7 @@ function buildLobby(url){
         {
           data: 'power',
           render: function (data, type, row) {
-            return (row.cost * row.waiting * 1000).toFixed(0)
+            return numberWithCommas((row.cost * row.waiting * 1000).toFixed(0))
           }
         },
         {
