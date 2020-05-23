@@ -27,6 +27,7 @@ $( "#possibleInvestment" ).on('input', function() {
     possibleInvestment = $("#possibleInvestment").val()
     console.log(possibleInvestment)
     financialPlanner(chartPrices, possibleInvestment)
+    if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'PossibleInvestment'});};
 });
 
 
@@ -57,7 +58,8 @@ function financialPlanner(prices, inputDollar){
     if (isNaN(myPossibleDividends)){
         $("#possibleDividends").hide()
     } else {
-        $("#myPossibleDividendsUSD").text("$"+ myPossibleDividendsUSD.toFixed(2))
+        $("#possibleDividends").show()
+        $("#myPossibleDividendsUSD").text("$"+ numberWithCommas(myPossibleDividendsUSD.toFixed(2)))
     }
     $("#myPossibleDividends").text("(" + myPossibleDividends.toFixed(2) + " ETC)")
     $("#myPossiblePercentage").text((myShare * 100 ).toFixed(4) + "%")
