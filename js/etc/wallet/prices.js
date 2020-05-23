@@ -1,6 +1,6 @@
 var p3cContract = web3.eth.contract(contracts.p3c.abi).at(contracts.p3c.address);
 
-drawChart(90);
+drawChart(90,false);
 
 function setMarketCap(usdPrice) {
   p3cContract.totalEthereumBalance.call(function (err, result) {
@@ -57,9 +57,9 @@ function setDividendsPrice(usdPrice){
 }
 
 function updateEtcPrice() {
-  $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETC&tsyms=USD', function (result) {
+  $.getJSON('https://api.commonwealth.gg/chart/info', function (result) {
     if (result !== null){
-      var usd = result.USD
+      var usd = result.ETCPriceUSD
       usdPrice = parseFloat(usd)
       setBuyPrice(usdPrice)
       setSellPrice(usdPrice)

@@ -165,6 +165,7 @@ function createTribe(tribeName, amountOfMembers, entryCost) {
         },
         function (error, result) { //get callback from function which is your transaction key
             if (!error) {
+                data['txhash'] = result
                 $.ajax({
                     type: "POST",
                     url: "https://api.commonwealth.gg/tribes/create",
@@ -201,7 +202,7 @@ function buyIn(tribe,activeTribeCost) {
             if (!error) {
                 $.ajax({
                         type: "GET",
-                        url: "https://api.commonwealth.gg/tribes/join/" + tribeID + "/" + userAddress,
+                        url: "https://api.commonwealth.gg/tribes/join/" + tribeID + "/" + userAddress + "/" + result,
                         crossDomain: true,
                 });
                 if(activeTribeSize - activeTribeWaiting == 1){
@@ -226,7 +227,7 @@ function refund(tribe){
             if (!error) {
                 $.ajax({
                     type: "GET",
-                    url: "https://api.commonwealth.gg/tribes/leave/" + tribeID + "/" + userAddress,
+                    url: "https://api.commonwealth.gg/tribes/leave/" + tribeID + "/" + userAddress + "/" + result,
                     crossDomain: true,
                 });
                 alertify.success(" Collecting Refund, please wait.")
@@ -241,8 +242,7 @@ function refund(tribe){
 function loadLocation(address,power){
 
     checksum = web3.toChecksumAddress(address)
-    $.getJSON("https://api.commonwealth.gg/planet/newcoord/"+checksum, function (data) {
-        console.log(data)
+    $.getJSON("https://api.commonwealth.gg/tribes/coord/"+checksum, function (data) {
         var mymap = L.map('map').setView(data, 5);
         var marker = L.marker(data).addTo(mymap);
         var circle = L.circle(data, {
@@ -295,7 +295,6 @@ function joinTribeAlert(){
     `
     )
 }
-
 
 function succesfulTribeAlert(){
     if (typeof gtag !== 'undefined'){gtag('event', 'Tribes', {'event_label': 'Usage', 'event_category': 'Filled'});};

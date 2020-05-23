@@ -41,7 +41,7 @@
             <div class="ui container">
                 <a class="header item" href="/tribes.html">
                     <img src="img/tribes/moai.png" style="height: 45px;" ui mini image" />
-                    <h2 class="title">Commonwealth Tribes</h2>
+                    <h2 class="title">Commonwealth.gg Tribes</h2>
                 </a>
                 <div class="right menu">
                     <div class="item">
@@ -185,8 +185,8 @@
 
         <script>
             function refreshPrice() {
-                $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETC&tsyms=USDT', function (json) {
-                    var USETC = JSON.parse(JSON.stringify(json)).USDT;
+                $.getJSON('https://api.commonwealth.gg/chart/info', function (json) {
+                    var USETC = JSON.parse(JSON.stringify(json)).ETCPriceUSD;
                     var price = (USETC).toFixed(2);
                     $("#price").text(price)
                 });

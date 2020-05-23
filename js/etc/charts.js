@@ -2,7 +2,7 @@ $('.ui.dropdown')
     .dropdown({
         action: 'hide',
         onChange: function(value, text, $selectedItem) {
-            drawChart(value)
+            drawChart(value,true)
             if (value == '100000'){
                 $('#numDays').text('Max')
                 $('#planDays').text('Max')
@@ -35,8 +35,10 @@ function financialPlanner(prices, inputDollar){
     first = prices[0]
     last = prices[[prices.length-1]]
 
+    ETCPricePast = first.SizeUSD / first.SizeETC
     ETCPriceNow = last.SizeUSD / last.SizeETC
-    inputETC = inputDollar / ETCPriceNow
+
+    inputETC = inputDollar / ETCPricePast
 
     TokensPurchased = ( inputDollar / first.Open) 
     TokenNowValue = (TokensPurchased * last.Open)
@@ -48,33 +50,59 @@ function financialPlanner(prices, inputDollar){
     myPossibleDividendsUSD = myPossibleDividends * ETCPriceNow
 
     $("#inputETC").text("(" + inputETC.toFixed(2) + " ETC" + ")")
+    $('#inputETC').transition({
+        animation: 'flash',
+        duration: '.5s',
+    });
     $("#myPossibleValue").text(numberWithCommas(TokenNowValue.toFixed(2)))
+    $('#myPossibleValue').transition({
+        animation: 'flash',
+        duration: '.5s',
+    });
     if (TokenDiffValue > 0){
         $("#myPossibleIncrease").text("(+" + TokenDiffValue.toFixed(0) + "%)")
+        $("#myPossibleIncrease").addClass("green")
+        $("#myPossibleIncrease").removeClass("red")
+        $("#myPossibleValue").addClass("green")
+        $("#myPossibleValue").removeClass("red")
     } else {
         $("#myPossibleIncrease").text("(" + TokenDiffValue.toFixed(0) + "%)")
+        $("#myPossibleIncrease").addClass("red")
+        $("#myPossibleIncrease").removeClass("green")
+        $("#myPossibleValue").addClass("red")
+        $("#myPossibleValue").removeClass("green")
     }
-    console.log(myPossibleDividends)
+
     if (isNaN(myPossibleDividends)){
         $("#possibleDividends").hide()
     } else {
         $("#possibleDividends").show()
         $("#myPossibleDividendsUSD").text("$"+ numberWithCommas(myPossibleDividendsUSD.toFixed(2)))
+        $('#myPossibleDividendsUSD').transition({
+            animation: 'flash',
+            duration: '.5s',
+        });
     }
     $("#myPossibleDividends").text("(" + myPossibleDividends.toFixed(2) + " ETC)")
     $("#myPossiblePercentage").text((myShare * 100 ).toFixed(4) + "%")
+    $('#myPossiblePercentage').transition({
+        animation: 'flash',
+        duration: '.5s',
+    });
     // console.log("globalStats.P3CSupply / newDividends)
 }
 
-function drawChart(days) {
+function drawChart(days, useCalculator) {
     d3.selectAll("svg > *").remove();
     d3.json("https://api.commonwealth.gg/chart/ohlc/" + days).then(function (prices) {
         chartPrices = prices
-        if (possibleInvestment == undefined){
-            $("#possibleInvestment").val(500)
-            financialPlanner(prices, 500)
-        } else {
-            financialPlanner(prices, possibleInvestment)
+        if (useCalculator){
+            if (possibleInvestment == undefined){
+                $("#possibleInvestment").val(500)
+                financialPlanner(prices, 500)
+            } else {
+                financialPlanner(prices, possibleInvestment)
+            }
         }
         // Vault Growth Calculator
         if (prices !== null && prices[0].SizeETC){
