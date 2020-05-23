@@ -147,7 +147,7 @@
                         <input>
                         <i class="dropdown icon"></i>
                         <div style="font-size: 1em;">
-                            <b>Point Price</b><span class="ui green text">&nbsp;| <span id="numDays">180 Days</span></span>
+                            <b>Point Price</b><span class="ui green text">&nbsp;| <span id="planDays">180 Days</span></span>
                         </div>
                         <div class="menu">
                           <div class="item" data-value="30">30 Days</div>
@@ -156,7 +156,7 @@
                           <div class="item" data-value="365">1 Year</div>
                           <div class="item" data-value="100000">Max</div>
                         </div>
-                      </div>
+                    </div>
                 </h4>
                 <svg id="container"></svg>
                 <div class="ui divider" style="margin-bottom: 8px;"></div>
@@ -356,14 +356,54 @@
                             </div>
                         </div>
                         <div class="column">
-                            <div id="sizeStats" class="ui segments">
-                                <a href="https://youtu.be/PuQBHfKVF2I" target="_blank">
+                            <div class="ui segments">
                                 <div class="ui segment">
-                                    <h4 style="margin-bottom: 0px;">Start Using Commonwealth from your Phone<i class="right arrow icon"></i></h4>
-                                    <img class="logo mobile only" style="height: 75%" src="/img/landing/phone.jpg" >
-                                    <img class="logo custom-computer only" src="/img/landing/phone.jpg" >
+                                    <h4 class="ui header">
+                                        <i class="circular inverted green tachometer alternate icon"></i>
+                                        <div class="content">
+                                            <div class="sub header"><b>Financial Independence Calculator. </b></div>
+                                        </div>
+                                    </h4>
                                 </div>
-                                </a>
+                                <div class="ui segment" style="color: black !important;">
+                                    If I put in $<span class="ui input">
+                                        <input id="possibleInvestment" type="text" placeholder="Dollars" size="10">
+                                    </span> worth of ETC. <span id="inputETC">(x ETC)</span>
+                                    <span id="timeFrame" class="ui selection dropdown">
+                                        <input>
+                                        <i class="dropdown icon"></i>
+                                        <div style="font-size: 1em;">
+                                            <span class="ui green text"><span id="numDays">180 Days</span></span>
+                                        </div>
+                                        <div class="menu">
+                                          <div class="item" data-value="30">30 Days</div>
+                                          <div class="item" data-value="90">90 Days</div>
+                                          <div class="item" data-value="180">6 Months</div>
+                                          <div class="item" data-value="365">1 Year</div>
+                                          <div class="item" data-value="100000">Max</div>
+                                        </div>
+                                    </span> ago.
+                                </div>
+                                <div class="ui segment">
+                                    • I <b>would have</b> $<span id="myPossibleValue">800</span> worth of Points Today. <span id="myPossibleIncrease">30%</span>
+                                </div>
+                                <div id="possibleDividends" class="ui segment">
+                                    • I <b>would yield</b> <span id="myPossibleDividendsUSD">20</span> of dividends <span id="myPossibleDividends"></span>.
+                                </div>
+                                <div class="ui segment">
+                                    • I <b>would own</b> <span id="myPossiblePercentage">10%</span> of the total supply.
+                                </div>
+                                <div class="ui segment">
+                                    <a href="/use.html">
+                                    <button id="transfer" class="ui right labeled large icon teal fluid button">
+                                        <i class="right arrow icon"></i>
+                                        Get Started
+                                    </button>
+                                    </a>
+                                </div>
+                                <div class="ui segment">
+                                    <i>Based on the past performance of Commonwealth. Past performance does not guarantee future results.</i>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -5,8 +5,14 @@ $('.ui.dropdown')
             drawChart(value)
             if (value == '100000'){
                 $('#numDays').text('Max')
+                $('#planDays').text('Max')
+            } 
+            else if (value == '365') {
+                $('#numDays').text('1 Year')
+                $('#planDays').text('1 Year')
             } else {
                 $('#numDays').text(value + ' Days')
+                $('#planDays').text(value + ' Days')
             }
             if (typeof gtag !== 'undefined'){gtag('event', 'Home', {'event_label': 'Usage', 'event_category': 'ChangeRange'});};
         }
@@ -15,11 +21,59 @@ $('.ui.dropdown')
 
 setStats()
 
+var chartPrices;
+var possibleInvestment;
+$( "#possibleInvestment" ).on('input', function() {
+    possibleInvestment = $("#possibleInvestment").val()
+    console.log(possibleInvestment)
+    financialPlanner(chartPrices, possibleInvestment)
+});
+
+
+function financialPlanner(prices, inputDollar){
+    first = prices[0]
+    last = prices[[prices.length-1]]
+
+    ETCPriceNow = last.SizeUSD / last.SizeETC
+    inputETC = inputDollar / ETCPriceNow
+
+    TokensPurchased = ( inputDollar / first.Open) 
+    TokenNowValue = (TokensPurchased * last.Open)
+    TokenDiffValue = ((TokenNowValue - inputDollar) / (inputDollar) * 100)
+
+    newDividends = (last.TotalDividends - first.TotalDividends)
+    myShare = (TokensPurchased / globalStats.P3CSupply)
+    myPossibleDividends = newDividends * myShare
+    myPossibleDividendsUSD = myPossibleDividends * ETCPriceNow
+
+    $("#inputETC").text("(" + inputETC.toFixed(2) + " ETC" + ")")
+    $("#myPossibleValue").text(numberWithCommas(TokenNowValue.toFixed(2)))
+    if (TokenDiffValue > 0){
+        $("#myPossibleIncrease").text("(+" + TokenDiffValue.toFixed(0) + "%)")
+    } else {
+        $("#myPossibleIncrease").text("(" + TokenDiffValue.toFixed(0) + "%)")
+    }
+    console.log(myPossibleDividends)
+    if (isNaN(myPossibleDividends)){
+        $("#possibleDividends").hide()
+    } else {
+        $("#myPossibleDividendsUSD").text("$"+ myPossibleDividendsUSD.toFixed(2))
+    }
+    $("#myPossibleDividends").text("(" + myPossibleDividends.toFixed(2) + " ETC)")
+    $("#myPossiblePercentage").text((myShare * 100 ).toFixed(4) + "%")
+    // console.log("globalStats.P3CSupply / newDividends)
+}
 
 function drawChart(days) {
     d3.selectAll("svg > *").remove();
     d3.json("https://api.commonwealth.gg/chart/ohlc/" + days).then(function (prices) {
-
+        chartPrices = prices
+        if (possibleInvestment == undefined){
+            $("#possibleInvestment").val(500)
+            financialPlanner(prices, 500)
+        } else {
+            financialPlanner(prices, possibleInvestment)
+        }
         // Vault Growth Calculator
         if (prices !== null && prices[0].SizeETC){
             vaultDiff = (globalStats.SizeETC - prices[0].SizeETC)
