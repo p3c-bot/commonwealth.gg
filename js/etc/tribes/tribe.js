@@ -62,7 +62,7 @@ function getTribeDetails(tribe,tribeAddress) {
                 tribeReward = Number(web3.fromWei(activeTribeCost / buyPrice)).toFixed(1)
                 $("#infoTribeReward").html( tribeReward + " Points");
                 
-                var power = (web3.fromWei(activeTribeCost) * activeTribeWaiting * 50000)
+                var power = (web3.fromWei(activeTribeCost) * activeTribeWaiting * 20000)
                 loadLocation(tribeAddress, power)
             }); 
         });
@@ -242,7 +242,7 @@ function refund(tribe){
 function loadLocation(address,power){
 
     checksum = web3.toChecksumAddress(address)
-    $.getJSON("https://api.commonwealth.gg/tribes/coord/"+checksum, function (data) {
+    $.getJSON("https://api.commonwealth.gg/tribes/coord/"+checksum+"/"+tribeID, function (data) {
         var mymap = L.map('map').setView(data, 5);
         var marker = L.marker(data).addTo(mymap);
         var circle = L.circle(data, {

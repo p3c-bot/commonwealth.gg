@@ -1,7 +1,5 @@
 var p3cContract = web3.eth.contract(contracts.p3c.abi).at(contracts.p3c.address);
 
-drawChart(90,false);
-
 function setMarketCap(usdPrice) {
   p3cContract.totalEthereumBalance.call(function (err, result) {
     if (!err) {
@@ -74,7 +72,7 @@ function updateEtcPrice() {
 // get the etc price after 1.5s, and then every 10s
 setTimeout(function(){
   updateEtcPrice()
-}, 1400);
+}, 900);
 setInterval(function(){
   updateEtcPrice()
 }, 8000);
