@@ -25,7 +25,6 @@ var chartPrices;
 var possibleInvestment;
 $( "#possibleInvestment" ).on('input', function() {
     possibleInvestment = $("#possibleInvestment").val()
-    console.log(possibleInvestment)
     financialPlanner(chartPrices, possibleInvestment)
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'PossibleInvestment'});};
 });
