@@ -190,8 +190,8 @@ function getMyCropDisabled() {
 function getCropInfo(onboard) {
     getMyCrop(onboard)
     getMyCropTokens()
-    getMyCropDividends()
     getMyCropDisabled()
+    getMyCropDividends()
 }
 
 function deployCrop(amountToBuy, referrer, selfBuy) {
