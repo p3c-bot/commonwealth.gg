@@ -124,6 +124,10 @@ function getMyCropDividends() {
                         animation: 'flash',
                         duration: '1s',
                     });
+                    $('#myCropDividendsPoints').transition({
+                        animation: 'flash',
+                        duration: '1s',
+                    });
                 }
                 crop.cropDividends.call(false, function (err, result) {
                     if (!err) {
@@ -160,6 +164,10 @@ function getMyCropTokens() {
                     animation: 'flash',
                     duration: '1s',
                 });
+                $('#myETCValue').transition({
+                    animation: 'flash',
+                    duration: '1s',
+                });
             }
             p3cContract.totalSupply(function(e, r){
                 percentOwned = (myCropTokens / r) * 100 
@@ -189,9 +197,13 @@ function getMyCropDisabled() {
 
 function getCropInfo(onboard) {
     getMyCrop(onboard)
-    getMyCropTokens()
-    getMyCropDisabled()
-    getMyCropDividends()
+
+    setTimeout(function(){ 
+        getMyCropTokens()
+        getMyCropDisabled()
+        getMyCropDividends()
+     }, 300);
+
 }
 
 function deployCrop(amountToBuy, referrer, selfBuy) {
