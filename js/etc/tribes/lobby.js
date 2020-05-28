@@ -105,14 +105,14 @@ function buildLobby(url){
 var mymap = L.map('map').setView([45,75], 2);
 
 function generatePoint(location, power,name,id){
-  // var marker = L.marker(location).addTo(mymap);
+  var marker = L.marker(location).addTo(mymap);
   var circle = L.circle(location, {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.1,
       radius: power
   }).addTo(mymap);
-  // marker.bindPopup("<h5><a>" + linkify(name, "/tribe.html?id=" + id + "#") + "</a></h5>");
+  marker.bindPopup("<h5><a>" + linkify(name, "/tribe.html?id=" + id + "#") + "</a></h5>");
   // circle.bindPopup("<a>" +  "https://commonwealth.gg/tribe.html?id=4" + "</a>");
   // marker.bindPopup("TRIBE");
 
