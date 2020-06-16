@@ -116,15 +116,15 @@ function getMyCropDividends() {
             if (!err) {
                 change = (String(myCropDividends) !== String(result))
                 myCropDividends = result;
-                myCropDividendsCom = (web3.fromWei(myCropDividends) / buyPrice)
+                myCropDividendsWlth = (web3.fromWei(myCropDividends) / buyPrice)
                 if (change) {
-                    $("#myCropDividendsCom").replaceWith("<b id='myCropDividendsCom'>" + myCropDividendsCom.toFixed(2) + " </b>")
+                    $("#myCropDividendsWlth").replaceWith("<b id='myCropDividendsWlth'>" + myCropDividendsWlth.toFixed(2) + " </b>")
                     $("#myCropDividends").replaceWith("<b id='myCropDividends'>" + web3.fromWei(myCropDividends).toFixed(8) + "</b>")
                     $('#myCropDividends').transition({
                         animation: 'flash',
                         duration: '1s',
                     });
-                    $('#myCropDividendsCom').transition({
+                    $('#myCropDividendsWlth').transition({
                         animation: 'flash',
                         duration: '1s',
                     });
