@@ -1,15 +1,12 @@
-# Commonwealth
-Commonwealth Interface. Make sure you have [Saturn Wallet](https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig?hl=en) installed. This can be run locally if necessary.
+![ETC](/img/new-logo/main_text_gradient.png)
+
+Commonwealth.gg Interface. Make sure you have [Saturn Wallet](https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig?hl=en) installed. This can be run locally if necessary.
 
 1. ```git clone https://github.com/p3c-bot/commonwealth.gg && cd ./commonwealth.gg/```
 1. ```npm install -g live-server```
 1. Run ```live-server``` from this directory.
 1. Navigate to `localhost:8080/use.html` for the dashboard.
 1. For exchanges, merchants, or devs, we recommend using `localhost:8080/pure.html` which doesn't make any external calls besides what is from the blockchain.
-
-**Alternative Download Links**: 
-
-https://ipfs.io/ipfs/QmZxod99m4vL8acqLFRPX4wF1ZpGrLNsLLj8vPZQ3yAwKZ
 
 ## Information
 
@@ -19,13 +16,13 @@ Commonwealth is an open-source project and can be listed on any exchange without
 
 Token Type: ERC-20
 
-Ticker Symbol: PNT
+Ticker Symbol: WLTH
 
 Blockchain: Ethereum Classic (ETC)
 
 Smart Contract: 0xDe6FB6a5adbe6415CDaF143F8d90Eb01883e42ac
 
-Current Supply: Variable, can be queried from smart contract
+Current Supply: Variable, can be queried from smart contract, currently around 1.51million
 
 Max Supply: 204,939,006 (assuming all ETC possible is in contract)
 
@@ -41,7 +38,7 @@ Security Audit: Contract is Callisto Certified https://github.com/EthereumCommon
 
 Official Chat: https://discord.gg/crjsdJr
 
-Official Twitter: https://twitter.com/commonwealthgg
+Official Twitter: https://twitter.com/commonwealth_gg
 
 Official Blog: https://medium.com/@masterhax/
 

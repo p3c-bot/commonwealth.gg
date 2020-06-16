@@ -134,7 +134,7 @@ function sellFromCrop(amountToSell) {
         },
         function (error, result) { //get callback from function which is your transaction key
             if (!error) {
-                alertify.success(amountToSell + " Points Sold. Waiting for Blockchain.")
+                alertify.success(amountToSell + " WLTH Sold. Waiting for Blockchain.")
                 console.log(result);
             } else {
                 console.log(error);
@@ -152,7 +152,7 @@ function reinvestFromCrop(referrer) {
         },
         function (error, result) { //get callback from function which is your transaction key
             if (!error) {
-                alertify.success("Reinvested Points. Waiting for Blockchain.")
+                alertify.success("Reinvested WLTH. Waiting for Blockchain.")
                 console.log(result);
             } else {
                 console.log(error);
@@ -188,7 +188,7 @@ function transferFromCrop(destination, amountToTransfer) {
         },
         function (error, result) { //get callback from function which is your transaction key
             if (!error) {
-                alertify.success("Transferring " + amountToTransfer + " Points to " + destination.substring(0, 7) + "...")
+                alertify.success("Transferring " + amountToTransfer + " WLTH to " + destination.substring(0, 7) + "...")
                 console.log(result);
             } else {
                 console.log(error);

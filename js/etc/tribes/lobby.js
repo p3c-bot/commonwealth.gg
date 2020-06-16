@@ -87,7 +87,7 @@ function buildLobby(url){
         {
           data: 'reward',
           render: function (data, type, row) {
-            return data + ' Points'
+            return data + ' WLTH'
           }
         },
         {

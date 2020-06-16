@@ -78,10 +78,10 @@ function checkIfCrop(destination){
     if (web3.isAddress(destination) == true){
         cropAbi.at(destination).owner.call(function (err, owner) {
             if (owner != "0x"){
-                alertify.success('Sending to a Crop')
+                alertify.success('<h3>Sending to a Crop</h3>')
                 crop = true
             } else {
-                alertify.warning('Destination is not a Crop') 
+                alertify.warning('<h3>Destination is not a Crop</h3>') 
                 crop = false
             }
         });
