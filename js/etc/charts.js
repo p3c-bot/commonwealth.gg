@@ -44,9 +44,50 @@ function financialPlanner(prices, inputDollar){
     TokenDiffValue = ((TokenNowValue - inputDollar) / (inputDollar) * 100)
 
     newDividends = (last.TotalDividends - first.TotalDividends)
-    myShare = (TokensPurchased / globalStats.P3CSupply)
-    myPossibleDividends = newDividends * myShare
-    myPossibleDividendsUSD = myPossibleDividends * ETCPriceNow
+
+    /***
+     * This section is for anything on the /chart.html page that requires prices OHLC AND the global stats. Two seperate calls.
+     */
+    setTimeout(function(){ 
+        myShare = (TokensPurchased / globalStats.P3CSupply)
+        myPossibleDividends = newDividends * myShare    
+        myPossibleDividendsUSD = myPossibleDividends * ETCPriceNow
+
+
+        if (isNaN(myPossibleDividends)){
+            $("#possibleDividends").hide()
+        } else {
+            $("#possibleDividends").show()
+            $("#myPossibleDividendsUSD").text("$"+ numberWithCommas(myPossibleDividendsUSD.toFixed(2)))
+            $('#myPossibleDividendsUSD').transition({
+                animation: 'flash',
+                duration: '.5s',
+            });
+        }
+        $("#myPossibleDividends").text("(" + myPossibleDividends.toFixed(2) + " ETC)")
+        $("#myPossiblePercentage").text((myShare * 100 ).toFixed(4) + "%")
+        $('#myPossiblePercentage').transition({
+            animation: 'flash',
+            duration: '.5s',
+        });
+
+        // Vault Growth Calculator - Only call if useCalculator is Active
+        if (prices !== null && prices[0].SizeETC){
+            vaultDiff = (globalStats.SizeETC - prices[0].SizeETC)
+            $("#vaultDiff").html(numberWithCommas(vaultDiff.toFixed(0)) + " ETC")
+            percentChange = ((globalStats.SizeETC - prices[0].SizeETC) / prices[0].SizeETC * 100 )
+            if (percentChange > 0){
+                $('#pointChange').text(" | +" + percentChange.toFixed(1) + "%")
+                $( "#pointChange" ).addClass("green") 
+                $( "#pointChange" ).removeClass("red") 
+            } else {
+                $('#pointChange').text(" | " + percentChange.toFixed(0) + "%") 
+                $( "#pointChange" ).addClass("red")
+                $( "#pointChange" ).removeClass("green")
+            }
+        }
+    },700);
+
 
     $("#inputETC").text("(" + inputETC.toFixed(2) + " ETC" + ")")
     $('#inputETC').transition({
@@ -71,24 +112,6 @@ function financialPlanner(prices, inputDollar){
         $("#myPossibleValue").addClass("red")
         $("#myPossibleValue").removeClass("green")
     }
-
-    if (isNaN(myPossibleDividends)){
-        $("#possibleDividends").hide()
-    } else {
-        $("#possibleDividends").show()
-        $("#myPossibleDividendsUSD").text("$"+ numberWithCommas(myPossibleDividendsUSD.toFixed(2)))
-        $('#myPossibleDividendsUSD').transition({
-            animation: 'flash',
-            duration: '.5s',
-        });
-    }
-    $("#myPossibleDividends").text("(" + myPossibleDividends.toFixed(2) + " ETC)")
-    $("#myPossiblePercentage").text((myShare * 100 ).toFixed(4) + "%")
-    $('#myPossiblePercentage').transition({
-        animation: 'flash',
-        duration: '.5s',
-    });
-    // console.log("globalStats.P3CSupply / newDividends)
 }
 
 function drawChart(days, useCalculator) {
@@ -101,21 +124,6 @@ function drawChart(days, useCalculator) {
                 financialPlanner(prices, 500)
             } else {
                 financialPlanner(prices, possibleInvestment)
-            }
-        }
-        // Vault Growth Calculator
-        if (prices !== null && prices[0].SizeETC){
-            vaultDiff = (globalStats.SizeETC - prices[0].SizeETC)
-            $("#vaultDiff").html(numberWithCommas(vaultDiff.toFixed(0)) + " ETC")
-            percentChange = ((globalStats.SizeETC - prices[0].SizeETC) / prices[0].SizeETC * 100 )
-            if (percentChange > 0){
-                $('#pointChange').text(" | +" + percentChange.toFixed(1) + "%")
-                $( "#pointChange" ).addClass("green") 
-                $( "#pointChange" ).removeClass("red") 
-            } else {
-                $('#pointChange').text(" | " + percentChange.toFixed(0) + "%") 
-                $( "#pointChange" ).addClass("red")
-                $( "#pointChange" ).removeClass("green")
             }
         }
 

@@ -116,15 +116,15 @@ function getMyCropDividends() {
             if (!err) {
                 change = (String(myCropDividends) !== String(result))
                 myCropDividends = result;
-                myCropDividendsPoints = (web3.fromWei(myCropDividends) / buyPrice)
+                myCropDividendsWlth = (web3.fromWei(myCropDividends) / buyPrice)
                 if (change) {
-                    $("#myCropDividendsPoints").replaceWith("<b id='myCropDividendsPoints'>" + myCropDividendsPoints.toFixed(2) + " </b>")
+                    $("#myCropDividendsWlth").replaceWith("<b id='myCropDividendsWlth'>" + myCropDividendsWlth.toFixed(2) + " </b>")
                     $("#myCropDividends").replaceWith("<b id='myCropDividends'>" + web3.fromWei(myCropDividends).toFixed(8) + "</b>")
                     $('#myCropDividends').transition({
                         animation: 'flash',
                         duration: '1s',
                     });
-                    $('#myCropDividendsPoints').transition({
+                    $('#myCropDividendsWlth').transition({
                         animation: 'flash',
                         duration: '1s',
                     });
@@ -326,7 +326,7 @@ function sellFromCrop(amountToSell) {
             function (error, result) { //get callback from function which is your transaction key
                 if (!error) {
                     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'SellP3C', 'value': amountToSell});};
-                    alertify.success('<h3>' + amountToSell + " Points Sold. Funds are sent to wallet as ETC.</h3>")
+                    alertify.success('<h3>' + amountToSell + " WLTH Sold. Funds are sent to wallet as ETC.</h3>")
                     // playSound('register');
                     $('#sellAmount').hide();
                 } else {
@@ -347,7 +347,7 @@ function reinvestFromCrop(referrer) {
             function (error, result) { //get callback from function which is your transaction key
                 if (!error) {
                     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'Reinvest'});};
-                    alertify.success("<h3>Compounded Points. Waiting for Blockchain.</h3>")
+                    alertify.success("<h3>Compounded WLTH. Waiting for Blockchain.</h3>")
                     // playSound('register');
                     console.log(result);
                 } else {
@@ -390,7 +390,7 @@ function transferFromCrop(destination, amountToTransfer) {
             function (error, result) { //get callback from function which is your transaction key
                 if (!error) {
                     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'Transfer'});};
-                    alertify.success("<h3>Transfering " + amountToTransfer + " Points to " + destination.substring(0, 7) + "...</h3>")
+                    alertify.success("<h3>Transfering " + amountToTransfer + " WLTH to " + destination.substring(0, 7) + "...</h3>")
                     // playSound('register');
                     console.log(result);
                 } else {
