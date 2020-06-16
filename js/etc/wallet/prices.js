@@ -72,7 +72,7 @@ function updateEtcPrice() {
 // get the etc price after 1.5s, and then every 10s
 setTimeout(function(){
   updateEtcPrice()
-}, 900);
+}, 600);
 setInterval(function(){
   updateEtcPrice()
 }, 8000);
@@ -81,7 +81,7 @@ $('#buyInput').on('input change', function () {
   var value = parseFloat($(this).val())
   if (value > 0) {
     buyAmount = numberWithCommas((value / buyPrice).toFixed(1))
-    $('#buyAmount').text("Approx. " + buyAmount + " Points")
+    $('#buyAmount').text("Approx. " + buyAmount + " WLTH")
   } else {
     $('#buyAmount').hide()
   }

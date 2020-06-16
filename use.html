@@ -3,7 +3,7 @@
 
 <head>
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@Commonwealthgg" />
+    <meta name="twitter:creator" content="@commonwealth_gg" />
     <meta name="twitter:title" content="Commonwealth" />
     <meta name="twitter:description" content="A peer-to-peer savings fund built on Ethereum Classic. Built entirely on immutable smart contracts. Participants receive passive income as the system is used, with no central operator or controller." />
     <meta name="twitter:image" content="https://commonwealth.gg/img/coin.png"/>
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/lib/alertify.min.css"/>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="icon" type="image/png" href="img/logo/whale.png">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
     <!-- GA -->
     <meta name="google-site-verification" content="ZDl3q34Gq9Ct8J5T4o7FxNohH0fHqnGFAv4pZCoftos" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141280467-1"></script>
@@ -39,16 +39,17 @@
     <div class="ui large inverted stackable menu gradient personal" style="border-radius:0px !important;">
         <div class="ui container">
             <div class="header">
-                <div class="item">
-                    <img id="logo" src="img/logo/whale.svg" class="ui mini image home" style="margin-right:10px;" />
-                    <h2 class="title home custom-computer only">Commonwealth.gg</h2>
+                <div class="item" style="padding-top: 10px; padding-bottom: 5px;">
+                    <img id="logo" src="img/new-logo/white-logo-plain.png" class="custom-computer only ui image home" style="width: 8%;" />
+                    <img id="logo" src="img/new-logo/white-logo-plain.png" class="mobile only ui image home" style="margin-right:10px; width: 12%;" />
+                    <!-- <h2 class="title home custom-computer only">Commonwealth.gg</h2> -->
                     <div class="opacity mobile only home">
                         <strong>
                             <i class="chess rook icon"></i>
                         </strong>
                         <span id="etcInContract">0</span>
                     </div>
-                    <span>
+                    <span class="right menu mobile only">
                         <select id="language">
                             <option value="en">🇬🇧&emsp;EN</option>
                             <option value="ru">🇷🇺&emsp;RU</option>
@@ -92,6 +93,13 @@
                             Vault: <span id="etcInContract">0 ETC</span>
                         </div>
                     </a>
+                    <span>
+                        <select id="language">
+                            <option value="en">🇬🇧&emsp;EN</option>
+                            <option value="ru">🇷🇺&emsp;RU</option>
+                            <option value="id">🇮🇩&emsp;ID</option>
+                            </select>
+                    </span>
                 </div>
             </div>
         </div>
@@ -110,7 +118,7 @@
                             <div class="sub header notranslate">
                                 <span id="myTokensValue" class="converted" style="font-weight:bold;"></span><span id="myDayChange" class="converted" style="font-weight:bold;"></span>
                                 <div class="ui teal text small eleven">
-                                    <span id="myCropTokens" class="count"></span> Points<span class="custom-computer only"> / <span id="myETCValue" class="notranslate" style="font-weight:bold;"></span> ETC</span>
+                                    <span id="myCropTokens" class="count"></span> WLTH<span class="custom-computer only"> / <span id="myETCValue" class="notranslate" style="font-weight:bold;"></span> ETC</span>
                                 </div>
                             </div>
                         </h2>
@@ -121,7 +129,7 @@
                             <div class="sub header notranslate">
                                 <span id="myDividendsValue" class="converted" style="font-weight:bold;"></span>
                                 <div class="ui teal text small eleven">
-                                    <span id="myCropDividendsPoints" class="count"></span> Points /
+                                    <span id="myCropDividendsCom" class="count"></span> WLTH /
                                     <span id="myCropDividends" class="count"></span> ETC
                                 </div>
                             </div>
@@ -151,7 +159,7 @@
                 <h2 class="ui header">
                     <img src="img/wallet/time-forward.svg" class="width one and eight" />
                     <div class="content">
-                        <span>Buy Points</span>
+                        <span>Buy WLTH</span>
                     </div>
                 </h2>
 
@@ -186,7 +194,7 @@
                 <h2 class="ui header">
                     <img src="img/wallet/time-backward.svg" class="width one and eight" />
                     <div class="content">
-                        <span>Sell Points</span>
+                        <span>Sell WLTH</span>
                     </div>
                 </h2>
 
@@ -209,7 +217,7 @@
                     <input placeholder="..." type="text" id="sellInput">
                     <i class="tree blue icon"></i>
                     <span class="ui tag blue label">
-                        Points
+                        WLTH
                     </span>
                 </div>
                 <button id="sell" class="ui large fluid blue button" style="margin-top:10px;">
@@ -242,7 +250,7 @@
                             <input>
                             <i class="dropdown icon"></i>
                             <div>
-                                <b>Price</b><span class="ui green text">&nbsp;| <span id="numDays">90 Days</span></span>
+                                <b>WLTH</b><span class="ui green text">&nbsp;| <span id="numDays">90 Days</span></span>
                             </div>
                             <div class="menu">
                               <div class="item" data-value="30">30 Days</div>
@@ -281,7 +289,7 @@
                     <div style="text-align: center; margin-top: 15px;">
                         <a id="transferOpen" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
                         <i class="left qrcode icon"></i>
-                            Send or Receive Points.
+                            Send or Receive WLTH.
                         </a>
                     </div>
                     <div class ="ui segment">
@@ -294,7 +302,7 @@
                                 <h4 class="ui header">
                                     <i class="circular inverted green exchange alternate icon"></i>
                                     <div class="content">
-                                        <div class="sub header"><b>Transfer Points</b>. <i>(All dividends go to your ETC wallet during transfer)</i></div>
+                                        <div class="sub header"><b>Transfer WLTH</b>. <i>(All dividends go to your ETC wallet during transfer)</i></div>
                                     </div>
                                 </h4>
                             </div>
@@ -313,9 +321,9 @@
                             </div>
                             <div class="ui segment">
                                 <div class="ui right labeled left icon input fluid buy">
-                                    <input type="text" id="transferTokenCount" placeholder="Amount of Points">
+                                    <input type="text" id="transferTokenCount" placeholder="Amount of WLTH">
                                     <div class="ui tag teal label notranslate">
-                                        Points
+                                        WLTH
                                     </div>
                                 </div>
                             </div>
@@ -366,13 +374,14 @@
                         <a class="dashboard-link item" href="/use.html">Wallet</a>
                         <a href="/chart.html" class="item">Chart</a>
                         <a href="/commonwealth.pdf" target="_blank" class="item">White Paper</a>
+                        <a href="/design.html" class="item">Logos and Design</a>
                         <a href="https://github.com/p3c-bot/p3c-bot.github.io" target="_blank" class="item"><i class="github icon"></i>Github</a>
                     </div>
                 </div>
                 <div class="three wide column">
                     <div class="ui inverted link list" style="margin-top:0px;">
                         <a href="https://discord.gg/crjsdJr" target="_blank" class="item"><i class="left comments icon"></i> Discord Chat</a>
-                        <a href="https://twitter.com/commonwealthgg" target="_blank" class="item">Twitter</a>
+                        <a href="https://twitter.com/commonwealth_gg" target="_blank" class="item">Twitter</a>
                         <a href="https://medium.com/@masterhax/" target="_blank" class="item">Blog</a>
                         <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts" target="_blank" class="item">Smart Contract</a>
                         <a href="https://github.com/p3c-bot/api/blob/master/README.md" target="_blank"class="item">API Docs</a>

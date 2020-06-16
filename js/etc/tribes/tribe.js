@@ -60,7 +60,7 @@ function getTribeDetails(tribe,tribeAddress) {
                 $("#infoTribeCost").html( prettyNumber + " ETC");
                 $("#buttonTribeCost").html(" ("+ prettyNumber + " ETC)");
                 tribeReward = Number(web3.fromWei(activeTribeCost / buyPrice)).toFixed(1)
-                $("#infoTribeReward").html( tribeReward + " Points");
+                $("#infoTribeReward").html( tribeReward + " WLTH");
                 
                 var power = (web3.fromWei(activeTribeCost) * activeTribeWaiting * 20000)
                 loadLocation(tribeAddress, power)

@@ -605,6 +605,55 @@ i.blue.icon {
     height: 40px;
 }
 
+
+/* DESIGN PAGE */
+.circle-green {
+    float:left;
+    background: #348F50;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.circle-blue {
+    float:left;
+    background: #56B4D3;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.circle-forest {
+    float:left;
+    background: #629575;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.circle-gradient {
+    margin-top: 20px;
+    margin-left: 20px;
+    float:left;
+    background: #348F50 !important;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #56B4D3, #348F50) !important;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #56B4D3, #348F50) !important;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+
+
+
 /* Style the navigation menu */
 .topnav {
     overflow: hidden;
@@ -664,3 +713,4 @@ i.blue.icon {
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
 }
+
