@@ -714,3 +714,16 @@ i.blue.icon {
 	box-shadow: 2px 2px 3px #999;
 }
 
+/* Info Table */
+
+.green-item {
+    background-color: #b7d6aa;
+}
+
+.red-item {
+    background-color: #ea999a;
+}
+
+.yellow-item {
+    background-color: #fee49d;
+}
