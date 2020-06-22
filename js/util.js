@@ -8,7 +8,7 @@ function playSound(filename) {
     document.getElementById("sound").innerHTML = '<audio autoplay="autoplay">' + mp3Source + embedSource + '</audio>';
 }
 
-$("#language").change(function(){
+$(document.body).on('change','#language',function(){
     if($(this).val()=="en"){
         window.location.href="https://commonwealth.gg/use.html";
     }
