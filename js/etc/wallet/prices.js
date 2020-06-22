@@ -72,7 +72,7 @@ function updateEtcPrice() {
 // get the etc price after 1.5s, and then every 10s
 setTimeout(function(){
   updateEtcPrice()
-}, 800);
+}, 1000);
 setInterval(function(){
   updateEtcPrice()
 }, 2000);
