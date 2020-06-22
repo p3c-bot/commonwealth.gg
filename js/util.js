@@ -9,7 +9,6 @@ function playSound(filename) {
 }
 
 $("#language").change(function(){
-    alert('wut')
     if($(this).val()=="en"){
         window.location.href="https://commonwealth.gg/use.html";
     }
