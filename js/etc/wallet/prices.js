@@ -72,10 +72,10 @@ function updateEtcPrice() {
 // get the etc price after 1.5s, and then every 10s
 setTimeout(function(){
   updateEtcPrice()
-}, 600);
+}, 800);
 setInterval(function(){
   updateEtcPrice()
-}, 8000);
+}, 2000);
 
 $('#buyInput').on('input change', function () {
   var value = parseFloat($(this).val())
