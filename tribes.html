@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossorigin=""/>
+        <link href="/css/lib/mfb.css" rel="stylesheet">
+
         <!-- GA -->
         <meta name="google-site-verification" content="ZDl3q34Gq9Ct8J5T4o7FxNohH0fHqnGFAv4pZCoftos" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141280467-1"></script>
@@ -38,15 +40,53 @@
             gtag('js', new Date());
             gtag('config', 'UA-141280467-1');
         </script>
+
+
+<style type="text/css">
+body {
+background: url("img/tribes/bg.jpeg");
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ background-attachment: fixed;
+ z-index:1000; 
+
+}
+
+ul#menu a{
+background: url("img/tribes/label.png");
+  background-size: 100% 100%;"
+}
+
+.header{
+background: url("img/tribes/label.png");
+  background-size: 100% 100%;
+}
+
+.mobile{
+background: url("img/tribes/label.png");
+  background-size: 100% 100%;
+}
+</style>
+
+
+
+
     </head>
     <body>
-        <div class="ui large inverted stackable menu gradient emerald" style="border-radius:0px !important;">
-            <div class="ui container">
-                <a class="header item" href="/tribes.html">
+
+<div class="ui large inverted stackable menu gradient " style="border-radius:0px !important; background-color: transparent;">
+        <div class="ui container">
+         <div class="header">
+                <a class="item" href="/tribes.html">
                     <img src="img/tribes/moai.png" style="height: 45px;" ui mini image" />
                     <h2 class="title">Commonwealth Tribes</h2>
+  <div class="opacity mobile only">
+                        <strong> Vault:&nbsp; <span id="etcInContract">0.0</span>
+                        </strong>
+                    </div>
                 </a>
-                <div class="right menu">
+</div>
+                <div class="right menu custom-computer only">
                     <div class="item">
                         <a href="/index.html">
                             <div class="opacity">
@@ -62,39 +102,49 @@
                                 Tribes: <span id="tribeNumber"></span>
                             </div>
                         </a>
-                        <div class="opacity">
-                            <a href="https://pro.coinbase.com/trade/ETC-USD" style="color: white" target="_blank"><strong>
-                                <span>ETC Price:&nbsp;</span>
+   <a href="https://pro.coinbase.com/trade/ETC-USD" style="color: white" target="_blank">
+   <div class="opacity">
+                         <strong><span>ETC Price:&nbsp;</span>
                             </strong>
-                            $<span id="price">0.0</span>
-                            </a>
-                        </div>
-                        <div class="opacity">
-                            <a href="/use.html" style="color: white" target="_blank">Wallet</a>
+                          $<span id="price">0.0</span></strong>                         
+                        </div> </a>
+                        
+                            <a href="/use.html">
+                             <div class="opacity">
+                            <strong>Walet</strong>
+                        </div></a>
+                    </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div>            
+
         <div class="ui container margin top two">
-            <div class="ui stackable grid">
-                <div class="ui selection dropdown" style="margin-bottom: 10px;">
+            <div class="ui stackable grid" style="margin-bottom: 10px; border: 0px;">
+                <div class="ui selection dropdown" style="
+background: url('img/tribes/peta1.png');
+  background-size: 100% 100%; border: 0px;">
                     <input type="hidden" name="tribes">
                     <i class="dropdown icon"></i>
                     <div class="default text">Show Tribes</div>
-                    <div class="menu">
-                      <div class="item" data-value="0">Active Tribes</div>
-                      <div class="item" data-value="1">My Tribes</div>
-                      <div class="item" data-value="2">Completed Tribes</div>
+                    <div class="menu" style="
+background: url('img/tribes/peta2.png');
+  background-size: 100% 100%; border: 0px;">
+                      <div class="item bor" style="border: 0px;" data-value="0">Active Tribes</div>
+                      <div class="item bor" style="border: 0px;" data-value="1">Me Tribes</div>
+                      <div class="item bor" style="border: 0px;" data-value="2">Completed Tribes</div>
                     </div>
                   </div>
-                <div class="sixteen wide column border right border left" style="background: rgba(58, 150, 139, 0.17);">
+                 
+                <div class="sixteen wide column border right border left" style="background: rgba(58, 150, 139, 0.17); border-color: rgba(58, 150, 139, 0.17);">
+
+<center><div> <img src="img/tribes/gendang.gif" width="200" height="150"></div></center>
                     <h1 class="ui header">
-                        <div id="title" class="content">Active Tribes
+                        <div id="title" class="content" style="color: black;">Active Tribes
                     </h1>
-                    <table id="tribes" class="display">
+
+              <table id="tribes" class="display">
                         <thead>
-                            <tr>
+                           <tr>
                                 <th>Tribe</th>
                                 <th>Name</th>
                                 <th>Joined</th>
@@ -109,22 +159,13 @@
                     </table>
                 </div>
             </div>
-            <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
-
+            <div style="background-color: green; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
             <div class="ui stackable grid">
-
                 <div class="eight wide column">
-                    <div style="text-align: center">
-                        <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button">
-                            <i class="left discord icon"></i>
-                            Need help? Ask on our Discord. 
-                        </a>
-                    </div>
-                    <div class="ui segments">
                             <div class="ui segment">
                                 <h2 class="ui header">
                                     <div class="content">
-                                        <span>Create a New Tribe</span>
+                                        <span style="color: black;">Create a New Tribe</span>
                                     </div>
                                 </h2>
                                 <form>
@@ -145,56 +186,112 @@
                                     <i class="users green icon"></i>
                                     <input type="text" id="amountOfMembers" placeholder="Min. 2">
                                     <div class="ui tag blue label notranslate">Members</div>
-                                </div>
-                                    
+                                </div>  
                                     <div>
                                         <span id="tribeAddress"></span>
                                     </div>
-                                
                                 <a href="#" id="createTribe" class="ui large fluid green button" style="margin-top:10px;">
                                     Create Tribe
                                 </a>
                             </div>
-                    </div>
                 </div>
 
                 <div class="eight wide column">
-                    <div class="ui segments">
-                        <div class="ui segment">
-                            <h2><i class="globe icon"></i>Global Tribes</h2>
-                            <div id="map" style="width:100%; height: 400px;"></div>
-                        </div>
-                    </div>
+                    <div style="text-align: center">
+                        <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid button" style="background: url('img/tribes/label.png');
+  background-size: 100% 100%;">
+                            <i class="left discord icon"></i>
+                            Need help? Ask on our Discord. 
+                        </a>
+                    </div>   
+                  <div class="ui segments">
+                  <div class="ui segment">
+                  <h2 style="margin-bottom:10px; background: url('img/tribes/label.png');
+  background-size: 100% 100%;"><i class="globe icon">
+                   </i>Global Tribes</h2>
+                  <div id="map" style="width:100%; height: 400px;">
+                </div>
+                </div>
                 </div>
             </div>
         </div>
+
+
+<ul id="menu" class="mfb-component--br mfb-zoomin"  data-mfb-toggle="hover">
+      <li class="mfb-component__wrap">
+        <a href="#" class="mfb-component__button--main">
+          <i class="mfb-component__main-icon--resting ion-plus-round"></i>
+          <i class="mfb-component__main-icon--active ion-close-round"></i>
+        </a>
+        <ul class="mfb-component__list">
+          <li>
+            <a href="https://id.commonwealth.gg" data-mfb-label="Home" class="mfb-button">
+              <i class="mfb-button-tab"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://id.commonwealth.gg/use.html" data-mfb-label="Wallet" class="mfb-button">
+              <i class="mfb-button-tab"></i>
+            </a>
+          </li>
+          </li>
+          <li>
+            <a id="infoDayak" data-mfb-label="What Is Tribes" class="mfb-button">
+              <i class="mfb-button-tab icon-social-octocat"></i>
+            </a>
+          </li>
+            </li>
+          <li>
+            <a id="dayak" data-mfb-label="Create Tribes" class="mfb-button">
+              <i class="mfb-button-tab icon-social-octocat"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
         <script src="lib/jquery.min.js"></script>
         <script src="lib/semantic.min.js"></script>
         <script src="lib/jquery.dataTables.min.js"></script>
         <script src="lib/dataTables.responsive.min.js"></script>
         <script src="lib/alertify.min.js"></script>
         <script src="lib/leaflet.min.js"></script>
+        <script src="lib/modernizr.min.js"></script>
+        <script src="lib/mfb.min.js"></script>
 
         <script src="js/util.js"></script>
         <script src="js/etc/contracts.js"></script>
         <script src="js/etc/tribes/tribe.js"></script>
         <script src="js/etc/tribes/lobby.js"></script>
+        <script src="js/etc/tribes/dayak.js"></script>
+      
+        
+ <script>
+    function setMarketCap(price) {
+        p3cContract.totalEthereumBalance.call(function (err, price) {
+            if (!err) {
+            amount = web3.fromWei(price).toFixed(0)
+            $("#etcInContract").replaceWith(numberWithCommas(amount) + " ETC")
 
-        <script>
-            function refreshPrice() {
-                $.getJSON('https://api.commonwealth.gg/chart/info', function (json) {
-                    var USETC = JSON.parse(JSON.stringify(json)).ETCPriceUSD;
-                    var price = (USETC).toFixed(2);
-                    $("#price").text(price)
-                });
             }
-            setTimeout(function () {
-                refreshPrice()
-            }, 2000);
-            setInterval(function () {
-                refreshPrice() // this will run after every 5 seconds
-            }, 12000);
-    </script>
-    </body>
+        })
+    };
 
+    function refreshPrice() {
+        $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETC&tsyms=USDT', function (json) {
+            var USETC = JSON.parse(JSON.stringify(json)).USDT;
+            var price = (USETC).toFixed(2);
+            setMarketCap(price)
+            $("#price").text(price)
+        });
+    }
+
+    setTimeout(function () {
+        refreshPrice()
+    }, 2000);
+    setInterval(function () {
+        refreshPrice() // this will run after every 5 seconds
+    }, 12000);
+    </script>
+
+    </body>
 </html>
