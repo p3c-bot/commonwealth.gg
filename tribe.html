@@ -37,10 +37,44 @@
         gtag('js', new Date());
         gtag('config', 'UA-141280467-1');
     </script>
+
+<!-- build:js modernizr.touch.js -->
+    <script src="/dist/lib/modernizr.touch.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:css mfb.css -->
+    <link href="/dist/mfb.css" rel="stylesheet">
+    <!-- endbuild -->
+<style type="text/css">
+
+body {
+background: url("img/bg.jpeg");
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ background-attachment: fixed;
+ 
+}
+.mobile{
+background: url("img/tribes/label.png");
+  background-size: 100% 100%;"
+}
+.custom-computer {
+background: url("img/tribes/label.png");
+  background-size: 100% 100%;"
+}
+
+
+ul#menu a{
+background: url("img/tribes/label.png");
+  background-size: 100% 100%;"
+}
+
+</style>
 </head>
 
 <body>
-    <div class="ui large primary stackable menu" style="border-radius:0px !important; background-color: whitesmoke;">
+<div class="ui large primary stackable menu" style="border-radius:0px !important; background-color: transparent; background: url('img/tribes/label.png');
+  background-size: 100% 100%;">
         <div class="ui container">
             <div class="header">
                 <a class="item" href="/tribes.html">
@@ -69,7 +103,7 @@
                     </a>
                     <a href="/use.html">
                         <div class="opacity" style="color: black;">
-                            Account: <span id="myCropTokens"></span> WLTH
+                            Account: <span id="myCropTokens"></span> P3C
                         </div>
                     </a>
                     <a href="/tribes.html">
@@ -85,13 +119,15 @@
         </div>
     </div>
 
+
     <div class="ui container margin top two">
 
         <div class="ui stackable grid">
-            <div id="myHoldings" class="eight wide column border right border left">  
+            <div id="myHoldings" class="eight wide column border right border left" style="border: 0px">  
                 <div class="four wide column sell">
                 <h2 class="ui header">
-                    <i id="infoTribeName" class="content">Current</i>
+                    <i id="infoTribeName" class="content" style="background: url('img/tribes/label.png');
+  background-size: 100% 100%;" padding: 10px;">Current</i>
                 </h2>
                 <table class="ui celled table unstackable">
                     <thead>
@@ -107,69 +143,71 @@
                         <td id="infoTribeId" data-label="ID">Null</td>
                         <td id="infoTribeAge" data-label="Age">0 Seconds</td>
                         <td id="infoTribeCost" data-label="Cost">0 ETC</td>
-                        <td id="infoTribeReward" data-label="Cost">0 P3C</td>
+                        <td id="infoTribeReward" data-label="Cost">0 WLTH</td>
                         <td id="infoTribeSize" data-label="Seats">0</td>
                       </tr>
                     </tbody>
                   </table>
-                <button id="join" class="ui large fluid blue button" style="margin-top:10px;">
-                    Join this Tribe! <div id="buttonTribeCost"></div>
+                <button id="join" class="ui large fluid  button" style="margin-top:10px; background: url('img/tribes/label.png');
+  background-size: 100% 100%;">
+                    Join this Tribe!! <div id="buttonTribeCost"></div>
                 </button>
                 <div id="refundArea">
                 <h2>You're in the tribe, now find other players!</h2>
-                <a href="#" id="refund" class="ui large fluid orange button" style="margin-top:10px;">
+                <a href="#" id="refund" class="ui large fluid  button" style="margin-top:10px; background: url('img/tribes/label.png');
+  background-size: 100% 100%;">
                     Refund
                 </a>
                 </div>
                 </div>
                 <br>
                 <div style="text-align: center">
-                  <a id="copyTribeButton" class="ui left labeled icon large fluid green button" style="margin-bottom:10px;">
+                  <a id="copyTribeButton" class="ui left labeled icon large fluid button" style="margin-bottom:10px; background: url('img/tribes/label.png');
+  background-size: 100% 100%;">
                       <i class="left magic icon"></i>
                       Copy Tribe Link
                   </a>
                 </div>
                 <br>
-                <div class="ui green progress" id="tribeSize">
+                <div class="ui green progress" id="tribeSize"
+style="margin-bottom:10px; background: url('img/tribes/label.png');
+  background-size: 100% 100%;">
                     <div class="bar">
                       <div class="progress"></div>
                     </div>
                     <div class="label" id="tribeLabel">Null Waiting / Null Total</div>
                   </div>
             </div>
-            <div class="eight wide column buy" id="buyArea">
-              <h2><i class="globe icon"></i>Tribe Location</h2>
+            
+ <div class="eight wide column buy" id="buyArea">
+            <div class="ui segments">
+              <h2 style="margin-bottom:10px; background: url('img/tribes/label.png');
+  background-size: 100% 100%;"><i class="globe icon"></i>Tribe Location</h2>
               <div id="map" style="width:100%; height: 400px;"></div>
               <!-- <iframe id="map"  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBjN9bBBMOM3j33HZYkueaV7akl8IMciE0&q=-33.8569,151.2152&center=-33.8569,151.2152&zoom=4&maptype=roadmap"></iframe> -->
             </div>
         </div>
+      </div>
 
-        <div style="background-color: #eee; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
+ 
+
+        <div style="background-color: green; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
         <div class="ui stackable grid">
             <div class="eight wide column">
                 <div style="text-align: center">
-                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid green button"
-                        style="margin-bottom:10px;">
+                    <a href="https://discord.gg/crjsdJr" target="_blank" class="ui left labeled icon large fluid  button"
+                        style="margin-bottom:10px; background: url('img/tribes/label.png');
+  background-size: 100% 100%;">
                         <i class="left discord icon"></i>
                         Need Help? Join Discord!
-                    </a>
+                        </a>
+                    </div>                 
                 </div>
-                <div class="ui segments">
-                    <div class="ui segment">
-                            <h4 style="">Q: How does this game work?<i class="right arrow icon"></i></h4>
-                            <h4 style="text-align: left">
-                                <p >The purpose of the Commonwealth Tribes is to reduce risk in investing in Commonwealth. Invest as a group!<a href="https://medium.com/@masterhax/introducing-commonwealth-tribes-5d206890e6a6">Learn more.</a></p>
-                                <ul>
-                                    <li>When a game is created, each user puts ETC into the contract. The ETC can be refunded at any time.</li>
-                                    <li>Once the game is full, all ETC is used to buy into Commonwealth. P3C is spread equally among players. </li>
-                                    <li>Every user receives their P3C as well as a 3% bonus!</li>
-                                </ul>
-                            </h4>
-                        </div>
-                </div>
-            </div>     
+
+            </div>
+        </div>
             <div class="eight wide column">
-                <div class="ui segments">
+                <div class="ui segments small modal" style="margin: 0px;">
                         <div class="ui segment">
                           <h2 class="ui header">
                             <div class="content">
@@ -211,31 +249,61 @@
         </div>
     </div>
     <br />
-    
+     <ul id="menu" class="mfb-component--br mfb-zoomin"  data-mfb-toggle="hover">
+      <li class="mfb-component__wrap">
+        <a href="#" class="mfb-component__button--main">
+          <i class="mfb-component__main-icon--resting ion-plus-round"></i>
+          <i class="mfb-component__main-icon--active ion-close-round"></i>
+        </a>
+        <ul class="mfb-component__list">
+          <li>
+            <a href="https://id.commonwealth.gg" data-mfb-label="Home" class="mfb-button">
+              <i class="mfb-button-tab"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://id.commonwealth.gg/use.html" data-mfb-label="Wallet" class="mfb-button">
+              <i class="mfb-button-tab"></i>
+            </a>
+          </li>
+          </li>
+          <li>
+            <a id="infoDayak" data-mfb-label="What is Tribes" class="mfb-button">
+              <i class="mfb-button-tab icon-social-octocat"></i>
+            </a>
+          </li>
+            </li>
+          <li>
+            <a id="dayak" data-mfb-label="Make New Tribes" class="mfb-button">
+              <i class="mfb-button-tab icon-social-octocat"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
     <div class="ui inverted vertical footer segment">
         <div class="ui container">
             <div class="ui stackable inverted divided equal height stackable grid">
                 <div class="three wide column">
                     <div class="ui inverted link list">
                         <a class="item" href="/">Home</a>
-                        <a class="dashboard-link item" href="/use.html">Wallet</a>
+                        <a class="dashboard-link item" href="/use.html">Walet</a>
                         <a href="/chart.html" class="item">Chart</a>
                         <a href="/commonwealth.pdf" target="_blank" class="item">White Paper</a>
-                        <a href="/design.html" class="item">Logos and Design</a>
                         <a href="https://github.com/p3c-bot/p3c-bot.github.io" target="_blank" class="item"><i class="github icon"></i>Github</a>
                     </div>
                 </div>
-                <div class="three wide column">
-                    <div class="ui inverted link list" style="margin-top:0px;">
-                        <a href="https://discord.gg/crjsdJr" target="_blank" class="item"><i class="left discord icon"></i>Discord Chat</a>
-                        <a href="https://twitter.com/commonwealth_gg" target="_blank" class="item">Twitter</a>
-                        <a href="https://medium.com/@masterhax/" target="_blank" class="item">Blog</a>
-                        <a href="/commonwealth.pdf" target="_blank" class="item">White Paper</a>
-                        <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts" target="_blank" class="item">Smart Contract</a>
-                        <a href="https://github.com/p3c-bot/api/blob/master/README.md" target="_blank"class="item">API Docs</a>
+                
+               <div class="three wide column">
+                        <div class="ui inverted link list" style="margin-top:0px;">
+                            <a href="https://discord.gg/crjsdJr" target="_blank" class="item"><i class="left discord icon"></i>Discord Chat</a>
+                            <a href="https://medium.com/@masterhax/" target="_blank" class="item">Blog</a>
+                            <a href="https://twitter.com/commonwealth_gg" target="_blank" class="item">Twitter</a>
+                            <a href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts" target="_blank" class="item">Smart Contract</a>
+                            <a href="https://github.com/p3c-bot/api/blob/master/README.md" target="_blank"class="item">API Docs</a>
+                        </div>
                     </div>
-                </div>
-                <div class="ten wide column">
+				<div class="ten wide column">
                     <h5 class="ui inverted header">Disclaimer</h5>
                     <p class="instruction disclaimer">
                         This project is experimental. Do not send any <span class="notranslate">ETC</span> you cannot
@@ -267,6 +335,11 @@
     <script src="js/etc/wallet/farm.js"></script>
     <script src="js/etc/wallet/use.js"></script>
     <script src="js/etc/tribes/tribe.js"></script>
+    <script src="js/etc/tribes/dayak.js"></script>
     
+<!-- build:js mfb.js -->
+  <script src="dist/mfb.js"></script>
+  <!-- endbuild -->
+
 </body>
 </html>
