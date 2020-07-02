@@ -105,24 +105,24 @@ function buildLobby(url){
 var mymap = L.map('map').setView([45,75], 2);
 
 function generatePoint(location, power,name,id){
-  var marker = L.marker(location).addTo(mymap);
+  // var marker = L.marker(location).addTo(mymap);
   // var circle = L.circle(location, {
   //     color: 'red',
   //     fillColor: '#f03',
   //     fillOpacity: 0.1,
   //     radius: power
   // }).addTo(mymap);
-  marker.bindPopup("<h5><a>" + linkify(name, "/tribe.html?id=" + id + "#") + "</a></h5>");
+  // marker.bindPopup("<h5><a>" + linkify(name, "/tribe.html?id=" + id + "#") + "</a></h5>");
   // circle.bindPopup("<a>" +  "https://commonwealth.gg/tribe.html?id=4" + "</a>");
   // marker.bindPopup("TRIBE");
 
   
-  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW50c2Fua292IiwiYSI6ImNrYWQwOWQxYzF6NTAyem96OWd5d2V1N2wifQ.IheYsirwEr5e_Sr06guSRQ', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
-      id: 'mapbox/streets-v11',
-      tileSize: 512,
-      zoomOffset: -1,
-      accessToken: 'pk.eyJ1IjoiYW50c2Fua292IiwiYSI6ImNrYWQwOWQxYzF6NTAyem96OWd5d2V1N2wifQ.IheYsirwEr5e_Sr06guSRQ'
-  }).addTo(mymap);  
+  // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW50c2Fua292IiwiYSI6ImNrYWQwOWQxYzF6NTAyem96OWd5d2V1N2wifQ.IheYsirwEr5e_Sr06guSRQ', {
+  //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  //     maxZoom: 18,
+  //     id: 'mapbox/streets-v11',
+  //     tileSize: 512,
+  //     zoomOffset: -1,
+  //     accessToken: 'pk.eyJ1IjoiYW50c2Fua292IiwiYSI6ImNrYWQwOWQxYzF6NTAyem96OWd5d2V1N2wifQ.IheYsirwEr5e_Sr06guSRQ'
+  // }).addTo(mymap);  
 }

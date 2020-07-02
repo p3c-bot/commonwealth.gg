@@ -111,7 +111,7 @@ background: url("img/tribes/label.png");
                         
                             <a href="/use.html">
                              <div class="opacity">
-                            <strong>Walet</strong>
+                            <strong>Wallet</strong>
                         </div></a>
                     </div>
                         </div>
@@ -125,7 +125,7 @@ background: url('img/tribes/peta1.png');
   background-size: 100% 100%; border: 0px;">
                     <input type="hidden" name="tribes">
                     <i class="dropdown icon"></i>
-                    <div class="default text">Show Tribes</div>
+                    <div class="default text" style="color: black !important;">Show Tribes</div>
                     <div class="menu" style="
 background: url('img/tribes/peta2.png');
   background-size: 100% 100%; border: 0px;">
@@ -162,6 +162,42 @@ background: url('img/tribes/peta2.png');
             <div style="background-color: green; height: 1px; margin-top:20px; margin-bottom:20px;"></div>
             <div class="ui stackable grid">
                 <div class="eight wide column">
+                      <div class="ui segments">
+                            <div class="ui segment">
+                                <h2 class="ui header">
+                                    <div class="content" style="color: black !important;">
+                                        <span>Create a New Tribe</span>
+                                    </div>
+                                </h2>
+                                <form>
+                                    <div class="ui right labeled left icon input fluid large buy">
+                                      <i class="tag green icon"></i>
+                                      <input type="text" id="tribeName" placeholder="Max 32 Characters">
+                                      <div class="ui tag teal label notranslate">Name</div>
+                                    </div>
+                                    <br>
+                                    <div class="ui right labeled left icon input fluid large buy">
+                                      <i class="ethereum green icon"></i>
+                                      <input type="text" id="entryCost" placeholder="Min .001 ETC">
+                                      <div class="ui tag green label notranslate">ETC</div>
+                                    </div>
+                                <br/>
+                                
+                                <div class="ui right labeled left icon input fluid large buy">
+                                    <i class="users green icon"></i>
+                                    <input type="text" id="amountOfMembers" placeholder="Min. 2">
+                                    <div class="ui tag blue label notranslate">Members</div>
+                                </div>
+                                    
+                                    <div>
+                                        <span id="tribeAddress"></span>
+                                    </div>
+                                
+                                <a href="#" id="createTribe" class="ui large fluid green button" style="margin-top:10px;">
+                                    Create Tribe
+                                </a>
+                            </div>
+                    </div>
                             <div class="ui segment small modal">
                                 <h2 class="ui header">
                                     <div class="content">
@@ -208,8 +244,9 @@ background: url('img/tribes/peta2.png');
                   <div class="ui segment">
                   <h2 style="margin-bottom:10px; background: url('img/tribes/label.png');
   background-size: 100% 100%;"><i class="globe icon">
-                   </i>Global Tribes</h2>
-                  <div id="map" style="width:100%; height: 400px;">
+                   </i>How does it work?</h2>
+                  <!-- <div id="map" style="width:100%; height: 400px;"> -->
+                    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/kBrfKo7klX0?start=158" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 </div>
                 </div>
@@ -255,7 +292,7 @@ background: url('img/tribes/peta2.png');
         <script src="lib/dataTables.responsive.min.js"></script>
         <script src="lib/alertify.min.js"></script>
         <script src="lib/leaflet.min.js"></script>
-        <script src="lib/modernizr.min.js"></script>
+        <script src="lib/modernizr.touch.js"></script>
         <script src="lib/mfb.min.js"></script>
 
         <script src="js/util.js"></script>
