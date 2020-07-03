@@ -727,3 +727,9 @@ i.blue.icon {
 .yellow-item {
     background-color: #fee49d;
 }
+
+/* Team */
+
+.team-picture {
+    border-radius: 50%;
+}

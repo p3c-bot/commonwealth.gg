@@ -284,7 +284,7 @@ function expiredTribeAlert(){
 }
 function joinTribeAlert(){
     if (typeof gtag !== 'undefined'){gtag('event', 'Tribes', {'event_label': 'Usage', 'event_category': 'Joined'});};
-    alertify.success("Joining now! Reward will be " + tribeReward + " P3C")
+    alertify.success("Joining now! Reward will be " + tribeReward + " WLTH")
     alertify.alert(
     "Joining In",                        
     `
@@ -298,7 +298,7 @@ function joinTribeAlert(){
 
 function succesfulTribeAlert(){
     if (typeof gtag !== 'undefined'){gtag('event', 'Tribes', {'event_label': 'Usage', 'event_category': 'Filled'});};
-    alertify.success("Success! Reward " + tribeReward + " P3C")
+    alertify.success("Success! Reward " + tribeReward + " WLTH")
     alertify.alert(
     "Reward Completed",                        
     `
@@ -333,7 +333,7 @@ function tribeCreatedAlert(){
     <h2 style="text-align:center;">
     New Tribe has been created and link is copied! Page will redirect in 20 seconds. 
     </h2>
-    <img id="loginLogo" src="img/tribes/fire.gif" class="ui image etc-logo" />
+    <img id="loginLogo" src="img/tribes/gendang.gif" class="ui image etc-logo" />
     `,
     function() {window.location.href = newTribeLink;}
     )
