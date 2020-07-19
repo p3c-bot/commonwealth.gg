@@ -733,3 +733,9 @@ i.blue.icon {
 .team-picture {
     border-radius: 50%;
 }
+
+.network-title {
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: 7px;
+    box-shadow: 5px 10px 18px #888888;
+} 

@@ -89,6 +89,21 @@ $( "#buyETCButton" ).click(function() {
     if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'PurchaseETCInfo'});};
 });
 
+function changeNetworkMessage(){
+  alertify.alert(
+    'Select Network',
+    `
+    <h1 id="loginWarning" class="login-warning">Login to Saturn wallet, and refresh!</h1>
+    <a href="/use.html"><img id="loginLogo" src="img/logo/etc-title-white.jpg" class="ui image etc-logo center-larger network-title"/></a>
+    <a href="/use.html"><img id="loginLogo" src="img/logo/eth-title-soon.png" class="ui image etc-logo center-larger network-title"/></a>
+    `
+  )
+}
+
+$( "#changeNetwork" ).click(function() {
+  changeNetworkMessage()
+});
+
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function showNav() {
     var x = document.getElementById("myLinks");
