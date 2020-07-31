@@ -29,7 +29,7 @@ contract Hourglass {
 
 contract RainMaker {
     Hourglass eWLTH;
-    address public eWLTHAddress = 0x5833c959c3532dd5b3b6855d590d70b01d2d9fa6;
+    address public eWLTHAddress = 0x5833C959C3532dD5B3B6855D590D70b01D2d9fA6;
 
     function RainMaker() public {
         eWLTH = Hourglass(eWLTHAddress);
