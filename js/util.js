@@ -95,7 +95,7 @@ function changeNetworkMessage(){
     `
     <h1 id="loginWarning" class="login-warning">Login to Saturn wallet, and refresh!</h1>
     <a href="/use.html"><img id="loginLogo" src="img/logo/etc-title-white.jpg" class="ui image etc-logo center-larger network-title"/></a>
-    <a href="https://eth.commonwealth.gg/"><img id="loginLogo" src="img/logo/eth-title-soon.png" class="ui image etc-logo center-larger network-title"/></a>
+    <a href="https://eth.commonwealth.gg/"><img id="loginLogo" src="img/logo/eth-title.png" class="ui image etc-logo center-larger network-title"/></a>
     `
   )
 }
